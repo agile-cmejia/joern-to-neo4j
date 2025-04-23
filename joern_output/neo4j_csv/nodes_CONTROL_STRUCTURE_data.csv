@@ -1,0 +1,1512 @@
+47244640256,CONTROL_STRUCTURE,6,,"if (existingAliasName) {
+      this.logger.error(`The aliasName ${aliasName} is already used and needs to be unique`);
+      throw new ForbiddenException('aliasName is already in use', {
+        cause: new Error(),
+        description: `The aliasName ${aliasName} is already used and needs to be unique`,
+      });
+    }",4,IF,35,,,6,BabelNodeInfo
+47244640257,CONTROL_STRUCTURE,8,,"if (!existingRole) {
+      this.logger.error(`The role with id ${roleId} was not found`);
+      throw new NotFoundException('Role not found', {
+        cause: new Error(),
+        description: `The role with id ${roleId} was not found`,
+      });
+    }",4,IF,44,,,8,BabelNodeInfo
+47244640258,CONTROL_STRUCTURE,11,,"if (tenantRoleAlias && tenantRoleAlias.length > 0) {
+      const newTenantRoleAliases = await this.tenantRoleAliasService.assignToRoleAlias({
+        roleAliasToUpdate: newRoleAlias,
+        tenantRoleAliasNew: tenantRoleAlias,
+        roleId,
+      });
+
+      if (newTenantRoleAliases) {
+        newRoleAlias.tenantRoleAlias = newTenantRoleAliases.map((tenantRoleAlias) => {
+          delete tenantRoleAlias.roleAlias;
+          return tenantRoleAlias;
+        });
+        await this.rolesAliasRepository.save(newRoleAlias);
+      }
+    }",4,IF,61,,,11,BabelNodeInfo
+47244640259,CONTROL_STRUCTURE,2,,"if (newTenantRoleAliases) {
+        newRoleAlias.tenantRoleAlias = newTenantRoleAliases.map((tenantRoleAlias) => {
+          delete tenantRoleAlias.roleAlias;
+          return tenantRoleAlias;
+        });
+        await this.rolesAliasRepository.save(newRoleAlias);
+      }",6,IF,68,,,2,BabelNodeInfo
+47244640260,CONTROL_STRUCTURE,4,,"if (ids && ids.length > 0) {
+      query = query.andWhere('RoleAlias.id IN (:...ids) ', { ids });
+    }",4,IF,115,,,4,BabelNodeInfo
+47244640261,CONTROL_STRUCTURE,5,,"if (aliasNames) {
+      query = query.andWhere('lower(RoleAlias.aliasName) IN (:...aliasNames) ', {
+        aliasNames: aliasNames.map((alias) => alias.toLowerCase()),
+      });
+    }",4,IF,118,,,5,BabelNodeInfo
+47244640262,CONTROL_STRUCTURE,6,,"if (descriptions) {
+      query = query.andWhere('lower(RoleAlias.description) IN (:...descriptions) ', {
+        descriptions: descriptions.map((desc) => desc.toLowerCase()),
+      });
+    }",4,IF,123,,,6,BabelNodeInfo
+47244640263,CONTROL_STRUCTURE,7,,"if (roleIds) {
+      query = query.andWhere('RoleAlias.role_id IN (:...roleIds) ', { roleIds });
+    }",4,IF,128,,,7,BabelNodeInfo
+47244640264,CONTROL_STRUCTURE,8,,"if (enabled != null) {
+      query = query.andWhere('RoleAlias.enabled = :enabled ', { enabled });
+    }",4,IF,131,,,8,BabelNodeInfo
+47244640265,CONTROL_STRUCTURE,9,,"if (tenantRoleAlias && tenantRoleAlias.length > 0) {
+      // query = query.andWhere('tenantRoleAlias.id IN (:...tenantRoleAlias)', { tenantRoleAlias });
+      query = query.andWhere('tenantRoleAlias.tenant IN (:...tenantRoleAlias)', {
+        tenantRoleAlias,
+      });
+    }",4,IF,134,,,9,BabelNodeInfo
+47244640266,CONTROL_STRUCTURE,3,,"if (!roleAliasToUpdate) {
+      this.logger.error(`The user with id ${id} was not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `The user with id ${id} was not found`,
+      });
+    }",4,IF,155,,,3,BabelNodeInfo
+47244640267,CONTROL_STRUCTURE,7,,"if (aliasName) {
+      const existingAliasName = await this.rolesAliasRepository.findOneBy({ aliasName });
+      if (existingAliasName && existingAliasName.id !== id) {
+        this.logger.error(`The aliasName ${aliasName} is already used and needs to be unique`);
+        throw new ForbiddenException('aliasName is already in use', {
+          cause: new Error(),
+          description: `The aliasName ${aliasName} is already used and needs to be unique`,
+        });
+      }
+      roleAliasToUpdate.aliasName = aliasName;
+    }",4,IF,165,,,7,BabelNodeInfo
+47244640268,CONTROL_STRUCTURE,2,,"if (existingAliasName && existingAliasName.id !== id) {
+        this.logger.error(`The aliasName ${aliasName} is already used and needs to be unique`);
+        throw new ForbiddenException('aliasName is already in use', {
+          cause: new Error(),
+          description: `The aliasName ${aliasName} is already used and needs to be unique`,
+        });
+      }",6,IF,167,,,2,BabelNodeInfo
+47244640269,CONTROL_STRUCTURE,8,,"if (roleId) {
+      const existingRole = await this.rolesRepository.findOneBy({ id: roleId });
+      if (!existingRole) {
+        this.logger.error(`The role with id ${roleId} was not found`);
+        throw new NotFoundException('Role not found', {
+          cause: new Error(),
+          description: `The role with id ${roleId} was not found`,
+        });
+      }
+      roleAliasToUpdate.role = existingRole;
+    }",4,IF,176,,,8,BabelNodeInfo
+47244640270,CONTROL_STRUCTURE,2,,"if (!existingRole) {
+        this.logger.error(`The role with id ${roleId} was not found`);
+        throw new NotFoundException('Role not found', {
+          cause: new Error(),
+          description: `The role with id ${roleId} was not found`,
+        });
+      }",6,IF,178,,,2,BabelNodeInfo
+47244640271,CONTROL_STRUCTURE,11,,"if (tenantRoleAlias || roleId) {
+      const newTenantRoleAliases = await this.tenantRoleAliasService.assignToRoleAlias({
+        roleAliasToUpdate,
+        tenantRoleAliasNew: tenantRoleAlias,
+        roleId,
+      });
+
+      if (newTenantRoleAliases) {
+        roleAliasToUpdate.tenantRoleAlias = newTenantRoleAliases.map((tenantRoleAlias) => {
+          delete tenantRoleAlias.roleAlias;
+          return tenantRoleAlias;
+        });
+      }
+    }",4,IF,196,,,11,BabelNodeInfo
+47244640272,CONTROL_STRUCTURE,2,,"if (newTenantRoleAliases) {
+        roleAliasToUpdate.tenantRoleAlias = newTenantRoleAliases.map((tenantRoleAlias) => {
+          delete tenantRoleAlias.roleAlias;
+          return tenantRoleAlias;
+        });
+      }",6,IF,203,,,2,BabelNodeInfo
+47244640273,CONTROL_STRUCTURE,3,,"if (!userToDisable) {
+      this.logger.error(`The role alias with id ${id} was not found`);
+      throw new NotFoundException('Tenant not found', {
+        cause: new Error(),
+        description: `The role alias with id ${id} was not found`,
+      });
+    }",4,IF,217,,,3,BabelNodeInfo
+47244640274,CONTROL_STRUCTURE,4,,"if (existingTenantTag) {
+      this.logger.error(`The tag ""${tag}"" is already used and needs to be unique`);
+      throw new ForbiddenException('tag is already in use', {
+        cause: new Error(),
+        description: `The tag ""${tag}"" is already used and needs to be unique`,
+      });
+    }",4,IF,25,,,4,BabelNodeInfo
+47244640275,CONTROL_STRUCTURE,5,,"if (createRoleDto.tenantTypesIds && createRoleDto.tenantTypesIds.length > 0) {
+      this.logger.log(`tenant types: ${createRoleDto.tenantTypesIds}`);
+    }",4,IF,32,,,5,BabelNodeInfo
+47244640276,CONTROL_STRUCTURE,7,,"if (tenantSpecific) {
+      const url = process.env.TENANTS_MS_URL || 'error';
+      if (url === 'error') {
+        this.logger.error(`Missing TENANTS_MS_URL env variable`);
+        throw new NotFoundException('TENANTS_MS_URL env variable not found', {
+          cause: new Error(),
+          description: `Missing TENANTS_MS_URL env variable`,
+        });
+      }
+      try {
+        this.logger.log(`looking for tenant with id:${tenantCreatorId}`);
+        foundTenantCreator = await fetchTenants({ ids: [tenantCreatorId] }, `${url}tenants/many`);
+        if (foundTenantCreator.length < 1) {
+          this.logger.error(`The tenant with id ${tenantCreatorId} was not found`);
+          throw new NotFoundException('Tenant not found', {
+            cause: new Error(),
+            description: `The tenant with id ${tenantCreatorId} was not found`,
+          });
+        }
+      } catch (e) {
+        this.logger.error(`An error has occurred`);
+        this.logger.error(e);
+      }
+    }",4,IF,36,,,7,BabelNodeInfo
+47244640277,CONTROL_STRUCTURE,2,,"if (url === 'error') {
+        this.logger.error(`Missing TENANTS_MS_URL env variable`);
+        throw new NotFoundException('TENANTS_MS_URL env variable not found', {
+          cause: new Error(),
+          description: `Missing TENANTS_MS_URL env variable`,
+        });
+      }",6,IF,38,,,2,BabelNodeInfo
+47244640278,CONTROL_STRUCTURE,3,,"try {
+        this.logger.log(`looking for tenant with id:${tenantCreatorId}`);
+        foundTenantCreator = await fetchTenants({ ids: [tenantCreatorId] }, `${url}tenants/many`);
+        if (foundTenantCreator.length < 1) {
+          this.logger.error(`The tenant with id ${tenantCreatorId} was not found`);
+          throw new NotFoundException('Tenant not found', {
+            cause: new Error(),
+            description: `The tenant with id ${tenantCreatorId} was not found`,
+          });
+        }
+      } catch (e) {
+        this.logger.error(`An error has occurred`);
+        this.logger.error(e);
+      }",6,TRY,45,,,3,BabelNodeInfo
+47244640279,CONTROL_STRUCTURE,3,,"if (foundTenantCreator.length < 1) {
+          this.logger.error(`The tenant with id ${tenantCreatorId} was not found`);
+          throw new NotFoundException('Tenant not found', {
+            cause: new Error(),
+            description: `The tenant with id ${tenantCreatorId} was not found`,
+          });
+        }",8,IF,48,,,3,BabelNodeInfo
+47244640280,CONTROL_STRUCTURE,2,,"catch (e) {
+        this.logger.error(`An error has occurred`);
+        this.logger.error(e);
+      }",8,CATCH,55,,,2,BabelNodeInfo
+47244640281,CONTROL_STRUCTURE,9,,"if (createRoleDto.tenantTypesIds && createRoleDto.tenantTypesIds.length > 0) {
+      this.logger.log(`tenant types: ${createRoleDto.tenantTypesIds}`);
+      const url = process.env.TENANTS_MS_URL || 'error';
+      if (url === 'error') {
+        this.logger.error(`Missing TENANTS_MS_URL env variable`);
+        throw new NotFoundException('TENANTS_MS_URL env variable not found', {
+          cause: new Error(),
+          description: `Missing TENANTS_MS_URL env variable`,
+        });
+      }
+      try {
+        foundTenantTypes = await fetchTenants({ ids: createRoleDto.tenantTypesIds }, `${url}tenant-types/many`);
+        if (foundTenantTypes.length < 1) {
+          this.logger.error(`The tenant type with id ${tenantCreatorId} was not found`);
+          throw new NotFoundException('Tenant type not found', {
+            cause: new Error(),
+            description: `The tenant type with id ${tenantCreatorId} was not found`,
+          });
+        }
+      } catch (e) {
+        this.logger....",4,IF,62,,,9,BabelNodeInfo
+47244640282,CONTROL_STRUCTURE,3,,"if (url === 'error') {
+        this.logger.error(`Missing TENANTS_MS_URL env variable`);
+        throw new NotFoundException('TENANTS_MS_URL env variable not found', {
+          cause: new Error(),
+          description: `Missing TENANTS_MS_URL env variable`,
+        });
+      }",6,IF,65,,,3,BabelNodeInfo
+47244640283,CONTROL_STRUCTURE,4,,"try {
+        foundTenantTypes = await fetchTenants({ ids: createRoleDto.tenantTypesIds }, `${url}tenant-types/many`);
+        if (foundTenantTypes.length < 1) {
+          this.logger.error(`The tenant type with id ${tenantCreatorId} was not found`);
+          throw new NotFoundException('Tenant type not found', {
+            cause: new Error(),
+            description: `The tenant type with id ${tenantCreatorId} was not found`,
+          });
+        }
+      } catch (e) {
+        this.logger.error(`An error has occurred`);
+        this.logger.error(e);
+      }",6,TRY,72,,,4,BabelNodeInfo
+47244640284,CONTROL_STRUCTURE,2,,"if (foundTenantTypes.length < 1) {
+          this.logger.error(`The tenant type with id ${tenantCreatorId} was not found`);
+          throw new NotFoundException('Tenant type not found', {
+            cause: new Error(),
+            description: `The tenant type with id ${tenantCreatorId} was not found`,
+          });
+        }",8,IF,74,,,2,BabelNodeInfo
+47244640285,CONTROL_STRUCTURE,2,,"catch (e) {
+        this.logger.error(`An error has occurred`);
+        this.logger.error(e);
+      }",8,CATCH,81,,,2,BabelNodeInfo
+47244640286,CONTROL_STRUCTURE,3,,"if (!foundRole) {
+      this.logger.error(`The tenant with id ${id} was not found`);
+      throw new NotFoundException('Role  not found', {
+        cause: new Error(),
+        description: `The role with id ${id} was not found`,
+      });
+    }",4,IF,137,,,3,BabelNodeInfo
+47244640287,CONTROL_STRUCTURE,3,,"if (ids && ids.length > 0) {
+      this.logger.log(`Finding by ids: ${ids}`);
+      query = query.andWhere('roles.id IN (:...ids) ', { ids });
+    }",4,IF,174,,,3,BabelNodeInfo
+47244640288,CONTROL_STRUCTURE,4,,"if (names && names.length > 0) {
+      this.logger.log(`Finding by names: ${names}`);
+      query = query.andWhere('lower(roles.name) IN (:...names) ', {
+        names: names.map((name) => name.toLowerCase().trim()),
+      });
+    }",4,IF,178,,,4,BabelNodeInfo
+47244640289,CONTROL_STRUCTURE,5,,"if (tags && tags.length > 0) {
+      this.logger.log(`Finding by tags: ${tags}`);
+      query = query.andWhere('lower(roles.tag) IN (:...tags) ', { tags: tags.map((tag) => tag.toLowerCase().trim()) });
+    }",4,IF,184,,,5,BabelNodeInfo
+47244640290,CONTROL_STRUCTURE,6,,"if (descriptions && descriptions.length > 0) {
+      this.logger.log(`Finding by descriptions: ${descriptions}`);
+      query = query.andWhere('roles.description IN (:...descriptions) ', { descriptions });
+    }",4,IF,188,,,6,BabelNodeInfo
+47244640291,CONTROL_STRUCTURE,7,,"if (tenantTypesIds && tenantTypesIds.length > 0) {
+      this.logger.log(`Finding by tenantType Ids: ${tenantTypesIds}`);
+      query = query.andWhere('tenantTypes.id IN (:...tenantTypesIds) ', { tenantTypesIds: tenantTypesIds });
+    }",4,IF,198,,,7,BabelNodeInfo
+47244640292,CONTROL_STRUCTURE,8,,"if (aliasIds && aliasIds.length > 0) {
+      this.logger.log(`Finding by alias Ids: ${aliasIds}`);
+      query = query.andWhere('aliases.id IN (:...aliasIds) ', { aliasIds });
+    }",4,IF,202,,,8,BabelNodeInfo
+47244640293,CONTROL_STRUCTURE,9,,"if (enabled != null) {
+      this.logger.log(`Finding by enabled: ${enabled}`);
+      query = query.andWhere('roles.enabled = :enabled ', { enabled });
+    }",4,IF,207,,,9,BabelNodeInfo
+47244640294,CONTROL_STRUCTURE,10,,"if (BackOfficeAccess != null) {
+      this.logger.log(`Finding by Back Office Access: ${BackOfficeAccess}`);
+      query = query.andWhere('roles.BackOfficeAccess = :BackOfficeAccess ', { BackOfficeAccess });
+    }",4,IF,211,,,10,BabelNodeInfo
+47244640295,CONTROL_STRUCTURE,11,,"if (SaasAccess != null) {
+      this.logger.log(`Finding by Saas Access: ${SaasAccess}`);
+      query = query.andWhere('roles.SaasAccess = :SaasAccess ', { SaasAccess });
+    }",4,IF,215,,,11,BabelNodeInfo
+47244640296,CONTROL_STRUCTURE,12,,"if (tenantSpecific != null) {
+      this.logger.log(`Finding by tenant Specific: ${tenantSpecific}`);
+      query = query.andWhere('roles.tenantSpecific = :tenantSpecific ', { tenantSpecific });
+    }",4,IF,219,,,12,BabelNodeInfo
+47244640297,CONTROL_STRUCTURE,3,,"if (!roleToUpdate) {
+      this.logger.error(`The tenant with id ${id} was not found`);
+      throw new NotFoundException('Role  not found', {
+        cause: new Error(),
+        description: `The role with id ${id} was not found`,
+      });
+    }",4,IF,244,,,3,BabelNodeInfo
+47244640298,CONTROL_STRUCTURE,10,,"if (updateRoleDto.tag) {
+      this.logger.log(`finding role with tag: ${tag} ...`);
+      const existingTenantTag = await this.rolesRepository.findOneBy({ tag });
+      if (existingTenantTag && existingTenantTag.id != id) {
+        this.logger.error(`The tag ""${tag}"" is already used and needs to be unique`);
+        throw new ForbiddenException('tag is already in use', {
+          cause: new Error(),
+          description: `The tag '${tag}' is already used and needs to be unique`,
+        });
+      }
+      roleToUpdate.tag = tag;
+    }",4,IF,259,,,10,BabelNodeInfo
+47244640299,CONTROL_STRUCTURE,3,,"if (existingTenantTag && existingTenantTag.id != id) {
+        this.logger.error(`The tag ""${tag}"" is already used and needs to be unique`);
+        throw new ForbiddenException('tag is already in use', {
+          cause: new Error(),
+          description: `The tag '${tag}' is already used and needs to be unique`,
+        });
+      }",6,IF,262,,,3,BabelNodeInfo
+47244640300,CONTROL_STRUCTURE,11,,"if (tenantSpecific) {
+      this.logger.log(`finding Tenant Creator with id: ${tenantCreatorId} ...`);
+      const url = process.env.TENANTS_MS_URL || 'error';
+      if (url === 'error') {
+        this.logger.error(`Missing TENANTS_MS_URL env variable`);
+        throw new NotFoundException('Role  not found', {
+          cause: new Error(),
+          description: `Missing TENANTS_MS_URL env variable`,
+        });
+      }
+      if (!updateRoleDto.tenantCreatorId) {
+        this.logger.error(`The tenant with id ${tenantCreatorId} was not supplied`);
+        throw new NotFoundException('tenantCreatorId not supplied', {
+          cause: new Error(),
+          description: `The tenant with id ${tenantCreatorId} was not supplied. Please supply a valid one when including the tenantSpecific prop!`,
+        });
+      }
+      try {
+        this.logger.log(`looking for tenant with id:${tenantCreatorId}`);
+        const foundTenantCreator = await fetchTenants({ ids: [tenantCreatorId] }, `${url}t...",4,IF,271,,,11,BabelNodeInfo
+47244640301,CONTROL_STRUCTURE,3,,"if (url === 'error') {
+        this.logger.error(`Missing TENANTS_MS_URL env variable`);
+        throw new NotFoundException('Role  not found', {
+          cause: new Error(),
+          description: `Missing TENANTS_MS_URL env variable`,
+        });
+      }",6,IF,274,,,3,BabelNodeInfo
+47244640302,CONTROL_STRUCTURE,4,,"if (!updateRoleDto.tenantCreatorId) {
+        this.logger.error(`The tenant with id ${tenantCreatorId} was not supplied`);
+        throw new NotFoundException('tenantCreatorId not supplied', {
+          cause: new Error(),
+          description: `The tenant with id ${tenantCreatorId} was not supplied. Please supply a valid one when including the tenantSpecific prop!`,
+        });
+      }",6,IF,281,,,4,BabelNodeInfo
+47244640303,CONTROL_STRUCTURE,5,,"try {
+        this.logger.log(`looking for tenant with id:${tenantCreatorId}`);
+        const foundTenantCreator = await fetchTenants({ ids: [tenantCreatorId] }, `${url}tenants/many`);
+        if (foundTenantCreator.length < 1) {
+          this.logger.error(`The tenant with id ${tenantCreatorId} was not found`);
+          throw new NotFoundException('Tenant  not found', {
+            cause: new Error(),
+            description: `The tenant with id ${tenantCreatorId} was not found`,
+          });
+        }
+      } catch (e) {
+        this.logger.error(`An error has occurred`);
+        this.logger.error(e);
+      }",6,TRY,288,,,5,BabelNodeInfo
+47244640304,CONTROL_STRUCTURE,3,,"if (foundTenantCreator.length < 1) {
+          this.logger.error(`The tenant with id ${tenantCreatorId} was not found`);
+          throw new NotFoundException('Tenant  not found', {
+            cause: new Error(),
+            description: `The tenant with id ${tenantCreatorId} was not found`,
+          });
+        }",8,IF,291,,,3,BabelNodeInfo
+47244640305,CONTROL_STRUCTURE,2,,"catch (e) {
+        this.logger.error(`An error has occurred`);
+        this.logger.error(e);
+      }",8,CATCH,298,,,2,BabelNodeInfo
+47244640306,CONTROL_STRUCTURE,13,,"if (updateRoleDto.tenantTypesIds && updateRoleDto.tenantTypesIds.length > 0) {
+      this.logger.log(`tenant types: ${updateRoleDto.tenantTypesIds}`);
+      const url = process.env.TENANTS_MS_URL || 'error';
+      if (url === 'error') {
+        this.logger.error(`Missing TENANTS_MS_URL env variable`);
+        throw new NotFoundException('TENANTS_MS_URL env variable not found', {
+          cause: new Error(),
+          description: `Missing TENANTS_MS_URL env variable`,
+        });
+      }
+      try {
+        foundTenantTypes = await fetchTenants({ ids: updateRoleDto.tenantTypesIds }, `${url}tenant-types/many`);
+        if (foundTenantTypes.length < 1) {
+          this.logger.error(`The tenant type with id ${tenantCreatorId} was not found`);
+          throw new NotFoundException('Tenant type not found', {
+            cause: new Error(),
+            description: `The tenant type with id ${tenantCreatorId} was not found`,
+          });
+        }
+      } catch (e) {
+        this.logger....",4,IF,304,,,13,BabelNodeInfo
+47244640307,CONTROL_STRUCTURE,3,,"if (url === 'error') {
+        this.logger.error(`Missing TENANTS_MS_URL env variable`);
+        throw new NotFoundException('TENANTS_MS_URL env variable not found', {
+          cause: new Error(),
+          description: `Missing TENANTS_MS_URL env variable`,
+        });
+      }",6,IF,307,,,3,BabelNodeInfo
+47244640308,CONTROL_STRUCTURE,4,,"try {
+        foundTenantTypes = await fetchTenants({ ids: updateRoleDto.tenantTypesIds }, `${url}tenant-types/many`);
+        if (foundTenantTypes.length < 1) {
+          this.logger.error(`The tenant type with id ${tenantCreatorId} was not found`);
+          throw new NotFoundException('Tenant type not found', {
+            cause: new Error(),
+            description: `The tenant type with id ${tenantCreatorId} was not found`,
+          });
+        }
+      } catch (e) {
+        this.logger.error(`An error has occurred`);
+        this.logger.error(e);
+        throw e;
+      }",6,TRY,314,,,4,BabelNodeInfo
+47244640309,CONTROL_STRUCTURE,2,,"if (foundTenantTypes.length < 1) {
+          this.logger.error(`The tenant type with id ${tenantCreatorId} was not found`);
+          throw new NotFoundException('Tenant type not found', {
+            cause: new Error(),
+            description: `The tenant type with id ${tenantCreatorId} was not found`,
+          });
+        }",8,IF,316,,,2,BabelNodeInfo
+47244640310,CONTROL_STRUCTURE,2,,"catch (e) {
+        this.logger.error(`An error has occurred`);
+        this.logger.error(e);
+        throw e;
+      }",8,CATCH,323,,,2,BabelNodeInfo
+47244640311,CONTROL_STRUCTURE,15,,"if (updateRoleDto.tenantTypesIds)
+      roleToUpdate.tenantTypes =
+        foundTenantTypes.length === 0 && updateRoleDto.tenantTypesIds.length === 0 ? [] : foundTenantTypes;",4,IF,336,,,15,BabelNodeInfo
+47244640312,CONTROL_STRUCTURE,3,,"if (!roleToDelete) {
+      this.logger.error(`The tenant with id ${id} was not found`);
+      throw new NotFoundException('Role  not found', {
+        cause: new Error(),
+        description: `The role with id ${id} was not found`,
+      });
+    }",4,IF,358,,,3,BabelNodeInfo
+47244640313,CONTROL_STRUCTURE,6,,"if (!foundTenant) {
+      this.logger.error(`Invalid Tenant, does not exist any tenant with id ${tenant}`);
+      throw new NotFoundException('Invalid Tenant', {
+        cause: new Error(),
+        description: `Invalid Tenant, does not exist any tenant with id ${tenant}`,
+      });
+    }",4,IF,30,,,6,BabelNodeInfo
+47244640314,CONTROL_STRUCTURE,8,,"if (!foundRole) {
+      this.logger.error(`Invalid Role, does not exist any role with id ${role}`);
+      throw new NotFoundException('Invalid Role', {
+        cause: new Error(),
+        description: `Invalid Role, does not exist any role with id ${role}`,
+      });
+    }",4,IF,40,,,8,BabelNodeInfo
+47244640315,CONTROL_STRUCTURE,10,,"if (!foundRoleAlias) {
+      this.logger.error(`Invalid RoleAlias, does not exist any role alias with id ${roleAlias}, for role ${role}`);
+      throw new NotFoundException('Invalid RoleAlias', {
+        cause: new Error(),
+        description: `Invalid RoleAlias, does not exist any role alias with id ${roleAlias}, for role ${role}`,
+      });
+    }",4,IF,57,,,10,BabelNodeInfo
+47244640316,CONTROL_STRUCTURE,12,,"if (existingTenantRoleAliases) {
+      this.logger.error(
+        `Entry Already Exists with id ${existingTenantRoleAliases.id}, can only have one for tenant ${tenant} and role ${role}`,
+      );
+      throw new ForbiddenException('Entry Already Exists', {
+        cause: new Error(),
+        description: `Entry Already Exists with id ${existingTenantRoleAliases.id}, can only have one for tenant ${tenant} and role ${role}`,
+      });
+    }",4,IF,73,,,12,BabelNodeInfo
+47244640317,CONTROL_STRUCTURE,7,,"if (ids && ids.length > 0) query = query.andWhere('TenantRoleAliases.id IN (:...ids) ', { ids });",4,IF,119,,,7,BabelNodeInfo
+47244640318,CONTROL_STRUCTURE,8,,"if (roles && roles.length > 0) query = query.andWhere('TenantRoleAliases.role IN (:...roles) ', { roles });",4,IF,121,,,8,BabelNodeInfo
+47244640319,CONTROL_STRUCTURE,9,,"if (roleAliases && roleAliases.length > 0)
+      query = query.andWhere('TenantRoleAliases.roleAlias IN (:...roleAliases) ', { roleAliases });",4,IF,123,,,9,BabelNodeInfo
+47244640320,CONTROL_STRUCTURE,10,,"if (tenants && tenants.length > 0)
+      query = query.andWhere('TenantRoleAliases.tenant IN (:...tenants) ', { tenants });",4,IF,126,,,10,BabelNodeInfo
+47244640321,CONTROL_STRUCTURE,11,,"if (enabled != null) query = query.andWhere('TenantRoleAliases.enabled = :enabled ', { enabled });",4,IF,129,,,11,BabelNodeInfo
+47244640322,CONTROL_STRUCTURE,6,,if (!tenantRoleAliasesToUpdate) return null;,4,IF,143,,,6,BabelNodeInfo
+47244640323,CONTROL_STRUCTURE,9,,"if (tenant || role) {
+      const existingTenantRoleAliases = await this.tenantRoleAliasRepository
+        .createQueryBuilder('TenantRoleAliases')
+        .leftJoinAndSelect('TenantRoleAliases.tenant', 'Tenant')
+        .leftJoinAndSelect('TenantRoleAliases.role', 'Role')
+        .leftJoinAndSelect('TenantRoleAliases.roleAlias', 'RoleAlias')
+        .andWhere('Tenant.id = :newTenantId', { newTenantId })
+        .andWhere('Role.id = :newRole', { newRole })
+        .getOne();
+      if (existingTenantRoleAliases && existingTenantRoleAliases?.id != id) {
+        this.logger.error(
+          `Entry Already Exists with id ${existingTenantRoleAliases.id}, can only have one for tenant ${newTenantId} and role ${newRole}`,
+        );
+        throw new ForbiddenException('Entry Already Exists', {
+          cause: new Error(),
+          description: `Entry Already Exists with id ${existingTenantRoleAliases.id}, can only have one for tenant ${newTenantId} and role ${newRole}`,
+        });
+     ...",4,IF,147,,,9,BabelNodeInfo
+47244640324,CONTROL_STRUCTURE,2,,"if (existingTenantRoleAliases && existingTenantRoleAliases?.id != id) {
+        this.logger.error(
+          `Entry Already Exists with id ${existingTenantRoleAliases.id}, can only have one for tenant ${newTenantId} and role ${newRole}`,
+        );
+        throw new ForbiddenException('Entry Already Exists', {
+          cause: new Error(),
+          description: `Entry Already Exists with id ${existingTenantRoleAliases.id}, can only have one for tenant ${newTenantId} and role ${newRole}`,
+        });
+      }",6,IF,156,,,2,BabelNodeInfo
+47244640325,CONTROL_STRUCTURE,10,,"if (tenant) {
+      const foundTenant = await this.tenantRepository.createQueryBuilder().where('id = :tenant', { tenant }).getOne();
+      if (!foundTenant) {
+        this.logger.error(`Invalid Tenant, does not exist any tenant with id ${tenant}`);
+        throw new NotFoundException('Invalid Tenant', {
+          cause: new Error(),
+          description: `Invalid Tenant, does not exist any tenant with id ${tenant}`,
+        });
+      }
+      tenantRoleAliasesToUpdate.tenant = foundTenant;
+    }",4,IF,167,,,10,BabelNodeInfo
+47244640326,CONTROL_STRUCTURE,2,,"if (!foundTenant) {
+        this.logger.error(`Invalid Tenant, does not exist any tenant with id ${tenant}`);
+        throw new NotFoundException('Invalid Tenant', {
+          cause: new Error(),
+          description: `Invalid Tenant, does not exist any tenant with id ${tenant}`,
+        });
+      }",6,IF,169,,,2,BabelNodeInfo
+47244640327,CONTROL_STRUCTURE,11,,"if (role) {
+      const foundRole = await this.rolesRepository.createQueryBuilder().where('id = :role', { role }).getOne();
+
+      if (!foundRole) {
+        this.logger.error(`Invalid Role, does not exist any role with id ${role}`);
+        throw new NotFoundException('Invalid Role', {
+          cause: new Error(),
+          description: `Invalid Role, does not exist any role with id ${role}`,
+        });
+      }
+      tenantRoleAliasesToUpdate.role = foundRole;
+    }",4,IF,179,,,11,BabelNodeInfo
+47244640328,CONTROL_STRUCTURE,2,,"if (!foundRole) {
+        this.logger.error(`Invalid Role, does not exist any role with id ${role}`);
+        throw new NotFoundException('Invalid Role', {
+          cause: new Error(),
+          description: `Invalid Role, does not exist any role with id ${role}`,
+        });
+      }",6,IF,182,,,2,BabelNodeInfo
+47244640329,CONTROL_STRUCTURE,12,,"if (roleAlias) {
+      const foundRoleAlias = await this.rolesAliasRepository
+        .createQueryBuilder('RoleAlias')
+        .leftJoinAndSelect('RoleAlias.tenantRoleAlias', 'tenantRoleAlias')
+        .leftJoinAndSelect('tenantRoleAlias.tenant', 'tenant')
+        .leftJoinAndSelect('tenantRoleAlias.role', 'tenantRoleAliasRole')
+        .leftJoinAndSelect('RoleAlias.role', 'role')
+        .andWhere('RoleAlias.id = :roleAlias', { roleAlias })
+        .andWhere('role.id = :newRole', { newRole })
+        .getOne();
+
+      if (!foundRoleAlias) {
+        this.logger.error(`Invalid RoleAlias, does not exist any role alias with id ${roleAlias}, for role ${role}`);
+        throw new NotFoundException('Invalid RoleAlias', {
+          cause: new Error(),
+          description: `Invalid RoleAlias, does not exist any role alias with id ${roleAlias}, for role ${newRole}`,
+        });
+      }
+      tenantRoleAliasesToUpdate.roleAlias = foundRoleAlias;
+    }",4,IF,191,,,12,BabelNodeInfo
+47244640330,CONTROL_STRUCTURE,2,,"if (!foundRoleAlias) {
+        this.logger.error(`Invalid RoleAlias, does not exist any role alias with id ${roleAlias}, for role ${role}`);
+        throw new NotFoundException('Invalid RoleAlias', {
+          cause: new Error(),
+          description: `Invalid RoleAlias, does not exist any role alias with id ${roleAlias}, for role ${newRole}`,
+        });
+      }",6,IF,202,,,2,BabelNodeInfo
+47244640331,CONTROL_STRUCTURE,13,,if (enabled != null) tenantRoleAliasesToUpdate.enabled = enabled;,4,IF,211,,,13,BabelNodeInfo
+47244640332,CONTROL_STRUCTURE,2,,"if (!tenantRoleAliasToRemove) {
+      this.logger.error(`The tenant role alias with id ${id} was not found`);
+      throw new NotFoundException('Tenant role alias not found', {
+        cause: new Error(),
+        description: `The tenant role alias with id ${id} was not found`,
+      });
+    }",4,IF,226,,,2,BabelNodeInfo
+47244640333,CONTROL_STRUCTURE,5,,"if (tenantRoleAliasNew || roleId) {
+      const tenantRoleAliasN: number[] = [];
+      const tenantRoleAliasesToDelete: TenantRoleAliases[] = [];
+
+      if (!tenantRoleAliasNew) {
+        for (const t of roleAliasToUpdate.tenantRoleAlias) {
+          tenantRoleAliasN.push(t.tenant.id);
+        }
+      } else {
+        tenantRoleAliasN.push(...tenantRoleAliasNew);
+      }
+
+      if (tenantRoleAliasN && tenantRoleAliasN.length > 0) {
+        for (const tenant of tenantRoleAliasN) {
+          const foundTenantRoleAliases = await this.tenantRoleAliasRepository
+            .createQueryBuilder('Tenants')
+            .andWhere('Tenants.tenant = :tenant', { tenant })
+            .andWhere('Tenants.role = :roleId', { roleId: roleId || roleAliasToUpdate.role?.id })
+            .getOne();
+          if (foundTenantRoleAliases) {
+            foundTenantRoleAliases.roleAlias = roleAliasToUpdate;
+            this.tenantRoleAliasRepository.save(foundTenantRoleAliases);
+            collection.push(f...",4,IF,244,,,5,BabelNodeInfo
+47244640334,CONTROL_STRUCTURE,3,,"if (!tenantRoleAliasNew) {
+        for (const t of roleAliasToUpdate.tenantRoleAlias) {
+          tenantRoleAliasN.push(t.tenant.id);
+        }
+      } else {
+        tenantRoleAliasN.push(...tenantRoleAliasNew);
+      }",6,IF,248,,,3,BabelNodeInfo
+47244640335,CONTROL_STRUCTURE,4,,"for (const t of roleAliasToUpdate.tenantRoleAlias) {
+          tenantRoleAliasN.push(t.tenant.id);
+        }",8,WHILE,249,,,4,BabelNodeInfo
+47244640336,CONTROL_STRUCTURE,4,,"if (tenantRoleAliasN && tenantRoleAliasN.length > 0) {
+        for (const tenant of tenantRoleAliasN) {
+          const foundTenantRoleAliases = await this.tenantRoleAliasRepository
+            .createQueryBuilder('Tenants')
+            .andWhere('Tenants.tenant = :tenant', { tenant })
+            .andWhere('Tenants.role = :roleId', { roleId: roleId || roleAliasToUpdate.role?.id })
+            .getOne();
+          if (foundTenantRoleAliases) {
+            foundTenantRoleAliases.roleAlias = roleAliasToUpdate;
+            this.tenantRoleAliasRepository.save(foundTenantRoleAliases);
+            collection.push(foundTenantRoleAliases);
+          } else {
+            try {
+              const newTenantRoleALias = await this.create({
+                role: roleId || (roleAliasToUpdate.role?.id ?? 0),
+                enabled: roleAliasToUpdate.enabled,
+                tenant,
+                roleAlias: roleAliasToUpdate.id,
+              });
+              collection.push(newTenantRoleALias)...",6,IF,256,,,4,BabelNodeInfo
+47244640337,CONTROL_STRUCTURE,4,,"for (const tenant of tenantRoleAliasN) {
+          const foundTenantRoleAliases = await this.tenantRoleAliasRepository
+            .createQueryBuilder('Tenants')
+            .andWhere('Tenants.tenant = :tenant', { tenant })
+            .andWhere('Tenants.role = :roleId', { roleId: roleId || roleAliasToUpdate.role?.id })
+            .getOne();
+          if (foundTenantRoleAliases) {
+            foundTenantRoleAliases.roleAlias = roleAliasToUpdate;
+            this.tenantRoleAliasRepository.save(foundTenantRoleAliases);
+            collection.push(foundTenantRoleAliases);
+          } else {
+            try {
+              const newTenantRoleALias = await this.create({
+                role: roleId || (roleAliasToUpdate.role?.id ?? 0),
+                enabled: roleAliasToUpdate.enabled,
+                tenant,
+                roleAlias: roleAliasToUpdate.id,
+              });
+              collection.push(newTenantRoleALias);
+            } catch (error) {
+              this.logger.error...",8,WHILE,257,,,4,BabelNodeInfo
+47244640338,CONTROL_STRUCTURE,2,,"if (foundTenantRoleAliases) {
+            foundTenantRoleAliases.roleAlias = roleAliasToUpdate;
+            this.tenantRoleAliasRepository.save(foundTenantRoleAliases);
+            collection.push(foundTenantRoleAliases);
+          } else {
+            try {
+              const newTenantRoleALias = await this.create({
+                role: roleId || (roleAliasToUpdate.role?.id ?? 0),
+                enabled: roleAliasToUpdate.enabled,
+                tenant,
+                roleAlias: roleAliasToUpdate.id,
+              });
+              collection.push(newTenantRoleALias);
+            } catch (error) {
+              this.logger.error(`${error} when updating tenant-role-alias asociation.`);
+              throw new ForbiddenException('Cannot asociate role alias with tenant', {
+                cause: new Error(),
+                description: `${error} when updating tenant-role-alias asociation.`,
+              });
+            }
+          }",10,IF,263,,,2,BabelNodeInfo
+47244640339,CONTROL_STRUCTURE,1,,"try {
+              const newTenantRoleALias = await this.create({
+                role: roleId || (roleAliasToUpdate.role?.id ?? 0),
+                enabled: roleAliasToUpdate.enabled,
+                tenant,
+                roleAlias: roleAliasToUpdate.id,
+              });
+              collection.push(newTenantRoleALias);
+            } catch (error) {
+              this.logger.error(`${error} when updating tenant-role-alias asociation.`);
+              throw new ForbiddenException('Cannot asociate role alias with tenant', {
+                cause: new Error(),
+                description: `${error} when updating tenant-role-alias asociation.`,
+              });
+            }",12,TRY,268,,,1,BabelNodeInfo
+47244640340,CONTROL_STRUCTURE,2,,"catch (error) {
+              this.logger.error(`${error} when updating tenant-role-alias asociation.`);
+              throw new ForbiddenException('Cannot asociate role alias with tenant', {
+                cause: new Error(),
+                description: `${error} when updating tenant-role-alias asociation.`,
+              });
+            }",14,CATCH,276,,,2,BabelNodeInfo
+47244640341,CONTROL_STRUCTURE,7,,"if (tenantRoleAliasesToDelete && tenantRoleAliasesToDelete.length > 0) {
+        for (const t of tenantRoleAliasesToDelete) {
+          await this.tenantRoleAliasRepository.delete(t.id);
+        }
+      }",6,IF,310,,,7,BabelNodeInfo
+47244640342,CONTROL_STRUCTURE,4,,"for (const t of tenantRoleAliasesToDelete) {
+          await this.tenantRoleAliasRepository.delete(t.id);
+        }",8,WHILE,311,,,4,BabelNodeInfo
+47244640343,CONTROL_STRUCTURE,4,,"if (existingTenantUrl) {
+      this.logger.error(`The url ""${url}"" is already used and needs to be unique`);
+      throw new ForbiddenException('url is already in use', {
+        cause: new Error(),
+        description: `The url ""${url}"" is already used and needs to be unique`,
+      });
+    }",4,IF,24,,,4,BabelNodeInfo
+47244640344,CONTROL_STRUCTURE,5,,"if (createTenantDto.tenantTypeIds && createTenantDto.tenantTypeIds.length > 0) {
+      this.logger.log(`tenant types: ${createTenantDto.tenantTypeIds}`);
+    }",4,IF,31,,,5,BabelNodeInfo
+47244640345,CONTROL_STRUCTURE,3,,"if (this.tenantCollection.length < 1) {
+      this.logger.error(`The tenant with id ${id} was not found`);
+      throw new NotFoundException('Tenant  not found', {
+        cause: new Error(),
+        description: `The tenant with id ${id} was not found`,
+      });
+    }",4,IF,81,,,3,BabelNodeInfo
+47244640346,CONTROL_STRUCTURE,3,,"if (ids && ids.length > 0) {
+      this.logger.log(`Finding by ids: ${ids}`);
+      query = query.andWhere('Tenants.id IN (:...ids) ', { ids });
+    }",4,IF,121,,,3,BabelNodeInfo
+47244640347,CONTROL_STRUCTURE,4,,"if (names && names.length > 0) {
+      this.logger.log(`Finding by names: ${names}`);
+      query = query.andWhere('Tenant.name IN (:...names) ', { names: names.map((name) => name) });
+    }",4,IF,125,,,4,BabelNodeInfo
+47244640348,CONTROL_STRUCTURE,5,,"if (urls && urls.length > 0) {
+      this.logger.log(`Finding by urls: ${urls}`);
+      query = query.andWhere('Tenant.urls IN (:...urls) ', { urls: urls.map((url) => url) });
+    }",4,IF,129,,,5,BabelNodeInfo
+47244640349,CONTROL_STRUCTURE,6,,"if (descriptions && descriptions.length > 0) {
+      this.logger.log(`Finding by descriptions: ${descriptions}`);
+      query = query.andWhere('Tenant.description IN (:...descriptions) ', { descriptions });
+    }",4,IF,133,,,6,BabelNodeInfo
+47244640350,CONTROL_STRUCTURE,7,,"if (parentIds && parentIds.length > 0) {
+      this.logger.log(`Finding by parent Ids: ${parentIds}`);
+      query = query.andWhere('parent.id IN (:...parentIds) ', { parentIds });
+    }",4,IF,137,,,7,BabelNodeInfo
+47244640351,CONTROL_STRUCTURE,8,,"if (roleAliasesIds && roleAliasesIds.length > 0) {
+      this.logger.log(`Finding by roleAliases Ids: ${roleAliasesIds}`);
+      query = query.andWhere('tenantRoleAlias.id IN (:...roleAliasesIds) ', { roleAliasesIds });
+    }",4,IF,141,,,8,BabelNodeInfo
+47244640352,CONTROL_STRUCTURE,9,,"if (tenantTypeIds && tenantTypeIds.length > 0) {
+      this.logger.log(`Finding by tenantType Ids: ${tenantTypeIds}`);
+      query = query.andWhere('tenantType.id IN (:...tenantTypeIds) ', { tenantTypeIds });
+    }",4,IF,145,,,9,BabelNodeInfo
+47244640353,CONTROL_STRUCTURE,10,,"if (childrenIds && childrenIds.length > 0) {
+      this.logger.log(`Finding by children Ids: ${childrenIds}`);
+      query = query.andWhere('children.id IN (:...childrenIds) ', { childrenIds });
+    }",4,IF,149,,,10,BabelNodeInfo
+47244640354,CONTROL_STRUCTURE,11,,"if (coverageZoneIds && coverageZoneIds.length > 0) {
+      this.logger.log(`Finding by coverageZone Ids: ${coverageZoneIds}`);
+      query = query.andWhere('coverageZone.id IN (:...coverageZoneIds) ', { coverageZoneIds });
+    }",4,IF,153,,,11,BabelNodeInfo
+47244640355,CONTROL_STRUCTURE,12,,"if (userIds && userIds.length > 0) {
+      this.logger.log(`Finding by user Ids: ${userIds}`);
+      query = query.andWhere('users.id IN (:...userIds)', { userIds });
+    }",4,IF,157,,,12,BabelNodeInfo
+47244640356,CONTROL_STRUCTURE,13,,"if (enabled != null) {
+      this.logger.log(`Finding by enabled: ${enabled}`);
+      query = query.andWhere('Tenant.enabled = :enabled ', { enabled });
+    }",4,IF,161,,,13,BabelNodeInfo
+47244640357,CONTROL_STRUCTURE,4,,"if (!tenantToUpdate) {
+      this.logger.error(`The tenant with id ${id} was not found`);
+      throw new NotFoundException('Tenant not found', {
+        cause: new Error(),
+        description: `The tenant with id ${id} was not found`,
+      });
+    }",4,IF,191,,,4,BabelNodeInfo
+47244640358,CONTROL_STRUCTURE,5,,"if (url) {
+      const existingTenantTag = await this.tenantRepository.findOneBy({
+        url: url.toLowerCase().trim(),
+      });
+      if (existingTenantTag.id !== id) {
+        this.logger.error(`The url ""${url}"" is already used and needs to be unique`);
+        throw new ForbiddenException('url is already in use', {
+          cause: new Error(),
+          description: `The url ""${url}"" is already used and needs to be unique`,
+        });
+      }
+    }",4,IF,198,,,5,BabelNodeInfo
+47244640359,CONTROL_STRUCTURE,2,,"if (existingTenantTag.id !== id) {
+        this.logger.error(`The url ""${url}"" is already used and needs to be unique`);
+        throw new ForbiddenException('url is already in use', {
+          cause: new Error(),
+          description: `The url ""${url}"" is already used and needs to be unique`,
+        });
+      }",6,IF,202,,,2,BabelNodeInfo
+47244640360,CONTROL_STRUCTURE,3,,"if (!tenantToDisable) {
+      this.logger.error(`The tenant with id ${id} was not found`);
+      throw new NotFoundException('Tenant not found', {
+        cause: new Error(),
+        description: `The tenant with id ${id} was not found`,
+      });
+    }",4,IF,238,,,3,BabelNodeInfo
+47244640361,CONTROL_STRUCTURE,3,,"if (ids && ids.length > 0) {
+      this.logger.log(`Finding by ids: ${ids}`);
+      query = query.andWhere('Tenants.id IN (:...ids) ', { ids });
+      this.tenantCollection = await query.getMany();
+      this.logger.log(`Found ${this.tenantCollection.length} Tenant Types`);
+      return this.tenantCollection;
+    } else {
+      return [];
+    }",4,IF,255,,,3,BabelNodeInfo
+47244640362,CONTROL_STRUCTURE,9,,"if (foundUser.length < 0) {
+      this.logger.error('Invalid User or is not registered for that Tenant');
+      throw new NotFoundException('Invalid User or is not registered for that Tenant', {
+        cause: new Error(),
+        description: `Invalid User ${userId} or is not registered for Tenant ${tenantId}`,
+      });
+    }",4,IF,41,,,9,BabelNodeInfo
+47244640363,CONTROL_STRUCTURE,11,,"if (foundUserRoleByTenants.length > 0) {
+      this.logger.error(
+        `There is a role ${roleId} with user ${userId} in the tenant ${tenantId}, and needs to be unique. Object ${foundUserRoleByTenants[0].id} Found ${foundUserRoleByTenants.length}`,
+      );
+      throw new ForbiddenException('Violation of unique constraint', {
+        cause: new Error(),
+        description: `There is a role ${roleId} with that user ${userId} in the tenant ${tenantId}, and needs to be unique`,
+      });
+    }",4,IF,55,,,11,BabelNodeInfo
+47244640364,CONTROL_STRUCTURE,14,,"if (foundTenant.length <= 0) {
+      this.logger.error('Invalid Tenant!');
+      throw new ForbiddenException('Invalid Tenant!', {
+        cause: new Error(),
+        description: `Invalid Tenant ${tenantId}!`,
+      });
+    }",4,IF,68,,,14,BabelNodeInfo
+47244640365,CONTROL_STRUCTURE,18,,"if (foundRole.length <= 0) {
+      this.logger.error('Invalid Role or is not registered for that tenant type');
+      throw new NotFoundException('Invalid Role or is not registered for that tenant type', {
+        cause: new Error(),
+        description: `Invalid Role ${roleId} or is not registered for tenant type ${tenantTypes}`,
+      });
+    }",4,IF,81,,,18,BabelNodeInfo
+47244640366,CONTROL_STRUCTURE,19,,"if (roleAliasId) {
+      const roleId = foundRole[0].id;
+      this.logger.log(`Finding role alias ${roleAliasId} for the role ${roleId} ...`);
+
+      const foundRoleAlias = await this.roleAliasService.findByMany({ ids: [roleAliasId], roleIds: [roleId] });
+      if (foundRoleAlias.length <= 0) {
+        this.logger.error('Invalid Role Alias or is not registered for the selected role');
+        throw new NotFoundException('Invalid Role Alias or is not registered for the selected role', {
+          cause: new Error(),
+          description: `Invalid Role Alias ${roleAliasId} or is not registered for the selected role ${roleId}`,
+        });
+      }
+      newUserRoleByTenants.roleAlias = foundRoleAlias[0];
+    }",4,IF,89,,,19,BabelNodeInfo
+47244640367,CONTROL_STRUCTURE,4,,"if (foundRoleAlias.length <= 0) {
+        this.logger.error('Invalid Role Alias or is not registered for the selected role');
+        throw new NotFoundException('Invalid Role Alias or is not registered for the selected role', {
+          cause: new Error(),
+          description: `Invalid Role Alias ${roleAliasId} or is not registered for the selected role ${roleId}`,
+        });
+      }",6,IF,94,,,4,BabelNodeInfo
+47244640368,CONTROL_STRUCTURE,23,,if (enabled != null) newUserRoleByTenants.enabled = enabled;,4,IF,107,,,23,BabelNodeInfo
+47244640369,CONTROL_STRUCTURE,9,,"if (ids) {
+      this.logger.log(`with id ${ids} ...`);
+      query = query.andWhere('userRoleByTenants.id IN (:...ids)', { ids });
+    }",4,IF,134,,,9,BabelNodeInfo
+47244640370,CONTROL_STRUCTURE,10,,"if (userIds && userIds.length > 0) {
+      this.logger.log(`with userIds ${userIds} ...`);
+      query = query.andWhere('user.id IN (:...userIds)', { userIds });
+    }",4,IF,138,,,10,BabelNodeInfo
+47244640371,CONTROL_STRUCTURE,11,,"if (tenantIds && tenantIds.length > 0) {
+      this.logger.log(`with tenantIds ${tenantIds} ...`);
+      query = query.andWhere('tenants.id IN (:...tenantIds)', { tenantIds });
+    }",4,IF,142,,,11,BabelNodeInfo
+47244640372,CONTROL_STRUCTURE,12,,"if (roleIds && roleIds.length > 0) {
+      this.logger.log(`with roleIds ${roleIds} ...`);
+      query = query.andWhere('role.id IN (:...roleIds)', { roleIds });
+    }",4,IF,146,,,12,BabelNodeInfo
+47244640373,CONTROL_STRUCTURE,13,,"if (roleAliasIds && roleAliasIds.length > 0) {
+      this.logger.log(`with roleAliasIds ${roleAliasIds} ...`);
+      query = query.andWhere('roleAlias.id IN (:...roleAliasIds)', { roleAliasIds });
+    }",4,IF,150,,,13,BabelNodeInfo
+47244640374,CONTROL_STRUCTURE,14,,"if (enabled != null) {
+      this.logger.log(`with enabled property ${enabled} ...`);
+      query = query.andWhere('userRoleByTenants.enabled = :enabled', { enabled });
+    }",4,IF,154,,,14,BabelNodeInfo
+47244640375,CONTROL_STRUCTURE,1,,"if (existingRole.id !== userRoleByTenantsToUpdate.id) {
+          this.logger.error(
+            `There is a role ${newRole} with that user ${newUser} in the tenant ${newTenant}, and needs to be unique`,
+          );
+          throw new ForbiddenException('Violation of unique constraint', {
+            cause: new Error(),
+            description: `There is a role ${newRole} with that user ${newUser} in the tenant ${newTenant}, and needs to be unique`,
+          });
+        }",8,IF,244,,,1,BabelNodeInfo
+47244640376,CONTROL_STRUCTURE,7,,"if (!userRoleByTenantsToUpdate) {
+      this.logger.error('Property to update not found');
+      throw new NotFoundException('Not found', {
+        cause: new Error(),
+        description: `Property to update not found`,
+      });
+    }",4,IF,172,,,7,BabelNodeInfo
+47244640377,CONTROL_STRUCTURE,8,,if (enabled != null) userRoleByTenantsToUpdate.enabled = enabled;,4,IF,180,,,8,BabelNodeInfo
+47244640378,CONTROL_STRUCTURE,12,,"if (userId) {
+      const foundUser = await this.usersService.findByMany({ ids: [userId], tenantsIds: [newTenant] });
+      if (foundUser.length <= 0) {
+        this.logger.error('Invalid User or is not registered for that Tenant');
+        throw new NotFoundException('Invalid User or is not registered for that Tenant', {
+          cause: new Error(),
+          description: `Invalid User ${userId} or is not registered for Tenant ${tenantId}`,
+        });
+      }
+      userRoleByTenantsToUpdate.user = foundUser[0];
+    }",4,IF,186,,,12,BabelNodeInfo
+47244640379,CONTROL_STRUCTURE,2,,"if (foundUser.length <= 0) {
+        this.logger.error('Invalid User or is not registered for that Tenant');
+        throw new NotFoundException('Invalid User or is not registered for that Tenant', {
+          cause: new Error(),
+          description: `Invalid User ${userId} or is not registered for Tenant ${tenantId}`,
+        });
+      }",6,IF,188,,,2,BabelNodeInfo
+47244640380,CONTROL_STRUCTURE,14,,"if (foundTenant.length <= 0) {
+      this.logger.error('Invalid Tenant!');
+      throw new ForbiddenException('Invalid Tenant!', {
+        cause: new Error(),
+        description: `Invalid Tenant ${newTenant}!`,
+      });
+    }",4,IF,200,,,14,BabelNodeInfo
+47244640381,CONTROL_STRUCTURE,17,,"if (roleId) {
+      const foundRole = await this.rolesService.findByMany({ ids: [roleId], tenantTypesIds: tenantTypes });
+      if (foundRole.length <= 0) {
+        this.logger.error('Invalid Role or is not registered for that tenant type');
+        throw new NotFoundException('Invalid Role or is not registered for that tenant type', {
+          cause: new Error(),
+          description: `Invalid Role ${roleId} or is not registered for that tenant type ${tenantTypes}`,
+        });
+      }
+      userRoleByTenantsToUpdate.role = foundRole[0];
+    }",4,IF,212,,,17,BabelNodeInfo
+47244640382,CONTROL_STRUCTURE,2,,"if (foundRole.length <= 0) {
+        this.logger.error('Invalid Role or is not registered for that tenant type');
+        throw new NotFoundException('Invalid Role or is not registered for that tenant type', {
+          cause: new Error(),
+          description: `Invalid Role ${roleId} or is not registered for that tenant type ${tenantTypes}`,
+        });
+      }",6,IF,214,,,2,BabelNodeInfo
+47244640383,CONTROL_STRUCTURE,18,,"if (roleAliasId) {
+      const foundRoleAlias = await this.roleAliasService.findByMany({ ids: [roleAliasId], roleIds: [newRole] });
+      if (foundRoleAlias.length <= 0) {
+        this.logger.error('Invalid Role Alias or is not registered for the selected role');
+        throw new NotFoundException('Invalid Role Alias or is not registered for the selected role', {
+          cause: new Error(),
+          description: `Invalid Role Alias ${roleAliasId} or is not registered for the selected role ${newRole}`,
+        });
+      }
+      userRoleByTenantsToUpdate.roleAlias = foundRoleAlias[0];
+    }",4,IF,224,,,18,BabelNodeInfo
+47244640384,CONTROL_STRUCTURE,2,,"if (foundRoleAlias.length <= 0) {
+        this.logger.error('Invalid Role Alias or is not registered for the selected role');
+        throw new NotFoundException('Invalid Role Alias or is not registered for the selected role', {
+          cause: new Error(),
+          description: `Invalid Role Alias ${roleAliasId} or is not registered for the selected role ${newRole}`,
+        });
+      }",6,IF,226,,,2,BabelNodeInfo
+47244640385,CONTROL_STRUCTURE,20,,"if (existingRoleByTenantsToUpdate && existingRoleByTenantsToUpdate.length > 0) {
+      existingRoleByTenantsToUpdate.forEach((existingRole) => {
+        if (existingRole.id !== userRoleByTenantsToUpdate.id) {
+          this.logger.error(
+            `There is a role ${newRole} with that user ${newUser} in the tenant ${newTenant}, and needs to be unique`,
+          );
+          throw new ForbiddenException('Violation of unique constraint', {
+            cause: new Error(),
+            description: `There is a role ${newRole} with that user ${newUser} in the tenant ${newTenant}, and needs to be unique`,
+          });
+        }
+      });
+    }",4,IF,242,,,20,BabelNodeInfo
+47244640386,CONTROL_STRUCTURE,3,,"if (!userRoleByTenantsToDisable) {
+      this.logger.error('Property to disble/enable not found');
+      throw new NotFoundException('Not found', {
+        cause: new Error(),
+        description: `Property to disable/enable not found`,
+      });
+    }",4,IF,271,,,3,BabelNodeInfo
+47244640387,CONTROL_STRUCTURE,3,,"if (!user) {
+      this.logger.error(`User with temporalId ${temporalId} not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `User with temporalId ${temporalId} not found`,
+      });
+    }",4,IF,38,,,3,BabelNodeInfo
+47244640388,CONTROL_STRUCTURE,4,,"if (user.validated) {
+      this.logger.error(`User with temporalId ${temporalId} is already verified`);
+      throw new ForbiddenException('User is already verified', {
+        cause: new Error(),
+        description: `User with temporalId ${temporalId} is already verified`,
+      });
+    }",4,IF,47,,,4,BabelNodeInfo
+47244640389,CONTROL_STRUCTURE,5,,"if (!(user.tenants && user.tenants.length > 0)) {
+      this.logger.error(`User with temporalId ${temporalId} has no tenants associated`);
+      throw new ForbiddenException('User has no tenants associated', {
+        cause: new Error(),
+        description: `User with temporalId ${temporalId} has no tenants associated`,
+      });
+    }",4,IF,56,,,5,BabelNodeInfo
+47244640390,CONTROL_STRUCTURE,10,,"if (emailSent) {
+      this.logger.log(`Verification email sent successfully to ${user.email}`);
+      user.verifiedAt = new Date();
+      await this.userRepository.save(user);
+      return true;
+    } else {
+      this.logger.error(`Failed to send verification email to ${user.email}`);
+      return false;
+    }",4,IF,74,,,10,BabelNodeInfo
+47244640391,CONTROL_STRUCTURE,3,,"if (!user) {
+      this.logger.error(`User with temporalId ${temporalId} not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `User with temporalId ${temporalId} not found`,
+      });
+    }",4,IF,99,,,3,BabelNodeInfo
+47244640392,CONTROL_STRUCTURE,4,,"if (user.validated) {
+      this.logger.error(`User with temporalId ${temporalId} is already verified`);
+      throw new ForbiddenException('User is already verified', {
+        cause: new Error(),
+        description: `User with temporalId ${temporalId} is already verified`,
+      });
+    }",4,IF,108,,,4,BabelNodeInfo
+47244640393,CONTROL_STRUCTURE,3,,"if (!user) {
+      this.logger.error(`User with id ${userId} not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `User with id ${userId} not found`,
+      });
+    }",4,IF,136,,,3,BabelNodeInfo
+47244640394,CONTROL_STRUCTURE,7,,"if (emailSent) {
+      this.logger.log(`MFA attempt email sent successfully to ${user.email}`);
+      return true;
+    } else {
+      this.logger.error(`Failed to send MFA attempt email to ${user.email}`);
+      return false;
+    }",4,IF,151,,,7,BabelNodeInfo
+47244640395,CONTROL_STRUCTURE,3,,"if (!user) {
+      this.logger.error(`User with id ${userId} not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `User with id ${userId} not found`,
+      });
+    }",4,IF,171,,,3,BabelNodeInfo
+47244640396,CONTROL_STRUCTURE,7,,"if (emailSent) {
+      this.logger.log(`MFA success email sent successfully to ${user.email}`);
+      return true;
+    } else {
+      this.logger.error(`Failed to send MFA success email to ${user.email}`);
+      return false;
+    }",4,IF,186,,,7,BabelNodeInfo
+47244640397,CONTROL_STRUCTURE,5,,"if (payload){
+      const userCreator = await this.findOne(payload.userId);
+
+      if (payload.issuer === IssuerEnum.Saas && userCreator.typeOfUser === TypeOfUser.Client  && createUserDto.typeOfUser === TypeOfUser.AvantoEmployee && !userCreator.BackOfficeAccess) {
+        this.logger.error(`Action not allowed for typeOfUser: ${userCreator.typeOfUser}`);
+        throw new ForbiddenException('insufficient permissions for this user', {
+          cause: new Error(),
+          description: `The user of typeOfUser ${userCreator.typeOfUser} doesn´t  have enough permissions to perform this action`,
+        });
+      }
+    }",4,IF,53,,,5,BabelNodeInfo
+47244640398,CONTROL_STRUCTURE,2,,"if (payload.issuer === IssuerEnum.Saas && userCreator.typeOfUser === TypeOfUser.Client  && createUserDto.typeOfUser === TypeOfUser.AvantoEmployee && !userCreator.BackOfficeAccess) {
+        this.logger.error(`Action not allowed for typeOfUser: ${userCreator.typeOfUser}`);
+        throw new ForbiddenException('insufficient permissions for this user', {
+          cause: new Error(),
+          description: `The user of typeOfUser ${userCreator.typeOfUser} doesn´t  have enough permissions to perform this action`,
+        });
+      }",6,IF,56,,,2,BabelNodeInfo
+47244640399,CONTROL_STRUCTURE,7,,"if (existingTenantEmail) {
+      this.logger.error(`The email ${email} is already used and needs to be unique`);
+      throw new ForbiddenException('email is already in use', {
+        cause: new Error(),
+        description: `The email ${email} is already used and needs to be unique`,
+      });
+    }",4,IF,66,,,7,BabelNodeInfo
+47244640400,CONTROL_STRUCTURE,8,,"if (phone) {
+      const isTakenPhone = await this.userRepository.findOneBy({ phone });
+      if (isTakenPhone) {
+        throw new ForbiddenException('phone is already in use');
+      }
+    }",4,IF,73,,,8,BabelNodeInfo
+47244640401,CONTROL_STRUCTURE,2,,"if (isTakenPhone) {
+        throw new ForbiddenException('phone is already in use');
+      }",6,IF,75,,,2,BabelNodeInfo
+47244640402,CONTROL_STRUCTURE,9,,"if (!createUserDto.typeOfUser) {
+      createUserDto.typeOfUser = TypeOfUser.Client;
+    }",4,IF,80,,,9,BabelNodeInfo
+47244640403,CONTROL_STRUCTURE,10,,"if (createUserDto.typeOfUser) {
+      if (!Object.values(TypeOfUser).includes(createUserDto.typeOfUser)) {
+        this.logger.error(`Invalid typeOfUser: ${createUserDto.typeOfUser}`);
+        throw new BadRequestException('Invalid typeOfUser value', {
+          cause: new Error(),
+          description: `The typeOfUser value ${createUserDto.typeOfUser} is invalid`,
+        });
+      }
+    }",4,IF,84,,,10,BabelNodeInfo
+47244640404,CONTROL_STRUCTURE,1,,"if (!Object.values(TypeOfUser).includes(createUserDto.typeOfUser)) {
+        this.logger.error(`Invalid typeOfUser: ${createUserDto.typeOfUser}`);
+        throw new BadRequestException('Invalid typeOfUser value', {
+          cause: new Error(),
+          description: `The typeOfUser value ${createUserDto.typeOfUser} is invalid`,
+        });
+      }",6,IF,85,,,1,BabelNodeInfo
+47244640405,CONTROL_STRUCTURE,11,,"if (tenantsIds && tenantsIds.length > 0) {
+      foundTenants = await this.tenantService.findByIds({ ids: tenantsIds });
+      // if (!process.env.TENANTS_MS_URL) {
+      //   this.logger.error(`Missing TENANTS_MS_URL env variable`);
+      //   throw new NotFoundException('Role  not found', {
+      //     cause: new Error(),
+      //     description: `Missing TENANTS_MS_URL env variable`,
+      //   });
+      // }
+      // const url = process.env.TENANTS_MS_URL + 'tenants/many';
+      // try {
+      //   this.logger.log(`looking for tenant with id:${tenantsIds} in the microservice: ${url}`);
+      //   foundTenants = await fetchTenants({ ids: tenantsIds }, url);
+      //   if (foundTenants.length < 1) {
+      //     this.logger.error(`The tenant with id ${tenantsIds} was not found`);
+      //     throw new NotFoundException('Tenant  not found', {
+      //       cause: new Error(),
+      //       description: `The tenant with id ${tenantsIds} was not found`,
+      //     });
+      //...",4,IF,94,,,11,BabelNodeInfo
+47244640406,CONTROL_STRUCTURE,12,,"if (userRoleByTenantsIds && userRoleByTenantsIds.length > 1) {
+      this.logger.log(`looking for roles with id:${userRoleByTenantsIds}`);
+      foundRoles = await this.rolesRepository
+        .createQueryBuilder('roles')
+        .leftJoinAndSelect('roles.tenantTypes', 'tenantTypes')
+        .leftJoinAndSelect('roles.tenantCreator', 'tenantCreator')
+        //.leftJoinAndSelect('roles.aliases', 'aliases')
+        //.leftJoinAndSelect('roles.roles', 'assignedRoles')
+        //.leftJoinAndSelect('roles.gridPreferences', 'gridPreferences')
+        //.leftJoinAndSelect('assignedRoles.role', 'role')
+        //.leftJoinAndSelect('assignedRoles.user', 'user')
+        //.leftJoinAndSelect('assignedRoles.tenant', 'tenant')
+        //.leftJoinAndSelect('assignedRoles.roleAlias', 'roleAlias')
+        .andWhere('roles.id = :id', { userRoleByTenantsIds })
+        .getMany();
+      if (foundRoles.length < 1) {
+        this.logger.error(`The Role with id ${tenantsIds} was not found`);
+        thro...",4,IF,119,,,12,BabelNodeInfo
+47244640407,CONTROL_STRUCTURE,3,,"if (foundRoles.length < 1) {
+        this.logger.error(`The Role with id ${tenantsIds} was not found`);
+        throw new NotFoundException('Role  not found', {
+          cause: new Error(),
+          description: `The role with id ${tenantsIds} was not found`,
+        });
+      }",6,IF,134,,,3,BabelNodeInfo
+47244640408,CONTROL_STRUCTURE,3,,"if (this.usersCollection.length <= 0) {
+      throw new NotFoundException(`Not found any user with id: ${id}`, {
+        cause: new Error(),
+        description: `Not found any user with id: ${id}`,
+      });
+    }",4,IF,181,,,3,BabelNodeInfo
+47244640409,CONTROL_STRUCTURE,4,,"if (ids && ids.length > 0) {
+      this.logger.log(`Finding by ids: ${ids}`);
+      query = query.andWhere('users.id IN (:...ids) ', { ids });
+    }",4,IF,217,,,4,BabelNodeInfo
+47244640410,CONTROL_STRUCTURE,5,,"if (firstNames && firstNames.length > 0) {
+      this.logger.log(`Finding by firstNames: ${firstNames}`);
+      query = query.andWhere('users.firstName IN (:...firstNames) ', {
+        firstNames: firstNames.map((name) => name),
+      });
+    }",4,IF,221,,,5,BabelNodeInfo
+47244640411,CONTROL_STRUCTURE,6,,"if (lastNames && lastNames.length > 0) {
+      this.logger.log(`Finding by last names: ${lastNames}`);
+      query = query.andWhere('users.lastName IN (:...lastNames) ', {
+        lastNames: lastNames.map((name) => name),
+      });
+    }",4,IF,227,,,6,BabelNodeInfo
+47244640412,CONTROL_STRUCTURE,7,,"if (emails && emails.length > 0) {
+      this.logger.log(`Finding by emails: ${emails}`);
+      query = query.andWhere('users.email IN (:...emails) ', {
+        emails: emails.map((email) => email.toLowerCase()),
+      });
+    }",4,IF,233,,,7,BabelNodeInfo
+47244640413,CONTROL_STRUCTURE,8,,"if (typeOfUser) {
+      this.logger.log(`Finding by typeOfUser: ${typeOfUser}`);
+      query = query.andWhere('users.typeOfUser = :typeOfUser', { typeOfUser });
+    }",4,IF,239,,,8,BabelNodeInfo
+47244640414,CONTROL_STRUCTURE,9,,"if (userRoleByTenantsIds && userRoleByTenantsIds.length > 0) {
+      this.logger.log(`Finding by roleAliases Ids: ${userRoleByTenantsIds}`);
+      query = query.andWhere('roles.id IN (:...userRoleByTenantsIds) ', { userRoleByTenantsIds });
+    }",4,IF,243,,,9,BabelNodeInfo
+47244640415,CONTROL_STRUCTURE,10,,"if (tenantsIds && tenantsIds.length > 0) {
+      this.logger.log(`Finding by tenants Ids: ${tenantsIds}`);
+      query = query.andWhere('tenants.id IN (:...tenantsIds) ', { tenantsIds });
+    }",4,IF,247,,,10,BabelNodeInfo
+47244640416,CONTROL_STRUCTURE,11,,"if (temporalId) {
+      this.logger.log(`Finding by temporal id: ${tenantsIds}`);
+      query = query.andWhere('users.temporalId = :temporalId', { temporalId });
+    }",4,IF,251,,,11,BabelNodeInfo
+47244640417,CONTROL_STRUCTURE,12,,"if (enabled != null) {
+      this.logger.log(`Finding by enabled: ${enabled}`);
+      query = query.andWhere('users.enabled = :enabled ', { enabled });
+    }",4,IF,255,,,12,BabelNodeInfo
+47244640418,CONTROL_STRUCTURE,13,,"if (validated != null) {
+      this.logger.log(`Finding by validated: ${validated}`);
+      query = query.andWhere('users.validated = :validated ', { validated });
+    }",4,IF,260,,,13,BabelNodeInfo
+47244640419,CONTROL_STRUCTURE,14,,"if (BackOfficeAccess != null) {
+      this.logger.log(`Finding by BackOffice Access: ${BackOfficeAccess}`);
+      query = query.andWhere('users.BackOfficeAccess = :BackOfficeAccess ', { BackOfficeAccess });
+    }",4,IF,265,,,14,BabelNodeInfo
+47244640420,CONTROL_STRUCTURE,15,,"if (SaasAccess != null) {
+      this.logger.log(`Finding by Saas Access: ${SaasAccess}`);
+      query = query.andWhere('users.SaasAccess = :SaasAccess ', { SaasAccess });
+    }",4,IF,270,,,15,BabelNodeInfo
+47244640421,CONTROL_STRUCTURE,16,,"if (fireBaseId) {
+      this.logger.log(`Finding by fire Base Id: ${fireBaseId}`);
+      query = query.andWhere('users.fireBaseId = :fireBaseId ', { fireBaseId });
+    }",4,IF,275,,,16,BabelNodeInfo
+47244640422,CONTROL_STRUCTURE,17,,"if (recordTypeIds && recordTypeIds.length > 0) {
+      this.logger.log(`Finding by recordTypeIds: ${recordTypeIds}`);
+      const rolesAccessToRecordType = await this.findByRecordTypeAccess(recordTypeIds);
+      if (rolesAccessToRecordType && rolesAccessToRecordType.length > 0) {
+        this.logger.log(`Finding by roles: ${rolesAccessToRecordType}`);
+        query = query.andWhere('role.id IN (:...roleIds) ', {
+          roleIds: rolesAccessToRecordType,
+        });
+      } else {
+        this.logger.log(`Do not found any role access to recordTypeIds: ${recordTypeIds}`);
+        this.logger.error(`Do not found any role access to recordTypeIds: ${recordTypeIds}`);
+        throw new NotFoundException('Not found any role access to the record type.', {
+          cause: new Error(),
+          description: `Do not found any role access to recordTypeIds: ${recordTypeIds}`,
+        });
+      }
+    }",4,IF,280,,,17,BabelNodeInfo
+47244640423,CONTROL_STRUCTURE,3,,"if (rolesAccessToRecordType && rolesAccessToRecordType.length > 0) {
+        this.logger.log(`Finding by roles: ${rolesAccessToRecordType}`);
+        query = query.andWhere('role.id IN (:...roleIds) ', {
+          roleIds: rolesAccessToRecordType,
+        });
+      } else {
+        this.logger.log(`Do not found any role access to recordTypeIds: ${recordTypeIds}`);
+        this.logger.error(`Do not found any role access to recordTypeIds: ${recordTypeIds}`);
+        throw new NotFoundException('Not found any role access to the record type.', {
+          cause: new Error(),
+          description: `Do not found any role access to recordTypeIds: ${recordTypeIds}`,
+        });
+      }",6,IF,283,,,3,BabelNodeInfo
+47244640424,CONTROL_STRUCTURE,4,,"if (!userToUpdate) {
+      this.logger.error(`The user with id ${id} was not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `The user with id ${id} was not found`,
+      });
+    }",4,IF,329,,,4,BabelNodeInfo
+47244640425,CONTROL_STRUCTURE,5,,"if (payload){
+      const userCreator = await this.findOne(payload.userId);
+
+      if (payload.issuer === IssuerEnum.Saas && userCreator.typeOfUser === TypeOfUser.Client  && userToUpdate.typeOfUser === TypeOfUser.AvantoEmployee && !userCreator.BackOfficeAccess) {
+        this.logger.error(`Action not allowed for typeOfUser: ${userCreator.typeOfUser}`);
+        throw new ForbiddenException('insufficient permissions for this user', {
+          cause: new Error(),
+          description: `The user of typeOfUser ${userCreator.typeOfUser} doesn´t  have enough permissions to perform this action`,
+        });
+      }
+    }",4,IF,337,,,5,BabelNodeInfo
+47244640426,CONTROL_STRUCTURE,2,,"if (payload.issuer === IssuerEnum.Saas && userCreator.typeOfUser === TypeOfUser.Client  && userToUpdate.typeOfUser === TypeOfUser.AvantoEmployee && !userCreator.BackOfficeAccess) {
+        this.logger.error(`Action not allowed for typeOfUser: ${userCreator.typeOfUser}`);
+        throw new ForbiddenException('insufficient permissions for this user', {
+          cause: new Error(),
+          description: `The user of typeOfUser ${userCreator.typeOfUser} doesn´t  have enough permissions to perform this action`,
+        });
+      }",6,IF,340,,,2,BabelNodeInfo
+47244640427,CONTROL_STRUCTURE,6,,"if (email) {
+      const existingTenantEmail = await this.userRepository.findOneBy({ email });
+      if (existingTenantEmail && existingTenantEmail.id != id) {
+        this.logger.error(`The email ${email} is already used and needs to be unique`);
+        throw new ForbiddenException('email is already in use', {
+          cause: new Error(),
+          description: `The email ${email} is already used and needs to be unique`,
+        });
+      }
+      userToUpdate.email = email.trim().toLowerCase();
+    }",4,IF,349,,,6,BabelNodeInfo
+47244640428,CONTROL_STRUCTURE,2,,"if (existingTenantEmail && existingTenantEmail.id != id) {
+        this.logger.error(`The email ${email} is already used and needs to be unique`);
+        throw new ForbiddenException('email is already in use', {
+          cause: new Error(),
+          description: `The email ${email} is already used and needs to be unique`,
+        });
+      }",6,IF,351,,,2,BabelNodeInfo
+47244640429,CONTROL_STRUCTURE,7,,"if (typeOfUser) {
+      this.logger.log(`Updating typeOfUser to: ${typeOfUser}`);
+      if (!Object.values(TypeOfUser).includes(typeOfUser)) {
+        this.logger.error(`Invalid typeOfUser: ${typeOfUser}`);
+        throw new BadRequestException('Invalid typeOfUser value', {
+          cause: new Error(),
+          description: `The typeOfUser value ${typeOfUser} is invalid`,
+        });
+      }
+      userToUpdate.typeOfUser = typeOfUser;
+    }",4,IF,360,,,7,BabelNodeInfo
+47244640430,CONTROL_STRUCTURE,2,,"if (!Object.values(TypeOfUser).includes(typeOfUser)) {
+        this.logger.error(`Invalid typeOfUser: ${typeOfUser}`);
+        throw new BadRequestException('Invalid typeOfUser value', {
+          cause: new Error(),
+          description: `The typeOfUser value ${typeOfUser} is invalid`,
+        });
+      }",6,IF,362,,,2,BabelNodeInfo
+47244640431,CONTROL_STRUCTURE,8,,"if (phone) {
+      const isTakenPhone = await this.userRepository.findOneBy({ phone });
+      if (isTakenPhone && isTakenPhone.id != id) {
+        this.logger.error(`The phone ${phone} is already used and needs to be unique`);
+        throw new ForbiddenException('phone is already in use', {
+          cause: new Error(),
+          description: `The phone ${phone} is already used and needs to be unique`,
+        });
+      }
+      userToUpdate.phone = phone;
+    }",4,IF,372,,,8,BabelNodeInfo
+47244640432,CONTROL_STRUCTURE,2,,"if (isTakenPhone && isTakenPhone.id != id) {
+        this.logger.error(`The phone ${phone} is already used and needs to be unique`);
+        throw new ForbiddenException('phone is already in use', {
+          cause: new Error(),
+          description: `The phone ${phone} is already used and needs to be unique`,
+        });
+      }",6,IF,374,,,2,BabelNodeInfo
+47244640433,CONTROL_STRUCTURE,10,,"if (tenantsIds && tenantsIds.length > 0) {
+      foundTenants = await this.tenantService.findByIds({ ids: tenantsIds });
+
+      //borrar los tenant de la base de datos que no estan en la lista y que ya pertenecen a el
+      const tenantsToDelete = userToUpdate.tenants.filter(
+        (tenant) => !foundTenants.some((foundTenant) => foundTenant.id === tenant.id),
+      );
+      userToUpdate.tenants = userToUpdate.tenants.filter(
+        (tenant) => !tenantsToDelete.some((tenantToDelete) => tenantToDelete.id === tenant.id),
+      );
+
+      //eliminarlos
+      if (tenantsToDelete.length > 0) {
+        await this.userRepository
+          .createQueryBuilder('users')
+          .relation('tenants')
+          .of(userToUpdate)
+          .remove(tenantsToDelete);
+      }
+
+      //agregar los nuevos
+      userToUpdate.tenants = foundTenants;
+    }",4,IF,385,,,10,BabelNodeInfo
+47244640434,CONTROL_STRUCTURE,4,,"if (tenantsToDelete.length > 0) {
+        await this.userRepository
+          .createQueryBuilder('users')
+          .relation('tenants')
+          .of(userToUpdate)
+          .remove(tenantsToDelete);
+      }",6,IF,397,,,4,BabelNodeInfo
+47244640435,CONTROL_STRUCTURE,11,,"if (firstName) {
+      userToUpdate.firstName = firstName.trim();
+    }",4,IF,409,,,11,BabelNodeInfo
+47244640436,CONTROL_STRUCTURE,12,,"if (lastName) {
+      userToUpdate.lastName = lastName.trim();
+    }",4,IF,412,,,12,BabelNodeInfo
+47244640437,CONTROL_STRUCTURE,13,,"if (temporalId) {
+      userToUpdate.temporalId = temporalId.trim();
+    }",4,IF,415,,,13,BabelNodeInfo
+47244640438,CONTROL_STRUCTURE,14,,"if (validated != null) {
+      userToUpdate.validated = validated;
+    }",4,IF,418,,,14,BabelNodeInfo
+47244640439,CONTROL_STRUCTURE,15,,"if (BackOfficeAccess != null) {
+      userToUpdate.BackOfficeAccess = BackOfficeAccess;
+    }",4,IF,421,,,15,BabelNodeInfo
+47244640440,CONTROL_STRUCTURE,16,,"if (SaasAccess != null) {
+      userToUpdate.SaasAccess = SaasAccess;
+    }",4,IF,424,,,16,BabelNodeInfo
+47244640441,CONTROL_STRUCTURE,17,,"if (enabled != null) {
+      userToUpdate.enabled = enabled;
+      if (!enabled && userToUpdate.fireBaseId === 'default') {
+        userToUpdate.validated = true;
+      } else if (enabled && userToUpdate.fireBaseId === 'default') {
+        userToUpdate.validated = false;
+      }
+    }",4,IF,427,,,17,BabelNodeInfo
+47244640442,CONTROL_STRUCTURE,2,,"if (!enabled && userToUpdate.fireBaseId === 'default') {
+        userToUpdate.validated = true;
+      } else if (enabled && userToUpdate.fireBaseId === 'default') {
+        userToUpdate.validated = false;
+      }",6,IF,429,,,2,BabelNodeInfo
+47244640443,CONTROL_STRUCTURE,-1,,"if (enabled && userToUpdate.fireBaseId === 'default') {
+        userToUpdate.validated = false;
+      }",13,IF,431,,,3,BabelNodeInfo
+47244640444,CONTROL_STRUCTURE,18,,"if (fireBaseId) {
+      userToUpdate.fireBaseId = fireBaseId;
+    }",4,IF,435,,,18,BabelNodeInfo
+47244640445,CONTROL_STRUCTURE,3,,"if (!userToDisable) {
+      this.logger.error(`The user with id ${id} was not found`);
+      throw new NotFoundException('Tenant not found', {
+        cause: new Error(),
+        description: `The tenant with id ${id} was not found`,
+      });
+    }",4,IF,447,,,3,BabelNodeInfo
+47244640446,CONTROL_STRUCTURE,4,,"if (payload){
+      const userCreator = await this.findOne(payload.userId);
+
+      if (payload.issuer === IssuerEnum.Saas && userCreator.typeOfUser === TypeOfUser.Client  && userToDisable.typeOfUser === TypeOfUser.AvantoEmployee && !userCreator.BackOfficeAccess) {
+        this.logger.error(`Action not allowed for typeOfUser: ${userCreator.typeOfUser}`);
+        throw new ForbiddenException('insufficient permissions for this user', {
+          cause: new Error(),
+          description: `The user of typeOfUser ${userCreator.typeOfUser} doesn´t  have enough permissions to perform this action`,
+        });
+      }
+    }",4,IF,454,,,4,BabelNodeInfo
+47244640447,CONTROL_STRUCTURE,2,,"if (payload.issuer === IssuerEnum.Saas && userCreator.typeOfUser === TypeOfUser.Client  && userToDisable.typeOfUser === TypeOfUser.AvantoEmployee && !userCreator.BackOfficeAccess) {
+        this.logger.error(`Action not allowed for typeOfUser: ${userCreator.typeOfUser}`);
+        throw new ForbiddenException('insufficient permissions for this user', {
+          cause: new Error(),
+          description: `The user of typeOfUser ${userCreator.typeOfUser} doesn´t  have enough permissions to perform this action`,
+        });
+      }",6,IF,457,,,2,BabelNodeInfo
+47244640448,CONTROL_STRUCTURE,2,,"if (!user) {
+      this.logger.error(`The user with id ${temporalId} was not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `The user with id ${temporalId} was not found`,
+      });
+    }",4,IF,495,,,2,BabelNodeInfo
+47244640449,CONTROL_STRUCTURE,3,,"if (user.validated) {
+      this.logger.error(`The user with id ${temporalId} is already verified`);
+      throw new ForbiddenException('User is already verified', {
+        cause: new Error(),
+        description: `The user with id ${temporalId} is already verified`,
+      });
+    }",4,IF,502,,,3,BabelNodeInfo
+47244640450,CONTROL_STRUCTURE,4,,"if (!(user.tenants && user.tenants.length > 0)) {
+      this.logger.error(`The user with id ${temporalId} has no tenants asociated`);
+      throw new ForbiddenException('User has no tenants asociated', {
+        cause: new Error(),
+        description: `The user with id ${temporalId} has no tenants asociated`,
+      });
+    }",4,IF,509,,,4,BabelNodeInfo
+47244640451,CONTROL_STRUCTURE,2,,"if (!user) {
+      this.logger.error(`The user with id ${userId} was not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `The user with id ${userId} was not found`,
+      });
+    }",4,IF,528,,,2,BabelNodeInfo
+47244640452,CONTROL_STRUCTURE,2,,"if (!user) {
+      this.logger.error(`The user with id ${userId} was not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `The user with id ${userId} was not found`,
+      });
+    }",4,IF,542,,,2,BabelNodeInfo
+47244640453,CONTROL_STRUCTURE,1,,"try {
+      this.logger.log(`Sending email with params ${params}`);
+      await this.ses.sendEmail(params);
+      this.logger.log(`Email sent to ${params.Destination.ToAddresses[0]}`);
+    } catch (error) {
+      throw error;
+    }",4,TRY,17,,,1,BabelNodeInfo
+47244640454,CONTROL_STRUCTURE,2,,"catch (error) {
+      throw error;
+    }",6,CATCH,21,,,2,BabelNodeInfo
+47244640455,CONTROL_STRUCTURE,4,,"for (const key in commonEntities) {
+  if (commonEntities.hasOwnProperty(key)) {
+    const model = commonEntities[key];
+    models.push(model);
+  }
+}",0,WHILE,7,,,4,BabelNodeInfo
+47244640456,CONTROL_STRUCTURE,1,,"if (commonEntities.hasOwnProperty(key)) {
+    const model = commonEntities[key];
+    models.push(model);
+  }",2,IF,8,,,1,BabelNodeInfo
+47244640457,CONTROL_STRUCTURE,1,,"if (typeof str !== 'string') {
+    return false;
+  }",2,IF,43,,,1,BabelNodeInfo
+47244640458,CONTROL_STRUCTURE,2,,"if (str.trim() === '') {
+    return false;
+  }",2,IF,47,,,2,BabelNodeInfo
+47244640459,CONTROL_STRUCTURE,1,,"if (!configUrl)
+    throw new NotFoundException(`${type} env variable not found`, {
+      cause: new Error(),
+      description: `Missing ${type} env variable`,
+    });",2,IF,93,,,1,BabelNodeInfo
+47244640460,CONTROL_STRUCTURE,2,,"switch (response.statusCode) {
+    case 400:
+      logger.log(`Bad Request: ${response.message}`);
+      return new BadRequestException(response.message);
+    case 401:
+      logger.log(`Unauthorized: ${response.message}`);
+      return new UnauthorizedException(response.message);
+    case 403:
+      logger.log(`Forbidden: ${response.message}`);
+      return new ForbiddenException(response.message);
+    case 404:
+      logger.log(`Not Found: ${response.message}`);
+      return new NotFoundException(response.message);
+    case 408:
+      logger.log(`Request Timeout: ${response.message}`);
+      return new RequestTimeoutException(response.message);
+    case 409:
+      logger.log(`Conflict: ${response.message}`);
+      return new ConflictException(response.message);
+    case 413:
+      logger.log(`Payload Too Large: ${response.message}`);
+      return new PayloadTooLargeException(response.message);
+    case 500:
+      logger.log(`Internal Server Error: ${response.message}`);
+      retu...",2,SWITCH,146,,,2,BabelNodeInfo

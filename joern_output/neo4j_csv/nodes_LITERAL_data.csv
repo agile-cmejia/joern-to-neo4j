@@ -1,0 +1,2264 @@
+90194313216,LITERAL,1,,"""@commitlint/config-conventional""",29,__ecma.String,1,,,3,,__ecma.String
+90194313217,LITERAL,1,,"""Calling service get Hello!""",20,__ecma.String,11,,,3,,__ecma.String
+90194313218,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313219,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313220,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313221,LITERAL,1,,"""./app.service""",0,,2,,,3,,ANY
+90194313222,LITERAL,1,,"""*""",54,__ecma.String,30,,,3,,__ecma.String
+90194313223,LITERAL,1,,"""./shared/infrastructure/logger/pinoLoggerOptions""",0,,1,,,3,,ANY
+90194313224,LITERAL,1,,"""@nestjs/typeorm""",0,,2,,,3,,ANY
+90194313225,LITERAL,1,,"""./shared/infrastructure/persistance/postgre-sql/PostgresDataSource""",0,,3,,,3,,ANY
+90194313226,LITERAL,1,,"""./shared/middleware/correlation-id/correlation-id.middleware""",0,,4,,,3,,ANY
+90194313227,LITERAL,1,,"""@nestjs/common""",0,,5,,,3,,ANY
+90194313228,LITERAL,1,,"""@nestjs/common""",0,,5,,,3,,ANY
+90194313229,LITERAL,1,,"""@nestjs/common""",0,,5,,,3,,ANY
+90194313230,LITERAL,1,,"""nestjs-pino""",0,,6,,,3,,ANY
+90194313231,LITERAL,1,,"""./app.controller""",0,,7,,,3,,ANY
+90194313232,LITERAL,1,,"""./app.service""",0,,8,,,3,,ANY
+90194313233,LITERAL,1,,"""./context/users/users.module""",0,,9,,,3,,ANY
+90194313234,LITERAL,1,,"""./context/roles/roles.module""",0,,10,,,3,,ANY
+90194313235,LITERAL,1,,"""./context/role-aliases/role-aliases.module""",0,,11,,,3,,ANY
+90194313236,LITERAL,1,,"""./context/user-role-by-tenants/user-role-by-tenants.module""",0,,12,,,3,,ANY
+90194313237,LITERAL,1,,"""./context/tenant-role-aliases/tenant-role-aliases.module""",0,,13,,,3,,ANY
+90194313238,LITERAL,1,,"""""",21,__ecma.String,8,,,1,,__ecma.String
+90194313239,LITERAL,3,,""" called function """,39,__ecma.String,8,,,3,,__ecma.String
+90194313240,LITERAL,5,,"""""",77,__ecma.String,8,,,5,,__ecma.String
+90194313241,LITERAL,1,,"""Service """,23,__ecma.String,9,,,1,,__ecma.String
+90194313242,LITERAL,3,,""" working !!""",49,__ecma.String,9,,,3,,__ecma.String
+90194313243,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313244,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313245,LITERAL,2,,"""role-aliases""",9,__ecma.String,8,,,2,,__ecma.String
+90194313246,LITERAL,2,,"""role-aliases""",12,__ecma.String,9,,,2,,__ecma.String
+90194313247,LITERAL,1,,"""Creating new Role Alias ..""",20,__ecma.String,16,,,3,,__ecma.String
+90194313248,LITERAL,1,,"""Created new Role Alias! id: """,21,__ecma.String,19,,,1,,__ecma.String
+90194313249,LITERAL,3,,""".""",62,__ecma.String,19,,,3,,__ecma.String
+90194313250,LITERAL,1,,"""Finding All Roles Aliases...""",20,__ecma.String,25,,,3,,__ecma.String
+90194313251,LITERAL,2,,"""id""",23,__ecma.String,30,,,2,,__ecma.String
+90194313252,LITERAL,1,,"""Searching for Role Alias with id: """,21,__ecma.String,31,,,1,,__ecma.String
+90194313253,LITERAL,3,,""".""",60,__ecma.String,31,,,3,,__ecma.String
+90194313254,LITERAL,1,,"""Role Alias with id: """,21,__ecma.String,33,,,1,,__ecma.String
+90194313255,LITERAL,3,,""" was found.""",46,__ecma.String,33,,,3,,__ecma.String
+90194313256,LITERAL,2,,""":id""",7,__ecma.String,29,,,2,,__ecma.String
+90194313257,LITERAL,2,,""":id""",7,__ecma.String,29,,,2,,__ecma.String
+90194313258,LITERAL,1,,"""Searching for Role Aliases with many search args.""",21,__ecma.String,38,,,3,,__ecma.String
+90194313259,LITERAL,1,,"""found """,21,__ecma.String,40,,,1,,__ecma.String
+90194313260,LITERAL,3,,""" Role Aliases.""",51,__ecma.String,40,,,3,,__ecma.String
+90194313261,LITERAL,2,,"""many/""",8,__ecma.String,36,,,2,,__ecma.String
+90194313262,LITERAL,2,,"""many/""",8,__ecma.String,36,,,2,,__ecma.String
+90194313263,LITERAL,2,,"""id""",22,__ecma.String,45,,,2,,__ecma.String
+90194313264,LITERAL,1,,"""Updating role alias with id: """,21,__ecma.String,46,,,1,,__ecma.String
+90194313265,LITERAL,3,,""".""",55,__ecma.String,46,,,3,,__ecma.String
+90194313266,LITERAL,1,,"""Role alias with id: """,21,__ecma.String,48,,,1,,__ecma.String
+90194313267,LITERAL,3,,""" was updated.""",46,__ecma.String,48,,,3,,__ecma.String
+90194313268,LITERAL,2,,""":id""",9,__ecma.String,44,,,2,,__ecma.String
+90194313269,LITERAL,2,,""":id""",9,__ecma.String,44,,,2,,__ecma.String
+90194313270,LITERAL,2,,"""id""",22,__ecma.String,53,,,2,,__ecma.String
+90194313271,LITERAL,1,,"""Disabling / Enabling Role alias with id: """,21,__ecma.String,54,,,1,,__ecma.String
+90194313272,LITERAL,3,,""".""",67,__ecma.String,54,,,3,,__ecma.String
+90194313273,LITERAL,1,,"""Role alias with id: """,21,__ecma.String,56,,,1,,__ecma.String
+90194313274,LITERAL,3,,""" was """,46,__ecma.String,56,,,3,,__ecma.String
+90194313275,LITERAL,2,,"""Enabled!""",80,__ecma.String,56,,,2,,__ecma.String
+90194313276,LITERAL,3,,"""Disabled!""",93,__ecma.String,56,,,3,,__ecma.String
+90194313277,LITERAL,2,,""":id""",10,__ecma.String,52,,,2,,__ecma.String
+90194313278,LITERAL,2,,""":id""",10,__ecma.String,52,,,2,,__ecma.String
+90194313279,LITERAL,1,,"""./../../shared/context/role-aliases/domain/dto/find-role-alias.dto""",0,,1,,,3,,ANY
+90194313280,LITERAL,1,,"""@nestjs/common""",0,,2,,,3,,ANY
+90194313281,LITERAL,1,,"""@nestjs/common""",0,,2,,,3,,ANY
+90194313282,LITERAL,1,,"""@nestjs/common""",0,,2,,,3,,ANY
+90194313283,LITERAL,1,,"""@nestjs/common""",0,,2,,,3,,ANY
+90194313284,LITERAL,1,,"""@nestjs/common""",0,,2,,,3,,ANY
+90194313285,LITERAL,1,,"""@nestjs/common""",0,,2,,,3,,ANY
+90194313286,LITERAL,1,,"""@nestjs/common""",0,,2,,,3,,ANY
+90194313287,LITERAL,1,,"""@nestjs/common""",0,,2,,,3,,ANY
+90194313288,LITERAL,1,,"""../../shared/context/role-aliases/domain/role-aliases.service""",0,,3,,,3,,ANY
+90194313289,LITERAL,1,,"""../../shared/context/role-aliases/domain//dto/create-role-alias.dto""",0,,4,,,3,,ANY
+90194313290,LITERAL,1,,"""../../shared/context/role-aliases/domain//dto/update-role-alias.dto""",0,,5,,,3,,ANY
+90194313291,LITERAL,1,,"""@nestjs/swagger""",0,,6,,,3,,ANY
+90194313292,LITERAL,1,,"""./../../shared/infrastructure/persistance/postgre-sql/dbConfig""",0,,1,,,3,,ANY
+90194313293,LITERAL,1,,"""@nestjs/typeorm""",0,,2,,,3,,ANY
+90194313294,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194313295,LITERAL,1,,"""../../shared/context/role-aliases/domain/role-aliases.service""",0,,4,,,3,,ANY
+90194313296,LITERAL,1,,"""./role-aliases.controller""",0,,5,,,3,,ANY
+90194313297,LITERAL,1,,"""@avantodev/avanto-db""",0,,6,,,3,,ANY
+90194313298,LITERAL,1,,"""@avantodev/avanto-db""",0,,6,,,3,,ANY
+90194313299,LITERAL,1,,"""@avantodev/avanto-db""",0,,6,,,3,,ANY
+90194313300,LITERAL,1,,"""@avantodev/avanto-db""",0,,6,,,3,,ANY
+90194313301,LITERAL,1,,"""../../shared/context/tenant-role-aliases/tenant-role-aliases.service""",0,,7,,,3,,ANY
+90194313302,LITERAL,2,,"""roles""",9,__ecma.String,8,,,2,,__ecma.String
+90194313303,LITERAL,2,,"""roles""",12,__ecma.String,9,,,2,,__ecma.String
+90194313304,LITERAL,1,,"""Creating new Role ..""",20,__ecma.String,16,,,3,,__ecma.String
+90194313305,LITERAL,1,,"""Created new Role! id: """,21,__ecma.String,18,,,1,,__ecma.String
+90194313306,LITERAL,3,,""".""",56,__ecma.String,18,,,3,,__ecma.String
+90194313307,LITERAL,1,,"""Finding All Roles...""",20,__ecma.String,24,,,3,,__ecma.String
+90194313308,LITERAL,1,,"""Searching for Roles with many search args.""",21,__ecma.String,30,,,3,,__ecma.String
+90194313309,LITERAL,2,,"""many/""",8,__ecma.String,28,,,2,,__ecma.String
+90194313310,LITERAL,2,,"""many/""",8,__ecma.String,28,,,2,,__ecma.String
+90194313311,LITERAL,2,,"""id""",23,__ecma.String,36,,,2,,__ecma.String
+90194313312,LITERAL,1,,"""Searching for Role with id: """,21,__ecma.String,37,,,1,,__ecma.String
+90194313313,LITERAL,3,,""".""",54,__ecma.String,37,,,3,,__ecma.String
+90194313314,LITERAL,1,,"""Role with id: """,21,__ecma.String,39,,,1,,__ecma.String
+90194313315,LITERAL,3,,""" was found.""",40,__ecma.String,39,,,3,,__ecma.String
+90194313316,LITERAL,2,,""":id""",7,__ecma.String,35,,,2,,__ecma.String
+90194313317,LITERAL,2,,""":id""",7,__ecma.String,35,,,2,,__ecma.String
+90194313318,LITERAL,2,,"""id""",22,__ecma.String,44,,,2,,__ecma.String
+90194313319,LITERAL,1,,"""Updating role with id: """,21,__ecma.String,45,,,1,,__ecma.String
+90194313320,LITERAL,3,,""".""",49,__ecma.String,45,,,3,,__ecma.String
+90194313321,LITERAL,1,,"""Role with id: """,21,__ecma.String,47,,,1,,__ecma.String
+90194313322,LITERAL,3,,""" was updated.""",40,__ecma.String,47,,,3,,__ecma.String
+90194313323,LITERAL,2,,""":id""",9,__ecma.String,43,,,2,,__ecma.String
+90194313324,LITERAL,2,,""":id""",9,__ecma.String,43,,,2,,__ecma.String
+90194313325,LITERAL,2,,"""id""",22,__ecma.String,52,,,2,,__ecma.String
+90194313326,LITERAL,1,,"""Disabling / Enabling Role with id: """,21,__ecma.String,53,,,1,,__ecma.String
+90194313327,LITERAL,3,,""".""",61,__ecma.String,53,,,3,,__ecma.String
+90194313328,LITERAL,1,,"""Role with id: """,21,__ecma.String,55,,,1,,__ecma.String
+90194313329,LITERAL,3,,""" was """,40,__ecma.String,55,,,3,,__ecma.String
+90194313330,LITERAL,2,,"""Enabled!""",69,__ecma.String,55,,,2,,__ecma.String
+90194313331,LITERAL,3,,"""Disabled!""",82,__ecma.String,55,,,3,,__ecma.String
+90194313332,LITERAL,2,,""":id""",10,__ecma.String,51,,,2,,__ecma.String
+90194313333,LITERAL,2,,""":id""",10,__ecma.String,51,,,2,,__ecma.String
+90194313334,LITERAL,1,,"""./../../shared/context/roles/domain/dto/find-role.dto""",0,,1,,,3,,ANY
+90194313335,LITERAL,1,,"""@nestjs/common""",0,,2,,,3,,ANY
+90194313336,LITERAL,1,,"""@nestjs/common""",0,,2,,,3,,ANY
+90194313337,LITERAL,1,,"""@nestjs/common""",0,,2,,,3,,ANY
+90194313338,LITERAL,1,,"""@nestjs/common""",0,,2,,,3,,ANY
+90194313339,LITERAL,1,,"""@nestjs/common""",0,,2,,,3,,ANY
+90194313340,LITERAL,1,,"""@nestjs/common""",0,,2,,,3,,ANY
+90194313341,LITERAL,1,,"""@nestjs/common""",0,,2,,,3,,ANY
+90194313342,LITERAL,1,,"""@nestjs/common""",0,,2,,,3,,ANY
+90194313343,LITERAL,1,,"""../../shared/context/roles/domain/roles.service""",0,,3,,,3,,ANY
+90194313344,LITERAL,1,,"""../../shared/context/roles/domain/dto/create-role.dto""",0,,4,,,3,,ANY
+90194313345,LITERAL,1,,"""../../shared/context/roles/domain/dto/update-role.dto""",0,,5,,,3,,ANY
+90194313346,LITERAL,1,,"""@nestjs/swagger""",0,,6,,,3,,ANY
+90194313347,LITERAL,1,,"""./../../shared/infrastructure/persistance/postgre-sql/dbConfig""",0,,1,,,3,,ANY
+90194313348,LITERAL,1,,"""@avantodev/avanto-db""",0,,2,,,3,,ANY
+90194313349,LITERAL,1,,"""@avantodev/avanto-db""",0,,2,,,3,,ANY
+90194313350,LITERAL,1,,"""@nestjs/typeorm""",0,,3,,,3,,ANY
+90194313351,LITERAL,1,,"""@nestjs/common""",0,,4,,,3,,ANY
+90194313352,LITERAL,1,,"""../../shared/context/roles/domain/roles.service""",0,,5,,,3,,ANY
+90194313353,LITERAL,1,,"""./roles.controller""",0,,6,,,3,,ANY
+90194313354,LITERAL,2,,"""tenant-role-aliases""",9,__ecma.String,9,,,2,,__ecma.String
+90194313355,LITERAL,2,,"""tenant-role-aliases""",12,__ecma.String,10,,,2,,__ecma.String
+90194313356,LITERAL,1,,"""Creating new Tenant Role Aliases ..""",20,__ecma.String,17,,,3,,__ecma.String
+90194313357,LITERAL,1,,"""Created Tenenat Role Alias with id:""",21,__ecma.String,19,,,1,,__ecma.String
+90194313358,LITERAL,3,,"""""",77,__ecma.String,19,,,3,,__ecma.String
+90194313359,LITERAL,1,,"""Finding All Tenant Role Aliases...""",20,__ecma.String,25,,,3,,__ecma.String
+90194313360,LITERAL,1,,"""Searching for Tenant Role Aliases with many search args.""",21,__ecma.String,32,,,3,,__ecma.String
+90194313361,LITERAL,2,,"""many/""",8,__ecma.String,30,,,2,,__ecma.String
+90194313362,LITERAL,2,,"""many/""",8,__ecma.String,30,,,2,,__ecma.String
+90194313363,LITERAL,1,,"""Assign A Role alias to a tenant Role alias""",21,__ecma.String,38,,,3,,__ecma.String
+90194313364,LITERAL,2,,"""assign-role-alias""",8,__ecma.String,36,,,2,,__ecma.String
+90194313365,LITERAL,2,,"""assign-role-alias""",8,__ecma.String,36,,,2,,__ecma.String
+90194313366,LITERAL,2,,"""id""",23,__ecma.String,44,,,2,,__ecma.String
+90194313367,LITERAL,1,,"""Searching for Tenant Role ALiases with id: """,21,__ecma.String,45,,,1,,__ecma.String
+90194313368,LITERAL,3,,""".""",69,__ecma.String,45,,,3,,__ecma.String
+90194313369,LITERAL,1,,"""Found Tenenat Role Alias with id:""",21,__ecma.String,47,,,1,,__ecma.String
+90194313370,LITERAL,3,,"""""",59,__ecma.String,47,,,3,,__ecma.String
+90194313371,LITERAL,2,,""":id""",7,__ecma.String,43,,,2,,__ecma.String
+90194313372,LITERAL,2,,""":id""",7,__ecma.String,43,,,2,,__ecma.String
+90194313373,LITERAL,2,,"""id""",22,__ecma.String,52,,,2,,__ecma.String
+90194313374,LITERAL,1,,"""Updating tenant role alias with id: """,21,__ecma.String,53,,,1,,__ecma.String
+90194313375,LITERAL,3,,""".""",62,__ecma.String,53,,,3,,__ecma.String
+90194313376,LITERAL,1,,"""Updated Tenenat Role Alias with id:""",21,__ecma.String,55,,,1,,__ecma.String
+90194313377,LITERAL,3,,"""""",61,__ecma.String,55,,,3,,__ecma.String
+90194313378,LITERAL,2,,""":id""",9,__ecma.String,51,,,2,,__ecma.String
+90194313379,LITERAL,2,,""":id""",9,__ecma.String,51,,,2,,__ecma.String
+90194313380,LITERAL,2,,"""id""",22,__ecma.String,60,,,2,,__ecma.String
+90194313381,LITERAL,1,,"""Disabling / Enabling Tenant Role Alias with id: """,21,__ecma.String,61,,,1,,__ecma.String
+90194313382,LITERAL,3,,""".""",74,__ecma.String,61,,,3,,__ecma.String
+90194313383,LITERAL,1,,"""Tenant Role Alias with id: """,21,__ecma.String,63,,,1,,__ecma.String
+90194313384,LITERAL,3,,""" was """,53,__ecma.String,63,,,3,,__ecma.String
+90194313385,LITERAL,2,,"""Enabled!""",88,__ecma.String,63,,,2,,__ecma.String
+90194313386,LITERAL,3,,"""Disabled!""",101,__ecma.String,63,,,3,,__ecma.String
+90194313387,LITERAL,2,,""":id""",10,__ecma.String,59,,,2,,__ecma.String
+90194313388,LITERAL,2,,""":id""",10,__ecma.String,59,,,2,,__ecma.String
+90194313389,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313390,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313391,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313392,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313393,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313394,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313395,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313396,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313397,LITERAL,1,,"""../../shared/context/tenant-role-aliases/tenant-role-aliases.service""",0,,2,,,3,,ANY
+90194313398,LITERAL,1,,"""../../shared/context/tenant-role-aliases/dto/create-tenant-role-aliases.dto""",0,,3,,,3,,ANY
+90194313399,LITERAL,1,,"""src/shared/context/tenant-role-aliases/dto/update-tenant-role-alias.dto""",0,,4,,,3,,ANY
+90194313400,LITERAL,1,,"""src/shared/context/tenant-role-aliases/dto/find-tenant-role-alias.dto""",0,,5,,,3,,ANY
+90194313401,LITERAL,1,,"""@nestjs/swagger""",0,,6,,,3,,ANY
+90194313402,LITERAL,1,,"""src/shared/context/tenant-role-aliases/dto/assign-tenant-role-alias.dto""",0,,7,,,3,,ANY
+90194313403,LITERAL,1,,"""../../shared/infrastructure/persistance/postgre-sql/dbConfig""",0,,1,,,3,,ANY
+90194313404,LITERAL,1,,"""@avantodev/avanto-db""",0,,2,,,3,,ANY
+90194313405,LITERAL,1,,"""@avantodev/avanto-db""",0,,2,,,3,,ANY
+90194313406,LITERAL,1,,"""@avantodev/avanto-db""",0,,2,,,3,,ANY
+90194313407,LITERAL,1,,"""@avantodev/avanto-db""",0,,2,,,3,,ANY
+90194313408,LITERAL,1,,"""@nestjs/typeorm""",0,,3,,,3,,ANY
+90194313409,LITERAL,1,,"""@nestjs/common""",0,,4,,,3,,ANY
+90194313410,LITERAL,1,,"""../../shared/context/tenant-role-aliases/tenant-role-aliases.service""",0,,5,,,3,,ANY
+90194313411,LITERAL,1,,"""./tenant-role-aliases.controller""",0,,6,,,3,,ANY
+90194313412,LITERAL,2,,"""tenants""",9,__ecma.String,8,,,2,,__ecma.String
+90194313413,LITERAL,2,,"""tenants""",12,__ecma.String,9,,,2,,__ecma.String
+90194313414,LITERAL,1,,"""Creating new Tenant ..""",20,__ecma.String,16,,,3,,__ecma.String
+90194313415,LITERAL,1,,"""Created new Tenant! id: """,21,__ecma.String,24,,,1,,__ecma.String
+90194313416,LITERAL,3,,""".""",60,__ecma.String,24,,,3,,__ecma.String
+90194313417,LITERAL,1,,"""Finding All Tenants...""",20,__ecma.String,30,,,3,,__ecma.String
+90194313418,LITERAL,1,,"""Searching for Tenant with many search args.""",21,__ecma.String,36,,,3,,__ecma.String
+90194313419,LITERAL,2,,"""many/""",8,__ecma.String,34,,,2,,__ecma.String
+90194313420,LITERAL,2,,"""many/""",8,__ecma.String,34,,,2,,__ecma.String
+90194313421,LITERAL,2,,"""id""",23,__ecma.String,42,,,2,,__ecma.String
+90194313422,LITERAL,1,,"""Searching for Tenant with id: """,21,__ecma.String,43,,,1,,__ecma.String
+90194313423,LITERAL,3,,""".""",56,__ecma.String,43,,,3,,__ecma.String
+90194313424,LITERAL,1,,"""Tenant with id: """,21,__ecma.String,45,,,1,,__ecma.String
+90194313425,LITERAL,3,,""" was found.""",42,__ecma.String,45,,,3,,__ecma.String
+90194313426,LITERAL,2,,""":id""",7,__ecma.String,41,,,2,,__ecma.String
+90194313427,LITERAL,2,,""":id""",7,__ecma.String,41,,,2,,__ecma.String
+90194313428,LITERAL,2,,"""id""",22,__ecma.String,50,,,2,,__ecma.String
+90194313429,LITERAL,1,,"""Updating Tenant with id: """,21,__ecma.String,51,,,1,,__ecma.String
+90194313430,LITERAL,3,,""".""",51,__ecma.String,51,,,3,,__ecma.String
+90194313431,LITERAL,1,,"""Tenant with id: """,21,__ecma.String,58,,,1,,__ecma.String
+90194313432,LITERAL,3,,""" was updated.""",42,__ecma.String,58,,,3,,__ecma.String
+90194313433,LITERAL,2,,""":id""",9,__ecma.String,49,,,2,,__ecma.String
+90194313434,LITERAL,2,,""":id""",9,__ecma.String,49,,,2,,__ecma.String
+90194313435,LITERAL,2,,"""id""",22,__ecma.String,63,,,2,,__ecma.String
+90194313436,LITERAL,1,,"""Disabling / Enabling Tenant with id: """,21,__ecma.String,64,,,1,,__ecma.String
+90194313437,LITERAL,3,,""".""",63,__ecma.String,64,,,3,,__ecma.String
+90194313438,LITERAL,1,,"""Tenant with id: """,21,__ecma.String,66,,,1,,__ecma.String
+90194313439,LITERAL,3,,""" was """,42,__ecma.String,66,,,3,,__ecma.String
+90194313440,LITERAL,2,,"""Enabled!""",73,__ecma.String,66,,,2,,__ecma.String
+90194313441,LITERAL,3,,"""Disabled!""",86,__ecma.String,66,,,3,,__ecma.String
+90194313442,LITERAL,2,,""":id""",10,__ecma.String,62,,,2,,__ecma.String
+90194313443,LITERAL,2,,""":id""",10,__ecma.String,62,,,2,,__ecma.String
+90194313444,LITERAL,1,,"""../../shared/context/tenants/domain/dto/find-tenant.dto""",0,,1,,,3,,ANY
+90194313445,LITERAL,1,,"""../../shared/context/tenants/domain/dto/create-tenant.dto""",0,,2,,,3,,ANY
+90194313446,LITERAL,1,,"""../../shared/context/tenants/domain/dto/update-tenant.dto""",0,,3,,,3,,ANY
+90194313447,LITERAL,1,,"""@nestjs/common""",0,,4,,,3,,ANY
+90194313448,LITERAL,1,,"""@nestjs/common""",0,,4,,,3,,ANY
+90194313449,LITERAL,1,,"""@nestjs/common""",0,,4,,,3,,ANY
+90194313450,LITERAL,1,,"""@nestjs/common""",0,,4,,,3,,ANY
+90194313451,LITERAL,1,,"""@nestjs/common""",0,,4,,,3,,ANY
+90194313452,LITERAL,1,,"""@nestjs/common""",0,,4,,,3,,ANY
+90194313453,LITERAL,1,,"""@nestjs/common""",0,,4,,,3,,ANY
+90194313454,LITERAL,1,,"""@nestjs/common""",0,,4,,,3,,ANY
+90194313455,LITERAL,1,,"""../../shared/context/tenants/domain/tenants.service""",0,,5,,,3,,ANY
+90194313456,LITERAL,1,,"""@nestjs/swagger""",0,,6,,,3,,ANY
+90194313457,LITERAL,1,,"""@avantodev/avanto-db""",0,,1,,,3,,ANY
+90194313458,LITERAL,1,,"""@avantodev/avanto-db""",0,,1,,,3,,ANY
+90194313459,LITERAL,1,,"""@avantodev/avanto-db""",0,,1,,,3,,ANY
+90194313460,LITERAL,1,,"""../../shared/infrastructure/persistance/postgre-sql/dbConfig""",0,,2,,,3,,ANY
+90194313461,LITERAL,1,,"""@nestjs/typeorm""",0,,3,,,3,,ANY
+90194313462,LITERAL,1,,"""@nestjs/common""",0,,4,,,3,,ANY
+90194313463,LITERAL,1,,"""../../shared/context/tenants/domain/tenants.service""",0,,5,,,3,,ANY
+90194313464,LITERAL,1,,"""./tenants.controller""",0,,6,,,3,,ANY
+90194313465,LITERAL,2,,"""user-role-by-tenants""",9,__ecma.String,7,,,2,,__ecma.String
+90194313466,LITERAL,2,,"""user-role-by-tenants""",12,__ecma.String,8,,,2,,__ecma.String
+90194313467,LITERAL,1,,"""Creating new User Role by Tenant...""",20,__ecma.String,15,,,3,,__ecma.String
+90194313468,LITERAL,1,,"""Created new User Role by Tenant! id:""",21,__ecma.String,17,,,1,,__ecma.String
+90194313469,LITERAL,3,,"""""",83,__ecma.String,17,,,3,,__ecma.String
+90194313470,LITERAL,1,,"""Finding all User Role By Tenants""",20,__ecma.String,23,,,3,,__ecma.String
+90194313471,LITERAL,1,,"""Searching for USer Role By Tenants with many search args.""",21,__ecma.String,29,,,3,,__ecma.String
+90194313472,LITERAL,1,,"""Found """,21,__ecma.String,31,,,1,,__ecma.String
+90194313473,LITERAL,3,,""" items.""",59,__ecma.String,31,,,3,,__ecma.String
+90194313474,LITERAL,2,,"""/many""",8,__ecma.String,27,,,2,,__ecma.String
+90194313475,LITERAL,2,,"""/many""",8,__ecma.String,27,,,2,,__ecma.String
+90194313476,LITERAL,2,,"""id""",22,__ecma.String,36,,,2,,__ecma.String
+90194313477,LITERAL,1,,"""Updating User Role by Tenant with id: """,21,__ecma.String,37,,,1,,__ecma.String
+90194313478,LITERAL,3,,""".""",64,__ecma.String,37,,,3,,__ecma.String
+90194313479,LITERAL,1,,"""User Role by Tenant with id: """,21,__ecma.String,39,,,1,,__ecma.String
+90194313480,LITERAL,3,,""" was updated.""",55,__ecma.String,39,,,3,,__ecma.String
+90194313481,LITERAL,2,,""":id""",9,__ecma.String,35,,,2,,__ecma.String
+90194313482,LITERAL,2,,""":id""",9,__ecma.String,35,,,2,,__ecma.String
+90194313483,LITERAL,2,,"""id""",22,__ecma.String,44,,,2,,__ecma.String
+90194313484,LITERAL,1,,"""Disabling / Enabling User Role By Tenant with id: """,21,__ecma.String,45,,,1,,__ecma.String
+90194313485,LITERAL,3,,""".""",76,__ecma.String,45,,,3,,__ecma.String
+90194313486,LITERAL,1,,"""User Role By Tenant with id: """,7,__ecma.String,48,,,1,,__ecma.String
+90194313487,LITERAL,3,,""" was """,41,__ecma.String,48,,,3,,__ecma.String
+90194313488,LITERAL,2,,"""Enabled!""",83,__ecma.String,48,,,2,,__ecma.String
+90194313489,LITERAL,3,,"""Disabled!""",96,__ecma.String,48,,,3,,__ecma.String
+90194313490,LITERAL,2,,""":id""",10,__ecma.String,43,,,2,,__ecma.String
+90194313491,LITERAL,2,,""":id""",10,__ecma.String,43,,,2,,__ecma.String
+90194313492,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313493,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313494,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313495,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313496,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313497,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313498,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313499,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313500,LITERAL,1,,"""@nestjs/swagger""",0,,2,,,3,,ANY
+90194313501,LITERAL,1,,"""../../shared/context/user-role-by-tenants/user-role-by-tenants.service""",0,,3,,,3,,ANY
+90194313502,LITERAL,1,,"""../../shared/context/user-role-by-tenants/dto/create-user-role-by-tenants.dto""",0,,4,,,3,,ANY
+90194313503,LITERAL,1,,"""../../shared/context/user-role-by-tenants/dto/find-user-role-by-tenants.dto""",0,,5,,,3,,ANY
+90194313504,LITERAL,1,,"""../../shared/context/user-role-by-tenants/dto/update-user-role-by-tenants.dto""",0,,6,,,3,,ANY
+90194313505,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313506,LITERAL,1,,"""@avantodev/avanto-db""",0,,2,,,3,,ANY
+90194313507,LITERAL,1,,"""@avantodev/avanto-db""",0,,2,,,3,,ANY
+90194313508,LITERAL,1,,"""@avantodev/avanto-db""",0,,2,,,3,,ANY
+90194313509,LITERAL,1,,"""@avantodev/avanto-db""",0,,2,,,3,,ANY
+90194313510,LITERAL,1,,"""@avantodev/avanto-db""",0,,2,,,3,,ANY
+90194313511,LITERAL,1,,"""@avantodev/avanto-db""",0,,2,,,3,,ANY
+90194313512,LITERAL,1,,"""../../shared/infrastructure/persistance/postgre-sql/dbConfig""",0,,3,,,3,,ANY
+90194313513,LITERAL,1,,"""@nestjs/typeorm""",0,,4,,,3,,ANY
+90194313514,LITERAL,1,,"""../../shared/context/user-role-by-tenants/user-role-by-tenants.service""",0,,5,,,3,,ANY
+90194313515,LITERAL,1,,"""./user-role-by-tenants.controller""",0,,6,,,3,,ANY
+90194313516,LITERAL,1,,"""../../shared/context/users/domain/users.service""",0,,7,,,3,,ANY
+90194313517,LITERAL,1,,"""../../shared/context/roles/domain/roles.service""",0,,8,,,3,,ANY
+90194313518,LITERAL,1,,"""../../shared/context/role-aliases/domain/role-aliases.service""",0,,9,,,3,,ANY
+90194313519,LITERAL,1,,"""../../shared/context/tenants/domain/tenants.service""",0,,10,,,3,,ANY
+90194313520,LITERAL,1,,"""../../shared/context/tenant-role-aliases/tenant-role-aliases.service""",0,,11,,,3,,ANY
+90194313521,LITERAL,1,,"""../../shared/infrastructure/mails/mailProvider""",0,,12,,,3,,ANY
+90194313522,LITERAL,2,,"""users""",9,__ecma.String,9,,,2,,__ecma.String
+90194313523,LITERAL,2,,"""users""",12,__ecma.String,10,,,2,,__ecma.String
+90194313524,LITERAL,2,,"""payload""",62,__ecma.String,16,,,2,,__ecma.String
+90194313525,LITERAL,1,,"""Creating new user ..""",20,__ecma.String,18,,,3,,__ecma.String
+90194313526,LITERAL,1,,"""Created new User! id: """,21,__ecma.String,22,,,1,,__ecma.String
+90194313527,LITERAL,3,,""".""",56,__ecma.String,22,,,3,,__ecma.String
+90194313528,LITERAL,1,,"""Finding All Users...""",20,__ecma.String,28,,,3,,__ecma.String
+90194313529,LITERAL,1,,"""Searching for user with many search args.""",21,__ecma.String,34,,,3,,__ecma.String
+90194313530,LITERAL,2,,"""many/""",8,__ecma.String,32,,,2,,__ecma.String
+90194313531,LITERAL,2,,"""many/""",8,__ecma.String,32,,,2,,__ecma.String
+90194313532,LITERAL,2,,"""id""",23,__ecma.String,39,,,2,,__ecma.String
+90194313533,LITERAL,1,,"""Searching for user with id: """,21,__ecma.String,40,,,1,,__ecma.String
+90194313534,LITERAL,3,,""".""",54,__ecma.String,40,,,3,,__ecma.String
+90194313535,LITERAL,1,,"""User with id: """,21,__ecma.String,42,,,1,,__ecma.String
+90194313536,LITERAL,3,,""" was found.""",40,__ecma.String,42,,,3,,__ecma.String
+90194313537,LITERAL,2,,""":id""",7,__ecma.String,38,,,2,,__ecma.String
+90194313538,LITERAL,2,,""":id""",7,__ecma.String,38,,,2,,__ecma.String
+90194313539,LITERAL,2,,"""id""",22,__ecma.String,47,,,2,,__ecma.String
+90194313540,LITERAL,2,,"""payload""",87,__ecma.String,47,,,2,,__ecma.String
+90194313541,LITERAL,1,,"""Updating user with id: """,21,__ecma.String,49,,,1,,__ecma.String
+90194313542,LITERAL,3,,""".""",49,__ecma.String,49,,,3,,__ecma.String
+90194313543,LITERAL,1,,"""User with id: """,21,__ecma.String,52,,,1,,__ecma.String
+90194313544,LITERAL,3,,""" was updated.""",40,__ecma.String,52,,,3,,__ecma.String
+90194313545,LITERAL,2,,""":id""",9,__ecma.String,46,,,2,,__ecma.String
+90194313546,LITERAL,2,,""":id""",9,__ecma.String,46,,,2,,__ecma.String
+90194313547,LITERAL,2,,"""id""",34,__ecma.String,57,,,2,,__ecma.String
+90194313548,LITERAL,1,,"""Updating user with id: """,21,__ecma.String,58,,,1,,__ecma.String
+90194313549,LITERAL,3,,""".""",57,__ecma.String,58,,,3,,__ecma.String
+90194313550,LITERAL,1,,"""User with id: """,21,__ecma.String,60,,,1,,__ecma.String
+90194313551,LITERAL,3,,""" was updated.""",48,__ecma.String,60,,,3,,__ecma.String
+90194313552,LITERAL,2,,""":id/resend-verification""",9,__ecma.String,56,,,2,,__ecma.String
+90194313553,LITERAL,2,,""":id/resend-verification""",9,__ecma.String,56,,,2,,__ecma.String
+90194313554,LITERAL,2,,"""userId""",34,__ecma.String,65,,,2,,__ecma.String
+90194313555,LITERAL,2,,"""/mfa/attempt""",8,__ecma.String,64,,,2,,__ecma.String
+90194313556,LITERAL,2,,"""/mfa/attempt""",8,__ecma.String,64,,,2,,__ecma.String
+90194313557,LITERAL,2,,"""userId""",34,__ecma.String,70,,,2,,__ecma.String
+90194313558,LITERAL,2,,"""/mfa/success""",8,__ecma.String,69,,,2,,__ecma.String
+90194313559,LITERAL,2,,"""/mfa/success""",8,__ecma.String,69,,,2,,__ecma.String
+90194313560,LITERAL,2,,"""id""",22,__ecma.String,75,,,2,,__ecma.String
+90194313561,LITERAL,2,,"""payload""",49,__ecma.String,75,,,2,,__ecma.String
+90194313562,LITERAL,1,,"""Disabling / Enabling User with id: """,21,__ecma.String,76,,,1,,__ecma.String
+90194313563,LITERAL,3,,""".""",61,__ecma.String,76,,,3,,__ecma.String
+90194313564,LITERAL,1,,"""User with id: """,21,__ecma.String,80,,,1,,__ecma.String
+90194313565,LITERAL,3,,""" was """,40,__ecma.String,80,,,3,,__ecma.String
+90194313566,LITERAL,2,,"""Enabled!""",69,__ecma.String,80,,,2,,__ecma.String
+90194313567,LITERAL,3,,"""Disabled!""",82,__ecma.String,80,,,3,,__ecma.String
+90194313568,LITERAL,2,,""":id""",10,__ecma.String,74,,,2,,__ecma.String
+90194313569,LITERAL,2,,""":id""",10,__ecma.String,74,,,2,,__ecma.String
+90194313570,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313571,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313572,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313573,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313574,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313575,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313576,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313577,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313578,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194313579,LITERAL,1,,"""@nestjs/swagger""",0,,2,,,3,,ANY
+90194313580,LITERAL,1,,"""../../shared/context/users/domain/dto/create-user.dto""",0,,3,,,3,,ANY
+90194313581,LITERAL,1,,"""../../shared/context/users/domain/dto/find-user.dto""",0,,4,,,3,,ANY
+90194313582,LITERAL,1,,"""../../shared/context/users/domain/dto/update-user.dto""",0,,5,,,3,,ANY
+90194313583,LITERAL,1,,"""../../shared/context/users/domain/users.service""",0,,6,,,3,,ANY
+90194313584,LITERAL,1,,"""src/shared/dataTypes/MyContext""",0,,7,,,3,,ANY
+90194313585,LITERAL,1,,"""@nestjs/typeorm""",0,,1,,,3,,ANY
+90194313586,LITERAL,1,,"""@nestjs/common""",0,,2,,,3,,ANY
+90194313587,LITERAL,1,,"""./users.controller""",0,,3,,,3,,ANY
+90194313588,LITERAL,1,,"""@avantodev/avanto-db""",0,,4,,,3,,ANY
+90194313589,LITERAL,1,,"""@avantodev/avanto-db""",0,,4,,,3,,ANY
+90194313590,LITERAL,1,,"""@avantodev/avanto-db""",0,,4,,,3,,ANY
+90194313591,LITERAL,1,,"""../../shared/context/users/domain/users.service""",0,,5,,,3,,ANY
+90194313592,LITERAL,1,,"""../../shared/infrastructure/persistance/postgre-sql/dbConfig""",0,,6,,,3,,ANY
+90194313593,LITERAL,1,,"""src/shared/context/tenants/domain/tenants.service""",0,,7,,,3,,ANY
+90194313594,LITERAL,1,,"""../../shared/infrastructure/mails/mailProvider""",0,,8,,,3,,ANY
+90194313595,LITERAL,1,,"""App Running in port """,49,__ecma.String,27,,,1,,__ecma.String
+90194313596,LITERAL,3,,"""""",76,__ecma.String,27,,,3,,__ecma.String
+90194313597,LITERAL,1,,"""Tenant Micro Service""",14,__ecma.String,15,,,3,,__ecma.String
+90194313598,LITERAL,1,,"""Tenants Micro Service API documentation""",20,__ecma.String,16,,,3,,__ecma.String
+90194313599,LITERAL,1,,"""1.0""",16,__ecma.String,17,,,3,,__ecma.String
+90194313600,LITERAL,1,,"""tenant-types""",12,__ecma.String,18,,,3,,__ecma.String
+90194313601,LITERAL,1,,"""users""",12,__ecma.String,19,,,3,,__ecma.String
+90194313602,LITERAL,1,,"""roles""",12,__ecma.String,20,,,3,,__ecma.String
+90194313603,LITERAL,1,,"""docs""",22,__ecma.String,23,,,3,,__ecma.String
+90194313604,LITERAL,1,,"""@nestjs/core""",0,,1,,,3,,ANY
+90194313605,LITERAL,1,,"""@nestjs/swagger""",0,,2,,,3,,ANY
+90194313606,LITERAL,1,,"""@nestjs/swagger""",0,,2,,,3,,ANY
+90194313607,LITERAL,1,,"""nestjs-pino""",0,,3,,,3,,ANY
+90194313608,LITERAL,1,,"""./app.module""",0,,4,,,3,,ANY
+90194313609,LITERAL,1,,"""dotenv/config""",0,,5,,,3,,ANY
+90194313610,LITERAL,1,,"""@nestjs/common""",0,,6,,,3,,ANY
+90194313611,LITERAL,2,,"""3000""",33,__ecma.String,8,,,2,,__ecma.String
+90194313612,LITERAL,2,,2,10,__ecma.Number,8,,,2,,__ecma.Number
+90194313613,LITERAL,2,,100,13,__ecma.Number,8,,,2,,__ecma.Number
+90194313614,LITERAL,2,,2,10,__ecma.Number,13,,,2,,__ecma.Number
+90194313615,LITERAL,2,,400,13,__ecma.Number,13,,,2,,__ecma.Number
+90194313616,LITERAL,2,,true,27,__ecma.Boolean,23,,,2,,__ecma.Boolean
+90194313617,LITERAL,1,,"""./role-alias.dto""",0,,1,,,3,,ANY
+90194313618,LITERAL,1,,"""@nestjs/swagger""",0,,2,,,3,,ANY
+90194313619,LITERAL,1,,"""class-validator""",0,,3,,,3,,ANY
+90194313620,LITERAL,1,,"""class-validator""",0,,3,,,3,,ANY
+90194313621,LITERAL,2,,true,27,__ecma.Boolean,6,,,2,,__ecma.Boolean
+90194313622,LITERAL,2,,true,27,__ecma.Boolean,9,,,2,,__ecma.Boolean
+90194313623,LITERAL,2,,true,27,__ecma.Boolean,12,,,2,,__ecma.Boolean
+90194313624,LITERAL,2,,true,27,__ecma.Boolean,15,,,2,,__ecma.Boolean
+90194313625,LITERAL,2,,true,27,__ecma.Boolean,18,,,2,,__ecma.Boolean
+90194313626,LITERAL,2,,true,27,__ecma.Boolean,21,,,2,,__ecma.Boolean
+90194313627,LITERAL,1,,"""@nestjs/swagger""",0,,1,,,3,,ANY
+90194313628,LITERAL,1,,"""./create-role-alias.dto""",0,,2,,,3,,ANY
+90194313629,LITERAL,1,,"""@nestjs/swagger""",0,,3,,,3,,ANY
+90194313630,LITERAL,1,,"""@avantodev/avanto-db""",0,,1,,,3,,ANY
+90194313631,LITERAL,2,,true,27,__ecma.Boolean,7,,,2,,__ecma.Boolean
+90194313632,LITERAL,2,,2,10,__ecma.Number,9,,,2,,__ecma.Number
+90194313633,LITERAL,2,,100,13,__ecma.Number,9,,,2,,__ecma.Number
+90194313634,LITERAL,2,,true,27,__ecma.Boolean,12,,,2,,__ecma.Boolean
+90194313635,LITERAL,2,,2,10,__ecma.Number,14,,,2,,__ecma.Number
+90194313636,LITERAL,2,,400,13,__ecma.Number,14,,,2,,__ecma.Number
+90194313637,LITERAL,2,,true,27,__ecma.Boolean,17,,,2,,__ecma.Boolean
+90194313638,LITERAL,2,,true,27,__ecma.Boolean,21,,,2,,__ecma.Boolean
+90194313639,LITERAL,2,,true,27,__ecma.Boolean,24,,,2,,__ecma.Boolean
+90194313640,LITERAL,1,,"""@nestjs/swagger""",0,,1,,,3,,ANY
+90194313641,LITERAL,1,,"""./create-role-alias.dto""",0,,2,,,3,,ANY
+90194313642,LITERAL,1,,"""@nestjs/swagger""",0,,3,,,3,,ANY
+90194313643,LITERAL,1,,"""class-validator""",0,,4,,,3,,ANY
+90194313644,LITERAL,1,,"""class-validator""",0,,4,,,3,,ANY
+90194313645,LITERAL,1,,"""Creating new User...""",20,__ecma.String,29,,,3,,__ecma.String
+90194313646,LITERAL,1,,"""The aliasName """,25,__ecma.String,36,,,1,,__ecma.String
+90194313647,LITERAL,3,,""" is already used and needs to be unique""",51,__ecma.String,36,,,3,,__ecma.String
+90194313648,LITERAL,1,,"""aliasName is already in use""",35,__ecma.String,37,,,3,,__ecma.String
+90194313649,LITERAL,1,,"""The aliasName """,22,__ecma.String,39,,,1,,__ecma.String
+90194313650,LITERAL,3,,""" is already used and needs to be unique""",48,__ecma.String,39,,,3,,__ecma.String
+90194313651,LITERAL,1,,"""The role with id """,25,__ecma.String,45,,,1,,__ecma.String
+90194313652,LITERAL,3,,""" was not found""",51,__ecma.String,45,,,3,,__ecma.String
+90194313653,LITERAL,1,,"""Role not found""",34,__ecma.String,46,,,3,,__ecma.String
+90194313654,LITERAL,1,,"""The role with id """,22,__ecma.String,48,,,1,,__ecma.String
+90194313655,LITERAL,3,,""" was not found""",48,__ecma.String,48,,,3,,__ecma.String
+90194313656,LITERAL,2,,0,52,__ecma.Number,61,,,2,,__ecma.Number
+90194313657,LITERAL,1,,"""Finding All Role Aliases ...""",20,__ecma.String,81,,,3,,__ecma.String
+90194313658,LITERAL,1,,"""RoleAlias""",26,__ecma.String,83,,,3,,__ecma.String
+90194313659,LITERAL,1,,"""RoleAlias.tenantRoleAlias""",25,__ecma.String,84,,,3,,__ecma.String
+90194313660,LITERAL,2,,"""tenantRoleAlias""",54,__ecma.String,84,,,4,,__ecma.String
+90194313661,LITERAL,1,,"""tenantRoleAlias.tenant""",25,__ecma.String,85,,,3,,__ecma.String
+90194313662,LITERAL,2,,"""tenant""",51,__ecma.String,85,,,4,,__ecma.String
+90194313663,LITERAL,1,,"""tenantRoleAlias.role""",25,__ecma.String,86,,,3,,__ecma.String
+90194313664,LITERAL,2,,"""tenantRoleAliasRole""",49,__ecma.String,86,,,4,,__ecma.String
+90194313665,LITERAL,1,,"""RoleAlias.role""",25,__ecma.String,87,,,3,,__ecma.String
+90194313666,LITERAL,2,,"""role""",43,__ecma.String,87,,,4,,__ecma.String
+90194313667,LITERAL,1,,"""Finding All Role Aliases ...""",20,__ecma.String,93,,,3,,__ecma.String
+90194313668,LITERAL,1,,"""RoleAlias""",26,__ecma.String,95,,,3,,__ecma.String
+90194313669,LITERAL,1,,"""RoleAlias.tenantRoleAlias""",25,__ecma.String,96,,,3,,__ecma.String
+90194313670,LITERAL,2,,"""tenantRoleAlias""",54,__ecma.String,96,,,4,,__ecma.String
+90194313671,LITERAL,1,,"""tenantRoleAlias.tenant""",25,__ecma.String,97,,,3,,__ecma.String
+90194313672,LITERAL,2,,"""tenant""",51,__ecma.String,97,,,4,,__ecma.String
+90194313673,LITERAL,1,,"""tenantRoleAlias.role""",25,__ecma.String,98,,,3,,__ecma.String
+90194313674,LITERAL,2,,"""tenantRoleAliasRole""",49,__ecma.String,98,,,4,,__ecma.String
+90194313675,LITERAL,1,,"""RoleAlias.role""",25,__ecma.String,99,,,3,,__ecma.String
+90194313676,LITERAL,2,,"""role""",43,__ecma.String,99,,,4,,__ecma.String
+90194313677,LITERAL,1,,"""RoleAlias.id = :id""",13,__ecma.String,100,,,3,,__ecma.String
+90194313678,LITERAL,2,,0,36,__ecma.Number,102,,,2,,__ecma.Number
+90194313679,LITERAL,1,,"""Finding Role Aliases by many args...""",21,__ecma.String,106,,,3,,__ecma.String
+90194313680,LITERAL,1,,"""RoleAlias""",26,__ecma.String,109,,,3,,__ecma.String
+90194313681,LITERAL,1,,"""RoleAlias.tenantRoleAlias""",25,__ecma.String,110,,,3,,__ecma.String
+90194313682,LITERAL,2,,"""tenantRoleAlias""",54,__ecma.String,110,,,4,,__ecma.String
+90194313683,LITERAL,1,,"""tenantRoleAlias.tenant""",25,__ecma.String,111,,,3,,__ecma.String
+90194313684,LITERAL,2,,"""tenant""",51,__ecma.String,111,,,4,,__ecma.String
+90194313685,LITERAL,1,,"""tenantRoleAlias.role""",25,__ecma.String,112,,,3,,__ecma.String
+90194313686,LITERAL,2,,"""tenantRoleAliasRole""",49,__ecma.String,112,,,4,,__ecma.String
+90194313687,LITERAL,1,,"""RoleAlias.role""",25,__ecma.String,113,,,3,,__ecma.String
+90194313688,LITERAL,2,,"""role""",43,__ecma.String,113,,,4,,__ecma.String
+90194313689,LITERAL,2,,0,28,__ecma.Number,115,,,2,,__ecma.Number
+90194313690,LITERAL,1,,"""RoleAlias.id IN (:...ids) """,29,__ecma.String,116,,,3,,__ecma.String
+90194313691,LITERAL,1,,"""lower(RoleAlias.aliasName) IN (:...aliasNames) """,29,__ecma.String,119,,,3,,__ecma.String
+90194313692,LITERAL,1,,"""lower(RoleAlias.description) IN (:...descriptions) """,29,__ecma.String,124,,,3,,__ecma.String
+90194313693,LITERAL,1,,"""RoleAlias.role_id IN (:...roleIds) """,29,__ecma.String,129,,,3,,__ecma.String
+90194313694,LITERAL,2,,null,19,__ecma.Null,131,,,2,,__ecma.Null
+90194313695,LITERAL,1,,"""RoleAlias.enabled = :enabled """,29,__ecma.String,132,,,3,,__ecma.String
+90194313696,LITERAL,2,,0,52,__ecma.Number,134,,,2,,__ecma.Number
+90194313697,LITERAL,1,,"""tenantRoleAlias.tenant IN (:...tenantRoleAlias)""",29,__ecma.String,136,,,3,,__ecma.String
+90194313698,LITERAL,1,,"""Updating Role Alias with id: """,21,__ecma.String,145,,,1,,__ecma.String
+90194313699,LITERAL,3,,"""""",55,__ecma.String,145,,,3,,__ecma.String
+90194313700,LITERAL,1,,"""RoleAlias""",26,__ecma.String,147,,,3,,__ecma.String
+90194313701,LITERAL,1,,"""RoleAlias.tenantRoleAlias""",25,__ecma.String,148,,,3,,__ecma.String
+90194313702,LITERAL,2,,"""tenantRoleAlias""",54,__ecma.String,148,,,4,,__ecma.String
+90194313703,LITERAL,1,,"""tenantRoleAlias.tenant""",25,__ecma.String,149,,,3,,__ecma.String
+90194313704,LITERAL,2,,"""tenant""",51,__ecma.String,149,,,4,,__ecma.String
+90194313705,LITERAL,1,,"""tenantRoleAlias.role""",25,__ecma.String,150,,,3,,__ecma.String
+90194313706,LITERAL,2,,"""tenantRoleAliasRole""",49,__ecma.String,150,,,4,,__ecma.String
+90194313707,LITERAL,1,,"""RoleAlias.role""",25,__ecma.String,151,,,3,,__ecma.String
+90194313708,LITERAL,2,,"""role""",43,__ecma.String,151,,,4,,__ecma.String
+90194313709,LITERAL,1,,"""RoleAlias.id = :id""",13,__ecma.String,152,,,3,,__ecma.String
+90194313710,LITERAL,1,,"""The user with id """,25,__ecma.String,156,,,1,,__ecma.String
+90194313711,LITERAL,3,,""" was not found""",47,__ecma.String,156,,,3,,__ecma.String
+90194313712,LITERAL,1,,"""User not found""",34,__ecma.String,157,,,3,,__ecma.String
+90194313713,LITERAL,1,,"""The user with id """,22,__ecma.String,159,,,1,,__ecma.String
+90194313714,LITERAL,3,,""" was not found""",44,__ecma.String,159,,,3,,__ecma.String
+90194313715,LITERAL,2,,null,48,__ecma.Null,162,,,2,,__ecma.Null
+90194313716,LITERAL,3,,null,91,__ecma.Null,164,,,3,,__ecma.Null
+90194313717,LITERAL,1,,"""The aliasName """,27,__ecma.String,168,,,1,,__ecma.String
+90194313718,LITERAL,3,,""" is already used and needs to be unique""",53,__ecma.String,168,,,3,,__ecma.String
+90194313719,LITERAL,1,,"""aliasName is already in use""",37,__ecma.String,169,,,3,,__ecma.String
+90194313720,LITERAL,1,,"""The aliasName """,24,__ecma.String,171,,,1,,__ecma.String
+90194313721,LITERAL,3,,""" is already used and needs to be unique""",50,__ecma.String,171,,,3,,__ecma.String
+90194313722,LITERAL,1,,"""The role with id """,27,__ecma.String,179,,,1,,__ecma.String
+90194313723,LITERAL,3,,""" was not found""",53,__ecma.String,179,,,3,,__ecma.String
+90194313724,LITERAL,1,,"""Role not found""",36,__ecma.String,180,,,3,,__ecma.String
+90194313725,LITERAL,1,,"""The role with id """,24,__ecma.String,182,,,1,,__ecma.String
+90194313726,LITERAL,3,,""" was not found""",50,__ecma.String,182,,,3,,__ecma.String
+90194313727,LITERAL,1,,"""Role Alias with id: """,21,__ecma.String,210,,,1,,__ecma.String
+90194313728,LITERAL,3,,""" was updated.""",46,__ecma.String,210,,,3,,__ecma.String
+90194313729,LITERAL,1,,"""Enabling / Disabling Role Alias with id: """,21,__ecma.String,215,,,1,,__ecma.String
+90194313730,LITERAL,3,,""".""",67,__ecma.String,215,,,3,,__ecma.String
+90194313731,LITERAL,1,,"""The role alias with id """,25,__ecma.String,218,,,1,,__ecma.String
+90194313732,LITERAL,3,,""" was not found""",53,__ecma.String,218,,,3,,__ecma.String
+90194313733,LITERAL,1,,"""Tenant not found""",34,__ecma.String,219,,,3,,__ecma.String
+90194313734,LITERAL,1,,"""The role alias with id """,22,__ecma.String,221,,,1,,__ecma.String
+90194313735,LITERAL,3,,""" was not found""",50,__ecma.String,221,,,3,,__ecma.String
+90194313736,LITERAL,1,,"""Role alias with id: """,21,__ecma.String,225,,,1,,__ecma.String
+90194313737,LITERAL,3,,""" was """,46,__ecma.String,225,,,3,,__ecma.String
+90194313738,LITERAL,2,,"""Enabled!""",79,__ecma.String,225,,,2,,__ecma.String
+90194313739,LITERAL,3,,"""Disabled!""",92,__ecma.String,225,,,3,,__ecma.String
+90194313740,LITERAL,1,,"""../../../infrastructure/persistance/postgre-sql/dbConfig""",0,,1,,,3,,ANY
+90194313741,LITERAL,1,,"""@avantodev/avanto-db""",0,,2,,,3,,ANY
+90194313742,LITERAL,1,,"""@avantodev/avanto-db""",0,,2,,,3,,ANY
+90194313743,LITERAL,1,,"""@avantodev/avanto-db""",0,,2,,,3,,ANY
+90194313744,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194313745,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194313746,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194313747,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194313748,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194313749,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194313750,LITERAL,1,,"""./dto/create-role-alias.dto""",0,,4,,,3,,ANY
+90194313751,LITERAL,1,,"""./dto/update-role-alias.dto""",0,,5,,,3,,ANY
+90194313752,LITERAL,1,,"""@nestjs/typeorm""",0,,6,,,3,,ANY
+90194313753,LITERAL,1,,"""typeorm""",0,,7,,,3,,ANY
+90194313754,LITERAL,1,,"""./dto/find-role-alias.dto""",0,,8,,,3,,ANY
+90194313755,LITERAL,1,,"""../../tenant-role-aliases/tenant-role-aliases.service""",0,,9,,,3,,ANY
+90194313756,LITERAL,2,,2,10,__ecma.Number,8,,,2,,__ecma.Number
+90194313757,LITERAL,2,,100,13,__ecma.Number,8,,,2,,__ecma.Number
+90194313758,LITERAL,2,,2,10,__ecma.Number,13,,,2,,__ecma.Number
+90194313759,LITERAL,2,,400,13,__ecma.Number,13,,,2,,__ecma.Number
+90194313760,LITERAL,2,,2,10,__ecma.Number,18,,,2,,__ecma.Number
+90194313761,LITERAL,2,,50,13,__ecma.Number,18,,,2,,__ecma.Number
+90194313762,LITERAL,2,,true,27,__ecma.Boolean,36,,,2,,__ecma.Boolean
+90194313763,LITERAL,1,,"""./role.dto""",0,,1,,,3,,ANY
+90194313764,LITERAL,1,,"""@nestjs/swagger""",0,,2,,,3,,ANY
+90194313765,LITERAL,1,,"""class-validator""",0,,3,,,3,,ANY
+90194313766,LITERAL,1,,"""class-validator""",0,,3,,,3,,ANY
+90194313767,LITERAL,2,,true,27,__ecma.Boolean,5,,,2,,__ecma.Boolean
+90194313768,LITERAL,2,,true,27,__ecma.Boolean,8,,,2,,__ecma.Boolean
+90194313769,LITERAL,2,,true,27,__ecma.Boolean,11,,,2,,__ecma.Boolean
+90194313770,LITERAL,2,,true,27,__ecma.Boolean,14,,,2,,__ecma.Boolean
+90194313771,LITERAL,2,,true,27,__ecma.Boolean,32,,,2,,__ecma.Boolean
+90194313772,LITERAL,2,,true,27,__ecma.Boolean,35,,,2,,__ecma.Boolean
+90194313773,LITERAL,1,,"""@nestjs/swagger""",0,,1,,,3,,ANY
+90194313774,LITERAL,1,,"""@nestjs/swagger""",0,,1,,,3,,ANY
+90194313775,LITERAL,1,,"""./create-role.dto""",0,,2,,,3,,ANY
+90194313776,LITERAL,2,,true,27,__ecma.Boolean,7,,,2,,__ecma.Boolean
+90194313777,LITERAL,2,,2,10,__ecma.Number,9,,,2,,__ecma.Number
+90194313778,LITERAL,2,,100,13,__ecma.Number,9,,,2,,__ecma.Number
+90194313779,LITERAL,2,,true,27,__ecma.Boolean,12,,,2,,__ecma.Boolean
+90194313780,LITERAL,2,,2,10,__ecma.Number,14,,,2,,__ecma.Number
+90194313781,LITERAL,2,,400,13,__ecma.Number,14,,,2,,__ecma.Number
+90194313782,LITERAL,2,,true,27,__ecma.Boolean,17,,,2,,__ecma.Boolean
+90194313783,LITERAL,2,,2,10,__ecma.Number,19,,,2,,__ecma.Number
+90194313784,LITERAL,2,,50,13,__ecma.Number,19,,,2,,__ecma.Number
+90194313785,LITERAL,2,,true,27,__ecma.Boolean,22,,,2,,__ecma.Boolean
+90194313786,LITERAL,2,,true,27,__ecma.Boolean,25,,,2,,__ecma.Boolean
+90194313787,LITERAL,2,,true,27,__ecma.Boolean,28,,,2,,__ecma.Boolean
+90194313788,LITERAL,2,,true,27,__ecma.Boolean,31,,,2,,__ecma.Boolean
+90194313789,LITERAL,2,,true,27,__ecma.Boolean,34,,,2,,__ecma.Boolean
+90194313790,LITERAL,2,,true,27,__ecma.Boolean,37,,,2,,__ecma.Boolean
+90194313791,LITERAL,2,,true,27,__ecma.Boolean,40,,,2,,__ecma.Boolean
+90194313792,LITERAL,1,,"""@nestjs/swagger""",0,,1,,,3,,ANY
+90194313793,LITERAL,1,,"""./create-role.dto""",0,,2,,,3,,ANY
+90194313794,LITERAL,1,,"""@nestjs/swagger""",0,,3,,,3,,ANY
+90194313795,LITERAL,1,,"""class-validator""",0,,4,,,3,,ANY
+90194313796,LITERAL,1,,"""class-validator""",0,,4,,,3,,ANY
+90194313797,LITERAL,1,,"""Creating new roles...""",20,__ecma.String,22,,,3,,__ecma.String
+90194313798,LITERAL,1,,"""The tag """"",25,__ecma.String,26,,,1,,__ecma.String
+90194313799,LITERAL,3,,""""" is already used and needs to be unique""",40,__ecma.String,26,,,3,,__ecma.String
+90194313800,LITERAL,1,,"""tag is already in use""",35,__ecma.String,27,,,3,,__ecma.String
+90194313801,LITERAL,1,,"""The tag """"",22,__ecma.String,29,,,1,,__ecma.String
+90194313802,LITERAL,3,,""""" is already used and needs to be unique""",37,__ecma.String,29,,,3,,__ecma.String
+90194313803,LITERAL,2,,0,78,__ecma.Number,32,,,2,,__ecma.Number
+90194313804,LITERAL,1,,"""tenant types: """,23,__ecma.String,33,,,1,,__ecma.String
+90194313805,LITERAL,3,,"""""",68,__ecma.String,33,,,3,,__ecma.String
+90194313806,LITERAL,2,,"""error""",48,__ecma.String,37,,,2,,__ecma.String
+90194313807,LITERAL,2,,"""error""",18,__ecma.String,38,,,2,,__ecma.String
+90194313808,LITERAL,1,,"""Missing TENANTS_MS_URL env variable""",27,__ecma.String,39,,,3,,__ecma.String
+90194313809,LITERAL,1,,"""TENANTS_MS_URL env variable not found""",36,__ecma.String,40,,,3,,__ecma.String
+90194313810,LITERAL,2,,"""Missing TENANTS_MS_URL env variable""",24,__ecma.String,42,,,2,,__ecma.String
+90194313811,LITERAL,1,,"""looking for tenant with id:""",25,__ecma.String,46,,,1,,__ecma.String
+90194313812,LITERAL,3,,"""""",70,__ecma.String,46,,,3,,__ecma.String
+90194313813,LITERAL,1,,"""""",77,__ecma.String,47,,,1,,__ecma.String
+90194313814,LITERAL,3,,"""tenants/many""",83,__ecma.String,47,,,3,,__ecma.String
+90194313815,LITERAL,2,,1,40,__ecma.Number,48,,,2,,__ecma.Number
+90194313816,LITERAL,1,,"""The tenant with id """,29,__ecma.String,49,,,1,,__ecma.String
+90194313817,LITERAL,3,,""" was not found""",66,__ecma.String,49,,,3,,__ecma.String
+90194313818,LITERAL,1,,"""Tenant not found""",38,__ecma.String,50,,,3,,__ecma.String
+90194313819,LITERAL,1,,"""The tenant with id """,26,__ecma.String,52,,,1,,__ecma.String
+90194313820,LITERAL,3,,""" was not found""",63,__ecma.String,52,,,3,,__ecma.String
+90194313821,LITERAL,1,,"""An error has occurred""",27,__ecma.String,56,,,3,,__ecma.String
+90194313822,LITERAL,2,,0,78,__ecma.Number,62,,,2,,__ecma.Number
+90194313823,LITERAL,1,,"""tenant types: """,23,__ecma.String,63,,,1,,__ecma.String
+90194313824,LITERAL,3,,"""""",68,__ecma.String,63,,,3,,__ecma.String
+90194313825,LITERAL,2,,"""error""",48,__ecma.String,64,,,2,,__ecma.String
+90194313826,LITERAL,2,,"""error""",18,__ecma.String,65,,,2,,__ecma.String
+90194313827,LITERAL,1,,"""Missing TENANTS_MS_URL env variable""",27,__ecma.String,66,,,3,,__ecma.String
+90194313828,LITERAL,1,,"""TENANTS_MS_URL env variable not found""",36,__ecma.String,67,,,3,,__ecma.String
+90194313829,LITERAL,2,,"""Missing TENANTS_MS_URL env variable""",24,__ecma.String,69,,,2,,__ecma.String
+90194313830,LITERAL,1,,"""""",86,__ecma.String,73,,,1,,__ecma.String
+90194313831,LITERAL,3,,"""tenant-types/many""",92,__ecma.String,73,,,3,,__ecma.String
+90194313832,LITERAL,2,,1,38,__ecma.Number,74,,,2,,__ecma.Number
+90194313833,LITERAL,1,,"""The tenant type with id """,29,__ecma.String,75,,,1,,__ecma.String
+90194313834,LITERAL,3,,""" was not found""",71,__ecma.String,75,,,3,,__ecma.String
+90194313835,LITERAL,1,,"""Tenant type not found""",38,__ecma.String,76,,,3,,__ecma.String
+90194313836,LITERAL,1,,"""The tenant type with id """,26,__ecma.String,78,,,1,,__ecma.String
+90194313837,LITERAL,3,,""" was not found""",68,__ecma.String,78,,,3,,__ecma.String
+90194313838,LITERAL,1,,"""An error has occurred""",27,__ecma.String,82,,,3,,__ecma.String
+90194313839,LITERAL,2,,false,58,__ecma.Boolean,93,,,2,,__ecma.Boolean
+90194313840,LITERAL,2,,false,18,__ecma.Boolean,94,,,2,,__ecma.Boolean
+90194313841,LITERAL,1,,"""Finding All Roles ...""",20,__ecma.String,106,,,3,,__ecma.String
+90194313842,LITERAL,1,,"""roles""",26,__ecma.String,108,,,3,,__ecma.String
+90194313843,LITERAL,1,,"""roles.tenantTypes""",25,__ecma.String,109,,,3,,__ecma.String
+90194313844,LITERAL,2,,"""tenantTypes""",46,__ecma.String,109,,,4,,__ecma.String
+90194313845,LITERAL,1,,"""roles.aliases""",25,__ecma.String,110,,,3,,__ecma.String
+90194313846,LITERAL,2,,"""aliases""",42,__ecma.String,110,,,4,,__ecma.String
+90194313847,LITERAL,1,,"""roles.roles""",25,__ecma.String,111,,,3,,__ecma.String
+90194313848,LITERAL,2,,"""assignedRoles""",40,__ecma.String,111,,,4,,__ecma.String
+90194313849,LITERAL,1,,"""assignedRoles.role""",25,__ecma.String,113,,,3,,__ecma.String
+90194313850,LITERAL,2,,"""role""",47,__ecma.String,113,,,4,,__ecma.String
+90194313851,LITERAL,1,,"""""",21,__ecma.String,118,,,1,,__ecma.String
+90194313852,LITERAL,3,,""" roles found""",51,__ecma.String,118,,,3,,__ecma.String
+90194313853,LITERAL,1,,"""Searching for Role  with id: """,21,__ecma.String,123,,,1,,__ecma.String
+90194313854,LITERAL,3,,""".""",55,__ecma.String,123,,,3,,__ecma.String
+90194313855,LITERAL,1,,"""roles""",26,__ecma.String,125,,,3,,__ecma.String
+90194313856,LITERAL,1,,"""roles.tenantTypes""",25,__ecma.String,126,,,3,,__ecma.String
+90194313857,LITERAL,2,,"""tenantTypes""",46,__ecma.String,126,,,4,,__ecma.String
+90194313858,LITERAL,1,,"""roles.aliases""",25,__ecma.String,127,,,3,,__ecma.String
+90194313859,LITERAL,2,,"""aliases""",42,__ecma.String,127,,,4,,__ecma.String
+90194313860,LITERAL,1,,"""roles.roles""",25,__ecma.String,128,,,3,,__ecma.String
+90194313861,LITERAL,2,,"""assignedRoles""",40,__ecma.String,128,,,4,,__ecma.String
+90194313862,LITERAL,1,,"""assignedRoles.role""",25,__ecma.String,130,,,3,,__ecma.String
+90194313863,LITERAL,2,,"""role""",47,__ecma.String,130,,,4,,__ecma.String
+90194313864,LITERAL,1,,"""roles.id = :id""",16,__ecma.String,134,,,3,,__ecma.String
+90194313865,LITERAL,1,,"""The tenant with id """,25,__ecma.String,138,,,1,,__ecma.String
+90194313866,LITERAL,3,,""" was not found""",49,__ecma.String,138,,,3,,__ecma.String
+90194313867,LITERAL,1,,"""Role  not found""",34,__ecma.String,139,,,3,,__ecma.String
+90194313868,LITERAL,1,,"""The role with id """,22,__ecma.String,141,,,1,,__ecma.String
+90194313869,LITERAL,3,,""" was not found""",44,__ecma.String,141,,,3,,__ecma.String
+90194313870,LITERAL,1,,"""role with id: """,21,__ecma.String,144,,,1,,__ecma.String
+90194313871,LITERAL,3,,""" was found.""",40,__ecma.String,144,,,3,,__ecma.String
+90194313872,LITERAL,1,,"""roles""",26,__ecma.String,163,,,3,,__ecma.String
+90194313873,LITERAL,1,,"""roles.tenantTypes""",25,__ecma.String,164,,,3,,__ecma.String
+90194313874,LITERAL,2,,"""tenantTypes""",46,__ecma.String,164,,,4,,__ecma.String
+90194313875,LITERAL,1,,"""roles.aliases""",25,__ecma.String,165,,,3,,__ecma.String
+90194313876,LITERAL,2,,"""aliases""",42,__ecma.String,165,,,4,,__ecma.String
+90194313877,LITERAL,1,,"""roles.roles""",25,__ecma.String,166,,,3,,__ecma.String
+90194313878,LITERAL,2,,"""assignedRoles""",40,__ecma.String,166,,,4,,__ecma.String
+90194313879,LITERAL,1,,"""assignedRoles.role""",25,__ecma.String,168,,,3,,__ecma.String
+90194313880,LITERAL,2,,"""role""",47,__ecma.String,168,,,4,,__ecma.String
+90194313881,LITERAL,2,,0,28,__ecma.Number,174,,,2,,__ecma.Number
+90194313882,LITERAL,1,,"""Finding by ids: """,23,__ecma.String,175,,,1,,__ecma.String
+90194313883,LITERAL,3,,"""""",45,__ecma.String,175,,,3,,__ecma.String
+90194313884,LITERAL,1,,"""roles.id IN (:...ids) """,29,__ecma.String,176,,,3,,__ecma.String
+90194313885,LITERAL,2,,0,32,__ecma.Number,178,,,2,,__ecma.Number
+90194313886,LITERAL,1,,"""Finding by names: """,23,__ecma.String,179,,,1,,__ecma.String
+90194313887,LITERAL,3,,"""""",49,__ecma.String,179,,,3,,__ecma.String
+90194313888,LITERAL,1,,"""lower(roles.name) IN (:...names) """,29,__ecma.String,180,,,3,,__ecma.String
+90194313889,LITERAL,2,,0,30,__ecma.Number,184,,,2,,__ecma.Number
+90194313890,LITERAL,1,,"""Finding by tags: """,23,__ecma.String,185,,,1,,__ecma.String
+90194313891,LITERAL,3,,"""""",47,__ecma.String,185,,,3,,__ecma.String
+90194313892,LITERAL,1,,"""lower(roles.tag) IN (:...tags) """,29,__ecma.String,186,,,3,,__ecma.String
+90194313893,LITERAL,2,,0,46,__ecma.Number,188,,,2,,__ecma.Number
+90194313894,LITERAL,1,,"""Finding by descriptions: """,23,__ecma.String,189,,,1,,__ecma.String
+90194313895,LITERAL,3,,"""""",63,__ecma.String,189,,,3,,__ecma.String
+90194313896,LITERAL,1,,"""roles.description IN (:...descriptions) """,29,__ecma.String,190,,,3,,__ecma.String
+90194313897,LITERAL,2,,0,50,__ecma.Number,198,,,2,,__ecma.Number
+90194313898,LITERAL,1,,"""Finding by tenantType Ids: """,23,__ecma.String,199,,,1,,__ecma.String
+90194313899,LITERAL,3,,"""""",67,__ecma.String,199,,,3,,__ecma.String
+90194313900,LITERAL,1,,"""tenantTypes.id IN (:...tenantTypesIds) """,29,__ecma.String,200,,,3,,__ecma.String
+90194313901,LITERAL,2,,0,38,__ecma.Number,202,,,2,,__ecma.Number
+90194313902,LITERAL,1,,"""Finding by alias Ids: """,23,__ecma.String,203,,,1,,__ecma.String
+90194313903,LITERAL,3,,"""""",56,__ecma.String,203,,,3,,__ecma.String
+90194313904,LITERAL,1,,"""aliases.id IN (:...aliasIds) """,29,__ecma.String,204,,,3,,__ecma.String
+90194313905,LITERAL,2,,null,19,__ecma.Null,207,,,2,,__ecma.Null
+90194313906,LITERAL,1,,"""Finding by enabled: """,23,__ecma.String,208,,,1,,__ecma.String
+90194313907,LITERAL,3,,"""""",53,__ecma.String,208,,,3,,__ecma.String
+90194313908,LITERAL,1,,"""roles.enabled = :enabled """,29,__ecma.String,209,,,3,,__ecma.String
+90194313909,LITERAL,2,,null,28,__ecma.Null,211,,,2,,__ecma.Null
+90194313910,LITERAL,1,,"""Finding by Back Office Access: """,23,__ecma.String,212,,,1,,__ecma.String
+90194313911,LITERAL,3,,"""""",73,__ecma.String,212,,,3,,__ecma.String
+90194313912,LITERAL,1,,"""roles.BackOfficeAccess = :BackOfficeAccess """,29,__ecma.String,213,,,3,,__ecma.String
+90194313913,LITERAL,2,,null,22,__ecma.Null,215,,,2,,__ecma.Null
+90194313914,LITERAL,1,,"""Finding by Saas Access: """,23,__ecma.String,216,,,1,,__ecma.String
+90194313915,LITERAL,3,,"""""",60,__ecma.String,216,,,3,,__ecma.String
+90194313916,LITERAL,1,,"""roles.SaasAccess = :SaasAccess """,29,__ecma.String,217,,,3,,__ecma.String
+90194313917,LITERAL,2,,null,26,__ecma.Null,219,,,2,,__ecma.Null
+90194313918,LITERAL,1,,"""Finding by tenant Specific: """,23,__ecma.String,220,,,1,,__ecma.String
+90194313919,LITERAL,3,,"""""",68,__ecma.String,220,,,3,,__ecma.String
+90194313920,LITERAL,1,,"""roles.tenantSpecific = :tenantSpecific """,29,__ecma.String,221,,,3,,__ecma.String
+90194313921,LITERAL,1,,"""Found """,21,__ecma.String,225,,,1,,__ecma.String
+90194313922,LITERAL,3,,""" Tenant Types""",57,__ecma.String,225,,,3,,__ecma.String
+90194313923,LITERAL,1,,"""Searching for Role with id: """,21,__ecma.String,230,,,1,,__ecma.String
+90194313924,LITERAL,3,,""" to Update it""",54,__ecma.String,230,,,3,,__ecma.String
+90194313925,LITERAL,1,,"""roles""",26,__ecma.String,232,,,3,,__ecma.String
+90194313926,LITERAL,1,,"""roles.tenantTypes""",25,__ecma.String,233,,,3,,__ecma.String
+90194313927,LITERAL,2,,"""tenantTypes""",46,__ecma.String,233,,,4,,__ecma.String
+90194313928,LITERAL,1,,"""roles.aliases""",25,__ecma.String,234,,,3,,__ecma.String
+90194313929,LITERAL,2,,"""aliases""",42,__ecma.String,234,,,4,,__ecma.String
+90194313930,LITERAL,1,,"""roles.roles""",25,__ecma.String,235,,,3,,__ecma.String
+90194313931,LITERAL,2,,"""assignedRoles""",40,__ecma.String,235,,,4,,__ecma.String
+90194313932,LITERAL,1,,"""assignedRoles.role""",25,__ecma.String,237,,,3,,__ecma.String
+90194313933,LITERAL,2,,"""role""",47,__ecma.String,237,,,4,,__ecma.String
+90194313934,LITERAL,1,,"""roles.id = :id""",16,__ecma.String,241,,,3,,__ecma.String
+90194313935,LITERAL,1,,"""The tenant with id """,25,__ecma.String,245,,,1,,__ecma.String
+90194313936,LITERAL,3,,""" was not found""",49,__ecma.String,245,,,3,,__ecma.String
+90194313937,LITERAL,1,,"""Role  not found""",34,__ecma.String,246,,,3,,__ecma.String
+90194313938,LITERAL,1,,"""The role with id """,22,__ecma.String,248,,,1,,__ecma.String
+90194313939,LITERAL,3,,""" was not found""",44,__ecma.String,248,,,3,,__ecma.String
+90194313940,LITERAL,1,,"""role with id: """,21,__ecma.String,251,,,1,,__ecma.String
+90194313941,LITERAL,3,,""" was found.""",40,__ecma.String,251,,,3,,__ecma.String
+90194313942,LITERAL,3,,null,48,__ecma.Null,255,,,3,,__ecma.Null
+90194313943,LITERAL,3,,null,59,__ecma.Null,256,,,3,,__ecma.Null
+90194313944,LITERAL,3,,null,69,__ecma.Null,257,,,3,,__ecma.Null
+90194313945,LITERAL,1,,"""finding role with tag: """,23,__ecma.String,260,,,1,,__ecma.String
+90194313946,LITERAL,3,,""" ...""",52,__ecma.String,260,,,3,,__ecma.String
+90194313947,LITERAL,1,,"""The tag """"",27,__ecma.String,263,,,1,,__ecma.String
+90194313948,LITERAL,3,,""""" is already used and needs to be unique""",42,__ecma.String,263,,,3,,__ecma.String
+90194313949,LITERAL,1,,"""tag is already in use""",37,__ecma.String,264,,,3,,__ecma.String
+90194313950,LITERAL,1,,"""The tag '""",24,__ecma.String,266,,,1,,__ecma.String
+90194313951,LITERAL,3,,"""' is already used and needs to be unique""",39,__ecma.String,266,,,3,,__ecma.String
+90194313952,LITERAL,1,,"""finding Tenant Creator with id: """,23,__ecma.String,272,,,1,,__ecma.String
+90194313953,LITERAL,3,,""" ...""",73,__ecma.String,272,,,3,,__ecma.String
+90194313954,LITERAL,2,,"""error""",48,__ecma.String,273,,,2,,__ecma.String
+90194313955,LITERAL,2,,"""error""",18,__ecma.String,274,,,2,,__ecma.String
+90194313956,LITERAL,1,,"""Missing TENANTS_MS_URL env variable""",27,__ecma.String,275,,,3,,__ecma.String
+90194313957,LITERAL,1,,"""Role  not found""",36,__ecma.String,276,,,3,,__ecma.String
+90194313958,LITERAL,2,,"""Missing TENANTS_MS_URL env variable""",24,__ecma.String,278,,,2,,__ecma.String
+90194313959,LITERAL,1,,"""The tenant with id """,27,__ecma.String,282,,,1,,__ecma.String
+90194313960,LITERAL,3,,""" was not supplied""",64,__ecma.String,282,,,3,,__ecma.String
+90194313961,LITERAL,1,,"""tenantCreatorId not supplied""",36,__ecma.String,283,,,3,,__ecma.String
+90194313962,LITERAL,1,,"""The tenant with id """,24,__ecma.String,285,,,1,,__ecma.String
+90194313963,LITERAL,3,,""" was not supplied. Please supply a valid one when including the tenantSpecific prop!""",61,__ecma.String,285,,,3,,__ecma.String
+90194313964,LITERAL,1,,"""looking for tenant with id:""",25,__ecma.String,289,,,1,,__ecma.String
+90194313965,LITERAL,3,,"""""",70,__ecma.String,289,,,3,,__ecma.String
+90194313966,LITERAL,1,,"""""",83,__ecma.String,290,,,1,,__ecma.String
+90194313967,LITERAL,3,,"""tenants/many""",89,__ecma.String,290,,,3,,__ecma.String
+90194313968,LITERAL,2,,1,40,__ecma.Number,291,,,2,,__ecma.Number
+90194313969,LITERAL,1,,"""The tenant with id """,29,__ecma.String,292,,,1,,__ecma.String
+90194313970,LITERAL,3,,""" was not found""",66,__ecma.String,292,,,3,,__ecma.String
+90194313971,LITERAL,1,,"""Tenant  not found""",38,__ecma.String,293,,,3,,__ecma.String
+90194313972,LITERAL,1,,"""The tenant with id """,26,__ecma.String,295,,,1,,__ecma.String
+90194313973,LITERAL,3,,""" was not found""",63,__ecma.String,295,,,3,,__ecma.String
+90194313974,LITERAL,1,,"""An error has occurred""",27,__ecma.String,299,,,3,,__ecma.String
+90194313975,LITERAL,2,,0,78,__ecma.Number,304,,,2,,__ecma.Number
+90194313976,LITERAL,1,,"""tenant types: """,23,__ecma.String,305,,,1,,__ecma.String
+90194313977,LITERAL,3,,"""""",68,__ecma.String,305,,,3,,__ecma.String
+90194313978,LITERAL,2,,"""error""",48,__ecma.String,306,,,2,,__ecma.String
+90194313979,LITERAL,2,,"""error""",18,__ecma.String,307,,,2,,__ecma.String
+90194313980,LITERAL,1,,"""Missing TENANTS_MS_URL env variable""",27,__ecma.String,308,,,3,,__ecma.String
+90194313981,LITERAL,1,,"""TENANTS_MS_URL env variable not found""",36,__ecma.String,309,,,3,,__ecma.String
+90194313982,LITERAL,2,,"""Missing TENANTS_MS_URL env variable""",24,__ecma.String,311,,,2,,__ecma.String
+90194313983,LITERAL,1,,"""""",86,__ecma.String,315,,,1,,__ecma.String
+90194313984,LITERAL,3,,"""tenant-types/many""",92,__ecma.String,315,,,3,,__ecma.String
+90194313985,LITERAL,2,,1,38,__ecma.Number,316,,,2,,__ecma.Number
+90194313986,LITERAL,1,,"""The tenant type with id """,29,__ecma.String,317,,,1,,__ecma.String
+90194313987,LITERAL,3,,""" was not found""",71,__ecma.String,317,,,3,,__ecma.String
+90194313988,LITERAL,1,,"""Tenant type not found""",38,__ecma.String,318,,,3,,__ecma.String
+90194313989,LITERAL,1,,"""The tenant type with id """,26,__ecma.String,320,,,1,,__ecma.String
+90194313990,LITERAL,3,,""" was not found""",68,__ecma.String,320,,,3,,__ecma.String
+90194313991,LITERAL,1,,"""An error has occurred""",27,__ecma.String,324,,,3,,__ecma.String
+90194313992,LITERAL,2,,0,36,__ecma.Number,338,,,2,,__ecma.Number
+90194313993,LITERAL,2,,0,81,__ecma.Number,338,,,2,,__ecma.Number
+90194313994,LITERAL,1,,"""Enabling / Disabling Role with id: """,21,__ecma.String,344,,,1,,__ecma.String
+90194313995,LITERAL,3,,""".""",61,__ecma.String,344,,,3,,__ecma.String
+90194313996,LITERAL,1,,"""roles""",26,__ecma.String,346,,,3,,__ecma.String
+90194313997,LITERAL,1,,"""roles.tenantTypes""",25,__ecma.String,347,,,3,,__ecma.String
+90194313998,LITERAL,2,,"""tenantTypes""",46,__ecma.String,347,,,4,,__ecma.String
+90194313999,LITERAL,1,,"""roles.aliases""",25,__ecma.String,348,,,3,,__ecma.String
+90194314000,LITERAL,2,,"""aliases""",42,__ecma.String,348,,,4,,__ecma.String
+90194314001,LITERAL,1,,"""roles.roles""",25,__ecma.String,349,,,3,,__ecma.String
+90194314002,LITERAL,2,,"""assignedRoles""",40,__ecma.String,349,,,4,,__ecma.String
+90194314003,LITERAL,1,,"""assignedRoles.role""",25,__ecma.String,351,,,3,,__ecma.String
+90194314004,LITERAL,2,,"""role""",47,__ecma.String,351,,,4,,__ecma.String
+90194314005,LITERAL,1,,"""roles.id = :id""",16,__ecma.String,355,,,3,,__ecma.String
+90194314006,LITERAL,1,,"""The tenant with id """,25,__ecma.String,359,,,1,,__ecma.String
+90194314007,LITERAL,3,,""" was not found""",49,__ecma.String,359,,,3,,__ecma.String
+90194314008,LITERAL,1,,"""Role  not found""",34,__ecma.String,360,,,3,,__ecma.String
+90194314009,LITERAL,1,,"""The role with id """,22,__ecma.String,362,,,1,,__ecma.String
+90194314010,LITERAL,3,,""" was not found""",44,__ecma.String,362,,,3,,__ecma.String
+90194314011,LITERAL,1,,"""Tenant with id: """,21,__ecma.String,366,,,1,,__ecma.String
+90194314012,LITERAL,3,,""" was """,42,__ecma.String,366,,,3,,__ecma.String
+90194314013,LITERAL,2,,"""Enabled!""",74,__ecma.String,366,,,2,,__ecma.String
+90194314014,LITERAL,3,,"""Disabled!""",87,__ecma.String,366,,,3,,__ecma.String
+90194314015,LITERAL,1,,"""typeorm""",0,,1,,,3,,ANY
+90194314016,LITERAL,1,,"""@nestjs/typeorm""",0,,2,,,3,,ANY
+90194314017,LITERAL,1,,"""./../../../utils""",0,,3,,,3,,ANY
+90194314018,LITERAL,1,,"""@avantodev/avanto-db""",0,,4,,,3,,ANY
+90194314019,LITERAL,1,,"""@avantodev/avanto-db""",0,,4,,,3,,ANY
+90194314020,LITERAL,1,,"""@avantodev/avanto-db""",0,,4,,,3,,ANY
+90194314021,LITERAL,1,,"""./../domain/dto/find-role.dto""",0,,5,,,3,,ANY
+90194314022,LITERAL,1,,"""./../domain/dto/create-role.dto""",0,,6,,,3,,ANY
+90194314023,LITERAL,1,,"""./../domain/dto/update-role.dto""",0,,7,,,3,,ANY
+90194314024,LITERAL,1,,"""../../../infrastructure/persistance/postgre-sql/dbConfig""",0,,8,,,3,,ANY
+90194314025,LITERAL,1,,"""@nestjs/common""",0,,9,,,3,,ANY
+90194314026,LITERAL,1,,"""@nestjs/common""",0,,9,,,3,,ANY
+90194314027,LITERAL,1,,"""@nestjs/common""",0,,9,,,3,,ANY
+90194314028,LITERAL,1,,"""@nestjs/common""",0,,9,,,3,,ANY
+90194314029,LITERAL,2,,true,27,__ecma.Boolean,7,,,2,,__ecma.Boolean
+90194314030,LITERAL,2,,true,27,__ecma.Boolean,10,,,2,,__ecma.Boolean
+90194314031,LITERAL,2,,true,27,__ecma.Boolean,13,,,2,,__ecma.Boolean
+90194314032,LITERAL,1,,"""@nestjs/swagger""",0,,1,,,3,,ANY
+90194314033,LITERAL,1,,"""./create-tenant-role-aliases.dto""",0,,2,,,3,,ANY
+90194314034,LITERAL,1,,"""@nestjs/swagger""",0,,3,,,3,,ANY
+90194314035,LITERAL,1,,"""@avantodev/avanto-db""",0,,4,,,3,,ANY
+90194314036,LITERAL,1,,"""./tenant-role-alias.dto""",0,,1,,,3,,ANY
+90194314037,LITERAL,1,,"""@nestjs/swagger""",0,,2,,,3,,ANY
+90194314038,LITERAL,1,,"""class-validator""",0,,3,,,3,,ANY
+90194314039,LITERAL,2,,true,27,__ecma.Boolean,6,,,2,,__ecma.Boolean
+90194314040,LITERAL,2,,true,27,__ecma.Boolean,9,,,2,,__ecma.Boolean
+90194314041,LITERAL,2,,true,27,__ecma.Boolean,12,,,2,,__ecma.Boolean
+90194314042,LITERAL,2,,true,27,__ecma.Boolean,15,,,2,,__ecma.Boolean
+90194314043,LITERAL,2,,true,27,__ecma.Boolean,18,,,2,,__ecma.Boolean
+90194314044,LITERAL,1,,"""@nestjs/swagger""",0,,1,,,3,,ANY
+90194314045,LITERAL,1,,"""./create-tenant-role-aliases.dto""",0,,2,,,3,,ANY
+90194314046,LITERAL,1,,"""@nestjs/swagger""",0,,3,,,3,,ANY
+90194314047,LITERAL,2,,true,27,__ecma.Boolean,7,,,2,,__ecma.Boolean
+90194314048,LITERAL,2,,true,27,__ecma.Boolean,11,,,2,,__ecma.Boolean
+90194314049,LITERAL,2,,true,27,__ecma.Boolean,15,,,2,,__ecma.Boolean
+90194314050,LITERAL,2,,true,27,__ecma.Boolean,19,,,2,,__ecma.Boolean
+90194314051,LITERAL,1,,"""@nestjs/swagger""",0,,1,,,3,,ANY
+90194314052,LITERAL,1,,"""./create-tenant-role-aliases.dto""",0,,2,,,3,,ANY
+90194314053,LITERAL,1,,"""@nestjs/swagger""",0,,3,,,3,,ANY
+90194314054,LITERAL,1,,"""class-validator""",0,,4,,,3,,ANY
+90194314055,LITERAL,1,,"""id = :tenant""",79,__ecma.String,28,,,3,,__ecma.String
+90194314056,LITERAL,1,,"""Invalid Tenant, does not exist any tenant with id """,25,__ecma.String,31,,,1,,__ecma.String
+90194314057,LITERAL,3,,"""""",84,__ecma.String,31,,,3,,__ecma.String
+90194314058,LITERAL,1,,"""Invalid Tenant""",34,__ecma.String,32,,,3,,__ecma.String
+90194314059,LITERAL,1,,"""Invalid Tenant, does not exist any tenant with id """,22,__ecma.String,34,,,1,,__ecma.String
+90194314060,LITERAL,3,,"""""",81,__ecma.String,34,,,3,,__ecma.String
+90194314061,LITERAL,1,,"""id = :role""",76,__ecma.String,38,,,3,,__ecma.String
+90194314062,LITERAL,1,,"""Invalid Role, does not exist any role with id """,25,__ecma.String,41,,,1,,__ecma.String
+90194314063,LITERAL,3,,"""""",78,__ecma.String,41,,,3,,__ecma.String
+90194314064,LITERAL,1,,"""Invalid Role""",34,__ecma.String,42,,,3,,__ecma.String
+90194314065,LITERAL,1,,"""Invalid Role, does not exist any role with id """,22,__ecma.String,44,,,1,,__ecma.String
+90194314066,LITERAL,3,,"""""",75,__ecma.String,44,,,3,,__ecma.String
+90194314067,LITERAL,1,,"""RoleAlias""",26,__ecma.String,49,,,3,,__ecma.String
+90194314068,LITERAL,1,,"""RoleAlias.tenantRoleAlias""",25,__ecma.String,50,,,3,,__ecma.String
+90194314069,LITERAL,2,,"""tenantRoleAlias""",54,__ecma.String,50,,,4,,__ecma.String
+90194314070,LITERAL,1,,"""tenantRoleAlias.tenant""",25,__ecma.String,51,,,3,,__ecma.String
+90194314071,LITERAL,2,,"""tenant""",51,__ecma.String,51,,,4,,__ecma.String
+90194314072,LITERAL,1,,"""tenantRoleAlias.role""",25,__ecma.String,52,,,3,,__ecma.String
+90194314073,LITERAL,2,,"""tenantRoleAliasRole""",49,__ecma.String,52,,,4,,__ecma.String
+90194314074,LITERAL,1,,"""RoleAlias.role""",25,__ecma.String,53,,,3,,__ecma.String
+90194314075,LITERAL,2,,"""role""",43,__ecma.String,53,,,4,,__ecma.String
+90194314076,LITERAL,1,,"""RoleAlias.id = :roleAlias""",16,__ecma.String,54,,,3,,__ecma.String
+90194314077,LITERAL,1,,"""role.id = :role""",16,__ecma.String,55,,,3,,__ecma.String
+90194314078,LITERAL,1,,"""Invalid RoleAlias, does not exist any role alias with id """,25,__ecma.String,58,,,1,,__ecma.String
+90194314079,LITERAL,3,,""", for role """,94,__ecma.String,58,,,3,,__ecma.String
+90194314080,LITERAL,5,,"""""",112,__ecma.String,58,,,5,,__ecma.String
+90194314081,LITERAL,1,,"""Invalid RoleAlias""",34,__ecma.String,59,,,3,,__ecma.String
+90194314082,LITERAL,1,,"""Invalid RoleAlias, does not exist any role alias with id """,22,__ecma.String,61,,,1,,__ecma.String
+90194314083,LITERAL,3,,""", for role """,91,__ecma.String,61,,,3,,__ecma.String
+90194314084,LITERAL,5,,"""""",109,__ecma.String,61,,,5,,__ecma.String
+90194314085,LITERAL,1,,"""TenantRoleAliases""",26,__ecma.String,66,,,3,,__ecma.String
+90194314086,LITERAL,1,,"""TenantRoleAliases.tenant""",25,__ecma.String,67,,,3,,__ecma.String
+90194314087,LITERAL,2,,"""Tenant""",53,__ecma.String,67,,,4,,__ecma.String
+90194314088,LITERAL,1,,"""TenantRoleAliases.role""",25,__ecma.String,68,,,3,,__ecma.String
+90194314089,LITERAL,2,,"""Role""",51,__ecma.String,68,,,4,,__ecma.String
+90194314090,LITERAL,1,,"""TenantRoleAliases.roleAlias""",25,__ecma.String,69,,,3,,__ecma.String
+90194314091,LITERAL,2,,"""RoleAlias""",56,__ecma.String,69,,,4,,__ecma.String
+90194314092,LITERAL,1,,"""Tenant.id = :tenant""",16,__ecma.String,70,,,3,,__ecma.String
+90194314093,LITERAL,1,,"""Role.id = :role""",16,__ecma.String,71,,,3,,__ecma.String
+90194314094,LITERAL,1,,"""Entry Already Exists with id """,9,__ecma.String,75,,,1,,__ecma.String
+90194314095,LITERAL,3,,""", can only have one for tenant """,69,__ecma.String,75,,,3,,__ecma.String
+90194314096,LITERAL,5,,""" and role """,109,__ecma.String,75,,,5,,__ecma.String
+90194314097,LITERAL,7,,"""""",126,__ecma.String,75,,,7,,__ecma.String
+90194314098,LITERAL,1,,"""Entry Already Exists""",35,__ecma.String,77,,,3,,__ecma.String
+90194314099,LITERAL,1,,"""Entry Already Exists with id """,22,__ecma.String,79,,,1,,__ecma.String
+90194314100,LITERAL,3,,""", can only have one for tenant """,82,__ecma.String,79,,,3,,__ecma.String
+90194314101,LITERAL,5,,""" and role """,122,__ecma.String,79,,,5,,__ecma.String
+90194314102,LITERAL,7,,"""""",139,__ecma.String,79,,,7,,__ecma.String
+90194314103,LITERAL,1,,"""TenantRoleAliases""",26,__ecma.String,95,,,3,,__ecma.String
+90194314104,LITERAL,1,,"""TenantRoleAliases.tenant""",25,__ecma.String,96,,,3,,__ecma.String
+90194314105,LITERAL,2,,"""Tenant""",53,__ecma.String,96,,,4,,__ecma.String
+90194314106,LITERAL,1,,"""TenantRoleAliases.role""",25,__ecma.String,97,,,3,,__ecma.String
+90194314107,LITERAL,2,,"""Role""",51,__ecma.String,97,,,4,,__ecma.String
+90194314108,LITERAL,1,,"""TenantRoleAliases.roleAlias""",25,__ecma.String,98,,,3,,__ecma.String
+90194314109,LITERAL,2,,"""RoleAlias""",56,__ecma.String,98,,,4,,__ecma.String
+90194314110,LITERAL,1,,"""TenantRoleAliases""",26,__ecma.String,104,,,3,,__ecma.String
+90194314111,LITERAL,1,,"""TenantRoleAliases.tenant""",25,__ecma.String,105,,,3,,__ecma.String
+90194314112,LITERAL,2,,"""Tenant""",53,__ecma.String,105,,,4,,__ecma.String
+90194314113,LITERAL,1,,"""TenantRoleAliases.role""",25,__ecma.String,106,,,3,,__ecma.String
+90194314114,LITERAL,2,,"""Role""",51,__ecma.String,106,,,4,,__ecma.String
+90194314115,LITERAL,1,,"""TenantRoleAliases.roleAlias""",25,__ecma.String,107,,,3,,__ecma.String
+90194314116,LITERAL,2,,"""RoleAlias""",56,__ecma.String,107,,,4,,__ecma.String
+90194314117,LITERAL,1,,"""TenantRoleAliases.id=:id""",13,__ecma.String,108,,,3,,__ecma.String
+90194314118,LITERAL,1,,"""TenantRoleAliases""",26,__ecma.String,114,,,3,,__ecma.String
+90194314119,LITERAL,1,,"""TenantRoleAliases.tenant""",25,__ecma.String,115,,,3,,__ecma.String
+90194314120,LITERAL,2,,"""Tenant""",53,__ecma.String,115,,,4,,__ecma.String
+90194314121,LITERAL,1,,"""TenantRoleAliases.role""",25,__ecma.String,116,,,3,,__ecma.String
+90194314122,LITERAL,2,,"""Role""",51,__ecma.String,116,,,4,,__ecma.String
+90194314123,LITERAL,1,,"""TenantRoleAliases.roleAlias""",25,__ecma.String,117,,,3,,__ecma.String
+90194314124,LITERAL,2,,"""RoleAlias""",56,__ecma.String,117,,,4,,__ecma.String
+90194314125,LITERAL,2,,0,28,__ecma.Number,119,,,2,,__ecma.Number
+90194314126,LITERAL,1,,"""TenantRoleAliases.id IN (:...ids) """,54,__ecma.String,119,,,3,,__ecma.String
+90194314127,LITERAL,2,,0,32,__ecma.Number,121,,,2,,__ecma.Number
+90194314128,LITERAL,1,,"""TenantRoleAliases.role IN (:...roles) """,58,__ecma.String,121,,,3,,__ecma.String
+90194314129,LITERAL,2,,0,44,__ecma.Number,123,,,2,,__ecma.Number
+90194314130,LITERAL,1,,"""TenantRoleAliases.roleAlias IN (:...roleAliases) """,29,__ecma.String,124,,,3,,__ecma.String
+90194314131,LITERAL,2,,0,36,__ecma.Number,126,,,2,,__ecma.Number
+90194314132,LITERAL,1,,"""TenantRoleAliases.tenant IN (:...tenants) """,29,__ecma.String,127,,,3,,__ecma.String
+90194314133,LITERAL,2,,null,19,__ecma.Null,129,,,2,,__ecma.Null
+90194314134,LITERAL,1,,"""TenantRoleAliases.enabled = :enabled """,48,__ecma.String,129,,,3,,__ecma.String
+90194314135,LITERAL,1,,"""TenantRoleAliases""",26,__ecma.String,136,,,3,,__ecma.String
+90194314136,LITERAL,1,,"""TenantRoleAliases.tenant""",25,__ecma.String,137,,,3,,__ecma.String
+90194314137,LITERAL,2,,"""Tenant""",53,__ecma.String,137,,,4,,__ecma.String
+90194314138,LITERAL,1,,"""TenantRoleAliases.role""",25,__ecma.String,138,,,3,,__ecma.String
+90194314139,LITERAL,2,,"""Role""",51,__ecma.String,138,,,4,,__ecma.String
+90194314140,LITERAL,1,,"""TenantRoleAliases.roleAlias""",25,__ecma.String,139,,,3,,__ecma.String
+90194314141,LITERAL,2,,"""RoleAlias""",56,__ecma.String,139,,,4,,__ecma.String
+90194314142,LITERAL,1,,"""TenantRoleAliases.id = :id""",16,__ecma.String,140,,,3,,__ecma.String
+90194314143,LITERAL,1,,null,43,__ecma.Null,143,,,1,,__ecma.Null
+90194314144,LITERAL,1,,"""TenantRoleAliases""",28,__ecma.String,149,,,3,,__ecma.String
+90194314145,LITERAL,1,,"""TenantRoleAliases.tenant""",27,__ecma.String,150,,,3,,__ecma.String
+90194314146,LITERAL,2,,"""Tenant""",55,__ecma.String,150,,,4,,__ecma.String
+90194314147,LITERAL,1,,"""TenantRoleAliases.role""",27,__ecma.String,151,,,3,,__ecma.String
+90194314148,LITERAL,2,,"""Role""",53,__ecma.String,151,,,4,,__ecma.String
+90194314149,LITERAL,1,,"""TenantRoleAliases.roleAlias""",27,__ecma.String,152,,,3,,__ecma.String
+90194314150,LITERAL,2,,"""RoleAlias""",58,__ecma.String,152,,,4,,__ecma.String
+90194314151,LITERAL,1,,"""Tenant.id = :newTenantId""",18,__ecma.String,153,,,3,,__ecma.String
+90194314152,LITERAL,1,,"""Role.id = :newRole""",18,__ecma.String,154,,,3,,__ecma.String
+90194314153,LITERAL,1,,"""Entry Already Exists with id """,11,__ecma.String,158,,,1,,__ecma.String
+90194314154,LITERAL,3,,""", can only have one for tenant """,71,__ecma.String,158,,,3,,__ecma.String
+90194314155,LITERAL,5,,""" and role """,116,__ecma.String,158,,,5,,__ecma.String
+90194314156,LITERAL,7,,"""""",136,__ecma.String,158,,,7,,__ecma.String
+90194314157,LITERAL,1,,"""Entry Already Exists""",37,__ecma.String,160,,,3,,__ecma.String
+90194314158,LITERAL,1,,"""Entry Already Exists with id """,24,__ecma.String,162,,,1,,__ecma.String
+90194314159,LITERAL,3,,""", can only have one for tenant """,84,__ecma.String,162,,,3,,__ecma.String
+90194314160,LITERAL,5,,""" and role """,129,__ecma.String,162,,,5,,__ecma.String
+90194314161,LITERAL,7,,"""""",149,__ecma.String,162,,,7,,__ecma.String
+90194314162,LITERAL,1,,"""id = :tenant""",81,__ecma.String,168,,,3,,__ecma.String
+90194314163,LITERAL,1,,"""Invalid Tenant, does not exist any tenant with id """,27,__ecma.String,170,,,1,,__ecma.String
+90194314164,LITERAL,3,,"""""",86,__ecma.String,170,,,3,,__ecma.String
+90194314165,LITERAL,1,,"""Invalid Tenant""",36,__ecma.String,171,,,3,,__ecma.String
+90194314166,LITERAL,1,,"""Invalid Tenant, does not exist any tenant with id """,24,__ecma.String,173,,,1,,__ecma.String
+90194314167,LITERAL,3,,"""""",83,__ecma.String,173,,,3,,__ecma.String
+90194314168,LITERAL,1,,"""id = :role""",78,__ecma.String,180,,,3,,__ecma.String
+90194314169,LITERAL,1,,"""Invalid Role, does not exist any role with id """,27,__ecma.String,183,,,1,,__ecma.String
+90194314170,LITERAL,3,,"""""",80,__ecma.String,183,,,3,,__ecma.String
+90194314171,LITERAL,1,,"""Invalid Role""",36,__ecma.String,184,,,3,,__ecma.String
+90194314172,LITERAL,1,,"""Invalid Role, does not exist any role with id """,24,__ecma.String,186,,,1,,__ecma.String
+90194314173,LITERAL,3,,"""""",77,__ecma.String,186,,,3,,__ecma.String
+90194314174,LITERAL,1,,"""RoleAlias""",28,__ecma.String,193,,,3,,__ecma.String
+90194314175,LITERAL,1,,"""RoleAlias.tenantRoleAlias""",27,__ecma.String,194,,,3,,__ecma.String
+90194314176,LITERAL,2,,"""tenantRoleAlias""",56,__ecma.String,194,,,4,,__ecma.String
+90194314177,LITERAL,1,,"""tenantRoleAlias.tenant""",27,__ecma.String,195,,,3,,__ecma.String
+90194314178,LITERAL,2,,"""tenant""",53,__ecma.String,195,,,4,,__ecma.String
+90194314179,LITERAL,1,,"""tenantRoleAlias.role""",27,__ecma.String,196,,,3,,__ecma.String
+90194314180,LITERAL,2,,"""tenantRoleAliasRole""",51,__ecma.String,196,,,4,,__ecma.String
+90194314181,LITERAL,1,,"""RoleAlias.role""",27,__ecma.String,197,,,3,,__ecma.String
+90194314182,LITERAL,2,,"""role""",45,__ecma.String,197,,,4,,__ecma.String
+90194314183,LITERAL,1,,"""RoleAlias.id = :roleAlias""",18,__ecma.String,198,,,3,,__ecma.String
+90194314184,LITERAL,1,,"""role.id = :newRole""",18,__ecma.String,199,,,3,,__ecma.String
+90194314185,LITERAL,1,,"""Invalid RoleAlias, does not exist any role alias with id """,27,__ecma.String,203,,,1,,__ecma.String
+90194314186,LITERAL,3,,""", for role """,96,__ecma.String,203,,,3,,__ecma.String
+90194314187,LITERAL,5,,"""""",114,__ecma.String,203,,,5,,__ecma.String
+90194314188,LITERAL,1,,"""Invalid RoleAlias""",36,__ecma.String,204,,,3,,__ecma.String
+90194314189,LITERAL,1,,"""Invalid RoleAlias, does not exist any role alias with id """,24,__ecma.String,206,,,1,,__ecma.String
+90194314190,LITERAL,3,,""", for role """,93,__ecma.String,206,,,3,,__ecma.String
+90194314191,LITERAL,5,,"""""",114,__ecma.String,206,,,5,,__ecma.String
+90194314192,LITERAL,2,,null,19,__ecma.Null,211,,,2,,__ecma.Null
+90194314193,LITERAL,1,,"""TenantRoleAliases""",26,__ecma.String,219,,,3,,__ecma.String
+90194314194,LITERAL,1,,"""TenantRoleAliases.tenant""",25,__ecma.String,220,,,3,,__ecma.String
+90194314195,LITERAL,2,,"""Tenant""",53,__ecma.String,220,,,4,,__ecma.String
+90194314196,LITERAL,1,,"""TenantRoleAliases.role""",25,__ecma.String,221,,,3,,__ecma.String
+90194314197,LITERAL,2,,"""Role""",51,__ecma.String,221,,,4,,__ecma.String
+90194314198,LITERAL,1,,"""TenantRoleAliases.roleAlias""",25,__ecma.String,222,,,3,,__ecma.String
+90194314199,LITERAL,2,,"""RoleAlias""",56,__ecma.String,222,,,4,,__ecma.String
+90194314200,LITERAL,1,,"""TenantRoleAliases.id=:id""",13,__ecma.String,223,,,3,,__ecma.String
+90194314201,LITERAL,1,,"""The tenant role alias with id """,25,__ecma.String,227,,,1,,__ecma.String
+90194314202,LITERAL,3,,""" was not found""",60,__ecma.String,227,,,3,,__ecma.String
+90194314203,LITERAL,1,,"""Tenant role alias not found""",34,__ecma.String,228,,,3,,__ecma.String
+90194314204,LITERAL,1,,"""The tenant role alias with id """,22,__ecma.String,230,,,1,,__ecma.String
+90194314205,LITERAL,3,,""" was not found""",57,__ecma.String,230,,,3,,__ecma.String
+90194314206,LITERAL,1,,"""Tenant role alias with id: """,7,__ecma.String,235,,,1,,__ecma.String
+90194314207,LITERAL,3,,""" was """,39,__ecma.String,235,,,3,,__ecma.String
+90194314208,LITERAL,2,,"""Enabled!""",82,__ecma.String,235,,,2,,__ecma.String
+90194314209,LITERAL,3,,"""Disabled!""",95,__ecma.String,235,,,3,,__ecma.String
+90194314210,LITERAL,1,,"""TenantRoleAliases.tenant NOT IN (:...tenant)""",23,__ecma.String,291,,,3,,__ecma.String
+90194314211,LITERAL,1,,"""TenantRoleAliases.role <> :roleId""",25,__ecma.String,293,,,3,,__ecma.String
+90194314212,LITERAL,2,,0,56,__ecma.Number,256,,,2,,__ecma.Number
+90194314213,LITERAL,1,,"""Tenants""",32,__ecma.String,259,,,3,,__ecma.String
+90194314214,LITERAL,1,,"""Tenants.tenant = :tenant""",22,__ecma.String,260,,,3,,__ecma.String
+90194314215,LITERAL,1,,"""Tenants.role = :roleId""",22,__ecma.String,261,,,3,,__ecma.String
+90194314216,LITERAL,2,,0,63,__ecma.Number,270,,,2,,__ecma.Number
+90194314217,LITERAL,1,,"""""",33,__ecma.String,277,,,1,,__ecma.String
+90194314218,LITERAL,3,,""" when updating tenant-role-alias asociation.""",41,__ecma.String,277,,,3,,__ecma.String
+90194314219,LITERAL,1,,"""Cannot asociate role alias with tenant""",43,__ecma.String,278,,,3,,__ecma.String
+90194314220,LITERAL,1,,"""""",30,__ecma.String,280,,,1,,__ecma.String
+90194314221,LITERAL,3,,""" when updating tenant-role-alias asociation.""",38,__ecma.String,280,,,3,,__ecma.String
+90194314222,LITERAL,1,,"""TenantRoleAliases""",30,__ecma.String,287,,,3,,__ecma.String
+90194314223,LITERAL,1,,"""TenantRoleAliases.roleAlias = :roleAlias""",17,__ecma.String,288,,,3,,__ecma.String
+90194314224,LITERAL,1,,"""TenantRoleAliases""",28,__ecma.String,304,,,3,,__ecma.String
+90194314225,LITERAL,1,,"""TenantRoleAliases.roleAlias IS NULL""",15,__ecma.String,305,,,3,,__ecma.String
+90194314226,LITERAL,2,,0,74,__ecma.Number,310,,,2,,__ecma.Number
+90194314227,LITERAL,1,,"""../../infrastructure/persistance/postgre-sql/dbConfig""",0,,1,,,3,,ANY
+90194314228,LITERAL,1,,"""@avantodev/avanto-db""",0,,2,,,3,,ANY
+90194314229,LITERAL,1,,"""@avantodev/avanto-db""",0,,2,,,3,,ANY
+90194314230,LITERAL,1,,"""@avantodev/avanto-db""",0,,2,,,3,,ANY
+90194314231,LITERAL,1,,"""@avantodev/avanto-db""",0,,2,,,3,,ANY
+90194314232,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194314233,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194314234,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194314235,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194314236,LITERAL,1,,"""./dto/create-tenant-role-aliases.dto""",0,,4,,,3,,ANY
+90194314237,LITERAL,1,,"""./dto/update-tenant-role-alias.dto""",0,,5,,,3,,ANY
+90194314238,LITERAL,1,,"""./dto/find-tenant-role-alias.dto""",0,,6,,,3,,ANY
+90194314239,LITERAL,1,,"""@nestjs/typeorm""",0,,7,,,3,,ANY
+90194314240,LITERAL,1,,"""typeorm""",0,,8,,,3,,ANY
+90194314241,LITERAL,1,,"""typeorm""",0,,8,,,3,,ANY
+90194314242,LITERAL,1,,"""./dto/assign-tenant-role-alias.dto""",0,,9,,,3,,ANY
+90194314243,LITERAL,2,,2,10,__ecma.Number,7,,,2,,__ecma.Number
+90194314244,LITERAL,2,,200,13,__ecma.Number,7,,,2,,__ecma.Number
+90194314245,LITERAL,2,,2,10,__ecma.Number,12,,,2,,__ecma.Number
+90194314246,LITERAL,2,,400,13,__ecma.Number,12,,,2,,__ecma.Number
+90194314247,LITERAL,2,,2,10,__ecma.Number,24,,,2,,__ecma.Number
+90194314248,LITERAL,2,,100,13,__ecma.Number,24,,,2,,__ecma.Number
+90194314249,LITERAL,2,,true,27,__ecma.Boolean,31,,,2,,__ecma.Boolean
+90194314250,LITERAL,2,,true,27,__ecma.Boolean,34,,,2,,__ecma.Boolean
+90194314251,LITERAL,2,,true,27,__ecma.Boolean,37,,,2,,__ecma.Boolean
+90194314252,LITERAL,2,,true,27,__ecma.Boolean,40,,,2,,__ecma.Boolean
+90194314253,LITERAL,1,,"""./tenant.dto""",0,,1,,,3,,ANY
+90194314254,LITERAL,1,,"""@nestjs/swagger""",0,,2,,,3,,ANY
+90194314255,LITERAL,1,,"""class-validator""",0,,3,,,3,,ANY
+90194314256,LITERAL,1,,"""class-validator""",0,,3,,,3,,ANY
+90194314257,LITERAL,2,,true,27,__ecma.Boolean,6,,,2,,__ecma.Boolean
+90194314258,LITERAL,2,,true,27,__ecma.Boolean,9,,,2,,__ecma.Boolean
+90194314259,LITERAL,2,,true,27,__ecma.Boolean,12,,,2,,__ecma.Boolean
+90194314260,LITERAL,2,,true,27,__ecma.Boolean,15,,,2,,__ecma.Boolean
+90194314261,LITERAL,2,,true,27,__ecma.Boolean,18,,,2,,__ecma.Boolean
+90194314262,LITERAL,2,,true,27,__ecma.Boolean,21,,,2,,__ecma.Boolean
+90194314263,LITERAL,2,,true,27,__ecma.Boolean,27,,,2,,__ecma.Boolean
+90194314264,LITERAL,2,,true,27,__ecma.Boolean,30,,,2,,__ecma.Boolean
+90194314265,LITERAL,2,,true,27,__ecma.Boolean,33,,,2,,__ecma.Boolean
+90194314266,LITERAL,2,,true,27,__ecma.Boolean,36,,,2,,__ecma.Boolean
+90194314267,LITERAL,1,,"""@nestjs/swagger""",0,,1,,,3,,ANY
+90194314268,LITERAL,1,,"""@nestjs/swagger""",0,,2,,,3,,ANY
+90194314269,LITERAL,1,,"""./create-tenant.dto""",0,,3,,,3,,ANY
+90194314270,LITERAL,2,,2,10,__ecma.Number,11,,,2,,__ecma.Number
+90194314271,LITERAL,2,,200,13,__ecma.Number,11,,,2,,__ecma.Number
+90194314272,LITERAL,2,,2,10,__ecma.Number,16,,,2,,__ecma.Number
+90194314273,LITERAL,2,,400,13,__ecma.Number,16,,,2,,__ecma.Number
+90194314274,LITERAL,2,,2,10,__ecma.Number,28,,,2,,__ecma.Number
+90194314275,LITERAL,2,,100,13,__ecma.Number,28,,,2,,__ecma.Number
+90194314276,LITERAL,2,,true,27,__ecma.Boolean,35,,,2,,__ecma.Boolean
+90194314277,LITERAL,2,,true,27,__ecma.Boolean,38,,,2,,__ecma.Boolean
+90194314278,LITERAL,2,,true,27,__ecma.Boolean,41,,,2,,__ecma.Boolean
+90194314279,LITERAL,2,,true,27,__ecma.Boolean,44,,,2,,__ecma.Boolean
+90194314280,LITERAL,1,,"""@nestjs/swagger""",0,,1,,,3,,ANY
+90194314281,LITERAL,1,,"""class-validator""",0,,2,,,3,,ANY
+90194314282,LITERAL,1,,"""class-validator""",0,,2,,,3,,ANY
+90194314283,LITERAL,1,,"""@nestjs/swagger""",0,,3,,,3,,ANY
+90194314284,LITERAL,1,,"""./create-tenant.dto""",0,,4,,,3,,ANY
+90194314285,LITERAL,1,,"""Creating new Tenant...""",20,__ecma.String,21,,,3,,__ecma.String
+90194314286,LITERAL,1,,"""The url """"",25,__ecma.String,25,,,1,,__ecma.String
+90194314287,LITERAL,3,,""""" is already used and needs to be unique""",40,__ecma.String,25,,,3,,__ecma.String
+90194314288,LITERAL,1,,"""url is already in use""",35,__ecma.String,26,,,3,,__ecma.String
+90194314289,LITERAL,1,,"""The url """"",22,__ecma.String,28,,,1,,__ecma.String
+90194314290,LITERAL,3,,""""" is already used and needs to be unique""",37,__ecma.String,28,,,3,,__ecma.String
+90194314291,LITERAL,2,,0,80,__ecma.Number,31,,,2,,__ecma.Number
+90194314292,LITERAL,1,,"""tenant types: """,23,__ecma.String,32,,,1,,__ecma.String
+90194314293,LITERAL,3,,"""""",69,__ecma.String,32,,,3,,__ecma.String
+90194314294,LITERAL,1,,"""Finding All Tenant ...""",20,__ecma.String,44,,,3,,__ecma.String
+90194314295,LITERAL,1,,"""Tenants""",26,__ecma.String,46,,,3,,__ecma.String
+90194314296,LITERAL,1,,"""Tenants.tenantType""",25,__ecma.String,47,,,3,,__ecma.String
+90194314297,LITERAL,2,,"""tenantType""",47,__ecma.String,47,,,4,,__ecma.String
+90194314298,LITERAL,1,,"""Tenants.childrenIds""",25,__ecma.String,48,,,3,,__ecma.String
+90194314299,LITERAL,2,,"""childrenIds""",48,__ecma.String,48,,,4,,__ecma.String
+90194314300,LITERAL,1,,"""Tenants.parent""",25,__ecma.String,49,,,3,,__ecma.String
+90194314301,LITERAL,2,,"""parent""",43,__ecma.String,49,,,4,,__ecma.String
+90194314302,LITERAL,1,,"""Tenants.tenantRoleAlias""",25,__ecma.String,50,,,3,,__ecma.String
+90194314303,LITERAL,2,,"""tenantRoleAlias""",52,__ecma.String,50,,,4,,__ecma.String
+90194314304,LITERAL,1,,"""Tenants.coverageZone""",25,__ecma.String,51,,,3,,__ecma.String
+90194314305,LITERAL,2,,"""coverageZone""",49,__ecma.String,51,,,4,,__ecma.String
+90194314306,LITERAL,1,,"""tenantType.roles""",25,__ecma.String,58,,,3,,__ecma.String
+90194314307,LITERAL,2,,"""tenantRoles""",45,__ecma.String,58,,,4,,__ecma.String
+90194314308,LITERAL,1,,"""Searching for Tenant  with id: """,21,__ecma.String,64,,,1,,__ecma.String
+90194314309,LITERAL,3,,""".""",57,__ecma.String,64,,,3,,__ecma.String
+90194314310,LITERAL,1,,"""Tenants""",26,__ecma.String,66,,,3,,__ecma.String
+90194314311,LITERAL,1,,"""Tenants.tenantType""",25,__ecma.String,67,,,3,,__ecma.String
+90194314312,LITERAL,2,,"""tenantType""",47,__ecma.String,67,,,4,,__ecma.String
+90194314313,LITERAL,1,,"""Tenants.childrenIds""",25,__ecma.String,68,,,3,,__ecma.String
+90194314314,LITERAL,2,,"""childrenIds""",48,__ecma.String,68,,,4,,__ecma.String
+90194314315,LITERAL,1,,"""Tenants.parent""",25,__ecma.String,69,,,3,,__ecma.String
+90194314316,LITERAL,2,,"""parent""",43,__ecma.String,69,,,4,,__ecma.String
+90194314317,LITERAL,1,,"""tenantType.roles""",25,__ecma.String,78,,,3,,__ecma.String
+90194314318,LITERAL,2,,"""tenantRoles""",45,__ecma.String,78,,,4,,__ecma.String
+90194314319,LITERAL,1,,"""Tenants.id = :id """,16,__ecma.String,79,,,3,,__ecma.String
+90194314320,LITERAL,2,,1,39,__ecma.Number,81,,,2,,__ecma.Number
+90194314321,LITERAL,1,,"""The tenant with id """,25,__ecma.String,82,,,1,,__ecma.String
+90194314322,LITERAL,3,,""" was not found""",49,__ecma.String,82,,,3,,__ecma.String
+90194314323,LITERAL,1,,"""Tenant  not found""",34,__ecma.String,83,,,3,,__ecma.String
+90194314324,LITERAL,1,,"""The tenant with id """,22,__ecma.String,85,,,1,,__ecma.String
+90194314325,LITERAL,3,,""" was not found""",46,__ecma.String,85,,,3,,__ecma.String
+90194314326,LITERAL,1,,"""Tenant with id: """,21,__ecma.String,88,,,1,,__ecma.String
+90194314327,LITERAL,3,,""" was found.""",42,__ecma.String,88,,,3,,__ecma.String
+90194314328,LITERAL,2,,0,33,__ecma.Number,89,,,2,,__ecma.Number
+90194314329,LITERAL,1,,"""Tenants""",26,__ecma.String,107,,,3,,__ecma.String
+90194314330,LITERAL,1,,"""Tenants.tenantType""",25,__ecma.String,108,,,3,,__ecma.String
+90194314331,LITERAL,2,,"""tenantType""",47,__ecma.String,108,,,4,,__ecma.String
+90194314332,LITERAL,1,,"""Tenants.children""",25,__ecma.String,109,,,3,,__ecma.String
+90194314333,LITERAL,2,,"""children""",45,__ecma.String,109,,,4,,__ecma.String
+90194314334,LITERAL,1,,"""Tenants.parent""",25,__ecma.String,110,,,3,,__ecma.String
+90194314335,LITERAL,2,,"""parent""",43,__ecma.String,110,,,4,,__ecma.String
+90194314336,LITERAL,1,,"""Tenants.users""",25,__ecma.String,113,,,3,,__ecma.String
+90194314337,LITERAL,2,,"""users""",42,__ecma.String,113,,,4,,__ecma.String
+90194314338,LITERAL,1,,"""Tenants.roles""",25,__ecma.String,114,,,3,,__ecma.String
+90194314339,LITERAL,2,,"""roles""",42,__ecma.String,114,,,4,,__ecma.String
+90194314340,LITERAL,1,,"""roles.user""",25,__ecma.String,116,,,3,,__ecma.String
+90194314341,LITERAL,2,,"""user""",39,__ecma.String,116,,,4,,__ecma.String
+90194314342,LITERAL,1,,"""roles.roleAlias""",25,__ecma.String,118,,,3,,__ecma.String
+90194314343,LITERAL,2,,"""roleAlias""",44,__ecma.String,118,,,4,,__ecma.String
+90194314344,LITERAL,1,,"""tenantType.roles""",25,__ecma.String,119,,,3,,__ecma.String
+90194314345,LITERAL,2,,"""tenantRoles""",45,__ecma.String,119,,,4,,__ecma.String
+90194314346,LITERAL,2,,0,28,__ecma.Number,121,,,2,,__ecma.Number
+90194314347,LITERAL,1,,"""Finding by ids: """,23,__ecma.String,122,,,1,,__ecma.String
+90194314348,LITERAL,3,,"""""",45,__ecma.String,122,,,3,,__ecma.String
+90194314349,LITERAL,1,,"""Tenants.id IN (:...ids) """,29,__ecma.String,123,,,3,,__ecma.String
+90194314350,LITERAL,2,,0,32,__ecma.Number,125,,,2,,__ecma.Number
+90194314351,LITERAL,1,,"""Finding by names: """,23,__ecma.String,126,,,1,,__ecma.String
+90194314352,LITERAL,3,,"""""",49,__ecma.String,126,,,3,,__ecma.String
+90194314353,LITERAL,1,,"""Tenant.name IN (:...names) """,29,__ecma.String,127,,,3,,__ecma.String
+90194314354,LITERAL,2,,0,30,__ecma.Number,129,,,2,,__ecma.Number
+90194314355,LITERAL,1,,"""Finding by urls: """,23,__ecma.String,130,,,1,,__ecma.String
+90194314356,LITERAL,3,,"""""",47,__ecma.String,130,,,3,,__ecma.String
+90194314357,LITERAL,1,,"""Tenant.urls IN (:...urls) """,29,__ecma.String,131,,,3,,__ecma.String
+90194314358,LITERAL,2,,0,46,__ecma.Number,133,,,2,,__ecma.Number
+90194314359,LITERAL,1,,"""Finding by descriptions: """,23,__ecma.String,134,,,1,,__ecma.String
+90194314360,LITERAL,3,,"""""",63,__ecma.String,134,,,3,,__ecma.String
+90194314361,LITERAL,1,,"""Tenant.description IN (:...descriptions) """,29,__ecma.String,135,,,3,,__ecma.String
+90194314362,LITERAL,2,,0,40,__ecma.Number,137,,,2,,__ecma.Number
+90194314363,LITERAL,1,,"""Finding by parent Ids: """,23,__ecma.String,138,,,1,,__ecma.String
+90194314364,LITERAL,3,,"""""",58,__ecma.String,138,,,3,,__ecma.String
+90194314365,LITERAL,1,,"""parent.id IN (:...parentIds) """,29,__ecma.String,139,,,3,,__ecma.String
+90194314366,LITERAL,2,,0,50,__ecma.Number,141,,,2,,__ecma.Number
+90194314367,LITERAL,1,,"""Finding by roleAliases Ids: """,23,__ecma.String,142,,,1,,__ecma.String
+90194314368,LITERAL,3,,"""""",68,__ecma.String,142,,,3,,__ecma.String
+90194314369,LITERAL,1,,"""tenantRoleAlias.id IN (:...roleAliasesIds) """,29,__ecma.String,143,,,3,,__ecma.String
+90194314370,LITERAL,2,,0,48,__ecma.Number,145,,,2,,__ecma.Number
+90194314371,LITERAL,1,,"""Finding by tenantType Ids: """,23,__ecma.String,146,,,1,,__ecma.String
+90194314372,LITERAL,3,,"""""",66,__ecma.String,146,,,3,,__ecma.String
+90194314373,LITERAL,1,,"""tenantType.id IN (:...tenantTypeIds) """,29,__ecma.String,147,,,3,,__ecma.String
+90194314374,LITERAL,2,,0,44,__ecma.Number,149,,,2,,__ecma.Number
+90194314375,LITERAL,1,,"""Finding by children Ids: """,23,__ecma.String,150,,,1,,__ecma.String
+90194314376,LITERAL,3,,"""""",62,__ecma.String,150,,,3,,__ecma.String
+90194314377,LITERAL,1,,"""children.id IN (:...childrenIds) """,29,__ecma.String,151,,,3,,__ecma.String
+90194314378,LITERAL,2,,0,52,__ecma.Number,153,,,2,,__ecma.Number
+90194314379,LITERAL,1,,"""Finding by coverageZone Ids: """,23,__ecma.String,154,,,1,,__ecma.String
+90194314380,LITERAL,3,,"""""",70,__ecma.String,154,,,3,,__ecma.String
+90194314381,LITERAL,1,,"""coverageZone.id IN (:...coverageZoneIds) """,29,__ecma.String,155,,,3,,__ecma.String
+90194314382,LITERAL,2,,0,36,__ecma.Number,157,,,2,,__ecma.Number
+90194314383,LITERAL,1,,"""Finding by user Ids: """,23,__ecma.String,158,,,1,,__ecma.String
+90194314384,LITERAL,3,,"""""",54,__ecma.String,158,,,3,,__ecma.String
+90194314385,LITERAL,1,,"""users.id IN (:...userIds)""",29,__ecma.String,159,,,3,,__ecma.String
+90194314386,LITERAL,2,,null,19,__ecma.Null,161,,,2,,__ecma.Null
+90194314387,LITERAL,1,,"""Finding by enabled: """,23,__ecma.String,162,,,1,,__ecma.String
+90194314388,LITERAL,3,,"""""",53,__ecma.String,162,,,3,,__ecma.String
+90194314389,LITERAL,1,,"""Tenant.enabled = :enabled """,29,__ecma.String,163,,,3,,__ecma.String
+90194314390,LITERAL,1,,"""Found """,21,__ecma.String,167,,,1,,__ecma.String
+90194314391,LITERAL,3,,""" Tenant Types""",58,__ecma.String,167,,,3,,__ecma.String
+90194314392,LITERAL,1,,"""Updating for Tenant with id: """,21,__ecma.String,172,,,1,,__ecma.String
+90194314393,LITERAL,3,,""".""",55,__ecma.String,172,,,3,,__ecma.String
+90194314394,LITERAL,1,,"""Tenants""",26,__ecma.String,176,,,3,,__ecma.String
+90194314395,LITERAL,1,,"""Tenants.tenantType""",25,__ecma.String,177,,,3,,__ecma.String
+90194314396,LITERAL,2,,"""tenantType""",47,__ecma.String,177,,,4,,__ecma.String
+90194314397,LITERAL,1,,"""Tenants.childrenIds""",25,__ecma.String,178,,,3,,__ecma.String
+90194314398,LITERAL,2,,"""childrenIds""",48,__ecma.String,178,,,4,,__ecma.String
+90194314399,LITERAL,1,,"""Tenants.parent""",25,__ecma.String,179,,,3,,__ecma.String
+90194314400,LITERAL,2,,"""parent""",43,__ecma.String,179,,,4,,__ecma.String
+90194314401,LITERAL,1,,"""tenantType.roles""",25,__ecma.String,188,,,3,,__ecma.String
+90194314402,LITERAL,2,,"""tenantRoles""",45,__ecma.String,188,,,4,,__ecma.String
+90194314403,LITERAL,1,,"""Tenants.id = :id """,16,__ecma.String,189,,,3,,__ecma.String
+90194314404,LITERAL,1,,"""The tenant with id """,25,__ecma.String,192,,,1,,__ecma.String
+90194314405,LITERAL,3,,""" was not found""",49,__ecma.String,192,,,3,,__ecma.String
+90194314406,LITERAL,1,,"""Tenant not found""",34,__ecma.String,193,,,3,,__ecma.String
+90194314407,LITERAL,1,,"""The tenant with id """,22,__ecma.String,195,,,1,,__ecma.String
+90194314408,LITERAL,3,,""" was not found""",46,__ecma.String,195,,,3,,__ecma.String
+90194314409,LITERAL,1,,"""The url """"",27,__ecma.String,203,,,1,,__ecma.String
+90194314410,LITERAL,3,,""""" is already used and needs to be unique""",42,__ecma.String,203,,,3,,__ecma.String
+90194314411,LITERAL,1,,"""url is already in use""",37,__ecma.String,204,,,3,,__ecma.String
+90194314412,LITERAL,1,,"""The url """"",24,__ecma.String,206,,,1,,__ecma.String
+90194314413,LITERAL,3,,""""" is already used and needs to be unique""",39,__ecma.String,206,,,3,,__ecma.String
+90194314414,LITERAL,1,,"""Tenant with id: """,21,__ecma.String,216,,,1,,__ecma.String
+90194314415,LITERAL,3,,""" was updated.""",42,__ecma.String,216,,,3,,__ecma.String
+90194314416,LITERAL,1,,"""Enabling / Disabling Tenant with id: """,21,__ecma.String,221,,,1,,__ecma.String
+90194314417,LITERAL,3,,""".""",63,__ecma.String,221,,,3,,__ecma.String
+90194314418,LITERAL,1,,"""Tenants""",26,__ecma.String,223,,,3,,__ecma.String
+90194314419,LITERAL,1,,"""Tenants.tenantType""",25,__ecma.String,224,,,3,,__ecma.String
+90194314420,LITERAL,2,,"""tenantType""",47,__ecma.String,224,,,4,,__ecma.String
+90194314421,LITERAL,1,,"""Tenants.childrenIds""",25,__ecma.String,225,,,3,,__ecma.String
+90194314422,LITERAL,2,,"""childrenIds""",48,__ecma.String,225,,,4,,__ecma.String
+90194314423,LITERAL,1,,"""Tenants.parent""",25,__ecma.String,226,,,3,,__ecma.String
+90194314424,LITERAL,2,,"""parent""",43,__ecma.String,226,,,4,,__ecma.String
+90194314425,LITERAL,1,,"""tenantType.roles""",25,__ecma.String,235,,,3,,__ecma.String
+90194314426,LITERAL,2,,"""tenantRoles""",45,__ecma.String,235,,,4,,__ecma.String
+90194314427,LITERAL,1,,"""Tenants.id = :id """,16,__ecma.String,236,,,3,,__ecma.String
+90194314428,LITERAL,1,,"""The tenant with id """,25,__ecma.String,239,,,1,,__ecma.String
+90194314429,LITERAL,3,,""" was not found""",49,__ecma.String,239,,,3,,__ecma.String
+90194314430,LITERAL,1,,"""Tenant not found""",34,__ecma.String,240,,,3,,__ecma.String
+90194314431,LITERAL,1,,"""The tenant with id """,22,__ecma.String,242,,,1,,__ecma.String
+90194314432,LITERAL,3,,""" was not found""",46,__ecma.String,242,,,3,,__ecma.String
+90194314433,LITERAL,1,,"""Tenant with id: """,21,__ecma.String,246,,,1,,__ecma.String
+90194314434,LITERAL,3,,""" was """,42,__ecma.String,246,,,3,,__ecma.String
+90194314435,LITERAL,2,,"""Enabled!""",77,__ecma.String,246,,,2,,__ecma.String
+90194314436,LITERAL,3,,"""Disabled!""",90,__ecma.String,246,,,3,,__ecma.String
+90194314437,LITERAL,1,,"""Tenants""",57,__ecma.String,253,,,3,,__ecma.String
+90194314438,LITERAL,2,,0,28,__ecma.Number,255,,,2,,__ecma.Number
+90194314439,LITERAL,1,,"""Finding by ids: """,23,__ecma.String,256,,,1,,__ecma.String
+90194314440,LITERAL,3,,"""""",45,__ecma.String,256,,,3,,__ecma.String
+90194314441,LITERAL,1,,"""Tenants.id IN (:...ids) """,29,__ecma.String,257,,,3,,__ecma.String
+90194314442,LITERAL,1,,"""Found """,23,__ecma.String,259,,,1,,__ecma.String
+90194314443,LITERAL,3,,""" Tenant Types""",60,__ecma.String,259,,,3,,__ecma.String
+90194314444,LITERAL,1,,"""typeorm""",0,,1,,,3,,ANY
+90194314445,LITERAL,1,,"""@nestjs/typeorm""",0,,2,,,3,,ANY
+90194314446,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194314447,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194314448,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194314449,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194314450,LITERAL,1,,"""@avantodev/avanto-db""",0,,4,,,3,,ANY
+90194314451,LITERAL,1,,"""../../tenants/domain/dto/find-tenant.dto""",0,,5,,,3,,ANY
+90194314452,LITERAL,1,,"""../../tenants/domain/dto/create-tenant.dto""",0,,6,,,3,,ANY
+90194314453,LITERAL,1,,"""../../tenants/domain/dto/update-tenant.dto""",0,,7,,,3,,ANY
+90194314454,LITERAL,1,,"""../../../infrastructure/persistance/postgre-sql/dbConfig""",0,,8,,,3,,ANY
+90194314455,LITERAL,1,,"""@avantodev/avanto-db""",0,,1,,,3,,ANY
+90194314456,LITERAL,1,,Tenant,34,,3,,,1,Tenant,ANY
+90194314457,LITERAL,1,,"""{
+    ""id"": 1,
+    ""name"": ""Hartford Office Interiors"",
+    ""description"": ""Testing purposes in Orderbahn"",
+    ""url"": ""hoi"",
+    ""apiKey"": ""SrzczBcbeIhLsT3QQcEBtfhzQWeqo9lmn4K-TI1rHs"",
+    ""apiSecret"": ""a9VBUUykzIpl0AMWV0YlZpxsNzOzRkqFMXw6-H1VxaRuEPPy1VPSqflyLDWrsFWJS2MjkU4-XWFzzQYgTlRTP2gxfL9ksqljUGZfrOfZz-JVFs4X"",
+    ""enabled"": true,
+    ""createdAt"": ""2022-08-09T17:37:42.597Z"",
+    ""updatedAt"": ""2023-07-12T14:27:45.746Z"",
+    ""tenantType"": [
+      {
+        ""id"": 3,
+        ""name"": ""Installer"",
+        ""description"": ""Installer"",
+        ""tag"": ""Installer"",
+        ""enabled"": true,
+        ""createdAt"": ""2022-08-09T17:31:09.317Z"",
+        ""updatedAt"": ""2023-07-12T13:46:56.821Z""
+      },
+      {
+        ""id"": 2,
+        ""name"": ""Dealer"",
+        ""description"": ""Dealer"",
+        ""tag"": ""Dealer"",
+        ""enabled"": true,
+        ""createdAt"": ""2022-08-09T17:30:58.113Z"",
+        ""updatedAt"": ""2023-07-12T13:46:56.807Z""
+      },
+      {
+        ""id"": 1,
+        ""name"": ""Factory"",
+        ""description"": ""Factory"",
+        ""tag"": ""Factor"",
+        ""enabled"": true,
+        ""createdAt"": ""2022-08-09T17:30:35.293Z"",
+        ""updatedAt"": ""2023-07-26T22:06:09.273Z""
+      }
+    ],
+    ""children"": [],
+    ""parent"": null,
+    ""coverageZone"": {
+      ""id"": 1,
+      ""name"": ""Default"",
+      ""description"": ""Default coverage zone"",
+      ""enabled"": true,
+      ""createdAt"": ""2022-08-09T17:32:49.160Z"",
+      ""updatedAt"": ""2023-04-27T20:24:18.207Z""
+    },
+    ""users"": [
+      {
+        ""id"": 78,
+        ""firstName"": ""Michael "",
+        ""lastName"": ""Shinn"",
+        ""email"": ""agnes_runt10@yahoo.com"",
+        ""fireBaseId"": ""default"",
+        ""enabled"": true,
+        ""validated"": true,
+        ""BackOfficeAccess"": true,
+        ""SaasAccess"": true,
+        ""avatar"": null,
+        ""phone"": null,
+        ""temporalId"": null,
+        ""createdAt"": ""2022-11-17T21:02:41.375Z"",
+        ""verifiedAt"": ""2023-06-19T22:25:56.822Z"",
+        ""updatedAt"": ""2023-07-03T16:18:50.978Z""
+      },
+      {
+        ""id"": 79,
+        ""firstName"": ""Billy Jean"",
+        ""lastName"": ""Taylor B"",
+        ""email"": ""larry.schu8@yahoo.com"",
+        ""fireBaseId"": ""fb3b6e83-b01c-4d0a-8b6a-231b88741ac1"",
+        ""enabled"": false,
+        ""validated"": false,
+        ""BackOfficeAccess"": false,
+        ""SaasAccess"": false,
+        ""avatar"": null,
+        ""phone"": null,
+        ""temporalId"": null,
+        ""createdAt"": ""2022-08-19T17:33:29.928Z"",
+        ""verifiedAt"": ""2023-06-19T22:25:56.822Z"",
+        ""updatedAt"": ""2024-02-29T18:58:27.357Z""
+      }
+    ]
+  }""",46,__ecma.String,3,,,1,,__ecma.String
+90194314458,LITERAL,2,,true,27,__ecma.Boolean,18,,,2,,__ecma.Boolean
+90194314459,LITERAL,1,,"""./user-role-by-tenants.dto""",0,,1,,,3,,ANY
+90194314460,LITERAL,1,,"""@nestjs/swagger""",0,,2,,,3,,ANY
+90194314461,LITERAL,1,,"""class-validator""",0,,3,,,3,,ANY
+90194314462,LITERAL,2,,true,27,__ecma.Boolean,6,,,2,,__ecma.Boolean
+90194314463,LITERAL,2,,true,27,__ecma.Boolean,9,,,2,,__ecma.Boolean
+90194314464,LITERAL,2,,true,27,__ecma.Boolean,12,,,2,,__ecma.Boolean
+90194314465,LITERAL,2,,true,27,__ecma.Boolean,15,,,2,,__ecma.Boolean
+90194314466,LITERAL,2,,true,27,__ecma.Boolean,18,,,2,,__ecma.Boolean
+90194314467,LITERAL,2,,true,27,__ecma.Boolean,21,,,2,,__ecma.Boolean
+90194314468,LITERAL,1,,"""@nestjs/swagger""",0,,1,,,3,,ANY
+90194314469,LITERAL,1,,"""@nestjs/swagger""",0,,2,,,3,,ANY
+90194314470,LITERAL,1,,"""./create-user-role-by-tenants.dto""",0,,3,,,3,,ANY
+90194314471,LITERAL,2,,true,27,__ecma.Boolean,7,,,2,,__ecma.Boolean
+90194314472,LITERAL,2,,true,27,__ecma.Boolean,11,,,2,,__ecma.Boolean
+90194314473,LITERAL,2,,true,27,__ecma.Boolean,15,,,2,,__ecma.Boolean
+90194314474,LITERAL,2,,true,27,__ecma.Boolean,19,,,2,,__ecma.Boolean
+90194314475,LITERAL,2,,true,27,__ecma.Boolean,22,,,2,,__ecma.Boolean
+90194314476,LITERAL,1,,"""@nestjs/swagger""",0,,1,,,3,,ANY
+90194314477,LITERAL,1,,"""class-validator""",0,,2,,,3,,ANY
+90194314478,LITERAL,1,,"""@nestjs/swagger""",0,,3,,,3,,ANY
+90194314479,LITERAL,1,,"""./create-user-role-by-tenants.dto""",0,,4,,,3,,ANY
+90194314480,LITERAL,1,,"""Finding user """,21,__ecma.String,38,,,1,,__ecma.String
+90194314481,LITERAL,3,,""" in tenant """,43,__ecma.String,38,,,3,,__ecma.String
+90194314482,LITERAL,5,,""" ...""",65,__ecma.String,38,,,5,,__ecma.String
+90194314483,LITERAL,2,,0,27,__ecma.Number,41,,,2,,__ecma.Number
+90194314484,LITERAL,1,,"""Invalid User or is not registered for that Tenant""",24,__ecma.String,42,,,3,,__ecma.String
+90194314485,LITERAL,1,,"""Invalid User or is not registered for that Tenant""",34,__ecma.String,43,,,3,,__ecma.String
+90194314486,LITERAL,1,,"""Invalid User """,22,__ecma.String,45,,,1,,__ecma.String
+90194314487,LITERAL,3,,""" or is not registered for Tenant """,44,__ecma.String,45,,,3,,__ecma.String
+90194314488,LITERAL,5,,"""""",88,__ecma.String,45,,,5,,__ecma.String
+90194314489,LITERAL,2,,0,40,__ecma.Number,55,,,2,,__ecma.Number
+90194314490,LITERAL,1,,"""There is a role """,9,__ecma.String,57,,,1,,__ecma.String
+90194314491,LITERAL,3,,""" with user """,34,__ecma.String,57,,,3,,__ecma.String
+90194314492,LITERAL,5,,""" in the tenant """,54,__ecma.String,57,,,5,,__ecma.String
+90194314493,LITERAL,7,,""", and needs to be unique. Object """,80,__ecma.String,57,,,7,,__ecma.String
+90194314494,LITERAL,2,,0,138,__ecma.Number,57,,,2,,__ecma.Number
+90194314495,LITERAL,9,,""" Found """,144,__ecma.String,57,,,9,,__ecma.String
+90194314496,LITERAL,11,,"""""",183,__ecma.String,57,,,11,,__ecma.String
+90194314497,LITERAL,1,,"""Violation of unique constraint""",35,__ecma.String,59,,,3,,__ecma.String
+90194314498,LITERAL,1,,"""There is a role """,22,__ecma.String,61,,,1,,__ecma.String
+90194314499,LITERAL,3,,""" with that user """,47,__ecma.String,61,,,3,,__ecma.String
+90194314500,LITERAL,5,,""" in the tenant """,72,__ecma.String,61,,,5,,__ecma.String
+90194314501,LITERAL,7,,""", and needs to be unique""",98,__ecma.String,61,,,7,,__ecma.String
+90194314502,LITERAL,1,,"""Finding tenant """,21,__ecma.String,65,,,1,,__ecma.String
+90194314503,LITERAL,3,,""" ...""",47,__ecma.String,65,,,3,,__ecma.String
+90194314504,LITERAL,2,,0,30,__ecma.Number,68,,,2,,__ecma.Number
+90194314505,LITERAL,1,,"""Invalid Tenant!""",24,__ecma.String,69,,,3,,__ecma.String
+90194314506,LITERAL,1,,"""Invalid Tenant!""",35,__ecma.String,70,,,3,,__ecma.String
+90194314507,LITERAL,1,,"""Invalid Tenant """,22,__ecma.String,72,,,1,,__ecma.String
+90194314508,LITERAL,3,,"""!""",48,__ecma.String,72,,,3,,__ecma.String
+90194314509,LITERAL,2,,0,36,__ecma.Number,76,,,2,,__ecma.Number
+90194314510,LITERAL,1,,"""Finding role """,21,__ecma.String,78,,,1,,__ecma.String
+90194314511,LITERAL,3,,""" in tenant type """,43,__ecma.String,78,,,3,,__ecma.String
+90194314512,LITERAL,5,,""" ...""",73,__ecma.String,78,,,5,,__ecma.String
+90194314513,LITERAL,2,,0,28,__ecma.Number,81,,,2,,__ecma.Number
+90194314514,LITERAL,1,,"""Invalid Role or is not registered for that tenant type""",24,__ecma.String,82,,,3,,__ecma.String
+90194314515,LITERAL,1,,"""Invalid Role or is not registered for that tenant type""",34,__ecma.String,83,,,3,,__ecma.String
+90194314516,LITERAL,1,,"""Invalid Role """,22,__ecma.String,85,,,1,,__ecma.String
+90194314517,LITERAL,3,,""" or is not registered for tenant type """,44,__ecma.String,85,,,3,,__ecma.String
+90194314518,LITERAL,5,,"""""",96,__ecma.String,85,,,5,,__ecma.String
+90194314519,LITERAL,2,,0,31,__ecma.Number,90,,,2,,__ecma.Number
+90194314520,LITERAL,1,,"""Finding role alias """,23,__ecma.String,91,,,1,,__ecma.String
+90194314521,LITERAL,3,,""" for the role """,56,__ecma.String,91,,,3,,__ecma.String
+90194314522,LITERAL,5,,""" ...""",79,__ecma.String,91,,,5,,__ecma.String
+90194314523,LITERAL,2,,0,35,__ecma.Number,94,,,2,,__ecma.Number
+90194314524,LITERAL,1,,"""Invalid Role Alias or is not registered for the selected role""",26,__ecma.String,95,,,3,,__ecma.String
+90194314525,LITERAL,1,,"""Invalid Role Alias or is not registered for the selected role""",36,__ecma.String,96,,,3,,__ecma.String
+90194314526,LITERAL,1,,"""Invalid Role Alias """,24,__ecma.String,98,,,1,,__ecma.String
+90194314527,LITERAL,3,,""" or is not registered for the selected role """,57,__ecma.String,98,,,3,,__ecma.String
+90194314528,LITERAL,5,,"""""",110,__ecma.String,98,,,5,,__ecma.String
+90194314529,LITERAL,2,,0,54,__ecma.Number,101,,,2,,__ecma.Number
+90194314530,LITERAL,2,,0,42,__ecma.Number,103,,,2,,__ecma.Number
+90194314531,LITERAL,2,,0,46,__ecma.Number,104,,,2,,__ecma.Number
+90194314532,LITERAL,2,,0,42,__ecma.Number,105,,,2,,__ecma.Number
+90194314533,LITERAL,2,,null,19,__ecma.Null,107,,,2,,__ecma.Null
+90194314534,LITERAL,1,,"""Saving user role by tenant with id """,21,__ecma.String,109,,,1,,__ecma.String
+90194314535,LITERAL,3,,""" ...""",82,__ecma.String,109,,,3,,__ecma.String
+90194314536,LITERAL,1,,"""Finding all ...""",21,__ecma.String,115,,,3,,__ecma.String
+90194314537,LITERAL,1,,"""userRoleByTenants""",26,__ecma.String,117,,,3,,__ecma.String
+90194314538,LITERAL,1,,"""userRoleByTenants.tenant""",25,__ecma.String,118,,,3,,__ecma.String
+90194314539,LITERAL,2,,"""tenant""",53,__ecma.String,118,,,4,,__ecma.String
+90194314540,LITERAL,1,,"""userRoleByTenants.user""",25,__ecma.String,119,,,3,,__ecma.String
+90194314541,LITERAL,2,,"""user""",51,__ecma.String,119,,,4,,__ecma.String
+90194314542,LITERAL,1,,"""userRoleByTenants.role""",25,__ecma.String,120,,,3,,__ecma.String
+90194314543,LITERAL,2,,"""role""",51,__ecma.String,120,,,4,,__ecma.String
+90194314544,LITERAL,1,,"""userRoleByTenants.roleAlias""",25,__ecma.String,121,,,3,,__ecma.String
+90194314545,LITERAL,2,,"""roleAlias""",56,__ecma.String,121,,,4,,__ecma.String
+90194314546,LITERAL,1,,"""Finding user role by tenants""",21,__ecma.String,126,,,3,,__ecma.String
+90194314547,LITERAL,1,,"""userRoleByTenants""",26,__ecma.String,128,,,3,,__ecma.String
+90194314548,LITERAL,1,,"""userRoleByTenants.tenant""",25,__ecma.String,129,,,3,,__ecma.String
+90194314549,LITERAL,2,,"""tenants""",53,__ecma.String,129,,,4,,__ecma.String
+90194314550,LITERAL,1,,"""userRoleByTenants.user""",25,__ecma.String,130,,,3,,__ecma.String
+90194314551,LITERAL,2,,"""user""",51,__ecma.String,130,,,4,,__ecma.String
+90194314552,LITERAL,1,,"""userRoleByTenants.role""",25,__ecma.String,131,,,3,,__ecma.String
+90194314553,LITERAL,2,,"""role""",51,__ecma.String,131,,,4,,__ecma.String
+90194314554,LITERAL,1,,"""userRoleByTenants.roleAlias""",25,__ecma.String,132,,,3,,__ecma.String
+90194314555,LITERAL,2,,"""roleAlias""",56,__ecma.String,132,,,4,,__ecma.String
+90194314556,LITERAL,1,,"""with id """,23,__ecma.String,135,,,1,,__ecma.String
+90194314557,LITERAL,3,,""" ...""",37,__ecma.String,135,,,3,,__ecma.String
+90194314558,LITERAL,1,,"""userRoleByTenants.id IN (:...ids)""",29,__ecma.String,136,,,3,,__ecma.String
+90194314559,LITERAL,2,,0,36,__ecma.Number,138,,,2,,__ecma.Number
+90194314560,LITERAL,1,,"""with userIds """,23,__ecma.String,139,,,1,,__ecma.String
+90194314561,LITERAL,3,,""" ...""",46,__ecma.String,139,,,3,,__ecma.String
+90194314562,LITERAL,1,,"""user.id IN (:...userIds)""",29,__ecma.String,140,,,3,,__ecma.String
+90194314563,LITERAL,2,,0,40,__ecma.Number,142,,,2,,__ecma.Number
+90194314564,LITERAL,1,,"""with tenantIds """,23,__ecma.String,143,,,1,,__ecma.String
+90194314565,LITERAL,3,,""" ...""",50,__ecma.String,143,,,3,,__ecma.String
+90194314566,LITERAL,1,,"""tenants.id IN (:...tenantIds)""",29,__ecma.String,144,,,3,,__ecma.String
+90194314567,LITERAL,2,,0,36,__ecma.Number,146,,,2,,__ecma.Number
+90194314568,LITERAL,1,,"""with roleIds """,23,__ecma.String,147,,,1,,__ecma.String
+90194314569,LITERAL,3,,""" ...""",46,__ecma.String,147,,,3,,__ecma.String
+90194314570,LITERAL,1,,"""role.id IN (:...roleIds)""",29,__ecma.String,148,,,3,,__ecma.String
+90194314571,LITERAL,2,,0,46,__ecma.Number,150,,,2,,__ecma.Number
+90194314572,LITERAL,1,,"""with roleAliasIds """,23,__ecma.String,151,,,1,,__ecma.String
+90194314573,LITERAL,3,,""" ...""",56,__ecma.String,151,,,3,,__ecma.String
+90194314574,LITERAL,1,,"""roleAlias.id IN (:...roleAliasIds)""",29,__ecma.String,152,,,3,,__ecma.String
+90194314575,LITERAL,2,,null,19,__ecma.Null,154,,,2,,__ecma.Null
+90194314576,LITERAL,1,,"""with enabled property """,23,__ecma.String,155,,,1,,__ecma.String
+90194314577,LITERAL,3,,""" ...""",55,__ecma.String,155,,,3,,__ecma.String
+90194314578,LITERAL,1,,"""userRoleByTenants.enabled = :enabled""",29,__ecma.String,156,,,3,,__ecma.String
+90194314579,LITERAL,1,,"""There is a role """,13,__ecma.String,246,,,1,,__ecma.String
+90194314580,LITERAL,3,,""" with that user """,39,__ecma.String,246,,,3,,__ecma.String
+90194314581,LITERAL,5,,""" in the tenant """,65,__ecma.String,246,,,5,,__ecma.String
+90194314582,LITERAL,7,,""", and needs to be unique""",92,__ecma.String,246,,,7,,__ecma.String
+90194314583,LITERAL,1,,"""Violation of unique constraint""",39,__ecma.String,248,,,3,,__ecma.String
+90194314584,LITERAL,1,,"""There is a role """,26,__ecma.String,250,,,1,,__ecma.String
+90194314585,LITERAL,3,,""" with that user """,52,__ecma.String,250,,,3,,__ecma.String
+90194314586,LITERAL,5,,""" in the tenant """,78,__ecma.String,250,,,5,,__ecma.String
+90194314587,LITERAL,7,,""", and needs to be unique""",105,__ecma.String,250,,,7,,__ecma.String
+90194314588,LITERAL,1,,"""userRoleByTenants""",26,__ecma.String,164,,,3,,__ecma.String
+90194314589,LITERAL,1,,"""userRoleByTenants.tenant""",25,__ecma.String,165,,,3,,__ecma.String
+90194314590,LITERAL,2,,"""tenant""",53,__ecma.String,165,,,4,,__ecma.String
+90194314591,LITERAL,1,,"""userRoleByTenants.user""",25,__ecma.String,166,,,3,,__ecma.String
+90194314592,LITERAL,2,,"""user""",51,__ecma.String,166,,,4,,__ecma.String
+90194314593,LITERAL,1,,"""userRoleByTenants.role""",25,__ecma.String,167,,,3,,__ecma.String
+90194314594,LITERAL,2,,"""role""",51,__ecma.String,167,,,4,,__ecma.String
+90194314595,LITERAL,1,,"""userRoleByTenants.roleAlias""",25,__ecma.String,168,,,3,,__ecma.String
+90194314596,LITERAL,2,,"""roleAlias""",56,__ecma.String,168,,,4,,__ecma.String
+90194314597,LITERAL,1,,"""userRoleByTenants.id = :id""",16,__ecma.String,169,,,3,,__ecma.String
+90194314598,LITERAL,1,,"""Property to update not found""",24,__ecma.String,173,,,3,,__ecma.String
+90194314599,LITERAL,1,,"""Not found""",34,__ecma.String,174,,,3,,__ecma.String
+90194314600,LITERAL,2,,"""Property to update not found""",22,__ecma.String,176,,,2,,__ecma.String
+90194314601,LITERAL,2,,null,19,__ecma.Null,180,,,2,,__ecma.Null
+90194314602,LITERAL,2,,0,30,__ecma.Number,188,,,2,,__ecma.Number
+90194314603,LITERAL,1,,"""Invalid User or is not registered for that Tenant""",26,__ecma.String,189,,,3,,__ecma.String
+90194314604,LITERAL,1,,"""Invalid User or is not registered for that Tenant""",36,__ecma.String,190,,,3,,__ecma.String
+90194314605,LITERAL,1,,"""Invalid User """,24,__ecma.String,192,,,1,,__ecma.String
+90194314606,LITERAL,3,,""" or is not registered for Tenant """,46,__ecma.String,192,,,3,,__ecma.String
+90194314607,LITERAL,5,,"""""",90,__ecma.String,192,,,5,,__ecma.String
+90194314608,LITERAL,2,,0,49,__ecma.Number,195,,,2,,__ecma.Number
+90194314609,LITERAL,2,,0,30,__ecma.Number,200,,,2,,__ecma.Number
+90194314610,LITERAL,1,,"""Invalid Tenant!""",24,__ecma.String,201,,,3,,__ecma.String
+90194314611,LITERAL,1,,"""Invalid Tenant!""",35,__ecma.String,202,,,3,,__ecma.String
+90194314612,LITERAL,1,,"""Invalid Tenant """,22,__ecma.String,204,,,1,,__ecma.String
+90194314613,LITERAL,3,,"""!""",49,__ecma.String,204,,,3,,__ecma.String
+90194314614,LITERAL,2,,0,36,__ecma.Number,208,,,2,,__ecma.Number
+90194314615,LITERAL,2,,0,51,__ecma.Number,210,,,2,,__ecma.Number
+90194314616,LITERAL,2,,0,30,__ecma.Number,214,,,2,,__ecma.Number
+90194314617,LITERAL,1,,"""Invalid Role or is not registered for that tenant type""",26,__ecma.String,215,,,3,,__ecma.String
+90194314618,LITERAL,1,,"""Invalid Role or is not registered for that tenant type""",36,__ecma.String,216,,,3,,__ecma.String
+90194314619,LITERAL,1,,"""Invalid Role """,24,__ecma.String,218,,,1,,__ecma.String
+90194314620,LITERAL,3,,""" or is not registered for that tenant type """,46,__ecma.String,218,,,3,,__ecma.String
+90194314621,LITERAL,5,,"""""",103,__ecma.String,218,,,5,,__ecma.String
+90194314622,LITERAL,2,,0,49,__ecma.Number,221,,,2,,__ecma.Number
+90194314623,LITERAL,2,,0,35,__ecma.Number,226,,,2,,__ecma.Number
+90194314624,LITERAL,1,,"""Invalid Role Alias or is not registered for the selected role""",26,__ecma.String,227,,,3,,__ecma.String
+90194314625,LITERAL,1,,"""Invalid Role Alias or is not registered for the selected role""",36,__ecma.String,228,,,3,,__ecma.String
+90194314626,LITERAL,1,,"""Invalid Role Alias """,24,__ecma.String,230,,,1,,__ecma.String
+90194314627,LITERAL,3,,""" or is not registered for the selected role """,57,__ecma.String,230,,,3,,__ecma.String
+90194314628,LITERAL,5,,"""""",111,__ecma.String,230,,,5,,__ecma.String
+90194314629,LITERAL,2,,0,59,__ecma.Number,233,,,2,,__ecma.Number
+90194314630,LITERAL,2,,0,80,__ecma.Number,242,,,2,,__ecma.Number
+90194314631,LITERAL,1,,"""Enabling / Disabling User Role By Tenant with id: """,21,__ecma.String,261,,,1,,__ecma.String
+90194314632,LITERAL,3,,""".""",76,__ecma.String,261,,,3,,__ecma.String
+90194314633,LITERAL,1,,"""userRoleByTenants""",26,__ecma.String,263,,,3,,__ecma.String
+90194314634,LITERAL,1,,"""userRoleByTenants.tenant""",25,__ecma.String,264,,,3,,__ecma.String
+90194314635,LITERAL,2,,"""tenant""",53,__ecma.String,264,,,4,,__ecma.String
+90194314636,LITERAL,1,,"""userRoleByTenants.user""",25,__ecma.String,265,,,3,,__ecma.String
+90194314637,LITERAL,2,,"""user""",51,__ecma.String,265,,,4,,__ecma.String
+90194314638,LITERAL,1,,"""userRoleByTenants.role""",25,__ecma.String,266,,,3,,__ecma.String
+90194314639,LITERAL,2,,"""role""",51,__ecma.String,266,,,4,,__ecma.String
+90194314640,LITERAL,1,,"""userRoleByTenants.roleAlias""",25,__ecma.String,267,,,3,,__ecma.String
+90194314641,LITERAL,2,,"""roleAlias""",56,__ecma.String,267,,,4,,__ecma.String
+90194314642,LITERAL,1,,"""userRoleByTenants.id = :id""",16,__ecma.String,268,,,3,,__ecma.String
+90194314643,LITERAL,1,,"""Property to disble/enable not found""",24,__ecma.String,272,,,3,,__ecma.String
+90194314644,LITERAL,1,,"""Not found""",34,__ecma.String,273,,,3,,__ecma.String
+90194314645,LITERAL,2,,"""Property to disable/enable not found""",22,__ecma.String,275,,,2,,__ecma.String
+90194314646,LITERAL,1,,"""User Role By Tenant with id: """,7,__ecma.String,280,,,1,,__ecma.String
+90194314647,LITERAL,3,,""" was """,41,__ecma.String,280,,,3,,__ecma.String
+90194314648,LITERAL,2,,"""Enabled!""",88,__ecma.String,280,,,2,,__ecma.String
+90194314649,LITERAL,3,,"""Disabled!""",101,__ecma.String,280,,,3,,__ecma.String
+90194314650,LITERAL,1,,"""typeorm""",0,,1,,,3,,ANY
+90194314651,LITERAL,1,,"""@nestjs/typeorm""",0,,2,,,3,,ANY
+90194314652,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194314653,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194314654,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194314655,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194314656,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194314657,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194314658,LITERAL,1,,"""@avantodev/avanto-db""",0,,4,,,3,,ANY
+90194314659,LITERAL,1,,"""./dto/find-user-role-by-tenants.dto""",0,,5,,,3,,ANY
+90194314660,LITERAL,1,,"""./dto/create-user-role-by-tenants.dto""",0,,6,,,3,,ANY
+90194314661,LITERAL,1,,"""./dto/update-user-role-by-tenants.dto""",0,,7,,,3,,ANY
+90194314662,LITERAL,1,,"""src/shared/infrastructure/persistance/postgre-sql/dbConfig""",0,,8,,,3,,ANY
+90194314663,LITERAL,1,,"""../users/domain/users.service""",0,,9,,,3,,ANY
+90194314664,LITERAL,1,,"""../tenants/domain/tenants.service""",0,,10,,,3,,ANY
+90194314665,LITERAL,1,,"""../roles/domain/roles.service""",0,,11,,,3,,ANY
+90194314666,LITERAL,1,,"""../role-aliases/domain/role-aliases.service""",0,,12,,,3,,ANY
+90194314667,LITERAL,2,,2,10,__ecma.Number,8,,,2,,__ecma.Number
+90194314668,LITERAL,2,,200,13,__ecma.Number,8,,,2,,__ecma.Number
+90194314669,LITERAL,2,,2,10,__ecma.Number,13,,,2,,__ecma.Number
+90194314670,LITERAL,2,,200,13,__ecma.Number,13,,,2,,__ecma.Number
+90194314671,LITERAL,2,,2,10,__ecma.Number,18,,,2,,__ecma.Number
+90194314672,LITERAL,2,,200,13,__ecma.Number,18,,,2,,__ecma.Number
+90194314673,LITERAL,2,,2,10,__ecma.Number,36,,,2,,__ecma.Number
+90194314674,LITERAL,2,,200,13,__ecma.Number,36,,,2,,__ecma.Number
+90194314675,LITERAL,2,,true,27,__ecma.Boolean,47,,,2,,__ecma.Boolean
+90194314676,LITERAL,2,,true,27,__ecma.Boolean,50,,,2,,__ecma.Boolean
+90194314677,LITERAL,1,,"""@avantodev/avanto-db/dist/shared/enums""",0,,1,,,3,,ANY
+90194314678,LITERAL,1,,"""./user.dto""",0,,2,,,3,,ANY
+90194314679,LITERAL,1,,"""@nestjs/swagger""",0,,3,,,3,,ANY
+90194314680,LITERAL,1,,"""class-validator""",0,,4,,,3,,ANY
+90194314681,LITERAL,1,,"""class-validator""",0,,4,,,3,,ANY
+90194314682,LITERAL,1,,"""class-validator""",0,,4,,,3,,ANY
+90194314683,LITERAL,1,,"""class-validator""",0,,4,,,3,,ANY
+90194314684,LITERAL,2,,true,27,__ecma.Boolean,6,,,2,,__ecma.Boolean
+90194314685,LITERAL,2,,true,27,__ecma.Boolean,9,,,2,,__ecma.Boolean
+90194314686,LITERAL,2,,true,27,__ecma.Boolean,12,,,2,,__ecma.Boolean
+90194314687,LITERAL,2,,true,27,__ecma.Boolean,33,,,2,,__ecma.Boolean
+90194314688,LITERAL,2,,true,27,__ecma.Boolean,39,,,2,,__ecma.Boolean
+90194314689,LITERAL,2,,true,27,__ecma.Boolean,42,,,2,,__ecma.Boolean
+90194314690,LITERAL,2,,true,27,__ecma.Boolean,45,,,2,,__ecma.Boolean
+90194314691,LITERAL,1,,"""@nestjs/swagger""",0,,1,,,3,,ANY
+90194314692,LITERAL,1,,"""@nestjs/swagger""",0,,1,,,3,,ANY
+90194314693,LITERAL,1,,"""./create-user.dto""",0,,2,,,3,,ANY
+90194314694,LITERAL,1,,"""@avantodev/avanto-db/dist/shared/enums""",0,,3,,,3,,ANY
+90194314695,LITERAL,2,,2,10,__ecma.Number,8,,,2,,__ecma.Number
+90194314696,LITERAL,2,,200,13,__ecma.Number,8,,,2,,__ecma.Number
+90194314697,LITERAL,2,,2,10,__ecma.Number,13,,,2,,__ecma.Number
+90194314698,LITERAL,2,,200,13,__ecma.Number,13,,,2,,__ecma.Number
+90194314699,LITERAL,2,,2,10,__ecma.Number,18,,,2,,__ecma.Number
+90194314700,LITERAL,2,,200,13,__ecma.Number,18,,,2,,__ecma.Number
+90194314701,LITERAL,2,,2,10,__ecma.Number,36,,,2,,__ecma.Number
+90194314702,LITERAL,2,,200,13,__ecma.Number,36,,,2,,__ecma.Number
+90194314703,LITERAL,2,,true,27,__ecma.Boolean,46,,,2,,__ecma.Boolean
+90194314704,LITERAL,2,,true,27,__ecma.Boolean,49,,,2,,__ecma.Boolean
+90194314705,LITERAL,2,,true,27,__ecma.Boolean,52,,,2,,__ecma.Boolean
+90194314706,LITERAL,1,,"""@nestjs/swagger""",0,,1,,,3,,ANY
+90194314707,LITERAL,1,,"""@nestjs/swagger""",0,,1,,,3,,ANY
+90194314708,LITERAL,1,,"""./create-user.dto""",0,,2,,,3,,ANY
+90194314709,LITERAL,1,,"""class-validator""",0,,3,,,3,,ANY
+90194314710,LITERAL,1,,"""class-validator""",0,,3,,,3,,ANY
+90194314711,LITERAL,1,,"""class-validator""",0,,3,,,3,,ANY
+90194314712,LITERAL,1,,"""@avantodev/avanto-db/dist/shared/enums""",0,,4,,,3,,ANY
+90194314713,LITERAL,1,,"""@avantodev/avanto-db/dist/shared/enums""",0,,1,,,3,,ANY
+90194314714,LITERAL,1,,"""@avantodev/avanto-db""",0,,1,,,3,,ANY
+90194314715,LITERAL,1,,"""@avantodev/avanto-db""",0,,1,,,3,,ANY
+90194314716,LITERAL,1,,"""../dto/create-user.dto""",0,,2,,,3,,ANY
+90194314717,LITERAL,1,,"""../dto/update-user.dto""",0,,3,,,3,,ANY
+90194314718,LITERAL,1,,"""../dto/user.dto""",0,,4,,,3,,ANY
+90194314719,LITERAL,1,,"""@avantodev/avanto-db/dist/shared/enums""",0,,5,,,3,,ANY
+90194314720,LITERAL,2,,"""Robert""",13,__ecma.String,8,,,2,,__ecma.String
+90194314721,LITERAL,2,,"""Smith""",12,__ecma.String,9,,,2,,__ecma.String
+90194314722,LITERAL,2,,false,13,__ecma.Boolean,10,,,2,,__ecma.Boolean
+90194314723,LITERAL,2,,false,20,__ecma.Boolean,11,,,2,,__ecma.Boolean
+90194314724,LITERAL,2,,true,14,__ecma.Boolean,13,,,2,,__ecma.Boolean
+90194314725,LITERAL,2,,"""robertsmith@gmail.com""",9,__ecma.String,14,,,2,,__ecma.String
+90194314726,LITERAL,2,,true,11,__ecma.Boolean,15,,,2,,__ecma.Boolean
+90194314727,LITERAL,1,,1,15,__ecma.Number,16,,,3,,__ecma.Number
+90194314728,LITERAL,1,,1,25,__ecma.Number,17,,,3,,__ecma.Number
+90194314729,LITERAL,1,,47,28,__ecma.Number,17,,,3,,__ecma.Number
+90194314730,LITERAL,2,,"""3198725234""",9,__ecma.String,18,,,2,,__ecma.String
+90194314731,LITERAL,2,,"""Robert""",13,__ecma.String,22,,,2,,__ecma.String
+90194314732,LITERAL,2,,"""Smith""",12,__ecma.String,23,,,2,,__ecma.String
+90194314733,LITERAL,2,,false,13,__ecma.Boolean,24,,,2,,__ecma.Boolean
+90194314734,LITERAL,2,,false,20,__ecma.Boolean,25,,,2,,__ecma.Boolean
+90194314735,LITERAL,2,,true,14,__ecma.Boolean,27,,,2,,__ecma.Boolean
+90194314736,LITERAL,2,,true,11,__ecma.Boolean,28,,,2,,__ecma.Boolean
+90194314737,LITERAL,1,,1,15,__ecma.Number,29,,,3,,__ecma.Number
+90194314738,LITERAL,2,,"""""",9,__ecma.String,30,,,2,,__ecma.String
+90194314739,LITERAL,2,,"""""",9,__ecma.String,31,,,2,,__ecma.String
+90194314740,LITERAL,1,,"""[
+  {
+    ""id"": ""1"",
+    ""name"": ""Administrator"",
+    ""description"": ""Super administrators"",
+    ""tag"": ""god""
+  },
+  {
+    ""id"": ""41"",
+    ""name"": ""Role C"",
+    ""description"": ""Role C"",
+    ""tag"": ""role c""
+  },
+  {
+    ""id"": ""43"",
+    ""name"": ""Role 1943"",
+    ""description"": ""Role 1943"",
+    ""tag"": ""1943""
+  },
+  {
+    ""id"": ""44"",
+    ""name"": ""Integration Role"",
+    ""description"": ""Integration Role"",
+    ""tag"": ""integration role""
+  },
+  {
+    ""id"": ""42"",
+    ""name"": ""Role D"",
+    ""description"": ""role D"",
+    ""tag"": ""role_d""
+  },
+  {
+    ""id"": ""40"",
+    ""name"": ""Role B"",
+    ""description"": ""role b"",
+    ""tag"": ""role_b""
+  },
+  {
+    ""id"": ""46"",
+    ""name"": ""Test Qa2"",
+    ""description"": ""test"",
+    ""tag"": ""test2""
+  },
+  {
+    ""id"": ""45"",
+    ""name"": ""Test Qa"",
+    ""description"": ""test"",
+    ""tag"": ""test""
+  },
+  {
+    ""id"": ""47"",
+    ""name"": ""Test Qa 382024"",
+    ""description"": ""test"",
+    ""tag"": ""test qa""
+  }
+]""",52,__ecma.String,34,,,1,,__ecma.String
+90194314741,LITERAL,2,,1,6,__ecma.Number,92,,,2,,__ecma.Number
+90194314742,LITERAL,2,,"""Robert""",13,__ecma.String,93,,,2,,__ecma.String
+90194314743,LITERAL,2,,"""Smith""",12,__ecma.String,94,,,2,,__ecma.String
+90194314744,LITERAL,2,,false,13,__ecma.Boolean,95,,,2,,__ecma.Boolean
+90194314745,LITERAL,2,,false,20,__ecma.Boolean,96,,,2,,__ecma.Boolean
+90194314746,LITERAL,2,,true,14,__ecma.Boolean,97,,,2,,__ecma.Boolean
+90194314747,LITERAL,2,,"""robertsmith@gmail.com""",9,__ecma.String,98,,,2,,__ecma.String
+90194314748,LITERAL,2,,true,11,__ecma.Boolean,99,,,2,,__ecma.Boolean
+90194314749,LITERAL,2,,1,18,__ecma.Number,100,,,2,,__ecma.Number
+90194314750,LITERAL,2,,"""""",14,__ecma.String,103,,,2,,__ecma.String
+90194314751,LITERAL,1,,"""Sending verification email to user with temporalId: """,21,__ecma.String,29,,,1,,__ecma.String
+90194314752,LITERAL,3,,"""""",86,__ecma.String,29,,,3,,__ecma.String
+90194314753,LITERAL,1,,"""user""",26,__ecma.String,33,,,3,,__ecma.String
+90194314754,LITERAL,1,,"""user.tenants""",25,__ecma.String,34,,,3,,__ecma.String
+90194314755,LITERAL,2,,"""tenants""",41,__ecma.String,34,,,4,,__ecma.String
+90194314756,LITERAL,1,,"""user.temporalId = :temporalId""",13,__ecma.String,35,,,3,,__ecma.String
+90194314757,LITERAL,1,,"""User with temporalId """,25,__ecma.String,39,,,1,,__ecma.String
+90194314758,LITERAL,3,,""" not found""",59,__ecma.String,39,,,3,,__ecma.String
+90194314759,LITERAL,1,,"""User not found""",34,__ecma.String,40,,,3,,__ecma.String
+90194314760,LITERAL,1,,"""User with temporalId """,22,__ecma.String,42,,,1,,__ecma.String
+90194314761,LITERAL,3,,""" not found""",56,__ecma.String,42,,,3,,__ecma.String
+90194314762,LITERAL,1,,"""User with temporalId """,25,__ecma.String,48,,,1,,__ecma.String
+90194314763,LITERAL,3,,""" is already verified""",59,__ecma.String,48,,,3,,__ecma.String
+90194314764,LITERAL,1,,"""User is already verified""",35,__ecma.String,49,,,3,,__ecma.String
+90194314765,LITERAL,1,,"""User with temporalId """,22,__ecma.String,51,,,1,,__ecma.String
+90194314766,LITERAL,3,,""" is already verified""",56,__ecma.String,51,,,3,,__ecma.String
+90194314767,LITERAL,2,,0,48,__ecma.Number,56,,,2,,__ecma.Number
+90194314768,LITERAL,1,,"""User with temporalId """,25,__ecma.String,57,,,1,,__ecma.String
+90194314769,LITERAL,3,,""" has no tenants associated""",59,__ecma.String,57,,,3,,__ecma.String
+90194314770,LITERAL,1,,"""User has no tenants associated""",35,__ecma.String,58,,,3,,__ecma.String
+90194314771,LITERAL,1,,"""User with temporalId """,22,__ecma.String,60,,,1,,__ecma.String
+90194314772,LITERAL,3,,""" has no tenants associated""",56,__ecma.String,60,,,3,,__ecma.String
+90194314773,LITERAL,2,,0,78,__ecma.Number,68,,,2,,__ecma.Number
+90194314774,LITERAL,1,,"""Sending verification email to """,21,__ecma.String,71,,,1,,__ecma.String
+90194314775,LITERAL,3,,"""""",64,__ecma.String,71,,,3,,__ecma.String
+90194314776,LITERAL,1,,"""Verification email sent successfully to """,23,__ecma.String,75,,,1,,__ecma.String
+90194314777,LITERAL,3,,"""""",76,__ecma.String,75,,,3,,__ecma.String
+90194314778,LITERAL,1,,true,13,__ecma.Boolean,78,,,1,,__ecma.Boolean
+90194314779,LITERAL,1,,"""Failed to send verification email to """,25,__ecma.String,80,,,1,,__ecma.String
+90194314780,LITERAL,3,,"""""",75,__ecma.String,80,,,3,,__ecma.String
+90194314781,LITERAL,1,,false,13,__ecma.Boolean,81,,,1,,__ecma.Boolean
+90194314782,LITERAL,1,,"""Verifying user with temporalId: """,21,__ecma.String,91,,,1,,__ecma.String
+90194314783,LITERAL,3,,"""""",66,__ecma.String,91,,,3,,__ecma.String
+90194314784,LITERAL,1,,"""user""",26,__ecma.String,95,,,3,,__ecma.String
+90194314785,LITERAL,1,,"""user.temporalId = :temporalId""",13,__ecma.String,96,,,3,,__ecma.String
+90194314786,LITERAL,1,,"""User with temporalId """,25,__ecma.String,100,,,1,,__ecma.String
+90194314787,LITERAL,3,,""" not found""",59,__ecma.String,100,,,3,,__ecma.String
+90194314788,LITERAL,1,,"""User not found""",34,__ecma.String,101,,,3,,__ecma.String
+90194314789,LITERAL,1,,"""User with temporalId """,22,__ecma.String,103,,,1,,__ecma.String
+90194314790,LITERAL,3,,""" not found""",56,__ecma.String,103,,,3,,__ecma.String
+90194314791,LITERAL,1,,"""User with temporalId """,25,__ecma.String,109,,,1,,__ecma.String
+90194314792,LITERAL,3,,""" is already verified""",59,__ecma.String,109,,,3,,__ecma.String
+90194314793,LITERAL,1,,"""User is already verified""",35,__ecma.String,110,,,3,,__ecma.String
+90194314794,LITERAL,1,,"""User with temporalId """,22,__ecma.String,112,,,1,,__ecma.String
+90194314795,LITERAL,3,,""" is already verified""",56,__ecma.String,112,,,3,,__ecma.String
+90194314796,LITERAL,2,,true,21,__ecma.Boolean,117,,,2,,__ecma.Boolean
+90194314797,LITERAL,1,,"""User with temporalId """,21,__ecma.String,121,,,1,,__ecma.String
+90194314798,LITERAL,3,,""" has been verified""",55,__ecma.String,121,,,3,,__ecma.String
+90194314799,LITERAL,1,,"""Sending MFA attempt email to user with id: """,21,__ecma.String,131,,,1,,__ecma.String
+90194314800,LITERAL,3,,"""""",73,__ecma.String,131,,,3,,__ecma.String
+90194314801,LITERAL,1,,"""User with id """,25,__ecma.String,137,,,1,,__ecma.String
+90194314802,LITERAL,3,,""" not found""",47,__ecma.String,137,,,3,,__ecma.String
+90194314803,LITERAL,1,,"""User not found""",34,__ecma.String,138,,,3,,__ecma.String
+90194314804,LITERAL,1,,"""User with id """,22,__ecma.String,140,,,1,,__ecma.String
+90194314805,LITERAL,3,,""" not found""",44,__ecma.String,140,,,3,,__ecma.String
+90194314806,LITERAL,1,,"""Sending MFA attempt email to """,21,__ecma.String,148,,,1,,__ecma.String
+90194314807,LITERAL,3,,"""""",63,__ecma.String,148,,,3,,__ecma.String
+90194314808,LITERAL,1,,"""MFA attempt email sent successfully to """,23,__ecma.String,152,,,1,,__ecma.String
+90194314809,LITERAL,3,,"""""",75,__ecma.String,152,,,3,,__ecma.String
+90194314810,LITERAL,1,,true,13,__ecma.Boolean,153,,,1,,__ecma.Boolean
+90194314811,LITERAL,1,,"""Failed to send MFA attempt email to """,25,__ecma.String,155,,,1,,__ecma.String
+90194314812,LITERAL,3,,"""""",74,__ecma.String,155,,,3,,__ecma.String
+90194314813,LITERAL,1,,false,13,__ecma.Boolean,156,,,1,,__ecma.Boolean
+90194314814,LITERAL,1,,"""Sending MFA success email to user with id: """,21,__ecma.String,166,,,1,,__ecma.String
+90194314815,LITERAL,3,,"""""",73,__ecma.String,166,,,3,,__ecma.String
+90194314816,LITERAL,1,,"""User with id """,25,__ecma.String,172,,,1,,__ecma.String
+90194314817,LITERAL,3,,""" not found""",47,__ecma.String,172,,,3,,__ecma.String
+90194314818,LITERAL,1,,"""User not found""",34,__ecma.String,173,,,3,,__ecma.String
+90194314819,LITERAL,1,,"""User with id """,22,__ecma.String,175,,,1,,__ecma.String
+90194314820,LITERAL,3,,""" not found""",44,__ecma.String,175,,,3,,__ecma.String
+90194314821,LITERAL,1,,"""Sending MFA success email to """,21,__ecma.String,183,,,1,,__ecma.String
+90194314822,LITERAL,3,,"""""",63,__ecma.String,183,,,3,,__ecma.String
+90194314823,LITERAL,1,,"""MFA success email sent successfully to """,23,__ecma.String,187,,,1,,__ecma.String
+90194314824,LITERAL,3,,"""""",75,__ecma.String,187,,,3,,__ecma.String
+90194314825,LITERAL,1,,true,13,__ecma.Boolean,188,,,1,,__ecma.Boolean
+90194314826,LITERAL,1,,"""Failed to send MFA success email to """,25,__ecma.String,190,,,1,,__ecma.String
+90194314827,LITERAL,3,,"""""",74,__ecma.String,190,,,3,,__ecma.String
+90194314828,LITERAL,1,,false,13,__ecma.Boolean,191,,,1,,__ecma.Boolean
+90194314829,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194314830,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194314831,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194314832,LITERAL,1,,"""@nestjs/common""",0,,1,,,3,,ANY
+90194314833,LITERAL,1,,"""@nestjs/typeorm""",0,,2,,,3,,ANY
+90194314834,LITERAL,1,,"""typeorm""",0,,3,,,3,,ANY
+90194314835,LITERAL,1,,"""@avantodev/avanto-db""",0,,4,,,3,,ANY
+90194314836,LITERAL,1,,"""../../../infrastructure/persistance/postgre-sql/dbConfig""",0,,5,,,3,,ANY
+90194314837,LITERAL,1,,"""../../tenants/domain/tenants.service""",0,,6,,,3,,ANY
+90194314838,LITERAL,1,,"""../../../infrastructure/mails/mailProvider""",0,,7,,,3,,ANY
+90194314839,LITERAL,1,,"""Creating new User...""",20,__ecma.String,47,,,3,,__ecma.String
+90194314840,LITERAL,1,,"""Action not allowed for typeOfUser: """,27,__ecma.String,57,,,1,,__ecma.String
+90194314841,LITERAL,3,,"""""",87,__ecma.String,57,,,3,,__ecma.String
+90194314842,LITERAL,1,,"""insufficient permissions for this user""",37,__ecma.String,58,,,3,,__ecma.String
+90194314843,LITERAL,1,,"""The user of typeOfUser """,24,__ecma.String,60,,,1,,__ecma.String
+90194314844,LITERAL,3,,""" doesn´t  have enough permissions to perform this action""",72,__ecma.String,60,,,3,,__ecma.String
+90194314845,LITERAL,1,,"""The email """,25,__ecma.String,67,,,1,,__ecma.String
+90194314846,LITERAL,3,,""" is already used and needs to be unique""",43,__ecma.String,67,,,3,,__ecma.String
+90194314847,LITERAL,1,,"""email is already in use""",35,__ecma.String,68,,,3,,__ecma.String
+90194314848,LITERAL,1,,"""The email """,22,__ecma.String,70,,,1,,__ecma.String
+90194314849,LITERAL,3,,""" is already used and needs to be unique""",40,__ecma.String,70,,,3,,__ecma.String
+90194314850,LITERAL,1,,"""phone is already in use""",37,__ecma.String,76,,,3,,__ecma.String
+90194314851,LITERAL,1,,"""Invalid typeOfUser: """,27,__ecma.String,86,,,1,,__ecma.String
+90194314852,LITERAL,3,,"""""",74,__ecma.String,86,,,3,,__ecma.String
+90194314853,LITERAL,1,,"""Invalid typeOfUser value""",38,__ecma.String,87,,,3,,__ecma.String
+90194314854,LITERAL,1,,"""The typeOfUser value """,24,__ecma.String,89,,,1,,__ecma.String
+90194314855,LITERAL,3,,""" is invalid""",72,__ecma.String,89,,,3,,__ecma.String
+90194314856,LITERAL,2,,0,42,__ecma.Number,94,,,2,,__ecma.Number
+90194314857,LITERAL,2,,1,62,__ecma.Number,119,,,2,,__ecma.Number
+90194314858,LITERAL,1,,"""looking for roles with id:""",23,__ecma.String,120,,,1,,__ecma.String
+90194314859,LITERAL,3,,"""""",72,__ecma.String,120,,,3,,__ecma.String
+90194314860,LITERAL,1,,"""roles""",28,__ecma.String,122,,,3,,__ecma.String
+90194314861,LITERAL,1,,"""roles.tenantTypes""",27,__ecma.String,123,,,3,,__ecma.String
+90194314862,LITERAL,2,,"""tenantTypes""",48,__ecma.String,123,,,4,,__ecma.String
+90194314863,LITERAL,1,,"""roles.tenantCreator""",27,__ecma.String,124,,,3,,__ecma.String
+90194314864,LITERAL,2,,"""tenantCreator""",50,__ecma.String,124,,,4,,__ecma.String
+90194314865,LITERAL,1,,"""roles.id = :id""",18,__ecma.String,132,,,3,,__ecma.String
+90194314866,LITERAL,2,,1,30,__ecma.Number,134,,,2,,__ecma.Number
+90194314867,LITERAL,1,,"""The Role with id """,27,__ecma.String,135,,,1,,__ecma.String
+90194314868,LITERAL,3,,""" was not found""",57,__ecma.String,135,,,3,,__ecma.String
+90194314869,LITERAL,1,,"""Role  not found""",36,__ecma.String,136,,,3,,__ecma.String
+90194314870,LITERAL,1,,"""The role with id """,24,__ecma.String,138,,,1,,__ecma.String
+90194314871,LITERAL,3,,""" was not found""",54,__ecma.String,138,,,3,,__ecma.String
+90194314872,LITERAL,2,,0,55,__ecma.Number,151,,,2,,__ecma.Number
+90194314873,LITERAL,1,,"""Finding All Users ...""",20,__ecma.String,157,,,3,,__ecma.String
+90194314874,LITERAL,1,,"""users""",26,__ecma.String,159,,,3,,__ecma.String
+90194314875,LITERAL,1,,"""users.tenants""",25,__ecma.String,160,,,3,,__ecma.String
+90194314876,LITERAL,2,,"""tenants""",42,__ecma.String,160,,,4,,__ecma.String
+90194314877,LITERAL,1,,"""users.roles""",25,__ecma.String,161,,,3,,__ecma.String
+90194314878,LITERAL,2,,"""roles""",40,__ecma.String,161,,,4,,__ecma.String
+90194314879,LITERAL,1,,"""roles.role""",25,__ecma.String,162,,,3,,__ecma.String
+90194314880,LITERAL,2,,"""role""",39,__ecma.String,162,,,4,,__ecma.String
+90194314881,LITERAL,1,,"""roles.tenant""",25,__ecma.String,163,,,3,,__ecma.String
+90194314882,LITERAL,2,,"""tenant""",41,__ecma.String,163,,,4,,__ecma.String
+90194314883,LITERAL,1,,"""roles.roleAlias""",25,__ecma.String,164,,,3,,__ecma.String
+90194314884,LITERAL,2,,"""roleAlias""",44,__ecma.String,164,,,4,,__ecma.String
+90194314885,LITERAL,1,,"""Found """,21,__ecma.String,166,,,1,,__ecma.String
+90194314886,LITERAL,3,,""" users""",57,__ecma.String,166,,,3,,__ecma.String
+90194314887,LITERAL,1,,"""Looking for user with id: """,21,__ecma.String,171,,,1,,__ecma.String
+90194314888,LITERAL,3,,"""""",52,__ecma.String,171,,,3,,__ecma.String
+90194314889,LITERAL,1,,"""users""",26,__ecma.String,173,,,3,,__ecma.String
+90194314890,LITERAL,1,,"""users.tenants""",25,__ecma.String,174,,,3,,__ecma.String
+90194314891,LITERAL,2,,"""tenants""",42,__ecma.String,174,,,4,,__ecma.String
+90194314892,LITERAL,1,,"""users.roles""",25,__ecma.String,175,,,3,,__ecma.String
+90194314893,LITERAL,2,,"""roles""",40,__ecma.String,175,,,4,,__ecma.String
+90194314894,LITERAL,1,,"""roles.role""",25,__ecma.String,176,,,3,,__ecma.String
+90194314895,LITERAL,2,,"""role""",39,__ecma.String,176,,,4,,__ecma.String
+90194314896,LITERAL,1,,"""roles.tenant""",25,__ecma.String,177,,,3,,__ecma.String
+90194314897,LITERAL,2,,"""tenant""",41,__ecma.String,177,,,4,,__ecma.String
+90194314898,LITERAL,1,,"""roles.roleAlias""",25,__ecma.String,178,,,3,,__ecma.String
+90194314899,LITERAL,2,,"""roleAlias""",44,__ecma.String,178,,,4,,__ecma.String
+90194314900,LITERAL,1,,"""users.id = :id""",13,__ecma.String,179,,,3,,__ecma.String
+90194314901,LITERAL,2,,0,39,__ecma.Number,181,,,2,,__ecma.Number
+90194314902,LITERAL,1,,"""Not found any user with id: """,35,__ecma.String,182,,,1,,__ecma.String
+90194314903,LITERAL,3,,"""""",68,__ecma.String,182,,,3,,__ecma.String
+90194314904,LITERAL,1,,"""Not found any user with id: """,22,__ecma.String,184,,,1,,__ecma.String
+90194314905,LITERAL,3,,"""""",55,__ecma.String,184,,,3,,__ecma.String
+90194314906,LITERAL,1,,"""Found """,21,__ecma.String,187,,,1,,__ecma.String
+90194314907,LITERAL,3,,""" users""",57,__ecma.String,187,,,3,,__ecma.String
+90194314908,LITERAL,2,,0,32,__ecma.Number,188,,,2,,__ecma.Number
+90194314909,LITERAL,1,,"""Finding Users by many args """,21,__ecma.String,208,,,3,,__ecma.String
+90194314910,LITERAL,1,,"""users""",26,__ecma.String,210,,,3,,__ecma.String
+90194314911,LITERAL,1,,"""users.tenants""",25,__ecma.String,211,,,3,,__ecma.String
+90194314912,LITERAL,2,,"""tenants""",42,__ecma.String,211,,,4,,__ecma.String
+90194314913,LITERAL,1,,"""users.roles""",25,__ecma.String,212,,,3,,__ecma.String
+90194314914,LITERAL,2,,"""roles""",40,__ecma.String,212,,,4,,__ecma.String
+90194314915,LITERAL,1,,"""roles.role""",25,__ecma.String,213,,,3,,__ecma.String
+90194314916,LITERAL,2,,"""role""",39,__ecma.String,213,,,4,,__ecma.String
+90194314917,LITERAL,1,,"""roles.tenant""",25,__ecma.String,214,,,3,,__ecma.String
+90194314918,LITERAL,2,,"""tenant""",41,__ecma.String,214,,,4,,__ecma.String
+90194314919,LITERAL,1,,"""roles.roleAlias""",25,__ecma.String,215,,,3,,__ecma.String
+90194314920,LITERAL,2,,"""roleAlias""",44,__ecma.String,215,,,4,,__ecma.String
+90194314921,LITERAL,2,,0,28,__ecma.Number,217,,,2,,__ecma.Number
+90194314922,LITERAL,1,,"""Finding by ids: """,23,__ecma.String,218,,,1,,__ecma.String
+90194314923,LITERAL,3,,"""""",45,__ecma.String,218,,,3,,__ecma.String
+90194314924,LITERAL,1,,"""users.id IN (:...ids) """,29,__ecma.String,219,,,3,,__ecma.String
+90194314925,LITERAL,2,,0,42,__ecma.Number,221,,,2,,__ecma.Number
+90194314926,LITERAL,1,,"""Finding by firstNames: """,23,__ecma.String,222,,,1,,__ecma.String
+90194314927,LITERAL,3,,"""""",59,__ecma.String,222,,,3,,__ecma.String
+90194314928,LITERAL,1,,"""users.firstName IN (:...firstNames) """,29,__ecma.String,223,,,3,,__ecma.String
+90194314929,LITERAL,2,,0,40,__ecma.Number,227,,,2,,__ecma.Number
+90194314930,LITERAL,1,,"""Finding by last names: """,23,__ecma.String,228,,,1,,__ecma.String
+90194314931,LITERAL,3,,"""""",58,__ecma.String,228,,,3,,__ecma.String
+90194314932,LITERAL,1,,"""users.lastName IN (:...lastNames) """,29,__ecma.String,229,,,3,,__ecma.String
+90194314933,LITERAL,2,,0,34,__ecma.Number,233,,,2,,__ecma.Number
+90194314934,LITERAL,1,,"""Finding by emails: """,23,__ecma.String,234,,,1,,__ecma.String
+90194314935,LITERAL,3,,"""""",51,__ecma.String,234,,,3,,__ecma.String
+90194314936,LITERAL,1,,"""users.email IN (:...emails) """,29,__ecma.String,235,,,3,,__ecma.String
+90194314937,LITERAL,1,,"""Finding by typeOfUser: """,23,__ecma.String,240,,,1,,__ecma.String
+90194314938,LITERAL,3,,"""""",59,__ecma.String,240,,,3,,__ecma.String
+90194314939,LITERAL,1,,"""users.typeOfUser = :typeOfUser""",29,__ecma.String,241,,,3,,__ecma.String
+90194314940,LITERAL,2,,0,62,__ecma.Number,243,,,2,,__ecma.Number
+90194314941,LITERAL,1,,"""Finding by roleAliases Ids: """,23,__ecma.String,244,,,1,,__ecma.String
+90194314942,LITERAL,3,,"""""",74,__ecma.String,244,,,3,,__ecma.String
+90194314943,LITERAL,1,,"""roles.id IN (:...userRoleByTenantsIds) """,29,__ecma.String,245,,,3,,__ecma.String
+90194314944,LITERAL,2,,0,42,__ecma.Number,247,,,2,,__ecma.Number
+90194314945,LITERAL,1,,"""Finding by tenants Ids: """,23,__ecma.String,248,,,1,,__ecma.String
+90194314946,LITERAL,3,,"""""",60,__ecma.String,248,,,3,,__ecma.String
+90194314947,LITERAL,1,,"""tenants.id IN (:...tenantsIds) """,29,__ecma.String,249,,,3,,__ecma.String
+90194314948,LITERAL,1,,"""Finding by temporal id: """,23,__ecma.String,252,,,1,,__ecma.String
+90194314949,LITERAL,3,,"""""",60,__ecma.String,252,,,3,,__ecma.String
+90194314950,LITERAL,1,,"""users.temporalId = :temporalId""",29,__ecma.String,253,,,3,,__ecma.String
+90194314951,LITERAL,2,,null,19,__ecma.Null,255,,,2,,__ecma.Null
+90194314952,LITERAL,1,,"""Finding by enabled: """,23,__ecma.String,256,,,1,,__ecma.String
+90194314953,LITERAL,3,,"""""",53,__ecma.String,256,,,3,,__ecma.String
+90194314954,LITERAL,1,,"""users.enabled = :enabled """,29,__ecma.String,257,,,3,,__ecma.String
+90194314955,LITERAL,2,,null,21,__ecma.Null,260,,,2,,__ecma.Null
+90194314956,LITERAL,1,,"""Finding by validated: """,23,__ecma.String,261,,,1,,__ecma.String
+90194314957,LITERAL,3,,"""""",57,__ecma.String,261,,,3,,__ecma.String
+90194314958,LITERAL,1,,"""users.validated = :validated """,29,__ecma.String,262,,,3,,__ecma.String
+90194314959,LITERAL,2,,null,28,__ecma.Null,265,,,2,,__ecma.Null
+90194314960,LITERAL,1,,"""Finding by BackOffice Access: """,23,__ecma.String,266,,,1,,__ecma.String
+90194314961,LITERAL,3,,"""""",72,__ecma.String,266,,,3,,__ecma.String
+90194314962,LITERAL,1,,"""users.BackOfficeAccess = :BackOfficeAccess """,29,__ecma.String,267,,,3,,__ecma.String
+90194314963,LITERAL,2,,null,22,__ecma.Null,270,,,2,,__ecma.Null
+90194314964,LITERAL,1,,"""Finding by Saas Access: """,23,__ecma.String,271,,,1,,__ecma.String
+90194314965,LITERAL,3,,"""""",60,__ecma.String,271,,,3,,__ecma.String
+90194314966,LITERAL,1,,"""users.SaasAccess = :SaasAccess """,29,__ecma.String,272,,,3,,__ecma.String
+90194314967,LITERAL,1,,"""Finding by fire Base Id: """,23,__ecma.String,276,,,1,,__ecma.String
+90194314968,LITERAL,3,,"""""",61,__ecma.String,276,,,3,,__ecma.String
+90194314969,LITERAL,1,,"""users.fireBaseId = :fireBaseId """,29,__ecma.String,277,,,3,,__ecma.String
+90194314970,LITERAL,2,,0,48,__ecma.Number,280,,,2,,__ecma.Number
+90194314971,LITERAL,1,,"""Finding by recordTypeIds: """,23,__ecma.String,281,,,1,,__ecma.String
+90194314972,LITERAL,3,,"""""",65,__ecma.String,281,,,3,,__ecma.String
+90194314973,LITERAL,2,,0,70,__ecma.Number,283,,,2,,__ecma.Number
+90194314974,LITERAL,1,,"""Finding by roles: """,25,__ecma.String,284,,,1,,__ecma.String
+90194314975,LITERAL,3,,"""""",69,__ecma.String,284,,,3,,__ecma.String
+90194314976,LITERAL,1,,"""role.id IN (:...roleIds) """,31,__ecma.String,285,,,3,,__ecma.String
+90194314977,LITERAL,1,,"""Do not found any role access to recordTypeIds: """,25,__ecma.String,289,,,1,,__ecma.String
+90194314978,LITERAL,3,,"""""",88,__ecma.String,289,,,3,,__ecma.String
+90194314979,LITERAL,1,,"""Do not found any role access to recordTypeIds: """,27,__ecma.String,290,,,1,,__ecma.String
+90194314980,LITERAL,3,,"""""",90,__ecma.String,290,,,3,,__ecma.String
+90194314981,LITERAL,1,,"""Not found any role access to the record type.""",36,__ecma.String,291,,,3,,__ecma.String
+90194314982,LITERAL,1,,"""Do not found any role access to recordTypeIds: """,24,__ecma.String,293,,,1,,__ecma.String
+90194314983,LITERAL,3,,"""""",87,__ecma.String,293,,,3,,__ecma.String
+90194314984,LITERAL,1,,"""Found """,21,__ecma.String,299,,,1,,__ecma.String
+90194314985,LITERAL,3,,""" Users""",57,__ecma.String,299,,,3,,__ecma.String
+90194314986,LITERAL,1,,"""Updating user with id: """,21,__ecma.String,304,,,1,,__ecma.String
+90194314987,LITERAL,3,,"""""",49,__ecma.String,304,,,3,,__ecma.String
+90194314988,LITERAL,1,,"""users""",26,__ecma.String,320,,,3,,__ecma.String
+90194314989,LITERAL,1,,"""users.tenants""",25,__ecma.String,321,,,3,,__ecma.String
+90194314990,LITERAL,2,,"""tenants""",42,__ecma.String,321,,,4,,__ecma.String
+90194314991,LITERAL,1,,"""users.roles""",25,__ecma.String,322,,,3,,__ecma.String
+90194314992,LITERAL,2,,"""roles""",40,__ecma.String,322,,,4,,__ecma.String
+90194314993,LITERAL,1,,"""roles.role""",25,__ecma.String,323,,,3,,__ecma.String
+90194314994,LITERAL,2,,"""role""",39,__ecma.String,323,,,4,,__ecma.String
+90194314995,LITERAL,1,,"""roles.tenant""",25,__ecma.String,324,,,3,,__ecma.String
+90194314996,LITERAL,2,,"""tenant""",41,__ecma.String,324,,,4,,__ecma.String
+90194314997,LITERAL,1,,"""roles.roleAlias""",25,__ecma.String,325,,,3,,__ecma.String
+90194314998,LITERAL,2,,"""roleAlias""",44,__ecma.String,325,,,4,,__ecma.String
+90194314999,LITERAL,1,,"""users.id = :id""",13,__ecma.String,326,,,3,,__ecma.String
+90194315000,LITERAL,1,,"""The user with id """,25,__ecma.String,330,,,1,,__ecma.String
+90194315001,LITERAL,3,,""" was not found""",47,__ecma.String,330,,,3,,__ecma.String
+90194315002,LITERAL,1,,"""User not found""",34,__ecma.String,331,,,3,,__ecma.String
+90194315003,LITERAL,1,,"""The user with id """,22,__ecma.String,333,,,1,,__ecma.String
+90194315004,LITERAL,3,,""" was not found""",44,__ecma.String,333,,,3,,__ecma.String
+90194315005,LITERAL,1,,"""Action not allowed for typeOfUser: """,27,__ecma.String,341,,,1,,__ecma.String
+90194315006,LITERAL,3,,"""""",87,__ecma.String,341,,,3,,__ecma.String
+90194315007,LITERAL,1,,"""insufficient permissions for this user""",37,__ecma.String,342,,,3,,__ecma.String
+90194315008,LITERAL,1,,"""The user of typeOfUser """,24,__ecma.String,344,,,1,,__ecma.String
+90194315009,LITERAL,3,,""" doesn´t  have enough permissions to perform this action""",72,__ecma.String,344,,,3,,__ecma.String
+90194315010,LITERAL,1,,"""The email """,27,__ecma.String,352,,,1,,__ecma.String
+90194315011,LITERAL,3,,""" is already used and needs to be unique""",45,__ecma.String,352,,,3,,__ecma.String
+90194315012,LITERAL,1,,"""email is already in use""",37,__ecma.String,353,,,3,,__ecma.String
+90194315013,LITERAL,1,,"""The email """,24,__ecma.String,355,,,1,,__ecma.String
+90194315014,LITERAL,3,,""" is already used and needs to be unique""",42,__ecma.String,355,,,3,,__ecma.String
+90194315015,LITERAL,1,,"""Updating typeOfUser to: """,23,__ecma.String,361,,,1,,__ecma.String
+90194315016,LITERAL,3,,"""""",60,__ecma.String,361,,,3,,__ecma.String
+90194315017,LITERAL,1,,"""Invalid typeOfUser: """,27,__ecma.String,363,,,1,,__ecma.String
+90194315018,LITERAL,3,,"""""",60,__ecma.String,363,,,3,,__ecma.String
+90194315019,LITERAL,1,,"""Invalid typeOfUser value""",38,__ecma.String,364,,,3,,__ecma.String
+90194315020,LITERAL,1,,"""The typeOfUser value """,24,__ecma.String,366,,,1,,__ecma.String
+90194315021,LITERAL,3,,""" is invalid""",58,__ecma.String,366,,,3,,__ecma.String
+90194315022,LITERAL,1,,"""The phone """,27,__ecma.String,375,,,1,,__ecma.String
+90194315023,LITERAL,3,,""" is already used and needs to be unique""",45,__ecma.String,375,,,3,,__ecma.String
+90194315024,LITERAL,1,,"""phone is already in use""",37,__ecma.String,376,,,3,,__ecma.String
+90194315025,LITERAL,1,,"""The phone """,24,__ecma.String,378,,,1,,__ecma.String
+90194315026,LITERAL,3,,""" is already used and needs to be unique""",42,__ecma.String,378,,,3,,__ecma.String
+90194315027,LITERAL,2,,0,42,__ecma.Number,385,,,2,,__ecma.Number
+90194315028,LITERAL,2,,0,35,__ecma.Number,397,,,2,,__ecma.Number
+90194315029,LITERAL,1,,"""users""",30,__ecma.String,399,,,3,,__ecma.String
+90194315030,LITERAL,1,,"""tenants""",20,__ecma.String,400,,,3,,__ecma.String
+90194315031,LITERAL,2,,null,21,__ecma.Null,418,,,2,,__ecma.Null
+90194315032,LITERAL,2,,null,28,__ecma.Null,421,,,2,,__ecma.Null
+90194315033,LITERAL,2,,null,22,__ecma.Null,424,,,2,,__ecma.Null
+90194315034,LITERAL,2,,null,19,__ecma.Null,427,,,2,,__ecma.Null
+90194315035,LITERAL,2,,"""default""",50,__ecma.String,429,,,2,,__ecma.String
+90194315036,LITERAL,2,,true,33,__ecma.Boolean,430,,,2,,__ecma.Boolean
+90194315037,LITERAL,2,,"""default""",56,__ecma.String,431,,,2,,__ecma.String
+90194315038,LITERAL,2,,false,33,__ecma.Boolean,432,,,2,,__ecma.Boolean
+90194315039,LITERAL,1,,"""User with id: """,21,__ecma.String,439,,,1,,__ecma.String
+90194315040,LITERAL,3,,""" was updated.""",40,__ecma.String,439,,,3,,__ecma.String
+90194315041,LITERAL,1,,"""Enabling / Disabling User with id: """,21,__ecma.String,444,,,1,,__ecma.String
+90194315042,LITERAL,3,,""".""",61,__ecma.String,444,,,3,,__ecma.String
+90194315043,LITERAL,1,,"""The user with id """,25,__ecma.String,448,,,1,,__ecma.String
+90194315044,LITERAL,3,,""" was not found""",47,__ecma.String,448,,,3,,__ecma.String
+90194315045,LITERAL,1,,"""Tenant not found""",34,__ecma.String,449,,,3,,__ecma.String
+90194315046,LITERAL,1,,"""The tenant with id """,22,__ecma.String,451,,,1,,__ecma.String
+90194315047,LITERAL,3,,""" was not found""",46,__ecma.String,451,,,3,,__ecma.String
+90194315048,LITERAL,1,,"""Action not allowed for typeOfUser: """,27,__ecma.String,458,,,1,,__ecma.String
+90194315049,LITERAL,3,,"""""",87,__ecma.String,458,,,3,,__ecma.String
+90194315050,LITERAL,1,,"""insufficient permissions for this user""",37,__ecma.String,459,,,3,,__ecma.String
+90194315051,LITERAL,1,,"""The user of typeOfUser """,24,__ecma.String,461,,,1,,__ecma.String
+90194315052,LITERAL,3,,""" doesn´t  have enough permissions to perform this action""",72,__ecma.String,461,,,3,,__ecma.String
+90194315053,LITERAL,1,,"""Tenant with id: """,21,__ecma.String,467,,,1,,__ecma.String
+90194315054,LITERAL,3,,""" was """,42,__ecma.String,467,,,3,,__ecma.String
+90194315055,LITERAL,2,,"""Enabled!""",75,__ecma.String,467,,,2,,__ecma.String
+90194315056,LITERAL,3,,"""Disabled!""",88,__ecma.String,467,,,3,,__ecma.String
+90194315057,LITERAL,1,,"""""",27,__ecma.String,473,,,1,,__ecma.String
+90194315058,LITERAL,3,,"""role-access-to-record-fields/many""",48,__ecma.String,473,,,3,,__ecma.String
+90194315059,LITERAL,1,,"""POST""",6,__ecma.String,476,,,3,,__ecma.String
+90194315060,LITERAL,2,,"""application/json""",24,__ecma.String,477,,,2,,__ecma.String
+90194315061,LITERAL,1,,"""user""",26,__ecma.String,491,,,3,,__ecma.String
+90194315062,LITERAL,1,,"""user.tenants""",25,__ecma.String,492,,,3,,__ecma.String
+90194315063,LITERAL,2,,"""tenants""",41,__ecma.String,492,,,4,,__ecma.String
+90194315064,LITERAL,1,,"""user.temporalId = :temporalId""",13,__ecma.String,493,,,3,,__ecma.String
+90194315065,LITERAL,1,,"""The user with id """,25,__ecma.String,496,,,1,,__ecma.String
+90194315066,LITERAL,3,,""" was not found""",55,__ecma.String,496,,,3,,__ecma.String
+90194315067,LITERAL,1,,"""User not found""",34,__ecma.String,497,,,3,,__ecma.String
+90194315068,LITERAL,1,,"""The user with id """,22,__ecma.String,499,,,1,,__ecma.String
+90194315069,LITERAL,3,,""" was not found""",52,__ecma.String,499,,,3,,__ecma.String
+90194315070,LITERAL,1,,"""The user with id """,25,__ecma.String,503,,,1,,__ecma.String
+90194315071,LITERAL,3,,""" is already verified""",55,__ecma.String,503,,,3,,__ecma.String
+90194315072,LITERAL,1,,"""User is already verified""",35,__ecma.String,504,,,3,,__ecma.String
+90194315073,LITERAL,1,,"""The user with id """,22,__ecma.String,506,,,1,,__ecma.String
+90194315074,LITERAL,3,,""" is already verified""",52,__ecma.String,506,,,3,,__ecma.String
+90194315075,LITERAL,2,,0,48,__ecma.Number,509,,,2,,__ecma.Number
+90194315076,LITERAL,1,,"""The user with id """,25,__ecma.String,510,,,1,,__ecma.String
+90194315077,LITERAL,3,,""" has no tenants asociated""",55,__ecma.String,510,,,3,,__ecma.String
+90194315078,LITERAL,1,,"""User has no tenants asociated""",35,__ecma.String,511,,,3,,__ecma.String
+90194315079,LITERAL,1,,"""The user with id """,22,__ecma.String,513,,,1,,__ecma.String
+90194315080,LITERAL,3,,""" has no tenants asociated""",52,__ecma.String,513,,,3,,__ecma.String
+90194315081,LITERAL,2,,0,41,__ecma.Number,518,,,2,,__ecma.Number
+90194315082,LITERAL,1,,"""The user with id """,25,__ecma.String,529,,,1,,__ecma.String
+90194315083,LITERAL,3,,""" was not found""",51,__ecma.String,529,,,3,,__ecma.String
+90194315084,LITERAL,1,,"""User not found""",34,__ecma.String,530,,,3,,__ecma.String
+90194315085,LITERAL,1,,"""The user with id """,22,__ecma.String,532,,,1,,__ecma.String
+90194315086,LITERAL,3,,""" was not found""",48,__ecma.String,532,,,3,,__ecma.String
+90194315087,LITERAL,1,,"""The user with id """,25,__ecma.String,543,,,1,,__ecma.String
+90194315088,LITERAL,3,,""" was not found""",51,__ecma.String,543,,,3,,__ecma.String
+90194315089,LITERAL,1,,"""User not found""",34,__ecma.String,544,,,3,,__ecma.String
+90194315090,LITERAL,1,,"""The user with id """,22,__ecma.String,546,,,1,,__ecma.String
+90194315091,LITERAL,3,,""" was not found""",48,__ecma.String,546,,,3,,__ecma.String
+90194315092,LITERAL,1,,"""@avantodev/avanto-db""",0,,1,,,3,,ANY
+90194315093,LITERAL,1,,"""@avantodev/avanto-db""",0,,1,,,3,,ANY
+90194315094,LITERAL,1,,"""@avantodev/avanto-db""",0,,1,,,3,,ANY
+90194315095,LITERAL,1,,"""../../../infrastructure/persistance/postgre-sql/dbConfig""",0,,2,,,3,,ANY
+90194315096,LITERAL,1,,"""../../../utils""",0,,3,,,3,,ANY
+90194315097,LITERAL,1,,"""../../../utils""",0,,3,,,3,,ANY
+90194315098,LITERAL,1,,"""../../../utils""",0,,3,,,3,,ANY
+90194315099,LITERAL,1,,"""../../../utils""",0,,3,,,3,,ANY
+90194315100,LITERAL,1,,"""../../../utils""",0,,3,,,3,,ANY
+90194315101,LITERAL,1,,"""./dto/find-user.dto""",0,,10,,,3,,ANY
+90194315102,LITERAL,1,,"""@nestjs/common""",0,,11,,,3,,ANY
+90194315103,LITERAL,1,,"""@nestjs/common""",0,,11,,,3,,ANY
+90194315104,LITERAL,1,,"""@nestjs/common""",0,,11,,,3,,ANY
+90194315105,LITERAL,1,,"""@nestjs/common""",0,,11,,,3,,ANY
+90194315106,LITERAL,1,,"""@nestjs/common""",0,,11,,,3,,ANY
+90194315107,LITERAL,1,,"""@nestjs/common""",0,,11,,,3,,ANY
+90194315108,LITERAL,1,,"""@nestjs/common""",0,,11,,,3,,ANY
+90194315109,LITERAL,1,,"""./dto/create-user.dto""",0,,20,,,3,,ANY
+90194315110,LITERAL,1,,"""./dto/update-user.dto""",0,,21,,,3,,ANY
+90194315111,LITERAL,1,,"""@nestjs/typeorm""",0,,22,,,3,,ANY
+90194315112,LITERAL,1,,"""typeorm""",0,,23,,,3,,ANY
+90194315113,LITERAL,1,,"""../../tenants/domain/tenants.service""",0,,24,,,3,,ANY
+90194315114,LITERAL,1,,"""../../../dataTypes/Options""",0,,25,,,3,,ANY
+90194315115,LITERAL,1,,"""../../../infrastructure/mails/mailProvider""",0,,26,,,3,,ANY
+90194315116,LITERAL,1,,"""uuid""",0,,27,,,3,,ANY
+90194315117,LITERAL,1,,"""@avantodev/avanto-db/dist/shared/enums""",0,,28,,,3,,ANY
+90194315118,LITERAL,1,,"""@avantodev/avanto-db/dist/shared/enums""",0,,28,,,3,,ANY
+90194315119,LITERAL,1,,"""src/shared/dataTypes/MyContext""",0,,29,,,3,,ANY
+90194315120,LITERAL,2,,"""BackOffice""",15,__ecma.String,2,,,2,,__ecma.String
+90194315121,LITERAL,2,,"""Saas""",9,__ecma.String,3,,,2,,__ecma.String
+90194315122,LITERAL,2,,"""NotAllowed""",15,__ecma.String,7,,,2,,__ecma.String
+90194315123,LITERAL,2,,"""Editable""",13,__ecma.String,8,,,2,,__ecma.String
+90194315124,LITERAL,2,,"""ViewOnly""",13,__ecma.String,9,,,2,,__ecma.String
+90194315125,LITERAL,1,,"""express""",0,,1,,,3,,ANY
+90194315126,LITERAL,1,,"""express""",0,,1,,,3,,ANY
+90194315127,LITERAL,1,,"""./Enums""",0,,2,,,3,,ANY
+90194315128,LITERAL,1,,"""express""",0,,1,,,3,,ANY
+90194315129,LITERAL,1,,"""./../../middleware/correlation-id/correlation-id.middleware""",0,,2,,,3,,ANY
+90194315130,LITERAL,2,,"""pino-pretty""",14,__ecma.String,7,,,2,,__ecma.String
+90194315131,LITERAL,2,,true,18,__ecma.Boolean,9,,,2,,__ecma.Boolean
+90194315132,LITERAL,2,,true,20,__ecma.Boolean,10,,,2,,__ecma.Boolean
+90194315133,LITERAL,2,,"""UTC:mm/dd/yyyy, h:MM:ss TT Z""",23,__ecma.String,11,,,2,,__ecma.String
+90194315134,LITERAL,2,,false,17,__ecma.Boolean,14,,,2,,__ecma.Boolean
+90194315135,LITERAL,1,,"""Sending email with params """,23,__ecma.String,18,,,1,,__ecma.String
+90194315136,LITERAL,3,,"""""",58,__ecma.String,18,,,3,,__ecma.String
+90194315137,LITERAL,1,,"""Email sent to """,23,__ecma.String,20,,,1,,__ecma.String
+90194315138,LITERAL,2,,0,70,__ecma.Number,20,,,2,,__ecma.Number
+90194315139,LITERAL,3,,"""""",73,__ecma.String,20,,,3,,__ecma.String
+90194315140,LITERAL,1,,"""Sending email with template """,21,__ecma.String,40,,,1,,__ecma.String
+90194315141,LITERAL,3,,"""""",58,__ecma.String,40,,,3,,__ecma.String
+90194315142,LITERAL,1,,"""Email sent""",20,__ecma.String,42,,,3,,__ecma.String
+90194315143,LITERAL,1,,"""@aws-sdk/credential-providers""",0,,1,,,3,,ANY
+90194315144,LITERAL,1,,"""@aws-sdk/client-ses""",0,,2,,,3,,ANY
+90194315145,LITERAL,1,,"""@aws-sdk/client-ses""",0,,2,,,3,,ANY
+90194315146,LITERAL,1,,"""@aws-sdk/client-ses""",0,,2,,,3,,ANY
+90194315147,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194315148,LITERAL,1,,"""@nestjs/common""",0,,3,,,3,,ANY
+90194315149,LITERAL,1,,"""process""",0,,4,,,3,,ANY
+90194315150,LITERAL,1,,"""
+<div style=""line-height:0.9;text-align:center;width:70%;margin:0auto;border:1px solid #ccc;padding:20px;font-family:Arial,sans-serif;border-radius:10px"">
+<img src=""https://ci3.googleusercontent.com/meips/ADKq_NbmlS89t1aNZlMT2xnvZF8EIsHnDI8he-ejvE-v7TH2zPeACPxoEpNHOx1asYu8F1XlQdP0T71xqbLcAAWp9KZQOESFltFoHhRMW1iUF5WE2HNU7VsReptL50ixmBfA6HiEUGONpg=s0-d-e1-ft#https://resources-images-orderbahn-dev.s3.amazonaws.com/Property+1%3DDefault.png"" alt=""Header Image"" style=""width:260px;height:auto"">
+<p style=""color:#222"">Dear """,64,__ecma.String,3,,,1,,__ecma.String
+90194315151,LITERAL,3,,""",</p> <p style=""color:#222"">We noticed an attempted setup of Multi-Factor Authentication (MFA) on your account at """,38,__ecma.String,6,,,3,,__ecma.String
+90194315152,LITERAL,5,,""".</p>
+<p style=""color:#222"">If you initiated this action, you can disregard this notification.</p>
+<p style=""color:#222"">However, if you did not attempt to set up MFA, please secure your account immediately and contact our support team at <a href=""mailto:support@goavanto.com"" style=""color:#5D599E"">support@goavanto.com</a> for further assistance.</p>
+<p style=""color:#222"">Thank you for choosing to strengthen the security of your account with us.</p>
+<p style=""color:#222"">Best regards,</p>
+<p style=""color:#222"">Team OrderBahn.</p>
+</div>
+""",162,__ecma.String,6,,,5,,__ecma.String
+90194315153,LITERAL,1,,"""process""",0,,1,,,3,,ANY
+90194315154,LITERAL,1,,"""
+<div style=""line-height:0.9; text-align:center;width:70%;margin:0 auto;border:1px solid #ccc;padding:20px;font-family:Arial,sans-serif;border-radius:10px"">
+<img src=""https://ci3.googleusercontent.com/meips/ADKq_NbmlS89t1aNZlMT2xnvZF8EIsHnDI8he-ejvE-v7TH2zPeACPxoEpNHOx1asYu8F1XlQdP0T71xqbLcAAWp9KZQOESFltFoHhRMW1iUF5WE2HNU7VsReptL50ixmBfA6HiEUGONpg=s0-d-e1-ft#https://resources-images-orderbahn-dev.s3.amazonaws.com/Property+1%3DDefault.png"" alt=""Header Image"" style=""width:260px;height:auto"">
+<p style=""color:#222"">Dear """,57,__ecma.String,3,,,1,,__ecma.String
+90194315155,LITERAL,3,,""",</p>
+<p style=""color:#222"">We're pleased to inform you that Multi-Factor Authentication (MFA) has been successfully set up on your account.</p>
+<p style=""color:#222"">This additional security measure will help protect your account from unauthorized access and enhance data security.</p>
+<p style=""color:#222"">If you have any questions or concerns regarding MFA or your account security, please don't hesitate to reach out to our support team at <a href=""mailto:support@goavanto.com"" style=""color:#5D599E"">support@goavanto.com</a>. We're here to assist you.</p>
+<p style=""color:#222"">Thank you for choosing to strengthen the security of your account with us.</p>
+<p style=""color:#222"">Best regards,</p>
+<p style=""color:#222"">Team OrderBahn.</p>
+</div>
+""",38,__ecma.String,6,,,3,,__ecma.String
+90194315156,LITERAL,1,,"""process""",0,,1,,,3,,ANY
+90194315157,LITERAL,1,,"""
+    <div style=""text-align: center; width: 70%; margin: 0 auto; border: 1px solid #ccc; padding: 20px; font-family: Arial, sans-serif; border-radius: 10px;"">
+        <img src=""https://ci3.googleusercontent.com/meips/ADKq_NbmlS89t1aNZlMT2xnvZF8EIsHnDI8he-ejvE-v7TH2zPeACPxoEpNHOx1asYu8F1XlQdP0T71xqbLcAAWp9KZQOESFltFoHhRMW1iUF5WE2HNU7VsReptL50ixmBfA6HiEUGONpg=s0-d-e1-ft#https://resources-images-orderbahn-dev.s3.amazonaws.com/Property+1%3DDefault.png"" alt=""Header Image"" style=""width: 260px; height: auto;"">
+        <p>In order to continue with your registration at OrderBahn, we need your confirmation.</p>
+        <p>Please click on the button below and follow the instructions to complete your registration.</p>
+
+        <a href=""",93,__ecma.String,3,,,1,,__ecma.String
+90194315158,LITERAL,3,,"""/user-confirmation/""",46,__ecma.String,9,,,3,,__ecma.String
+90194315159,LITERAL,5,,""" style=""font-weight: bold; background-color: #37326E; border-radius: 5px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); color: white; text-decoration: none; padding: 10px; display: block; text-align: center;"">Complete Registration</a>
+
+        <p>Please remember to validate your registration within the next 3 days.</p>
+
+        <p>If you did not submit this request or need further assistance, please contact us at <a href=""mailto:support@goavanto.com"" style=""color: #5D599E"">support@goavanto.com</a>.</p>
+
+        <p>Best regards,</p>
+
+        <p>Team Avanto.</p>
+    </div>
+""",74,__ecma.String,9,,,5,,__ecma.String
+90194315160,LITERAL,1,,"""process""",0,,1,,,3,,ANY
+90194315161,LITERAL,1,,DataSourceOptions,9,,30,,,1,DataSourceOptions,ANY
+90194315162,LITERAL,2,,"""postgres""",10,__ecma.String,31,,,2,,__ecma.String
+90194315163,LITERAL,2,,true,22,__ecma.Boolean,41,,,2,,__ecma.Boolean
+90194315164,LITERAL,1,,"""./dbConfig""",0,,1,,,3,,ANY
+90194315165,LITERAL,1,,"""@nestjs/typeorm""",0,,2,,,3,,ANY
+90194315166,LITERAL,1,,"""@avantodev/avanto-db""",0,,3,,,3,,ANY
+90194315167,LITERAL,1,,"""typeorm""",0,,4,,,3,,ANY
+90194315168,LITERAL,1,,TypeOrmModuleOptions,37,,14,,,1,TypeOrmModuleOptions,ANY
+90194315169,LITERAL,2,,"""postgres""",8,__ecma.String,15,,,2,,__ecma.String
+90194315170,LITERAL,2,,true,20,__ecma.Boolean,25,,,2,,__ecma.Boolean
+90194315171,LITERAL,1,,"""../../../utils""",0,,1,,,3,,ANY
+90194315172,LITERAL,1,,"""dotenv/config""",0,,2,,,3,,ANY
+90194315173,LITERAL,1,,"""@avantodev/avanto-shared-resources/dist/infrastructure/persistence/PostgreSQL/PostgreSQL.config""",0,,3,,,3,,ANY
+90194315174,LITERAL,2,,"""dev""",32,__ecma.String,6,,,2,,__ecma.String
+90194315175,LITERAL,2,,"""localhost""",31,__ecma.String,7,,,2,,__ecma.String
+90194315176,LITERAL,2,,5432,33,__ecma.Number,8,,,2,,__ecma.Number
+90194315177,LITERAL,2,,"""root""",39,__ecma.String,9,,,2,,__ecma.String
+90194315178,LITERAL,2,,"""root""",39,__ecma.String,10,,,2,,__ecma.String
+90194315179,LITERAL,2,,"""postgres""",35,__ecma.String,11,,,2,,__ecma.String
+90194315180,LITERAL,2,,"""public""",35,__ecma.String,12,,,2,,__ecma.String
+90194315181,LITERAL,3,,true,75,__ecma.Boolean,13,,,3,,__ecma.Boolean
+90194315182,LITERAL,3,,true,77,__ecma.Boolean,14,,,3,,__ecma.Boolean
+90194315183,LITERAL,1,,"""express""",0,,1,,,3,,ANY
+90194315184,LITERAL,1,,"""express""",0,,1,,,3,,ANY
+90194315185,LITERAL,1,,"""express""",0,,1,,,3,,ANY
+90194315186,LITERAL,1,,"""@nestjs/common""",0,,2,,,3,,ANY
+90194315187,LITERAL,1,,"""@nestjs/common""",0,,2,,,3,,ANY
+90194315188,LITERAL,1,,"""crypto""",0,,3,,,3,,ANY
+90194315189,LITERAL,2,,"""X-Correlation-Id""",37,__ecma.String,5,,,2,,__ecma.String
+90194315190,LITERAL,2,,"""true""",38,__ecma.String,6,,,2,,__ecma.String
+90194315191,LITERAL,1,,0,17,__ecma.Number,27,,,3,,__ecma.Number
+90194315192,LITERAL,2,,0,20,__ecma.Number,27,,,4,,__ecma.Number
+90194315193,LITERAL,3,,0,23,__ecma.Number,27,,,5,,__ecma.Number
+90194315194,LITERAL,4,,0,26,__ecma.Number,27,,,6,,__ecma.Number
+90194315195,LITERAL,1,,"""today: """,14,__ecma.String,28,,,1,,__ecma.String
+90194315196,LITERAL,1,,"""date to validate: """,14,__ecma.String,30,,,1,,__ecma.String
+90194315197,LITERAL,1,,"""validation: """,14,__ecma.String,31,,,3,,__ecma.String
+90194315198,LITERAL,1,,0,17,__ecma.Number,37,,,3,,__ecma.Number
+90194315199,LITERAL,2,,0,20,__ecma.Number,37,,,4,,__ecma.Number
+90194315200,LITERAL,3,,0,23,__ecma.Number,37,,,5,,__ecma.Number
+90194315201,LITERAL,4,,0,26,__ecma.Number,37,,,6,,__ecma.Number
+90194315202,LITERAL,2,,"""string""",21,__ecma.String,43,,,2,,__ecma.String
+90194315203,LITERAL,1,,false,11,__ecma.Boolean,44,,,1,,__ecma.Boolean
+90194315204,LITERAL,2,,"""""",21,__ecma.String,47,,,2,,__ecma.String
+90194315205,LITERAL,1,,false,11,__ecma.Boolean,48,,,1,,__ecma.Boolean
+90194315206,LITERAL,1,,"""""",99,__ecma.String,54,,,3,,__ecma.String
+90194315207,LITERAL,1,,""" """,11,__ecma.String,58,,,3,,__ecma.String
+90194315208,LITERAL,1,,""" """,10,__ecma.String,60,,,3,,__ecma.String
+90194315209,LITERAL,2,,/^[a-zA-Z ]*$/,16,__ecma.String,63,,,2,,__ecma.String
+90194315210,LITERAL,2,,/[0-9]/,9,__ecma.String,68,,,2,,__ecma.String
+90194315211,LITERAL,2,,"""POST""",12,__ecma.String,78,,,2,,__ecma.String
+90194315212,LITERAL,2,,"""application/json""",22,__ecma.String,81,,,2,,__ecma.String
+90194315213,LITERAL,1,,"""""",33,__ecma.String,94,,,1,,__ecma.String
+90194315214,LITERAL,3,,""" env variable not found""",40,__ecma.String,94,,,3,,__ecma.String
+90194315215,LITERAL,1,,"""Missing """,20,__ecma.String,96,,,1,,__ecma.String
+90194315216,LITERAL,3,,""" env variable""",35,__ecma.String,96,,,3,,__ecma.String
+90194315217,LITERAL,1,,"""/""",33,__ecma.String,98,,,3,,__ecma.String
+90194315218,LITERAL,1,,"""""",53,__ecma.String,98,,,1,,__ecma.String
+90194315219,LITERAL,3,,"""/""",65,__ecma.String,98,,,3,,__ecma.String
+90194315220,LITERAL,2,,"""SECURITY_MS_URL""",58,__ecma.String,103,,,4,,__ecma.String
+90194315221,LITERAL,2,,"""CATALOG_MS_URL""",57,__ecma.String,107,,,4,,__ecma.String
+90194315222,LITERAL,2,,"""TENANTS_MS_URL""",57,__ecma.String,111,,,4,,__ecma.String
+90194315223,LITERAL,2,,"""USERS_MS_URL""",55,__ecma.String,115,,,4,,__ecma.String
+90194315224,LITERAL,2,,"""RECORDS_GRID_MS_URL""",62,__ecma.String,119,,,4,,__ecma.String
+90194315225,LITERAL,2,,"""APP_MODULES_MS_URL""",61,__ecma.String,123,,,4,,__ecma.String
+90194315226,LITERAL,2,,"""GENERAL_MS_URL""",57,__ecma.String,127,,,4,,__ecma.String
+90194315227,LITERAL,2,,"""RECORDS_MS_URL""",57,__ecma.String,131,,,4,,__ecma.String
+90194315228,LITERAL,2,,"""FILE_MANAGEMENT_MS_URL""",65,__ecma.String,135,,,4,,__ecma.String
+90194315229,LITERAL,2,,400,9,__ecma.Number,147,,,2,,__ecma.Number
+90194315230,LITERAL,1,,"""Bad Request: """,18,__ecma.String,148,,,1,,__ecma.String
+90194315231,LITERAL,3,,"""""",50,__ecma.String,148,,,3,,__ecma.String
+90194315232,LITERAL,6,,401,9,__ecma.Number,150,,,6,,__ecma.Number
+90194315233,LITERAL,1,,"""Unauthorized: """,18,__ecma.String,151,,,1,,__ecma.String
+90194315234,LITERAL,3,,"""""",51,__ecma.String,151,,,3,,__ecma.String
+90194315235,LITERAL,10,,403,9,__ecma.Number,153,,,10,,__ecma.Number
+90194315236,LITERAL,1,,"""Forbidden: """,18,__ecma.String,154,,,1,,__ecma.String
+90194315237,LITERAL,3,,"""""",48,__ecma.String,154,,,3,,__ecma.String
+90194315238,LITERAL,14,,404,9,__ecma.Number,156,,,14,,__ecma.Number
+90194315239,LITERAL,1,,"""Not Found: """,18,__ecma.String,157,,,1,,__ecma.String
+90194315240,LITERAL,3,,"""""",48,__ecma.String,157,,,3,,__ecma.String
+90194315241,LITERAL,18,,408,9,__ecma.Number,159,,,18,,__ecma.Number
+90194315242,LITERAL,1,,"""Request Timeout: """,18,__ecma.String,160,,,1,,__ecma.String
+90194315243,LITERAL,3,,"""""",54,__ecma.String,160,,,3,,__ecma.String
+90194315244,LITERAL,22,,409,9,__ecma.Number,162,,,22,,__ecma.Number
+90194315245,LITERAL,1,,"""Conflict: """,18,__ecma.String,163,,,1,,__ecma.String
+90194315246,LITERAL,3,,"""""",47,__ecma.String,163,,,3,,__ecma.String
+90194315247,LITERAL,26,,413,9,__ecma.Number,165,,,26,,__ecma.Number
+90194315248,LITERAL,1,,"""Payload Too Large: """,18,__ecma.String,166,,,1,,__ecma.String
+90194315249,LITERAL,3,,"""""",56,__ecma.String,166,,,3,,__ecma.String
+90194315250,LITERAL,30,,500,9,__ecma.Number,168,,,30,,__ecma.Number
+90194315251,LITERAL,1,,"""Internal Server Error: """,18,__ecma.String,169,,,1,,__ecma.String
+90194315252,LITERAL,3,,"""""",60,__ecma.String,169,,,3,,__ecma.String
+90194315253,LITERAL,2,,"""UTF-8""",17,__ecma.String,184,,,2,,__ecma.String
+90194315254,LITERAL,1,,"""Welcome """,15,__ecma.String,185,,,1,,__ecma.String
+90194315255,LITERAL,3,,""" """,40,__ecma.String,185,,,3,,__ecma.String
+90194315256,LITERAL,5,,"""""",57,__ecma.String,185,,,5,,__ecma.String
+90194315257,LITERAL,2,,"""UTF-8""",19,__ecma.String,189,,,2,,__ecma.String
+90194315258,LITERAL,2,,1,40,__ecma.Number,202,,,2,,__ecma.Number
+90194315259,LITERAL,1,,2,52,__ecma.Number,202,,,3,,__ecma.Number
+90194315260,LITERAL,2,,"""0""",55,__ecma.String,202,,,4,,__ecma.String
+90194315261,LITERAL,1,,2,45,__ecma.Number,203,,,3,,__ecma.Number
+90194315262,LITERAL,2,,"""0""",48,__ecma.String,203,,,4,,__ecma.String
+90194315263,LITERAL,1,,2,48,__ecma.Number,204,,,3,,__ecma.Number
+90194315264,LITERAL,2,,"""0""",51,__ecma.String,204,,,4,,__ecma.String
+90194315265,LITERAL,1,,2,52,__ecma.Number,205,,,3,,__ecma.Number
+90194315266,LITERAL,2,,"""0""",55,__ecma.String,205,,,4,,__ecma.String
+90194315267,LITERAL,1,,"""""",29,__ecma.String,207,,,1,,__ecma.String
+90194315268,LITERAL,3,,"""-""",36,__ecma.String,207,,,3,,__ecma.String
+90194315269,LITERAL,5,,"""-""",45,__ecma.String,207,,,5,,__ecma.String
+90194315270,LITERAL,7,,""" """,52,__ecma.String,207,,,7,,__ecma.String
+90194315271,LITERAL,9,,""":""",61,__ecma.String,207,,,9,,__ecma.String
+90194315272,LITERAL,11,,"""""",72,__ecma.String,207,,,11,,__ecma.String
+90194315273,LITERAL,2,,"""UTF-8""",17,__ecma.String,216,,,2,,__ecma.String
+90194315274,LITERAL,2,,"""Alert: Attempted MFA Setup on Your Account""",15,__ecma.String,217,,,2,,__ecma.String
+90194315275,LITERAL,2,,"""UTF-8""",19,__ecma.String,221,,,2,,__ecma.String
+90194315276,LITERAL,1,,"""""",61,__ecma.String,222,,,1,,__ecma.String
+90194315277,LITERAL,3,,""" """,78,__ecma.String,222,,,3,,__ecma.String
+90194315278,LITERAL,5,,"""""",95,__ecma.String,222,,,5,,__ecma.String
+90194315279,LITERAL,2,,"""UTF-8""",17,__ecma.String,238,,,2,,__ecma.String
+90194315280,LITERAL,2,,"""Congratulations! MFA Successfully Set Up on Your Account""",15,__ecma.String,239,,,2,,__ecma.String
+90194315281,LITERAL,2,,"""UTF-8""",19,__ecma.String,243,,,2,,__ecma.String
+90194315282,LITERAL,1,,"""""",44,__ecma.String,244,,,1,,__ecma.String
+90194315283,LITERAL,3,,""" """,61,__ecma.String,244,,,3,,__ecma.String
+90194315284,LITERAL,5,,"""""",78,__ecma.String,244,,,5,,__ecma.String
+90194315285,LITERAL,1,,"""@avantodev/avanto-db""",0,,1,,,3,,ANY
+90194315286,LITERAL,1,,"""@avantodev/avanto-db""",0,,1,,,3,,ANY
+90194315287,LITERAL,1,,"""./dataTypes/Enums""",0,,2,,,3,,ANY
+90194315288,LITERAL,1,,"""aws-sdk""",0,,3,,,3,,ANY
+90194315289,LITERAL,1,,"""cross-fetch""",0,,8,,,3,,ANY
+90194315290,LITERAL,1,,"""@nestjs/common""",0,,9,,,3,,ANY
+90194315291,LITERAL,1,,"""@nestjs/common""",0,,9,,,3,,ANY
+90194315292,LITERAL,1,,"""@nestjs/common""",0,,9,,,3,,ANY
+90194315293,LITERAL,1,,"""@nestjs/common""",0,,9,,,3,,ANY
+90194315294,LITERAL,1,,"""@nestjs/common""",0,,9,,,3,,ANY
+90194315295,LITERAL,1,,"""@nestjs/common""",0,,9,,,3,,ANY
+90194315296,LITERAL,1,,"""@nestjs/common""",0,,9,,,3,,ANY
+90194315297,LITERAL,1,,"""@nestjs/common""",0,,9,,,3,,ANY
+90194315298,LITERAL,1,,"""@nestjs/common""",0,,9,,,3,,ANY
+90194315299,LITERAL,1,,"""./infrastructure/mails/templates/userConfirmationTemplate""",0,,20,,,3,,ANY
+90194315300,LITERAL,1,,"""./infrastructure/mails/mailProvider""",0,,21,,,3,,ANY
+90194315301,LITERAL,1,,"""./infrastructure/mails/templates/mfaAlertTemplate""",0,,22,,,3,,ANY
+90194315302,LITERAL,1,,"""./infrastructure/mails/templates/mfaSuccessTemplate""",0,,23,,,3,,ANY

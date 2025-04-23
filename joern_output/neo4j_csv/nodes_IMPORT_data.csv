@@ -1,0 +1,591 @@
+73014444032,IMPORT,"import { Controller, Get, Logger } from '@nestjs/common'",1,,Controller,@nestjs/common:Controller,,,1,,,-1
+73014444033,IMPORT,"import { Controller, Get, Logger } from '@nestjs/common'",1,,Get,@nestjs/common:Get,,,1,,,-1
+73014444034,IMPORT,"import { Controller, Get, Logger } from '@nestjs/common'",1,,Logger,@nestjs/common:Logger,,,1,,,-1
+73014444035,IMPORT,import { AppService } from './app.service',2,,AppService,./app.service:AppService,,,2,,,-1
+73014444036,IMPORT,import { pinoOptions } from './shared/infrastructure/logger/pinoLoggerOptions',1,,pinoOptions,./shared/infrastructure/logger/pinoLoggerOptions:pinoOptions,,,1,,,-1
+73014444037,IMPORT,import { TypeOrmModule } from '@nestjs/typeorm',2,,TypeOrmModule,@nestjs/typeorm:TypeOrmModule,,,2,,,-1
+73014444038,IMPORT,import { appPostgresDataSource } from './shared/infrastructure/persistance/postgre-sql/PostgresDataSource',3,,appPostgresDataSource,./shared/infrastructure/persistance/postgre-sql/PostgresDataSource:appPostgresDataSource,,,3,,,-1
+73014444039,IMPORT,import { CorrelationIdMiddleware } from './shared/middleware/correlation-id/correlation-id.middleware',4,,CorrelationIdMiddleware,./shared/middleware/correlation-id/correlation-id.middleware:CorrelationIdMiddleware,,,4,,,-1
+73014444040,IMPORT,"import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common'",5,,MiddlewareConsumer,@nestjs/common:MiddlewareConsumer,,,5,,,-1
+73014444041,IMPORT,"import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common'",5,,Module,@nestjs/common:Module,,,5,,,-1
+73014444042,IMPORT,"import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common'",5,,NestModule,@nestjs/common:NestModule,,,5,,,-1
+73014444043,IMPORT,import { LoggerModule } from 'nestjs-pino',6,,LoggerModule,nestjs-pino:LoggerModule,,,6,,,-1
+73014444044,IMPORT,import { AppController } from './app.controller',7,,AppController,./app.controller:AppController,,,7,,,-1
+73014444045,IMPORT,import { AppService } from './app.service',8,,AppService,./app.service:AppService,,,8,,,-1
+73014444046,IMPORT,import { UsersModule } from './context/users/users.module',9,,UsersModule,./context/users/users.module:UsersModule,,,9,,,-1
+73014444047,IMPORT,import { RolesModule } from './context/roles/roles.module',10,,RolesModule,./context/roles/roles.module:RolesModule,,,10,,,-1
+73014444048,IMPORT,import { RoleAliasesModule } from './context/role-aliases/role-aliases.module',11,,RoleAliasesModule,./context/role-aliases/role-aliases.module:RoleAliasesModule,,,11,,,-1
+73014444049,IMPORT,import { UserRoleByTenantsModule } from './context/user-role-by-tenants/user-role-by-tenants.module',12,,UserRoleByTenantsModule,./context/user-role-by-tenants/user-role-by-tenants.module:UserRoleByTenantsModule,,,12,,,-1
+73014444050,IMPORT,import { TenantRoleAliasModule } from './context/tenant-role-aliases/tenant-role-aliases.module',13,,TenantRoleAliasModule,./context/tenant-role-aliases/tenant-role-aliases.module:TenantRoleAliasModule,,,13,,,-1
+73014444051,IMPORT,"import { Injectable, Logger } from '@nestjs/common'",1,,Injectable,@nestjs/common:Injectable,,,1,,,-1
+73014444052,IMPORT,"import { Injectable, Logger } from '@nestjs/common'",1,,Logger,@nestjs/common:Logger,,,1,,,-1
+73014444053,IMPORT,import { FindRoleAliasDto } from './../../shared/context/role-aliases/domain/dto/find-role-alias.dto',1,,FindRoleAliasDto,./../../shared/context/role-aliases/domain/dto/find-role-alias.dto:FindRoleAliasDto,,,1,,,-1
+73014444054,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",2,,Controller,@nestjs/common:Controller,,,2,,,-1
+73014444055,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",2,,Get,@nestjs/common:Get,,,2,,,-1
+73014444056,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",2,,Post,@nestjs/common:Post,,,2,,,-1
+73014444057,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",2,,Body,@nestjs/common:Body,,,2,,,-1
+73014444058,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",2,,Patch,@nestjs/common:Patch,,,2,,,-1
+73014444059,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",2,,Param,@nestjs/common:Param,,,2,,,-1
+73014444060,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",2,,Delete,@nestjs/common:Delete,,,2,,,-1
+73014444061,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",2,,Logger,@nestjs/common:Logger,,,2,,,-1
+73014444062,IMPORT,import { RoleAliasesService } from '../../shared/context/role-aliases/domain/role-aliases.service',3,,RoleAliasesService,../../shared/context/role-aliases/domain/role-aliases.service:RoleAliasesService,,,3,,,-1
+73014444063,IMPORT,import { CreateRoleAliasDto } from '../../shared/context/role-aliases/domain//dto/create-role-alias.dto',4,,CreateRoleAliasDto,../../shared/context/role-aliases/domain//dto/create-role-alias.dto:CreateRoleAliasDto,,,4,,,-1
+73014444064,IMPORT,import { UpdateRoleAliasDto } from '../../shared/context/role-aliases/domain//dto/update-role-alias.dto',5,,UpdateRoleAliasDto,../../shared/context/role-aliases/domain//dto/update-role-alias.dto:UpdateRoleAliasDto,,,5,,,-1
+73014444065,IMPORT,import { ApiTags } from '@nestjs/swagger',6,,ApiTags,@nestjs/swagger:ApiTags,,,6,,,-1
+73014444066,IMPORT,import { dbConfig } from './../../shared/infrastructure/persistance/postgre-sql/dbConfig',1,,dbConfig,./../../shared/infrastructure/persistance/postgre-sql/dbConfig:dbConfig,,,1,,,-1
+73014444067,IMPORT,import { TypeOrmModule } from '@nestjs/typeorm',2,,TypeOrmModule,@nestjs/typeorm:TypeOrmModule,,,2,,,-1
+73014444068,IMPORT,import { Module } from '@nestjs/common',3,,Module,@nestjs/common:Module,,,3,,,-1
+73014444069,IMPORT,import { RoleAliasesService } from '../../shared/context/role-aliases/domain/role-aliases.service',4,,RoleAliasesService,../../shared/context/role-aliases/domain/role-aliases.service:RoleAliasesService,,,4,,,-1
+73014444070,IMPORT,import { RoleAliasesController } from './role-aliases.controller',5,,RoleAliasesController,./role-aliases.controller:RoleAliasesController,,,5,,,-1
+73014444071,IMPORT,"import { RoleAlias, Role, Tenant, TenantRoleAliases } from '@avantodev/avanto-db'",6,,RoleAlias,@avantodev/avanto-db:RoleAlias,,,6,,,-1
+73014444072,IMPORT,"import { RoleAlias, Role, Tenant, TenantRoleAliases } from '@avantodev/avanto-db'",6,,Role,@avantodev/avanto-db:Role,,,6,,,-1
+73014444073,IMPORT,"import { RoleAlias, Role, Tenant, TenantRoleAliases } from '@avantodev/avanto-db'",6,,Tenant,@avantodev/avanto-db:Tenant,,,6,,,-1
+73014444074,IMPORT,"import { RoleAlias, Role, Tenant, TenantRoleAliases } from '@avantodev/avanto-db'",6,,TenantRoleAliases,@avantodev/avanto-db:TenantRoleAliases,,,6,,,-1
+73014444075,IMPORT,import { TenantRoleAliasesService } from '../../shared/context/tenant-role-aliases/tenant-role-aliases.service',7,,TenantRoleAliasesService,../../shared/context/tenant-role-aliases/tenant-role-aliases.service:TenantRoleAliasesService,,,7,,,-1
+73014444076,IMPORT,import { FindRoleDto } from './../../shared/context/roles/domain/dto/find-role.dto',1,,FindRoleDto,./../../shared/context/roles/domain/dto/find-role.dto:FindRoleDto,,,1,,,-1
+73014444077,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",2,,Controller,@nestjs/common:Controller,,,2,,,-1
+73014444078,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",2,,Get,@nestjs/common:Get,,,2,,,-1
+73014444079,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",2,,Post,@nestjs/common:Post,,,2,,,-1
+73014444080,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",2,,Body,@nestjs/common:Body,,,2,,,-1
+73014444081,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",2,,Patch,@nestjs/common:Patch,,,2,,,-1
+73014444082,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",2,,Param,@nestjs/common:Param,,,2,,,-1
+73014444083,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",2,,Delete,@nestjs/common:Delete,,,2,,,-1
+73014444084,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",2,,Logger,@nestjs/common:Logger,,,2,,,-1
+73014444085,IMPORT,import { RolesService } from '../../shared/context/roles/domain/roles.service',3,,RolesService,../../shared/context/roles/domain/roles.service:RolesService,,,3,,,-1
+73014444086,IMPORT,import { CreateRoleDto } from '../../shared/context/roles/domain/dto/create-role.dto',4,,CreateRoleDto,../../shared/context/roles/domain/dto/create-role.dto:CreateRoleDto,,,4,,,-1
+73014444087,IMPORT,import { UpdateRoleDto } from '../../shared/context/roles/domain/dto/update-role.dto',5,,UpdateRoleDto,../../shared/context/roles/domain/dto/update-role.dto:UpdateRoleDto,,,5,,,-1
+73014444088,IMPORT,import { ApiTags } from '@nestjs/swagger',6,,ApiTags,@nestjs/swagger:ApiTags,,,6,,,-1
+73014444089,IMPORT,import { dbConfig } from './../../shared/infrastructure/persistance/postgre-sql/dbConfig',1,,dbConfig,./../../shared/infrastructure/persistance/postgre-sql/dbConfig:dbConfig,,,1,,,-1
+73014444090,IMPORT,"import { Role, User } from '@avantodev/avanto-db'",2,,Role,@avantodev/avanto-db:Role,,,2,,,-1
+73014444091,IMPORT,"import { Role, User } from '@avantodev/avanto-db'",2,,User,@avantodev/avanto-db:User,,,2,,,-1
+73014444092,IMPORT,import { TypeOrmModule } from '@nestjs/typeorm',3,,TypeOrmModule,@nestjs/typeorm:TypeOrmModule,,,3,,,-1
+73014444093,IMPORT,import { Module } from '@nestjs/common',4,,Module,@nestjs/common:Module,,,4,,,-1
+73014444094,IMPORT,import { RolesService } from '../../shared/context/roles/domain/roles.service',5,,RolesService,../../shared/context/roles/domain/roles.service:RolesService,,,5,,,-1
+73014444095,IMPORT,import { RolesController } from './roles.controller',6,,RolesController,./roles.controller:RolesController,,,6,,,-1
+73014444096,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",1,,Controller,@nestjs/common:Controller,,,1,,,-1
+73014444097,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",1,,Get,@nestjs/common:Get,,,1,,,-1
+73014444098,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",1,,Post,@nestjs/common:Post,,,1,,,-1
+73014444099,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",1,,Body,@nestjs/common:Body,,,1,,,-1
+73014444100,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",1,,Patch,@nestjs/common:Patch,,,1,,,-1
+73014444101,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",1,,Param,@nestjs/common:Param,,,1,,,-1
+73014444102,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",1,,Delete,@nestjs/common:Delete,,,1,,,-1
+73014444103,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",1,,Logger,@nestjs/common:Logger,,,1,,,-1
+73014444104,IMPORT,import { TenantRoleAliasesService } from '../../shared/context/tenant-role-aliases/tenant-role-aliases.service',2,,TenantRoleAliasesService,../../shared/context/tenant-role-aliases/tenant-role-aliases.service:TenantRoleAliasesService,,,2,,,-1
+73014444105,IMPORT,import { CreateTenantRoleAliasDto } from '../../shared/context/tenant-role-aliases/dto/create-tenant-role-aliases.dto',3,,CreateTenantRoleAliasDto,../../shared/context/tenant-role-aliases/dto/create-tenant-role-aliases.dto:CreateTenantRoleAliasDto,,,3,,,-1
+73014444106,IMPORT,import { UpdateTenantRoleAliasDto } from 'src/shared/context/tenant-role-aliases/dto/update-tenant-role-alias.dto',4,,UpdateTenantRoleAliasDto,src/shared/context/tenant-role-aliases/dto/update-tenant-role-alias.dto:UpdateTenantRoleAliasDto,,,4,,,-1
+73014444107,IMPORT,import { FindTenantRoleAliasDto } from 'src/shared/context/tenant-role-aliases/dto/find-tenant-role-alias.dto',5,,FindTenantRoleAliasDto,src/shared/context/tenant-role-aliases/dto/find-tenant-role-alias.dto:FindTenantRoleAliasDto,,,5,,,-1
+73014444108,IMPORT,import { ApiTags } from '@nestjs/swagger',6,,ApiTags,@nestjs/swagger:ApiTags,,,6,,,-1
+73014444109,IMPORT,import { AssignTenantRoleAliasDto } from 'src/shared/context/tenant-role-aliases/dto/assign-tenant-role-alias.dto',7,,AssignTenantRoleAliasDto,src/shared/context/tenant-role-aliases/dto/assign-tenant-role-alias.dto:AssignTenantRoleAliasDto,,,7,,,-1
+73014444110,IMPORT,import { dbConfig } from '../../shared/infrastructure/persistance/postgre-sql/dbConfig',1,,dbConfig,../../shared/infrastructure/persistance/postgre-sql/dbConfig:dbConfig,,,1,,,-1
+73014444111,IMPORT,"import { Role, Tenant, TenantRoleAliases, RoleAlias } from '@avantodev/avanto-db'",2,,Role,@avantodev/avanto-db:Role,,,2,,,-1
+73014444112,IMPORT,"import { Role, Tenant, TenantRoleAliases, RoleAlias } from '@avantodev/avanto-db'",2,,Tenant,@avantodev/avanto-db:Tenant,,,2,,,-1
+73014444113,IMPORT,"import { Role, Tenant, TenantRoleAliases, RoleAlias } from '@avantodev/avanto-db'",2,,TenantRoleAliases,@avantodev/avanto-db:TenantRoleAliases,,,2,,,-1
+73014444114,IMPORT,"import { Role, Tenant, TenantRoleAliases, RoleAlias } from '@avantodev/avanto-db'",2,,RoleAlias,@avantodev/avanto-db:RoleAlias,,,2,,,-1
+73014444115,IMPORT,import { TypeOrmModule } from '@nestjs/typeorm',3,,TypeOrmModule,@nestjs/typeorm:TypeOrmModule,,,3,,,-1
+73014444116,IMPORT,import { Module } from '@nestjs/common',4,,Module,@nestjs/common:Module,,,4,,,-1
+73014444117,IMPORT,import { TenantRoleAliasesService } from '../../shared/context/tenant-role-aliases/tenant-role-aliases.service',5,,TenantRoleAliasesService,../../shared/context/tenant-role-aliases/tenant-role-aliases.service:TenantRoleAliasesService,,,5,,,-1
+73014444118,IMPORT,import { TenantRoleAliasesController } from './tenant-role-aliases.controller',6,,TenantRoleAliasesController,./tenant-role-aliases.controller:TenantRoleAliasesController,,,6,,,-1
+73014444119,IMPORT,import { FindTenantDto } from '../../shared/context/tenants/domain/dto/find-tenant.dto',1,,FindTenantDto,../../shared/context/tenants/domain/dto/find-tenant.dto:FindTenantDto,,,1,,,-1
+73014444120,IMPORT,import { CreateTenantDto } from '../../shared/context/tenants/domain/dto/create-tenant.dto',2,,CreateTenantDto,../../shared/context/tenants/domain/dto/create-tenant.dto:CreateTenantDto,,,2,,,-1
+73014444121,IMPORT,import { UpdateTenantDto } from '../../shared/context/tenants/domain/dto/update-tenant.dto',3,,UpdateTenantDto,../../shared/context/tenants/domain/dto/update-tenant.dto:UpdateTenantDto,,,3,,,-1
+73014444122,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",4,,Controller,@nestjs/common:Controller,,,4,,,-1
+73014444123,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",4,,Get,@nestjs/common:Get,,,4,,,-1
+73014444124,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",4,,Post,@nestjs/common:Post,,,4,,,-1
+73014444125,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",4,,Body,@nestjs/common:Body,,,4,,,-1
+73014444126,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",4,,Patch,@nestjs/common:Patch,,,4,,,-1
+73014444127,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",4,,Param,@nestjs/common:Param,,,4,,,-1
+73014444128,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",4,,Delete,@nestjs/common:Delete,,,4,,,-1
+73014444129,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",4,,Logger,@nestjs/common:Logger,,,4,,,-1
+73014444130,IMPORT,import { TenantsService } from '../../shared/context/tenants/domain/tenants.service',5,,TenantsService,../../shared/context/tenants/domain/tenants.service:TenantsService,,,5,,,-1
+73014444131,IMPORT,import { ApiTags } from '@nestjs/swagger',6,,ApiTags,@nestjs/swagger:ApiTags,,,6,,,-1
+73014444132,IMPORT,"import { Tenant, TenantConfig, TenantType } from '@avantodev/avanto-db'",1,,Tenant,@avantodev/avanto-db:Tenant,,,1,,,-1
+73014444133,IMPORT,"import { Tenant, TenantConfig, TenantType } from '@avantodev/avanto-db'",1,,TenantConfig,@avantodev/avanto-db:TenantConfig,,,1,,,-1
+73014444134,IMPORT,"import { Tenant, TenantConfig, TenantType } from '@avantodev/avanto-db'",1,,TenantType,@avantodev/avanto-db:TenantType,,,1,,,-1
+73014444135,IMPORT,import { dbConfig } from '../../shared/infrastructure/persistance/postgre-sql/dbConfig',2,,dbConfig,../../shared/infrastructure/persistance/postgre-sql/dbConfig:dbConfig,,,2,,,-1
+73014444136,IMPORT,import { TypeOrmModule } from '@nestjs/typeorm',3,,TypeOrmModule,@nestjs/typeorm:TypeOrmModule,,,3,,,-1
+73014444137,IMPORT,import { Module } from '@nestjs/common',4,,Module,@nestjs/common:Module,,,4,,,-1
+73014444138,IMPORT,import { TenantsService } from '../../shared/context/tenants/domain/tenants.service',5,,TenantsService,../../shared/context/tenants/domain/tenants.service:TenantsService,,,5,,,-1
+73014444139,IMPORT,import { TenantsController } from './tenants.controller',6,,TenantsController,./tenants.controller:TenantsController,,,6,,,-1
+73014444140,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",1,,Controller,@nestjs/common:Controller,,,1,,,-1
+73014444141,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",1,,Get,@nestjs/common:Get,,,1,,,-1
+73014444142,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",1,,Post,@nestjs/common:Post,,,1,,,-1
+73014444143,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",1,,Body,@nestjs/common:Body,,,1,,,-1
+73014444144,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",1,,Patch,@nestjs/common:Patch,,,1,,,-1
+73014444145,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",1,,Param,@nestjs/common:Param,,,1,,,-1
+73014444146,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",1,,Delete,@nestjs/common:Delete,,,1,,,-1
+73014444147,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger } from '@nestjs/common'",1,,Logger,@nestjs/common:Logger,,,1,,,-1
+73014444148,IMPORT,import { ApiTags } from '@nestjs/swagger',2,,ApiTags,@nestjs/swagger:ApiTags,,,2,,,-1
+73014444149,IMPORT,import { UserRoleByTenantsService } from '../../shared/context/user-role-by-tenants/user-role-by-tenants.service',3,,UserRoleByTenantsService,../../shared/context/user-role-by-tenants/user-role-by-tenants.service:UserRoleByTenantsService,,,3,,,-1
+73014444150,IMPORT,import { CreateUserRoleByTenantsDto } from '../../shared/context/user-role-by-tenants/dto/create-user-role-by-tenants.dto',4,,CreateUserRoleByTenantsDto,../../shared/context/user-role-by-tenants/dto/create-user-role-by-tenants.dto:CreateUserRoleByTenantsDto,,,4,,,-1
+73014444151,IMPORT,import { FindUserRoleByTenantsDto } from '../../shared/context/user-role-by-tenants/dto/find-user-role-by-tenants.dto',5,,FindUserRoleByTenantsDto,../../shared/context/user-role-by-tenants/dto/find-user-role-by-tenants.dto:FindUserRoleByTenantsDto,,,5,,,-1
+73014444152,IMPORT,import { UpdateUserRoleByTenantsDto } from '../../shared/context/user-role-by-tenants/dto/update-user-role-by-tenants.dto',6,,UpdateUserRoleByTenantsDto,../../shared/context/user-role-by-tenants/dto/update-user-role-by-tenants.dto:UpdateUserRoleByTenantsDto,,,6,,,-1
+73014444153,IMPORT,import { Module } from '@nestjs/common',1,,Module,@nestjs/common:Module,,,1,,,-1
+73014444154,IMPORT,"import { UserRoleByTenants, Role, User, RoleAlias, Tenant, TenantRoleAliases } from '@avantodev/avanto-db'",2,,UserRoleByTenants,@avantodev/avanto-db:UserRoleByTenants,,,2,,,-1
+73014444155,IMPORT,"import { UserRoleByTenants, Role, User, RoleAlias, Tenant, TenantRoleAliases } from '@avantodev/avanto-db'",2,,Role,@avantodev/avanto-db:Role,,,2,,,-1
+73014444156,IMPORT,"import { UserRoleByTenants, Role, User, RoleAlias, Tenant, TenantRoleAliases } from '@avantodev/avanto-db'",2,,User,@avantodev/avanto-db:User,,,2,,,-1
+73014444157,IMPORT,"import { UserRoleByTenants, Role, User, RoleAlias, Tenant, TenantRoleAliases } from '@avantodev/avanto-db'",2,,RoleAlias,@avantodev/avanto-db:RoleAlias,,,2,,,-1
+73014444158,IMPORT,"import { UserRoleByTenants, Role, User, RoleAlias, Tenant, TenantRoleAliases } from '@avantodev/avanto-db'",2,,Tenant,@avantodev/avanto-db:Tenant,,,2,,,-1
+73014444159,IMPORT,"import { UserRoleByTenants, Role, User, RoleAlias, Tenant, TenantRoleAliases } from '@avantodev/avanto-db'",2,,TenantRoleAliases,@avantodev/avanto-db:TenantRoleAliases,,,2,,,-1
+73014444160,IMPORT,import { dbConfig } from '../../shared/infrastructure/persistance/postgre-sql/dbConfig',3,,dbConfig,../../shared/infrastructure/persistance/postgre-sql/dbConfig:dbConfig,,,3,,,-1
+73014444161,IMPORT,import { TypeOrmModule } from '@nestjs/typeorm',4,,TypeOrmModule,@nestjs/typeorm:TypeOrmModule,,,4,,,-1
+73014444162,IMPORT,import { UserRoleByTenantsService } from '../../shared/context/user-role-by-tenants/user-role-by-tenants.service',5,,UserRoleByTenantsService,../../shared/context/user-role-by-tenants/user-role-by-tenants.service:UserRoleByTenantsService,,,5,,,-1
+73014444163,IMPORT,import { UserRoleByTenantsController } from './user-role-by-tenants.controller',6,,UserRoleByTenantsController,./user-role-by-tenants.controller:UserRoleByTenantsController,,,6,,,-1
+73014444164,IMPORT,import { UsersService } from '../../shared/context/users/domain/users.service',7,,UsersService,../../shared/context/users/domain/users.service:UsersService,,,7,,,-1
+73014444165,IMPORT,import { RolesService } from '../../shared/context/roles/domain/roles.service',8,,RolesService,../../shared/context/roles/domain/roles.service:RolesService,,,8,,,-1
+73014444166,IMPORT,import { RoleAliasesService } from '../../shared/context/role-aliases/domain/role-aliases.service',9,,RoleAliasesService,../../shared/context/role-aliases/domain/role-aliases.service:RoleAliasesService,,,9,,,-1
+73014444167,IMPORT,import { TenantsService } from '../../shared/context/tenants/domain/tenants.service',10,,TenantsService,../../shared/context/tenants/domain/tenants.service:TenantsService,,,10,,,-1
+73014444168,IMPORT,import { TenantRoleAliasesService } from '../../shared/context/tenant-role-aliases/tenant-role-aliases.service',11,,TenantRoleAliasesService,../../shared/context/tenant-role-aliases/tenant-role-aliases.service:TenantRoleAliasesService,,,11,,,-1
+73014444169,IMPORT,import { EmailProvider } from '../../shared/infrastructure/mails/mailProvider',12,,EmailProvider,../../shared/infrastructure/mails/mailProvider:EmailProvider,,,12,,,-1
+73014444170,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger, Headers } from '@nestjs/common'",1,,Controller,@nestjs/common:Controller,,,1,,,-1
+73014444171,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger, Headers } from '@nestjs/common'",1,,Get,@nestjs/common:Get,,,1,,,-1
+73014444172,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger, Headers } from '@nestjs/common'",1,,Post,@nestjs/common:Post,,,1,,,-1
+73014444173,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger, Headers } from '@nestjs/common'",1,,Body,@nestjs/common:Body,,,1,,,-1
+73014444174,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger, Headers } from '@nestjs/common'",1,,Patch,@nestjs/common:Patch,,,1,,,-1
+73014444175,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger, Headers } from '@nestjs/common'",1,,Param,@nestjs/common:Param,,,1,,,-1
+73014444176,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger, Headers } from '@nestjs/common'",1,,Delete,@nestjs/common:Delete,,,1,,,-1
+73014444177,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger, Headers } from '@nestjs/common'",1,,Logger,@nestjs/common:Logger,,,1,,,-1
+73014444178,IMPORT,"import { Controller, Get, Post, Body, Patch, Param, Delete, Logger, Headers } from '@nestjs/common'",1,,Headers,@nestjs/common:Headers,,,1,,,-1
+73014444179,IMPORT,import { ApiTags } from '@nestjs/swagger',2,,ApiTags,@nestjs/swagger:ApiTags,,,2,,,-1
+73014444180,IMPORT,import { CreateUserDto } from '../../shared/context/users/domain/dto/create-user.dto',3,,CreateUserDto,../../shared/context/users/domain/dto/create-user.dto:CreateUserDto,,,3,,,-1
+73014444181,IMPORT,import { FindUserDto } from '../../shared/context/users/domain/dto/find-user.dto',4,,FindUserDto,../../shared/context/users/domain/dto/find-user.dto:FindUserDto,,,4,,,-1
+73014444182,IMPORT,import { UpdateUserDto } from '../../shared/context/users/domain/dto/update-user.dto',5,,UpdateUserDto,../../shared/context/users/domain/dto/update-user.dto:UpdateUserDto,,,5,,,-1
+73014444183,IMPORT,import { UsersService } from '../../shared/context/users/domain/users.service',6,,UsersService,../../shared/context/users/domain/users.service:UsersService,,,6,,,-1
+73014444184,IMPORT,import { ContextPayload } from 'src/shared/dataTypes/MyContext',7,,ContextPayload,src/shared/dataTypes/MyContext:ContextPayload,,,7,,,-1
+73014444185,IMPORT,import { TypeOrmModule } from '@nestjs/typeorm',1,,TypeOrmModule,@nestjs/typeorm:TypeOrmModule,,,1,,,-1
+73014444186,IMPORT,import { Module } from '@nestjs/common',2,,Module,@nestjs/common:Module,,,2,,,-1
+73014444187,IMPORT,import { UsersController } from './users.controller',3,,UsersController,./users.controller:UsersController,,,3,,,-1
+73014444188,IMPORT,"import { Role, Tenant, User } from '@avantodev/avanto-db'",4,,Role,@avantodev/avanto-db:Role,,,4,,,-1
+73014444189,IMPORT,"import { Role, Tenant, User } from '@avantodev/avanto-db'",4,,Tenant,@avantodev/avanto-db:Tenant,,,4,,,-1
+73014444190,IMPORT,"import { Role, Tenant, User } from '@avantodev/avanto-db'",4,,User,@avantodev/avanto-db:User,,,4,,,-1
+73014444191,IMPORT,import { UsersService } from '../../shared/context/users/domain/users.service',5,,UsersService,../../shared/context/users/domain/users.service:UsersService,,,5,,,-1
+73014444192,IMPORT,import { dbConfig } from '../../shared/infrastructure/persistance/postgre-sql/dbConfig',6,,dbConfig,../../shared/infrastructure/persistance/postgre-sql/dbConfig:dbConfig,,,6,,,-1
+73014444193,IMPORT,import { TenantsService } from 'src/shared/context/tenants/domain/tenants.service',7,,TenantsService,src/shared/context/tenants/domain/tenants.service:TenantsService,,,7,,,-1
+73014444194,IMPORT,import { EmailProvider } from '../../shared/infrastructure/mails/mailProvider',8,,EmailProvider,../../shared/infrastructure/mails/mailProvider:EmailProvider,,,8,,,-1
+73014444195,IMPORT,import { NestFactory } from '@nestjs/core',1,,NestFactory,@nestjs/core:NestFactory,,,1,,,-1
+73014444196,IMPORT,"import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'",2,,DocumentBuilder,@nestjs/swagger:DocumentBuilder,,,2,,,-1
+73014444197,IMPORT,"import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger'",2,,SwaggerModule,@nestjs/swagger:SwaggerModule,,,2,,,-1
+73014444198,IMPORT,import { Logger } from 'nestjs-pino',3,,Logger,nestjs-pino:Logger,,,3,,,-1
+73014444199,IMPORT,import { AppModule } from './app.module',4,,AppModule,./app.module:AppModule,,,4,,,-1
+73014444200,IMPORT,import 'dotenv/config',5,,dotenv/config,dotenv/config,,,5,,,-1
+73014444201,IMPORT,import { ValidationPipe } from '@nestjs/common',6,,ValidationPipe,@nestjs/common:ValidationPipe,,,6,,,-1
+73014444202,IMPORT,import { RoleAliasDto } from './role-alias.dto',1,,RoleAliasDto,./role-alias.dto:RoleAliasDto,,,1,,,-1
+73014444203,IMPORT,import { ApiProperty } from '@nestjs/swagger',2,,ApiProperty,@nestjs/swagger:ApiProperty,,,2,,,-1
+73014444204,IMPORT,"import { IsNotEmpty, Length } from 'class-validator'",3,,IsNotEmpty,class-validator:IsNotEmpty,,,3,,,-1
+73014444205,IMPORT,"import { IsNotEmpty, Length } from 'class-validator'",3,,Length,class-validator:Length,,,3,,,-1
+73014444206,IMPORT,import { PartialType } from '@nestjs/swagger',1,,PartialType,@nestjs/swagger:PartialType,,,1,,,-1
+73014444207,IMPORT,import { CreateRoleAliasDto } from './create-role-alias.dto',2,,CreateRoleAliasDto,./create-role-alias.dto:CreateRoleAliasDto,,,2,,,-1
+73014444208,IMPORT,import { ApiProperty } from '@nestjs/swagger',3,,ApiProperty,@nestjs/swagger:ApiProperty,,,3,,,-1
+73014444209,IMPORT,import { RoleAlias } from '@avantodev/avanto-db',1,,RoleAlias,@avantodev/avanto-db:RoleAlias,,,1,,,-1
+73014444210,IMPORT,import { PartialType } from '@nestjs/swagger',1,,PartialType,@nestjs/swagger:PartialType,,,1,,,-1
+73014444211,IMPORT,import { CreateRoleAliasDto } from './create-role-alias.dto',2,,CreateRoleAliasDto,./create-role-alias.dto:CreateRoleAliasDto,,,2,,,-1
+73014444212,IMPORT,import { ApiProperty } from '@nestjs/swagger',3,,ApiProperty,@nestjs/swagger:ApiProperty,,,3,,,-1
+73014444213,IMPORT,"import { IsNotEmpty, Length } from 'class-validator'",4,,IsNotEmpty,class-validator:IsNotEmpty,,,4,,,-1
+73014444214,IMPORT,"import { IsNotEmpty, Length } from 'class-validator'",4,,Length,class-validator:Length,,,4,,,-1
+73014444215,IMPORT,import { dbConfig } from '../../../infrastructure/persistance/postgre-sql/dbConfig',1,,dbConfig,../../../infrastructure/persistance/postgre-sql/dbConfig:dbConfig,,,1,,,-1
+73014444216,IMPORT,"import { RoleAlias, Role, TenantRoleAliases } from '@avantodev/avanto-db'",2,,RoleAlias,@avantodev/avanto-db:RoleAlias,,,2,,,-1
+73014444217,IMPORT,"import { RoleAlias, Role, TenantRoleAliases } from '@avantodev/avanto-db'",2,,Role,@avantodev/avanto-db:Role,,,2,,,-1
+73014444218,IMPORT,"import { RoleAlias, Role, TenantRoleAliases } from '@avantodev/avanto-db'",2,,TenantRoleAliases,@avantodev/avanto-db:TenantRoleAliases,,,2,,,-1
+73014444219,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException, Inject, forwardRef } from '@nestjs/common'",3,,Injectable,@nestjs/common:Injectable,,,3,,,-1
+73014444220,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException, Inject, forwardRef } from '@nestjs/common'",3,,Logger,@nestjs/common:Logger,,,3,,,-1
+73014444221,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException, Inject, forwardRef } from '@nestjs/common'",3,,ForbiddenException,@nestjs/common:ForbiddenException,,,3,,,-1
+73014444222,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException, Inject, forwardRef } from '@nestjs/common'",3,,NotFoundException,@nestjs/common:NotFoundException,,,3,,,-1
+73014444223,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException, Inject, forwardRef } from '@nestjs/common'",3,,Inject,@nestjs/common:Inject,,,3,,,-1
+73014444224,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException, Inject, forwardRef } from '@nestjs/common'",3,,forwardRef,@nestjs/common:forwardRef,,,3,,,-1
+73014444225,IMPORT,import { CreateRoleAliasDto } from './dto/create-role-alias.dto',4,,CreateRoleAliasDto,./dto/create-role-alias.dto:CreateRoleAliasDto,,,4,,,-1
+73014444226,IMPORT,import { UpdateRoleAliasDto } from './dto/update-role-alias.dto',5,,UpdateRoleAliasDto,./dto/update-role-alias.dto:UpdateRoleAliasDto,,,5,,,-1
+73014444227,IMPORT,import { InjectRepository } from '@nestjs/typeorm',6,,InjectRepository,@nestjs/typeorm:InjectRepository,,,6,,,-1
+73014444228,IMPORT,import { Repository } from 'typeorm',7,,Repository,typeorm:Repository,,,7,,,-1
+73014444229,IMPORT,import { FindRoleAliasDto } from './dto/find-role-alias.dto',8,,FindRoleAliasDto,./dto/find-role-alias.dto:FindRoleAliasDto,,,8,,,-1
+73014444230,IMPORT,import { TenantRoleAliasesService } from '../../tenant-role-aliases/tenant-role-aliases.service',9,,TenantRoleAliasesService,../../tenant-role-aliases/tenant-role-aliases.service:TenantRoleAliasesService,,,9,,,-1
+73014444231,IMPORT,import { RoleDto } from './role.dto',1,,RoleDto,./role.dto:RoleDto,,,1,,,-1
+73014444232,IMPORT,import { ApiProperty } from '@nestjs/swagger',2,,ApiProperty,@nestjs/swagger:ApiProperty,,,2,,,-1
+73014444233,IMPORT,"import { IsNotEmpty, Length } from 'class-validator'",3,,IsNotEmpty,class-validator:IsNotEmpty,,,3,,,-1
+73014444234,IMPORT,"import { IsNotEmpty, Length } from 'class-validator'",3,,Length,class-validator:Length,,,3,,,-1
+73014444235,IMPORT,"import { ApiProperty, PartialType } from '@nestjs/swagger'",1,,ApiProperty,@nestjs/swagger:ApiProperty,,,1,,,-1
+73014444236,IMPORT,"import { ApiProperty, PartialType } from '@nestjs/swagger'",1,,PartialType,@nestjs/swagger:PartialType,,,1,,,-1
+73014444237,IMPORT,import { CreateRoleDto } from './create-role.dto',2,,CreateRoleDto,./create-role.dto:CreateRoleDto,,,2,,,-1
+73014444238,IMPORT,import { PartialType } from '@nestjs/swagger',1,,PartialType,@nestjs/swagger:PartialType,,,1,,,-1
+73014444239,IMPORT,import { CreateRoleDto } from './create-role.dto',2,,CreateRoleDto,./create-role.dto:CreateRoleDto,,,2,,,-1
+73014444240,IMPORT,import { ApiProperty } from '@nestjs/swagger',3,,ApiProperty,@nestjs/swagger:ApiProperty,,,3,,,-1
+73014444241,IMPORT,"import { IsNotEmpty, Length } from 'class-validator'",4,,IsNotEmpty,class-validator:IsNotEmpty,,,4,,,-1
+73014444242,IMPORT,"import { IsNotEmpty, Length } from 'class-validator'",4,,Length,class-validator:Length,,,4,,,-1
+73014444243,IMPORT,import { Repository } from 'typeorm',1,,Repository,typeorm:Repository,,,1,,,-1
+73014444244,IMPORT,import { InjectRepository } from '@nestjs/typeorm',2,,InjectRepository,@nestjs/typeorm:InjectRepository,,,2,,,-1
+73014444245,IMPORT,import { fetchTenants } from './../../../utils',3,,fetchTenants,./../../../utils:fetchTenants,,,3,,,-1
+73014444246,IMPORT,"import { Role, Tenant, TenantType } from '@avantodev/avanto-db'",4,,Role,@avantodev/avanto-db:Role,,,4,,,-1
+73014444247,IMPORT,"import { Role, Tenant, TenantType } from '@avantodev/avanto-db'",4,,Tenant,@avantodev/avanto-db:Tenant,,,4,,,-1
+73014444248,IMPORT,"import { Role, Tenant, TenantType } from '@avantodev/avanto-db'",4,,TenantType,@avantodev/avanto-db:TenantType,,,4,,,-1
+73014444249,IMPORT,import { FindRoleDto } from './../domain/dto/find-role.dto',5,,FindRoleDto,./../domain/dto/find-role.dto:FindRoleDto,,,5,,,-1
+73014444250,IMPORT,import { CreateRoleDto } from './../domain/dto/create-role.dto',6,,CreateRoleDto,./../domain/dto/create-role.dto:CreateRoleDto,,,6,,,-1
+73014444251,IMPORT,import { UpdateRoleDto } from './../domain/dto/update-role.dto',7,,UpdateRoleDto,./../domain/dto/update-role.dto:UpdateRoleDto,,,7,,,-1
+73014444252,IMPORT,import { dbConfig } from '../../../infrastructure/persistance/postgre-sql/dbConfig',8,,dbConfig,../../../infrastructure/persistance/postgre-sql/dbConfig:dbConfig,,,8,,,-1
+73014444253,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException } from '@nestjs/common'",9,,Injectable,@nestjs/common:Injectable,,,9,,,-1
+73014444254,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException } from '@nestjs/common'",9,,Logger,@nestjs/common:Logger,,,9,,,-1
+73014444255,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException } from '@nestjs/common'",9,,ForbiddenException,@nestjs/common:ForbiddenException,,,9,,,-1
+73014444256,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException } from '@nestjs/common'",9,,NotFoundException,@nestjs/common:NotFoundException,,,9,,,-1
+73014444257,IMPORT,import { PartialType } from '@nestjs/swagger',1,,PartialType,@nestjs/swagger:PartialType,,,1,,,-1
+73014444258,IMPORT,import { CreateTenantRoleAliasDto } from './create-tenant-role-aliases.dto',2,,CreateTenantRoleAliasDto,./create-tenant-role-aliases.dto:CreateTenantRoleAliasDto,,,2,,,-1
+73014444259,IMPORT,import { ApiProperty } from '@nestjs/swagger',3,,ApiProperty,@nestjs/swagger:ApiProperty,,,3,,,-1
+73014444260,IMPORT,import { RoleAlias } from '@avantodev/avanto-db',4,,RoleAlias,@avantodev/avanto-db:RoleAlias,,,4,,,-1
+73014444261,IMPORT,import { TenantRoleAliasDto } from './tenant-role-alias.dto',1,,TenantRoleAliasDto,./tenant-role-alias.dto:TenantRoleAliasDto,,,1,,,-1
+73014444262,IMPORT,import { ApiProperty } from '@nestjs/swagger',2,,ApiProperty,@nestjs/swagger:ApiProperty,,,2,,,-1
+73014444263,IMPORT,import { IsNotEmpty } from 'class-validator',3,,IsNotEmpty,class-validator:IsNotEmpty,,,3,,,-1
+73014444264,IMPORT,import { PartialType } from '@nestjs/swagger',1,,PartialType,@nestjs/swagger:PartialType,,,1,,,-1
+73014444265,IMPORT,import { CreateTenantRoleAliasDto } from './create-tenant-role-aliases.dto',2,,CreateTenantRoleAliasDto,./create-tenant-role-aliases.dto:CreateTenantRoleAliasDto,,,2,,,-1
+73014444266,IMPORT,import { ApiProperty } from '@nestjs/swagger',3,,ApiProperty,@nestjs/swagger:ApiProperty,,,3,,,-1
+73014444267,IMPORT,import { PartialType } from '@nestjs/swagger',1,,PartialType,@nestjs/swagger:PartialType,,,1,,,-1
+73014444268,IMPORT,import { CreateTenantRoleAliasDto } from './create-tenant-role-aliases.dto',2,,CreateTenantRoleAliasDto,./create-tenant-role-aliases.dto:CreateTenantRoleAliasDto,,,2,,,-1
+73014444269,IMPORT,import { ApiProperty } from '@nestjs/swagger',3,,ApiProperty,@nestjs/swagger:ApiProperty,,,3,,,-1
+73014444270,IMPORT,import { IsNotEmpty } from 'class-validator',4,,IsNotEmpty,class-validator:IsNotEmpty,,,4,,,-1
+73014444271,IMPORT,import { dbConfig } from '../../infrastructure/persistance/postgre-sql/dbConfig',1,,dbConfig,../../infrastructure/persistance/postgre-sql/dbConfig:dbConfig,,,1,,,-1
+73014444272,IMPORT,"import { RoleAlias, Role, Tenant, TenantRoleAliases } from '@avantodev/avanto-db'",2,,RoleAlias,@avantodev/avanto-db:RoleAlias,,,2,,,-1
+73014444273,IMPORT,"import { RoleAlias, Role, Tenant, TenantRoleAliases } from '@avantodev/avanto-db'",2,,Role,@avantodev/avanto-db:Role,,,2,,,-1
+73014444274,IMPORT,"import { RoleAlias, Role, Tenant, TenantRoleAliases } from '@avantodev/avanto-db'",2,,Tenant,@avantodev/avanto-db:Tenant,,,2,,,-1
+73014444275,IMPORT,"import { RoleAlias, Role, Tenant, TenantRoleAliases } from '@avantodev/avanto-db'",2,,TenantRoleAliases,@avantodev/avanto-db:TenantRoleAliases,,,2,,,-1
+73014444276,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException } from '@nestjs/common'",3,,Injectable,@nestjs/common:Injectable,,,3,,,-1
+73014444277,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException } from '@nestjs/common'",3,,Logger,@nestjs/common:Logger,,,3,,,-1
+73014444278,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException } from '@nestjs/common'",3,,ForbiddenException,@nestjs/common:ForbiddenException,,,3,,,-1
+73014444279,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException } from '@nestjs/common'",3,,NotFoundException,@nestjs/common:NotFoundException,,,3,,,-1
+73014444280,IMPORT,import { CreateTenantRoleAliasDto } from './dto/create-tenant-role-aliases.dto',4,,CreateTenantRoleAliasDto,./dto/create-tenant-role-aliases.dto:CreateTenantRoleAliasDto,,,4,,,-1
+73014444281,IMPORT,import { UpdateTenantRoleAliasDto } from './dto/update-tenant-role-alias.dto',5,,UpdateTenantRoleAliasDto,./dto/update-tenant-role-alias.dto:UpdateTenantRoleAliasDto,,,5,,,-1
+73014444282,IMPORT,import { FindTenantRoleAliasDto } from './dto/find-tenant-role-alias.dto',6,,FindTenantRoleAliasDto,./dto/find-tenant-role-alias.dto:FindTenantRoleAliasDto,,,6,,,-1
+73014444283,IMPORT,import { InjectRepository } from '@nestjs/typeorm',7,,InjectRepository,@nestjs/typeorm:InjectRepository,,,7,,,-1
+73014444284,IMPORT,"import { Repository, Brackets } from 'typeorm'",8,,Repository,typeorm:Repository,,,8,,,-1
+73014444285,IMPORT,"import { Repository, Brackets } from 'typeorm'",8,,Brackets,typeorm:Brackets,,,8,,,-1
+73014444286,IMPORT,import { AssignTenantRoleAliasDto } from './dto/assign-tenant-role-alias.dto',9,,AssignTenantRoleAliasDto,./dto/assign-tenant-role-alias.dto:AssignTenantRoleAliasDto,,,9,,,-1
+73014444287,IMPORT,import { TenantDto } from './tenant.dto',1,,TenantDto,./tenant.dto:TenantDto,,,1,,,-1
+73014444288,IMPORT,import { ApiProperty } from '@nestjs/swagger',2,,ApiProperty,@nestjs/swagger:ApiProperty,,,2,,,-1
+73014444289,IMPORT,"import { IsNotEmpty, Length } from 'class-validator'",3,,IsNotEmpty,class-validator:IsNotEmpty,,,3,,,-1
+73014444290,IMPORT,"import { IsNotEmpty, Length } from 'class-validator'",3,,Length,class-validator:Length,,,3,,,-1
+73014444291,IMPORT,import { ApiProperty } from '@nestjs/swagger',1,,ApiProperty,@nestjs/swagger:ApiProperty,,,1,,,-1
+73014444292,IMPORT,import { PartialType } from '@nestjs/swagger',2,,PartialType,@nestjs/swagger:PartialType,,,2,,,-1
+73014444293,IMPORT,import { CreateTenantDto } from './create-tenant.dto',3,,CreateTenantDto,./create-tenant.dto:CreateTenantDto,,,3,,,-1
+73014444294,IMPORT,import { ApiProperty } from '@nestjs/swagger',1,,ApiProperty,@nestjs/swagger:ApiProperty,,,1,,,-1
+73014444295,IMPORT,"import { IsNotEmpty, Length } from 'class-validator'",2,,IsNotEmpty,class-validator:IsNotEmpty,,,2,,,-1
+73014444296,IMPORT,"import { IsNotEmpty, Length } from 'class-validator'",2,,Length,class-validator:Length,,,2,,,-1
+73014444297,IMPORT,import { PartialType } from '@nestjs/swagger',3,,PartialType,@nestjs/swagger:PartialType,,,3,,,-1
+73014444298,IMPORT,import { CreateTenantDto } from './create-tenant.dto',4,,CreateTenantDto,./create-tenant.dto:CreateTenantDto,,,4,,,-1
+73014444299,IMPORT,import { Repository } from 'typeorm',1,,Repository,typeorm:Repository,,,1,,,-1
+73014444300,IMPORT,import { InjectRepository } from '@nestjs/typeorm',2,,InjectRepository,@nestjs/typeorm:InjectRepository,,,2,,,-1
+73014444301,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException } from '@nestjs/common'",3,,Injectable,@nestjs/common:Injectable,,,3,,,-1
+73014444302,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException } from '@nestjs/common'",3,,Logger,@nestjs/common:Logger,,,3,,,-1
+73014444303,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException } from '@nestjs/common'",3,,ForbiddenException,@nestjs/common:ForbiddenException,,,3,,,-1
+73014444304,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException } from '@nestjs/common'",3,,NotFoundException,@nestjs/common:NotFoundException,,,3,,,-1
+73014444305,IMPORT,import { Tenant } from '@avantodev/avanto-db',4,,Tenant,@avantodev/avanto-db:Tenant,,,4,,,-1
+73014444306,IMPORT,import { FindTenantDto } from '../../tenants/domain/dto/find-tenant.dto',5,,FindTenantDto,../../tenants/domain/dto/find-tenant.dto:FindTenantDto,,,5,,,-1
+73014444307,IMPORT,import { CreateTenantDto } from '../../tenants/domain/dto/create-tenant.dto',6,,CreateTenantDto,../../tenants/domain/dto/create-tenant.dto:CreateTenantDto,,,6,,,-1
+73014444308,IMPORT,import { UpdateTenantDto } from '../../tenants/domain/dto/update-tenant.dto',7,,UpdateTenantDto,../../tenants/domain/dto/update-tenant.dto:UpdateTenantDto,,,7,,,-1
+73014444309,IMPORT,import { dbConfig } from '../../../infrastructure/persistance/postgre-sql/dbConfig',8,,dbConfig,../../../infrastructure/persistance/postgre-sql/dbConfig:dbConfig,,,8,,,-1
+73014444310,IMPORT,import { Tenant } from '@avantodev/avanto-db',1,,Tenant,@avantodev/avanto-db:Tenant,,,1,,,-1
+73014444311,IMPORT,import { UserRoleByTenantsDto } from './user-role-by-tenants.dto',1,,UserRoleByTenantsDto,./user-role-by-tenants.dto:UserRoleByTenantsDto,,,1,,,-1
+73014444312,IMPORT,import { ApiProperty } from '@nestjs/swagger',2,,ApiProperty,@nestjs/swagger:ApiProperty,,,2,,,-1
+73014444313,IMPORT,import { IsNotEmpty } from 'class-validator',3,,IsNotEmpty,class-validator:IsNotEmpty,,,3,,,-1
+73014444314,IMPORT,import { ApiProperty } from '@nestjs/swagger',1,,ApiProperty,@nestjs/swagger:ApiProperty,,,1,,,-1
+73014444315,IMPORT,import { PartialType } from '@nestjs/swagger',2,,PartialType,@nestjs/swagger:PartialType,,,2,,,-1
+73014444316,IMPORT,import { CreateUserRoleByTenantsDto } from './create-user-role-by-tenants.dto',3,,CreateUserRoleByTenantsDto,./create-user-role-by-tenants.dto:CreateUserRoleByTenantsDto,,,3,,,-1
+73014444317,IMPORT,import { ApiProperty } from '@nestjs/swagger',1,,ApiProperty,@nestjs/swagger:ApiProperty,,,1,,,-1
+73014444318,IMPORT,import { IsNotEmpty } from 'class-validator',2,,IsNotEmpty,class-validator:IsNotEmpty,,,2,,,-1
+73014444319,IMPORT,import { PartialType } from '@nestjs/swagger',3,,PartialType,@nestjs/swagger:PartialType,,,3,,,-1
+73014444320,IMPORT,import { CreateUserRoleByTenantsDto } from './create-user-role-by-tenants.dto',4,,CreateUserRoleByTenantsDto,./create-user-role-by-tenants.dto:CreateUserRoleByTenantsDto,,,4,,,-1
+73014444321,IMPORT,import { Repository } from 'typeorm',1,,Repository,typeorm:Repository,,,1,,,-1
+73014444322,IMPORT,import { InjectRepository } from '@nestjs/typeorm',2,,InjectRepository,@nestjs/typeorm:InjectRepository,,,2,,,-1
+73014444323,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException, Inject, forwardRef } from '@nestjs/common'",3,,Injectable,@nestjs/common:Injectable,,,3,,,-1
+73014444324,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException, Inject, forwardRef } from '@nestjs/common'",3,,Logger,@nestjs/common:Logger,,,3,,,-1
+73014444325,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException, Inject, forwardRef } from '@nestjs/common'",3,,ForbiddenException,@nestjs/common:ForbiddenException,,,3,,,-1
+73014444326,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException, Inject, forwardRef } from '@nestjs/common'",3,,NotFoundException,@nestjs/common:NotFoundException,,,3,,,-1
+73014444327,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException, Inject, forwardRef } from '@nestjs/common'",3,,Inject,@nestjs/common:Inject,,,3,,,-1
+73014444328,IMPORT,"import { Injectable, Logger, ForbiddenException, NotFoundException, Inject, forwardRef } from '@nestjs/common'",3,,forwardRef,@nestjs/common:forwardRef,,,3,,,-1
+73014444329,IMPORT,import { UserRoleByTenants } from '@avantodev/avanto-db',4,,UserRoleByTenants,@avantodev/avanto-db:UserRoleByTenants,,,4,,,-1
+73014444330,IMPORT,import { FindUserRoleByTenantsDto } from './dto/find-user-role-by-tenants.dto',5,,FindUserRoleByTenantsDto,./dto/find-user-role-by-tenants.dto:FindUserRoleByTenantsDto,,,5,,,-1
+73014444331,IMPORT,import { CreateUserRoleByTenantsDto } from './dto/create-user-role-by-tenants.dto',6,,CreateUserRoleByTenantsDto,./dto/create-user-role-by-tenants.dto:CreateUserRoleByTenantsDto,,,6,,,-1
+73014444332,IMPORT,import { UpdateUserRoleByTenantsDto } from './dto/update-user-role-by-tenants.dto',7,,UpdateUserRoleByTenantsDto,./dto/update-user-role-by-tenants.dto:UpdateUserRoleByTenantsDto,,,7,,,-1
+73014444333,IMPORT,import { dbConfig } from 'src/shared/infrastructure/persistance/postgre-sql/dbConfig',8,,dbConfig,src/shared/infrastructure/persistance/postgre-sql/dbConfig:dbConfig,,,8,,,-1
+73014444334,IMPORT,import { UsersService } from '../users/domain/users.service',9,,UsersService,../users/domain/users.service:UsersService,,,9,,,-1
+73014444335,IMPORT,import { TenantsService } from '../tenants/domain/tenants.service',10,,TenantsService,../tenants/domain/tenants.service:TenantsService,,,10,,,-1
+73014444336,IMPORT,import { RolesService } from '../roles/domain/roles.service',11,,RolesService,../roles/domain/roles.service:RolesService,,,11,,,-1
+73014444337,IMPORT,import { RoleAliasesService } from '../role-aliases/domain/role-aliases.service',12,,RoleAliasesService,../role-aliases/domain/role-aliases.service:RoleAliasesService,,,12,,,-1
+73014444338,IMPORT,import { TypeOfUser } from '@avantodev/avanto-db/dist/shared/enums',1,,TypeOfUser,@avantodev/avanto-db/dist/shared/enums:TypeOfUser,,,1,,,-1
+73014444339,IMPORT,import { UserDto } from './user.dto',2,,UserDto,./user.dto:UserDto,,,2,,,-1
+73014444340,IMPORT,import { ApiProperty } from '@nestjs/swagger',3,,ApiProperty,@nestjs/swagger:ApiProperty,,,3,,,-1
+73014444341,IMPORT,"import { IsEmail, IsNotEmpty, IsOptional, Length } from 'class-validator'",4,,IsEmail,class-validator:IsEmail,,,4,,,-1
+73014444342,IMPORT,"import { IsEmail, IsNotEmpty, IsOptional, Length } from 'class-validator'",4,,IsNotEmpty,class-validator:IsNotEmpty,,,4,,,-1
+73014444343,IMPORT,"import { IsEmail, IsNotEmpty, IsOptional, Length } from 'class-validator'",4,,IsOptional,class-validator:IsOptional,,,4,,,-1
+73014444344,IMPORT,"import { IsEmail, IsNotEmpty, IsOptional, Length } from 'class-validator'",4,,Length,class-validator:Length,,,4,,,-1
+73014444345,IMPORT,"import { ApiProperty, PartialType } from '@nestjs/swagger'",1,,ApiProperty,@nestjs/swagger:ApiProperty,,,1,,,-1
+73014444346,IMPORT,"import { ApiProperty, PartialType } from '@nestjs/swagger'",1,,PartialType,@nestjs/swagger:PartialType,,,1,,,-1
+73014444347,IMPORT,import { CreateUserDto } from './create-user.dto',2,,CreateUserDto,./create-user.dto:CreateUserDto,,,2,,,-1
+73014444348,IMPORT,import { TypeOfUser } from '@avantodev/avanto-db/dist/shared/enums',3,,TypeOfUser,@avantodev/avanto-db/dist/shared/enums:TypeOfUser,,,3,,,-1
+73014444349,IMPORT,"import { ApiProperty, PartialType } from '@nestjs/swagger'",1,,ApiProperty,@nestjs/swagger:ApiProperty,,,1,,,-1
+73014444350,IMPORT,"import { ApiProperty, PartialType } from '@nestjs/swagger'",1,,PartialType,@nestjs/swagger:PartialType,,,1,,,-1
+73014444351,IMPORT,import { CreateUserDto } from './create-user.dto',2,,CreateUserDto,./create-user.dto:CreateUserDto,,,2,,,-1
+73014444352,IMPORT,"import { IsEmail, IsNotEmpty, Length } from 'class-validator'",3,,IsEmail,class-validator:IsEmail,,,3,,,-1
+73014444353,IMPORT,"import { IsEmail, IsNotEmpty, Length } from 'class-validator'",3,,IsNotEmpty,class-validator:IsNotEmpty,,,3,,,-1
+73014444354,IMPORT,"import { IsEmail, IsNotEmpty, Length } from 'class-validator'",3,,Length,class-validator:Length,,,3,,,-1
+73014444355,IMPORT,import { TypeOfUser } from '@avantodev/avanto-db/dist/shared/enums',4,,TypeOfUser,@avantodev/avanto-db/dist/shared/enums:TypeOfUser,,,4,,,-1
+73014444356,IMPORT,import { TypeOfUser } from '@avantodev/avanto-db/dist/shared/enums',1,,TypeOfUser,@avantodev/avanto-db/dist/shared/enums:TypeOfUser,,,1,,,-1
+73014444357,IMPORT,"import { Role, User } from '@avantodev/avanto-db'",1,,Role,@avantodev/avanto-db:Role,,,1,,,-1
+73014444358,IMPORT,"import { Role, User } from '@avantodev/avanto-db'",1,,User,@avantodev/avanto-db:User,,,1,,,-1
+73014444359,IMPORT,import { CreateUserDto } from '../dto/create-user.dto',2,,CreateUserDto,../dto/create-user.dto:CreateUserDto,,,2,,,-1
+73014444360,IMPORT,import { UpdateUserDto } from '../dto/update-user.dto',3,,UpdateUserDto,../dto/update-user.dto:UpdateUserDto,,,3,,,-1
+73014444361,IMPORT,import { UserDto } from '../dto/user.dto',4,,UserDto,../dto/user.dto:UserDto,,,4,,,-1
+73014444362,IMPORT,import { TypeOfUser } from '@avantodev/avanto-db/dist/shared/enums',5,,TypeOfUser,@avantodev/avanto-db/dist/shared/enums:TypeOfUser,,,5,,,-1
+73014444363,IMPORT,"import { Injectable, Logger, NotFoundException, ForbiddenException } from '@nestjs/common'",1,,Injectable,@nestjs/common:Injectable,,,1,,,-1
+73014444364,IMPORT,"import { Injectable, Logger, NotFoundException, ForbiddenException } from '@nestjs/common'",1,,Logger,@nestjs/common:Logger,,,1,,,-1
+73014444365,IMPORT,"import { Injectable, Logger, NotFoundException, ForbiddenException } from '@nestjs/common'",1,,NotFoundException,@nestjs/common:NotFoundException,,,1,,,-1
+73014444366,IMPORT,"import { Injectable, Logger, NotFoundException, ForbiddenException } from '@nestjs/common'",1,,ForbiddenException,@nestjs/common:ForbiddenException,,,1,,,-1
+73014444367,IMPORT,import { InjectRepository } from '@nestjs/typeorm',2,,InjectRepository,@nestjs/typeorm:InjectRepository,,,2,,,-1
+73014444368,IMPORT,import { Repository } from 'typeorm',3,,Repository,typeorm:Repository,,,3,,,-1
+73014444369,IMPORT,import { User } from '@avantodev/avanto-db',4,,User,@avantodev/avanto-db:User,,,4,,,-1
+73014444370,IMPORT,import { dbConfig } from '../../../infrastructure/persistance/postgre-sql/dbConfig',5,,dbConfig,../../../infrastructure/persistance/postgre-sql/dbConfig:dbConfig,,,5,,,-1
+73014444371,IMPORT,import { TenantsService } from '../../tenants/domain/tenants.service',6,,TenantsService,../../tenants/domain/tenants.service:TenantsService,,,6,,,-1
+73014444372,IMPORT,import { EmailProvider } from '../../../infrastructure/mails/mailProvider',7,,EmailProvider,../../../infrastructure/mails/mailProvider:EmailProvider,,,7,,,-1
+73014444373,IMPORT,"import { Tenant, Role, User } from '@avantodev/avanto-db'",1,,Tenant,@avantodev/avanto-db:Tenant,,,1,,,-1
+73014444374,IMPORT,"import { Tenant, Role, User } from '@avantodev/avanto-db'",1,,Role,@avantodev/avanto-db:Role,,,1,,,-1
+73014444375,IMPORT,"import { Tenant, Role, User } from '@avantodev/avanto-db'",1,,User,@avantodev/avanto-db:User,,,1,,,-1
+73014444376,IMPORT,import { dbConfig } from '../../../infrastructure/persistance/postgre-sql/dbConfig',2,,dbConfig,../../../infrastructure/persistance/postgre-sql/dbConfig:dbConfig,,,2,,,-1
+73014444377,IMPORT,"import {
+  getResponse,
+  recordGridsMsUrl,
+  sendEmailProcess,
+  sendMfaAttemptEmailProcess,
+  sendMfaSuccessEmailProcess,
+} from '../../../utils'",3,,getResponse,../../../utils:getResponse,,,3,,,-1
+73014444378,IMPORT,"import {
+  getResponse,
+  recordGridsMsUrl,
+  sendEmailProcess,
+  sendMfaAttemptEmailProcess,
+  sendMfaSuccessEmailProcess,
+} from '../../../utils'",3,,recordGridsMsUrl,../../../utils:recordGridsMsUrl,,,3,,,-1
+73014444379,IMPORT,"import {
+  getResponse,
+  recordGridsMsUrl,
+  sendEmailProcess,
+  sendMfaAttemptEmailProcess,
+  sendMfaSuccessEmailProcess,
+} from '../../../utils'",3,,sendEmailProcess,../../../utils:sendEmailProcess,,,3,,,-1
+73014444380,IMPORT,"import {
+  getResponse,
+  recordGridsMsUrl,
+  sendEmailProcess,
+  sendMfaAttemptEmailProcess,
+  sendMfaSuccessEmailProcess,
+} from '../../../utils'",3,,sendMfaAttemptEmailProcess,../../../utils:sendMfaAttemptEmailProcess,,,3,,,-1
+73014444381,IMPORT,"import {
+  getResponse,
+  recordGridsMsUrl,
+  sendEmailProcess,
+  sendMfaAttemptEmailProcess,
+  sendMfaSuccessEmailProcess,
+} from '../../../utils'",3,,sendMfaSuccessEmailProcess,../../../utils:sendMfaSuccessEmailProcess,,,3,,,-1
+73014444382,IMPORT,import { FindUserDto } from './dto/find-user.dto',10,,FindUserDto,./dto/find-user.dto:FindUserDto,,,10,,,-1
+73014444383,IMPORT,"import {
+  Injectable,
+  Logger,
+  ForbiddenException,
+  NotFoundException,
+  forwardRef,
+  Inject,
+  BadRequestException,
+} from '@nestjs/common'",11,,Injectable,@nestjs/common:Injectable,,,11,,,-1
+73014444384,IMPORT,"import {
+  Injectable,
+  Logger,
+  ForbiddenException,
+  NotFoundException,
+  forwardRef,
+  Inject,
+  BadRequestException,
+} from '@nestjs/common'",11,,Logger,@nestjs/common:Logger,,,11,,,-1
+73014444385,IMPORT,"import {
+  Injectable,
+  Logger,
+  ForbiddenException,
+  NotFoundException,
+  forwardRef,
+  Inject,
+  BadRequestException,
+} from '@nestjs/common'",11,,ForbiddenException,@nestjs/common:ForbiddenException,,,11,,,-1
+73014444386,IMPORT,"import {
+  Injectable,
+  Logger,
+  ForbiddenException,
+  NotFoundException,
+  forwardRef,
+  Inject,
+  BadRequestException,
+} from '@nestjs/common'",11,,NotFoundException,@nestjs/common:NotFoundException,,,11,,,-1
+73014444387,IMPORT,"import {
+  Injectable,
+  Logger,
+  ForbiddenException,
+  NotFoundException,
+  forwardRef,
+  Inject,
+  BadRequestException,
+} from '@nestjs/common'",11,,forwardRef,@nestjs/common:forwardRef,,,11,,,-1
+73014444388,IMPORT,"import {
+  Injectable,
+  Logger,
+  ForbiddenException,
+  NotFoundException,
+  forwardRef,
+  Inject,
+  BadRequestException,
+} from '@nestjs/common'",11,,Inject,@nestjs/common:Inject,,,11,,,-1
+73014444389,IMPORT,"import {
+  Injectable,
+  Logger,
+  ForbiddenException,
+  NotFoundException,
+  forwardRef,
+  Inject,
+  BadRequestException,
+} from '@nestjs/common'",11,,BadRequestException,@nestjs/common:BadRequestException,,,11,,,-1
+73014444390,IMPORT,import { CreateUserDto } from './dto/create-user.dto',20,,CreateUserDto,./dto/create-user.dto:CreateUserDto,,,20,,,-1
+73014444391,IMPORT,import { UpdateUserDto } from './dto/update-user.dto',21,,UpdateUserDto,./dto/update-user.dto:UpdateUserDto,,,21,,,-1
+73014444392,IMPORT,import { InjectRepository } from '@nestjs/typeorm',22,,InjectRepository,@nestjs/typeorm:InjectRepository,,,22,,,-1
+73014444393,IMPORT,import { Repository } from 'typeorm',23,,Repository,typeorm:Repository,,,23,,,-1
+73014444394,IMPORT,import { TenantsService } from '../../tenants/domain/tenants.service',24,,TenantsService,../../tenants/domain/tenants.service:TenantsService,,,24,,,-1
+73014444395,IMPORT,import { Options } from '../../../dataTypes/Options',25,,Options,../../../dataTypes/Options:Options,,,25,,,-1
+73014444396,IMPORT,import { EmailProvider } from '../../../infrastructure/mails/mailProvider',26,,EmailProvider,../../../infrastructure/mails/mailProvider:EmailProvider,,,26,,,-1
+73014444397,IMPORT,import { v4 as uuid } from 'uuid',27,,uuid,uuid:v4,,,27,,,-1
+73014444398,IMPORT,"import { IssuerEnum, TypeOfUser } from '@avantodev/avanto-db/dist/shared/enums'",28,,IssuerEnum,@avantodev/avanto-db/dist/shared/enums:IssuerEnum,,,28,,,-1
+73014444399,IMPORT,"import { IssuerEnum, TypeOfUser } from '@avantodev/avanto-db/dist/shared/enums'",28,,TypeOfUser,@avantodev/avanto-db/dist/shared/enums:TypeOfUser,,,28,,,-1
+73014444400,IMPORT,import { ContextPayload } from 'src/shared/dataTypes/MyContext',29,,ContextPayload,src/shared/dataTypes/MyContext:ContextPayload,,,29,,,-1
+73014444401,IMPORT,"import { Request, Response } from 'express'",1,,Request,express:Request,,,1,,,-1
+73014444402,IMPORT,"import { Request, Response } from 'express'",1,,Response,express:Response,,,1,,,-1
+73014444403,IMPORT,import { IssuerEnum } from './Enums',2,,IssuerEnum,./Enums:IssuerEnum,,,2,,,-1
+73014444404,IMPORT,import { Request } from 'express',1,,Request,express:Request,,,1,,,-1
+73014444405,IMPORT,import { CORRELATION_ID_HEADER } from './../../middleware/correlation-id/correlation-id.middleware',2,,CORRELATION_ID_HEADER,./../../middleware/correlation-id/correlation-id.middleware:CORRELATION_ID_HEADER,,,2,,,-1
+73014444406,IMPORT,import { fromInstanceMetadata } from '@aws-sdk/credential-providers',1,,fromInstanceMetadata,@aws-sdk/credential-providers:fromInstanceMetadata,,,1,,,-1
+73014444407,IMPORT,"import { SES, SendEmailRequest, SendTemplatedEmailRequest } from '@aws-sdk/client-ses'",2,,SES,@aws-sdk/client-ses:SES,,,2,,,-1
+73014444408,IMPORT,"import { SES, SendEmailRequest, SendTemplatedEmailRequest } from '@aws-sdk/client-ses'",2,,SendEmailRequest,@aws-sdk/client-ses:SendEmailRequest,,,2,,,-1
+73014444409,IMPORT,"import { SES, SendEmailRequest, SendTemplatedEmailRequest } from '@aws-sdk/client-ses'",2,,SendTemplatedEmailRequest,@aws-sdk/client-ses:SendTemplatedEmailRequest,,,2,,,-1
+73014444410,IMPORT,"import { Injectable, Logger } from '@nestjs/common'",3,,Injectable,@nestjs/common:Injectable,,,3,,,-1
+73014444411,IMPORT,"import { Injectable, Logger } from '@nestjs/common'",3,,Logger,@nestjs/common:Logger,,,3,,,-1
+73014444412,IMPORT,import * as process from 'process',4,,process,process:process,,,4,,,-1
+73014444413,IMPORT,import * as process from 'process',1,,process,process:process,,,1,,,-1
+73014444414,IMPORT,import * as process from 'process',1,,process,process:process,,,1,,,-1
+73014444415,IMPORT,import * as process from 'process',1,,process,process:process,,,1,,,-1
+73014444416,IMPORT,import { dbConfig } from './dbConfig',1,,dbConfig,./dbConfig:dbConfig,,,1,,,-1
+73014444417,IMPORT,import { TypeOrmModuleOptions } from '@nestjs/typeorm',2,,TypeOrmModuleOptions,@nestjs/typeorm:TypeOrmModuleOptions,,,2,,,-1
+73014444418,IMPORT,import * as commonEntities from '@avantodev/avanto-db',3,,commonEntities,@avantodev/avanto-db:commonEntities,,,3,,,-1
+73014444419,IMPORT,import { DataSourceOptions } from 'typeorm',4,,DataSourceOptions,typeorm:DataSourceOptions,,,4,,,-1
+73014444420,IMPORT,import { evalENVBoolean } from '../../../utils',1,,evalENVBoolean,../../../utils:evalENVBoolean,,,1,,,-1
+73014444421,IMPORT,import 'dotenv/config',2,,dotenv/config,dotenv/config,,,2,,,-1
+73014444422,IMPORT,import { PostgreSQLConfig } from '@avantodev/avanto-shared-resources/dist/infrastructure/persistence/PostgreSQL/PostgreSQL.config',3,,PostgreSQLConfig,@avantodev/avanto-shared-resources/dist/infrastructure/persistence/PostgreSQL/PostgreSQL.config:PostgreSQLConfig,,,3,,,-1
+73014444423,IMPORT,"import { NextFunction, Request, Response } from 'express'",1,,NextFunction,express:NextFunction,,,1,,,-1
+73014444424,IMPORT,"import { NextFunction, Request, Response } from 'express'",1,,Request,express:Request,,,1,,,-1
+73014444425,IMPORT,"import { NextFunction, Request, Response } from 'express'",1,,Response,express:Response,,,1,,,-1
+73014444426,IMPORT,"import { Injectable, NestMiddleware } from '@nestjs/common'",2,,Injectable,@nestjs/common:Injectable,,,2,,,-1
+73014444427,IMPORT,"import { Injectable, NestMiddleware } from '@nestjs/common'",2,,NestMiddleware,@nestjs/common:NestMiddleware,,,2,,,-1
+73014444428,IMPORT,import { randomUUID } from 'crypto',3,,randomUUID,crypto:randomUUID,,,3,,,-1
+73014444429,IMPORT,"import { Tenant, User } from '@avantodev/avanto-db'",1,,Tenant,@avantodev/avanto-db:Tenant,,,1,,,-1
+73014444430,IMPORT,"import { Tenant, User } from '@avantodev/avanto-db'",1,,User,@avantodev/avanto-db:User,,,1,,,-1
+73014444431,IMPORT,import { IssuerEnum } from './dataTypes/Enums',2,,IssuerEnum,./dataTypes/Enums:IssuerEnum,,,2,,,-1
+73014444432,IMPORT,import AWS from 'aws-sdk',3,,AWS,aws-sdk:AWS,,,3,,,-1
+73014444433,IMPORT,import { fetch } from 'cross-fetch',8,,fetch,cross-fetch:fetch,,,8,,,-1
+73014444434,IMPORT,"import {
+  BadRequestException,
+  ConflictException,
+  ForbiddenException,
+  InternalServerErrorException,
+  Logger,
+  NotFoundException,
+  PayloadTooLargeException,
+  RequestTimeoutException,
+  UnauthorizedException,
+} from '@nestjs/common'",9,,BadRequestException,@nestjs/common:BadRequestException,,,9,,,-1
+73014444435,IMPORT,"import {
+  BadRequestException,
+  ConflictException,
+  ForbiddenException,
+  InternalServerErrorException,
+  Logger,
+  NotFoundException,
+  PayloadTooLargeException,
+  RequestTimeoutException,
+  UnauthorizedException,
+} from '@nestjs/common'",9,,ConflictException,@nestjs/common:ConflictException,,,9,,,-1
+73014444436,IMPORT,"import {
+  BadRequestException,
+  ConflictException,
+  ForbiddenException,
+  InternalServerErrorException,
+  Logger,
+  NotFoundException,
+  PayloadTooLargeException,
+  RequestTimeoutException,
+  UnauthorizedException,
+} from '@nestjs/common'",9,,ForbiddenException,@nestjs/common:ForbiddenException,,,9,,,-1
+73014444437,IMPORT,"import {
+  BadRequestException,
+  ConflictException,
+  ForbiddenException,
+  InternalServerErrorException,
+  Logger,
+  NotFoundException,
+  PayloadTooLargeException,
+  RequestTimeoutException,
+  UnauthorizedException,
+} from '@nestjs/common'",9,,InternalServerErrorException,@nestjs/common:InternalServerErrorException,,,9,,,-1
+73014444438,IMPORT,"import {
+  BadRequestException,
+  ConflictException,
+  ForbiddenException,
+  InternalServerErrorException,
+  Logger,
+  NotFoundException,
+  PayloadTooLargeException,
+  RequestTimeoutException,
+  UnauthorizedException,
+} from '@nestjs/common'",9,,Logger,@nestjs/common:Logger,,,9,,,-1
+73014444439,IMPORT,"import {
+  BadRequestException,
+  ConflictException,
+  ForbiddenException,
+  InternalServerErrorException,
+  Logger,
+  NotFoundException,
+  PayloadTooLargeException,
+  RequestTimeoutException,
+  UnauthorizedException,
+} from '@nestjs/common'",9,,NotFoundException,@nestjs/common:NotFoundException,,,9,,,-1
+73014444440,IMPORT,"import {
+  BadRequestException,
+  ConflictException,
+  ForbiddenException,
+  InternalServerErrorException,
+  Logger,
+  NotFoundException,
+  PayloadTooLargeException,
+  RequestTimeoutException,
+  UnauthorizedException,
+} from '@nestjs/common'",9,,PayloadTooLargeException,@nestjs/common:PayloadTooLargeException,,,9,,,-1
+73014444441,IMPORT,"import {
+  BadRequestException,
+  ConflictException,
+  ForbiddenException,
+  InternalServerErrorException,
+  Logger,
+  NotFoundException,
+  PayloadTooLargeException,
+  RequestTimeoutException,
+  UnauthorizedException,
+} from '@nestjs/common'",9,,RequestTimeoutException,@nestjs/common:RequestTimeoutException,,,9,,,-1
+73014444442,IMPORT,"import {
+  BadRequestException,
+  ConflictException,
+  ForbiddenException,
+  InternalServerErrorException,
+  Logger,
+  NotFoundException,
+  PayloadTooLargeException,
+  RequestTimeoutException,
+  UnauthorizedException,
+} from '@nestjs/common'",9,,UnauthorizedException,@nestjs/common:UnauthorizedException,,,9,,,-1
+73014444443,IMPORT,import { generateConfirmationTemplate } from './infrastructure/mails/templates/userConfirmationTemplate',20,,generateConfirmationTemplate,./infrastructure/mails/templates/userConfirmationTemplate:generateConfirmationTemplate,,,20,,,-1
+73014444444,IMPORT,import { EmailProvider } from './infrastructure/mails/mailProvider',21,,EmailProvider,./infrastructure/mails/mailProvider:EmailProvider,,,21,,,-1
+73014444445,IMPORT,import { generateMfaAlertTemplate } from './infrastructure/mails/templates/mfaAlertTemplate',22,,generateMfaAlertTemplate,./infrastructure/mails/templates/mfaAlertTemplate:generateMfaAlertTemplate,,,22,,,-1
+73014444446,IMPORT,import { generateMfaSuccessTemplate } from './infrastructure/mails/templates/mfaSuccessTemplate',23,,generateMfaSuccessTemplate,./infrastructure/mails/templates/mfaSuccessTemplate:generateMfaSuccessTemplate,,,23,,,-1

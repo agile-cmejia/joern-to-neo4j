@@ -1,0 +1,180 @@
+124554051584,METHOD_REF,2,,constructor(private readonly appService: AppService) {},0,,4,src/app.controller.ts::program:AppController:<init>,,,2,,src/app.controller.ts::program:AppController:<init>
+124554051585,METHOD_REF,2,,constructor() {},0,,15,src/app.module.ts::program:AppModule:<init>,,,2,,src/app.module.ts::program:AppModule:<init>
+124554051586,METHOD_REF,2,,constructor() {},0,,3,src/app.service.ts::program:AppService:<init>,,,2,,src/app.service.ts::program:AppService:<init>
+124554051587,METHOD_REF,2,,constructor(private readonly roleAliasesService: RoleAliasesService) {},0,,8,src/context/role-aliases/role-aliases.controller.ts::program:RoleAliasesController:<init>,,,2,,src/context/role-aliases/role-aliases.controller.ts::program:RoleAliasesController:<init>
+124554051588,METHOD_REF,2,,constructor() {},0,,9,src/context/role-aliases/role-aliases.module.ts::program:RoleAliasesModule:<init>,,,2,,src/context/role-aliases/role-aliases.module.ts::program:RoleAliasesModule:<init>
+124554051589,METHOD_REF,2,,constructor(private readonly rolesService: RolesService) {},0,,8,src/context/roles/roles.controller.ts::program:RolesController:<init>,,,2,,src/context/roles/roles.controller.ts::program:RolesController:<init>
+124554051590,METHOD_REF,2,,constructor() {},0,,8,src/context/roles/roles.module.ts::program:RolesModule:<init>,,,2,,src/context/roles/roles.module.ts::program:RolesModule:<init>
+124554051591,METHOD_REF,2,,constructor(private readonly tenantRoleAliasService: TenantRoleAliasesService) {},0,,9,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts::program:TenantRoleAliasesController:<init>,,,2,,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts::program:TenantRoleAliasesController:<init>
+124554051592,METHOD_REF,2,,constructor() {},0,,8,src/context/tenant-role-aliases/tenant-role-aliases.module.ts::program:TenantRoleAliasModule:<init>,,,2,,src/context/tenant-role-aliases/tenant-role-aliases.module.ts::program:TenantRoleAliasModule:<init>
+124554051593,METHOD_REF,2,,constructor(private readonly tenantsService: TenantsService) {},0,,8,src/context/tenants/tenants.controller.ts::program:TenantsController:<init>,,,2,,src/context/tenants/tenants.controller.ts::program:TenantsController:<init>
+124554051594,METHOD_REF,2,,constructor() {},0,,8,src/context/tenants/tenants.module.ts::program:TenantsModule:<init>,,,2,,src/context/tenants/tenants.module.ts::program:TenantsModule:<init>
+124554051595,METHOD_REF,2,,constructor(private readonly userRoleByTenantsService: UserRoleByTenantsService) {},0,,7,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts::program:UserRoleByTenantsController:<init>,,,2,,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts::program:UserRoleByTenantsController:<init>
+124554051596,METHOD_REF,2,,constructor() {},0,,14,src/context/user-role-by-tenants/user-role-by-tenants.module.ts::program:UserRoleByTenantsModule:<init>,,,2,,src/context/user-role-by-tenants/user-role-by-tenants.module.ts::program:UserRoleByTenantsModule:<init>
+124554051597,METHOD_REF,2,,constructor(private readonly usersService: UsersService) {},0,,9,src/context/users/users.controller.ts::program:UsersController:<init>,,,2,,src/context/users/users.controller.ts::program:UsersController:<init>
+124554051598,METHOD_REF,2,,constructor() {},0,,10,src/context/users/users.module.ts::program:UsersModule:<init>,,,2,,src/context/users/users.module.ts::program:UsersModule:<init>
+124554051599,METHOD_REF,1,,<lambda>0,30,,27,src/main.ts::program:bootstrap:<lambda>0,,,3,,src/main.ts::program:bootstrap:<lambda>0
+124554051600,METHOD_REF,2,,bootstrap,0,,10,src/main.ts::program:bootstrap,,,2,,src/main.ts::program:bootstrap
+124554051601,METHOD_REF,2,,constructor() {},7,,5,src/shared/context/role-aliases/domain/dto/create-role-alias.dto.ts::program:CreateRoleAliasDto:<init>,,,2,,src/shared/context/role-aliases/domain/dto/create-role-alias.dto.ts::program:CreateRoleAliasDto:<init>
+124554051602,METHOD_REF,2,,constructor() {},7,,5,src/shared/context/role-aliases/domain/dto/find-role-alias.dto.ts::program:FindRoleAliasDto:<init>,,,2,,src/shared/context/role-aliases/domain/dto/find-role-alias.dto.ts::program:FindRoleAliasDto:<init>
+124554051603,METHOD_REF,2,,constructor() {},7,,3,src/shared/context/role-aliases/domain/dto/role-alias.dto.ts::program:RoleAliasDto:<init>,,,2,,src/shared/context/role-aliases/domain/dto/role-alias.dto.ts::program:RoleAliasDto:<init>
+124554051604,METHOD_REF,2,,constructor() {},7,,6,src/shared/context/role-aliases/domain/dto/update-role-alias.dto.ts::program:UpdateRoleAliasDto:<init>,,,2,,src/shared/context/role-aliases/domain/dto/update-role-alias.dto.ts::program:UpdateRoleAliasDto:<init>
+124554051605,METHOD_REF,1,,<lambda>0,23,,24,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:<init>:<lambda>0,,,3,,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:<init>:<lambda>0
+124554051606,METHOD_REF,1,,<lambda>1,64,,69,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:create:<lambda>1,,,3,,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:create:<lambda>1
+124554051607,METHOD_REF,1,,<lambda>2,35,,120,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:findByMany:<lambda>2,,,3,,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:findByMany:<lambda>2
+124554051608,METHOD_REF,1,,<lambda>3,39,,125,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:findByMany:<lambda>3,,,3,,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:findByMany:<lambda>3
+124554051609,METHOD_REF,1,,<lambda>4,69,,204,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:update:<lambda>4,,,3,,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:update:<lambda>4
+124554051610,METHOD_REF,2,,"constructor(
+    @InjectRepository(RoleAlias, dbConfig.name)
+    private readonly rolesAliasRepository: Repository<RoleAlias>,
+    @InjectRepository(Role, dbConfig.name)
+    private readonly rolesRepository: Repository<Role>,
+    @InjectRepository(TenantRoleAliases, dbConfig.name)
+    private readonly tenantRoleAliasRepository: Repository<TenantRoleAliases>,
+
+    @Inject(forwardRef(() => TenantRoleAliasesService))
+    private readonly tenantRoleAliasService: TenantRoleAliasesService,
+  ) {}",0,,11,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:<init>,,,2,,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:<init>
+124554051611,METHOD_REF,2,,constructor() {},7,,5,src/shared/context/roles/domain/dto/create-role.dto.ts::program:CreateRoleDto:<init>,,,2,,src/shared/context/roles/domain/dto/create-role.dto.ts::program:CreateRoleDto:<init>
+124554051612,METHOD_REF,2,,constructor() {},7,,4,src/shared/context/roles/domain/dto/find-role.dto.ts::program:FindRoleDto:<init>,,,2,,src/shared/context/roles/domain/dto/find-role.dto.ts::program:FindRoleDto:<init>
+124554051613,METHOD_REF,2,,constructor() {},7,,1,src/shared/context/roles/domain/dto/role.dto.ts::program:RoleDto:<init>,,,2,,src/shared/context/roles/domain/dto/role.dto.ts::program:RoleDto:<init>
+124554051614,METHOD_REF,2,,constructor() {},7,,6,src/shared/context/roles/domain/dto/update-role.dto.ts::program:UpdateRoleDto:<init>,,,2,,src/shared/context/roles/domain/dto/update-role.dto.ts::program:UpdateRoleDto:<init>
+124554051615,METHOD_REF,1,,<lambda>0,25,,181,src/shared/context/roles/domain/roles.service.ts::program:RolesService:findByMany:<lambda>0,,,3,,src/shared/context/roles/domain/roles.service.ts::program:RolesService:findByMany:<lambda>0
+124554051616,METHOD_REF,1,,<lambda>1,81,,186,src/shared/context/roles/domain/roles.service.ts::program:RolesService:findByMany:<lambda>1,,,3,,src/shared/context/roles/domain/roles.service.ts::program:RolesService:findByMany:<lambda>1
+124554051617,METHOD_REF,2,,"constructor(
+    @InjectRepository(Role, dbConfig.name)
+    private readonly rolesRepository: Repository<Role>,
+  ) {}",0,,11,src/shared/context/roles/domain/roles.service.ts::program:RolesService:<init>,,,2,,src/shared/context/roles/domain/roles.service.ts::program:RolesService:<init>
+124554051618,METHOD_REF,2,,constructor() {},7,,6,src/shared/context/tenant-role-aliases/dto/assign-tenant-role-alias.dto.ts::program:AssignTenantRoleAliasDto:<init>,,,2,,src/shared/context/tenant-role-aliases/dto/assign-tenant-role-alias.dto.ts::program:AssignTenantRoleAliasDto:<init>
+124554051619,METHOD_REF,2,,constructor() {},7,,5,src/shared/context/tenant-role-aliases/dto/create-tenant-role-aliases.dto.ts::program:CreateTenantRoleAliasDto:<init>,,,2,,src/shared/context/tenant-role-aliases/dto/create-tenant-role-aliases.dto.ts::program:CreateTenantRoleAliasDto:<init>
+124554051620,METHOD_REF,2,,constructor() {},7,,5,src/shared/context/tenant-role-aliases/dto/find-tenant-role-alias.dto.ts::program:FindTenantRoleAliasDto:<init>,,,2,,src/shared/context/tenant-role-aliases/dto/find-tenant-role-alias.dto.ts::program:FindTenantRoleAliasDto:<init>
+124554051621,METHOD_REF,2,,constructor() {},7,,1,src/shared/context/tenant-role-aliases/dto/tenant-role-alias.dto.ts::program:TenantRoleAliasDto:<init>,,,2,,src/shared/context/tenant-role-aliases/dto/tenant-role-alias.dto.ts::program:TenantRoleAliasDto:<init>
+124554051622,METHOD_REF,2,,constructor() {},7,,6,src/shared/context/tenant-role-aliases/dto/update-tenant-role-alias.dto.ts::program:UpdateTenantRoleAliasDto:<init>,,,2,,src/shared/context/tenant-role-aliases/dto/update-tenant-role-alias.dto.ts::program:UpdateTenantRoleAliasDto:<init>
+124554051623,METHOD_REF,1,,<lambda>0,25,,290,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program:TenantRoleAliasesService:assignToRoleAlias:<lambda>0,,,3,,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program:TenantRoleAliasesService:assignToRoleAlias:<lambda>0
+124554051624,METHOD_REF,2,,"constructor(
+    @InjectRepository(RoleAlias, dbConfig.name)
+    private readonly rolesAliasRepository: Repository<RoleAlias>,
+    @InjectRepository(Role, dbConfig.name)
+    private readonly rolesRepository: Repository<Role>,
+    @InjectRepository(TenantRoleAliases, dbConfig.name)
+    private readonly tenantRoleAliasRepository: Repository<TenantRoleAliases>,
+    @InjectRepository(Tenant, dbConfig.name)
+    private readonly tenantRepository: Repository<Tenant>,
+  ) {}",0,,11,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program:TenantRoleAliasesService:<init>,,,2,,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program:TenantRoleAliasesService:<init>
+124554051625,METHOD_REF,2,,constructor() {},7,,5,src/shared/context/tenants/domain/dto/create-tenant.dto.ts::program:CreateTenantDto:<init>,,,2,,src/shared/context/tenants/domain/dto/create-tenant.dto.ts::program:CreateTenantDto:<init>
+124554051626,METHOD_REF,2,,constructor() {},7,,5,src/shared/context/tenants/domain/dto/find-tenant.dto.ts::program:FindTenantDto:<init>,,,2,,src/shared/context/tenants/domain/dto/find-tenant.dto.ts::program:FindTenantDto:<init>
+124554051627,METHOD_REF,2,,constructor() {},7,,1,src/shared/context/tenants/domain/dto/tenant.dto.ts::program:TenantDto:<init>,,,2,,src/shared/context/tenants/domain/dto/tenant.dto.ts::program:TenantDto:<init>
+124554051628,METHOD_REF,2,,constructor() {},7,,6,src/shared/context/tenants/domain/dto/update-tenant.dto.ts::program:UpdateTenantDto:<init>,,,2,,src/shared/context/tenants/domain/dto/update-tenant.dto.ts::program:UpdateTenantDto:<init>
+124554051629,METHOD_REF,1,,<lambda>0,79,,127,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:findByMany:<lambda>0,,,3,,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:findByMany:<lambda>0
+124554051630,METHOD_REF,1,,<lambda>1,76,,131,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:findByMany:<lambda>1,,,3,,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:findByMany:<lambda>1
+124554051631,METHOD_REF,2,,"constructor(
+    @InjectRepository(Tenant, dbConfig.name)
+    private readonly tenantRepository: Repository<Tenant>,
+  ) {}",0,,10,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:<init>,,,2,,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:<init>
+124554051632,METHOD_REF,2,,constructor() {},7,,5,src/shared/context/user-role-by-tenants/dto/create-user-role-by-tenants.dto.ts::program:CreateUserRoleByTenantsDto:<init>,,,2,,src/shared/context/user-role-by-tenants/dto/create-user-role-by-tenants.dto.ts::program:CreateUserRoleByTenantsDto:<init>
+124554051633,METHOD_REF,2,,constructor() {},7,,5,src/shared/context/user-role-by-tenants/dto/find-user-role-by-tenants.dto.ts::program:FindUserRoleByTenantsDto:<init>,,,2,,src/shared/context/user-role-by-tenants/dto/find-user-role-by-tenants.dto.ts::program:FindUserRoleByTenantsDto:<init>
+124554051634,METHOD_REF,2,,constructor() {},7,,6,src/shared/context/user-role-by-tenants/dto/update-user-role-by-tenants.dto.ts::program:UpdateUserRoleByTenantsDto:<init>,,,2,,src/shared/context/user-role-by-tenants/dto/update-user-role-by-tenants.dto.ts::program:UpdateUserRoleByTenantsDto:<init>
+124554051635,METHOD_REF,2,,constructor() {},7,,1,src/shared/context/user-role-by-tenants/dto/user-role-by-tenants.dto.ts::program:UserRoleByTenantsDto:<init>,,,2,,src/shared/context/user-role-by-tenants/dto/user-role-by-tenants.dto.ts::program:UserRoleByTenantsDto:<init>
+124554051636,METHOD_REF,1,,<lambda>0,23,,22,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:<init>:<lambda>0,,,3,,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:<init>:<lambda>0
+124554051637,METHOD_REF,1,,<lambda>1,23,,25,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:<init>:<lambda>1,,,3,,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:<init>:<lambda>1
+124554051638,METHOD_REF,1,,<lambda>2,23,,28,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:<init>:<lambda>2,,,3,,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:<init>:<lambda>2
+124554051639,METHOD_REF,1,,<lambda>3,23,,31,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:<init>:<lambda>3,,,3,,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:<init>:<lambda>3
+124554051640,METHOD_REF,1,,<lambda>4,54,,76,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:create:<lambda>4,,,3,,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:create:<lambda>4
+124554051641,METHOD_REF,1,,<lambda>5,54,,208,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:update:<lambda>5,,,3,,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:update:<lambda>5
+124554051642,METHOD_REF,1,,<lambda>6,44,,243,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:update:<lambda>6,,,3,,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:update:<lambda>6
+124554051643,METHOD_REF,2,,"constructor(
+    @InjectRepository(UserRoleByTenants, dbConfig.name)
+    private readonly userRoleByTenantsRepository: Repository<UserRoleByTenants>,
+
+    @Inject(forwardRef(() => UsersService))
+    private readonly usersService: UsersService,
+
+    @Inject(forwardRef(() => TenantsService))
+    private readonly tenantsService: TenantsService,
+
+    @Inject(forwardRef(() => RolesService))
+    private readonly rolesService: RolesService,
+
+    @Inject(forwardRef(() => RoleAliasesService))
+    private readonly roleAliasService: RoleAliasesService,
+  ) {}",0,,14,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:<init>,,,2,,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:<init>
+124554051644,METHOD_REF,2,,constructor() {},7,,6,src/shared/context/users/domain/dto/create-user.dto.ts::program:CreateUserDto:<init>,,,2,,src/shared/context/users/domain/dto/create-user.dto.ts::program:CreateUserDto:<init>
+124554051645,METHOD_REF,2,,constructor() {},7,,5,src/shared/context/users/domain/dto/find-user.dto.ts::program:FindUserDto:<init>,,,2,,src/shared/context/users/domain/dto/find-user.dto.ts::program:FindUserDto:<init>
+124554051646,METHOD_REF,2,,constructor() {},7,,6,src/shared/context/users/domain/dto/update-user.dto.ts::program:UpdateUserDto:<init>,,,2,,src/shared/context/users/domain/dto/update-user.dto.ts::program:UpdateUserDto:<init>
+124554051647,METHOD_REF,2,,constructor() {},7,,3,src/shared/context/users/domain/dto/user.dto.ts::program:UserDto:<init>,,,2,,src/shared/context/users/domain/dto/user.dto.ts::program:UserDto:<init>
+124554051648,METHOD_REF,1,,<lambda>0,79,,65,src/shared/context/users/domain/user-verification.service.ts::program:UserVerificationService:sendVerificationEmail:<lambda>0,,,3,,src/shared/context/users/domain/user-verification.service.ts::program:UserVerificationService:sendVerificationEmail:<lambda>0
+124554051649,METHOD_REF,2,,"constructor(
+    @InjectRepository(User, dbConfig.name)
+    private readonly userRepository: Repository<User>,
+    private readonly tenantService: TenantsService,
+    private readonly emailProvider: EmailProvider,
+  ) {}",0,,12,src/shared/context/users/domain/user-verification.service.ts::program:UserVerificationService:<init>,,,2,,src/shared/context/users/domain/user-verification.service.ts::program:UserVerificationService:<init>
+124554051650,METHOD_REF,1,,<lambda>0,23,,38,src/shared/context/users/domain/users.service.ts::program:UsersService:<init>:<lambda>0,,,3,,src/shared/context/users/domain/users.service.ts::program:UsersService:<init>:<lambda>0
+124554051651,METHOD_REF,1,,<lambda>1,35,,224,src/shared/context/users/domain/users.service.ts::program:UsersService:findByMany:<lambda>1,,,3,,src/shared/context/users/domain/users.service.ts::program:UsersService:findByMany:<lambda>1
+124554051652,METHOD_REF,1,,<lambda>2,33,,230,src/shared/context/users/domain/users.service.ts::program:UsersService:findByMany:<lambda>2,,,3,,src/shared/context/users/domain/users.service.ts::program:UsersService:findByMany:<lambda>2
+124554051653,METHOD_REF,1,,<lambda>3,27,,236,src/shared/context/users/domain/users.service.ts::program:UsersService:findByMany:<lambda>3,,,3,,src/shared/context/users/domain/users.service.ts::program:UsersService:findByMany:<lambda>3
+124554051654,METHOD_REF,1,,<lambda>5,39,,390,src/shared/context/users/domain/users.service.ts::program:UsersService:update:<lambda>4:<lambda>5,,,3,,src/shared/context/users/domain/users.service.ts::program:UsersService:update:<lambda>4:<lambda>5
+124554051655,METHOD_REF,1,,<lambda>7,42,,393,src/shared/context/users/domain/users.service.ts::program:UsersService:update:<lambda>6:<lambda>7,,,3,,src/shared/context/users/domain/users.service.ts::program:UsersService:update:<lambda>6:<lambda>7
+124554051656,METHOD_REF,1,,<lambda>4,8,,390,src/shared/context/users/domain/users.service.ts::program:UsersService:update:<lambda>4,,,3,,src/shared/context/users/domain/users.service.ts::program:UsersService:update:<lambda>4
+124554051657,METHOD_REF,1,,<lambda>6,8,,393,src/shared/context/users/domain/users.service.ts::program:UsersService:update:<lambda>6,,,3,,src/shared/context/users/domain/users.service.ts::program:UsersService:update:<lambda>6
+124554051658,METHOD_REF,1,,<lambda>10,75,,484,src/shared/context/users/domain/users.service.ts::program:UsersService:findByRecordTypeAccess:<lambda>9:<lambda>10,,,3,,src/shared/context/users/domain/users.service.ts::program:UsersService:findByRecordTypeAccess:<lambda>9:<lambda>10
+124554051659,METHOD_REF,1,,<lambda>8,27,,483,src/shared/context/users/domain/users.service.ts::program:UsersService:findByRecordTypeAccess:<lambda>8,,,3,,src/shared/context/users/domain/users.service.ts::program:UsersService:findByRecordTypeAccess:<lambda>8
+124554051660,METHOD_REF,1,,<lambda>9,37,,484,src/shared/context/users/domain/users.service.ts::program:UsersService:findByRecordTypeAccess:<lambda>9,,,3,,src/shared/context/users/domain/users.service.ts::program:UsersService:findByRecordTypeAccess:<lambda>9
+124554051661,METHOD_REF,1,,<lambda>11,27,,486,src/shared/context/users/domain/users.service.ts::program:UsersService:findByRecordTypeAccess:<lambda>11,,,3,,src/shared/context/users/domain/users.service.ts::program:UsersService:findByRecordTypeAccess:<lambda>11
+124554051662,METHOD_REF,1,,<lambda>12,79,,516,src/shared/context/users/domain/users.service.ts::program:UsersService:resendVerification:<lambda>12,,,3,,src/shared/context/users/domain/users.service.ts::program:UsersService:resendVerification:<lambda>12
+124554051663,METHOD_REF,2,,"constructor(
+    @InjectRepository(User, dbConfig.name)
+    private readonly userRepository: Repository<User>,
+    @InjectRepository(Role, dbConfig.name)
+    private readonly rolesRepository: Repository<Role>,
+    //inject tenant service
+    @Inject(forwardRef(() => TenantsService))
+    private readonly tenantService: TenantsService,
+    private readonly emailProvider: EmailProvider,
+  ) {}",0,,30,src/shared/context/users/domain/users.service.ts::program:UsersService:<init>,,,2,,src/shared/context/users/domain/users.service.ts::program:UsersService:<init>
+124554051664,METHOD_REF,2,,"constructor(method: 'POST' | 'GET' | 'PATCH' | 'PUT' | 'DELETE', headers?: object, body?: string) {
+    this.body = body;
+    this.headers = headers;
+    this.method = method;
+  }",7,,1,src/shared/dataTypes/Options.ts::program:Options:<init>,,,2,,src/shared/dataTypes/Options.ts::program:Options:<init>
+124554051665,METHOD_REF,2,,<lambda>0,17,,15,src/shared/infrastructure/logger/pinoLoggerOptions.ts::program:customProps,,,2,,src/shared/infrastructure/logger/pinoLoggerOptions.ts::program:<lambda>0
+124554051666,METHOD_REF,2,,<lambda>1,11,,21,src/shared/infrastructure/logger/pinoLoggerOptions.ts::program:req,,,2,,src/shared/infrastructure/logger/pinoLoggerOptions.ts::program:<lambda>1
+124554051667,METHOD_REF,2,,<lambda>2,11,,24,src/shared/infrastructure/logger/pinoLoggerOptions.ts::program:res,,,2,,src/shared/infrastructure/logger/pinoLoggerOptions.ts::program:<lambda>2
+124554051668,METHOD_REF,2,,"constructor() {
+    this.region = process.env.AWS_REGION;
+    this.ses = new SES({ credentials: fromInstanceMetadata(), region: this.region });
+  }",0,,6,src/shared/infrastructure/mails/mailProvider.ts::program:EmailProvider:<init>,,,2,,src/shared/infrastructure/mails/mailProvider.ts::program:EmailProvider:<init>
+124554051669,METHOD_REF,2,,<lambda>0,40,,3,src/shared/infrastructure/mails/templates/mfaAlertTemplate.ts::program:generateMfaAlertTemplate,,,2,,src/shared/infrastructure/mails/templates/mfaAlertTemplate.ts::program:<lambda>0
+124554051670,METHOD_REF,2,,<lambda>0,42,,3,src/shared/infrastructure/mails/templates/mfaSuccessTemplate.ts::program:generateMfaSuccessTemplate,,,2,,src/shared/infrastructure/mails/templates/mfaSuccessTemplate.ts::program:<lambda>0
+124554051671,METHOD_REF,2,,<lambda>0,44,,3,src/shared/infrastructure/mails/templates/userConfirmationTemplate.ts::program:generateConfirmationTemplate,,,2,,src/shared/infrastructure/mails/templates/userConfirmationTemplate.ts::program:<lambda>0
+124554051672,METHOD_REF,2,,getConfig,7,,29,src/shared/infrastructure/persistance/postgre-sql/PostgresDataSource.ts::program:getConfig,,,2,,src/shared/infrastructure/persistance/postgre-sql/PostgresDataSource.ts::program:getConfig
+124554051673,METHOD_REF,2,,constructor() {},0,,7,src/shared/middleware/correlation-id/correlation-id.middleware.ts::program:CorrelationIdMiddleware:<init>,,,2,,src/shared/middleware/correlation-id/correlation-id.middleware.ts::program:CorrelationIdMiddleware:<init>
+124554051674,METHOD_REF,1,,<lambda>6,9,,59,src/shared/utils.ts::program:<lambda>5:<lambda>6,,,3,,src/shared/utils.ts::program:<lambda>5:<lambda>6
+124554051675,METHOD_REF,1,,<lambda>11,10,,85,src/shared/utils.ts::program:<lambda>10:<lambda>11,,,3,,src/shared/utils.ts::program:<lambda>10:<lambda>11
+124554051676,METHOD_REF,1,,<lambda>12,11,,86,src/shared/utils.ts::program:<lambda>10:<lambda>12,,,3,,src/shared/utils.ts::program:<lambda>10:<lambda>12
+124554051677,METHOD_REF,1,,<lambda>24,10,,140,src/shared/utils.ts::program:<lambda>23:<lambda>24,,,3,,src/shared/utils.ts::program:<lambda>23:<lambda>24
+124554051678,METHOD_REF,1,,<lambda>25,11,,141,src/shared/utils.ts::program:<lambda>23:<lambda>25,,,3,,src/shared/utils.ts::program:<lambda>23:<lambda>25
+124554051679,METHOD_REF,2,,<lambda>0,30,,5,src/shared/utils.ts::program:evalENVBoolean,,,2,,src/shared/utils.ts::program:<lambda>0
+124554051680,METHOD_REF,2,,<lambda>1,31,,25,src/shared/utils.ts::program:ValidFutureDate,,,2,,src/shared/utils.ts::program:<lambda>1
+124554051681,METHOD_REF,2,,<lambda>2,29,,35,src/shared/utils.ts::program:ValidPastDate,,,2,,src/shared/utils.ts::program:<lambda>2
+124554051682,METHOD_REF,2,,<lambda>3,24,,42,src/shared/utils.ts::program:isNumber,,,2,,src/shared/utils.ts::program:<lambda>3
+124554051683,METHOD_REF,2,,<lambda>4,37,,54,src/shared/utils.ts::program:capitalizeFirstLetter,,,2,,src/shared/utils.ts::program:<lambda>4
+124554051684,METHOD_REF,2,,<lambda>5,34,,56,src/shared/utils.ts::program:capitalizeSentence,,,2,,src/shared/utils.ts::program:<lambda>5
+124554051685,METHOD_REF,2,,<lambda>7,27,,62,src/shared/utils.ts::program:onlyLetters,,,2,,src/shared/utils.ts::program:<lambda>7
+124554051686,METHOD_REF,2,,<lambda>8,32,,67,src/shared/utils.ts::program:stringHasNumbers,,,2,,src/shared/utils.ts::program:<lambda>8
+124554051687,METHOD_REF,2,,<lambda>9,34,,71,src/shared/utils.ts::program:isValidApplication,,,2,,src/shared/utils.ts::program:<lambda>9
+124554051688,METHOD_REF,2,,<lambda>10,28,,76,src/shared/utils.ts::program:fetchTenants,,,2,,src/shared/utils.ts::program:<lambda>10
+124554051689,METHOD_REF,2,,<lambda>13,35,,92,src/shared/utils.ts::program:getValidEndpointUrl,,,2,,src/shared/utils.ts::program:<lambda>13
+124554051690,METHOD_REF,2,,<lambda>14,29,,102,src/shared/utils.ts::program:securityMsUrl,,,2,,src/shared/utils.ts::program:<lambda>14
+124554051691,METHOD_REF,2,,<lambda>15,28,,106,src/shared/utils.ts::program:catalogMsUrl,,,2,,src/shared/utils.ts::program:<lambda>15
+124554051692,METHOD_REF,2,,<lambda>16,28,,110,src/shared/utils.ts::program:tenantsMsUrl,,,2,,src/shared/utils.ts::program:<lambda>16
+124554051693,METHOD_REF,2,,<lambda>17,26,,114,src/shared/utils.ts::program:usersMsUrl,,,2,,src/shared/utils.ts::program:<lambda>17
+124554051694,METHOD_REF,2,,<lambda>18,32,,118,src/shared/utils.ts::program:recordGridsMsUrl,,,2,,src/shared/utils.ts::program:<lambda>18
+124554051695,METHOD_REF,2,,<lambda>19,31,,122,src/shared/utils.ts::program:appModulesMsUrl,,,2,,src/shared/utils.ts::program:<lambda>19
+124554051696,METHOD_REF,2,,<lambda>20,34,,126,src/shared/utils.ts::program:generalConfigMsUrl,,,2,,src/shared/utils.ts::program:<lambda>20
+124554051697,METHOD_REF,2,,<lambda>21,28,,130,src/shared/utils.ts::program:recordsMsUrl,,,2,,src/shared/utils.ts::program:<lambda>21
+124554051698,METHOD_REF,2,,<lambda>22,35,,134,src/shared/utils.ts::program:fileManagementMsUrl,,,2,,src/shared/utils.ts::program:<lambda>22
+124554051699,METHOD_REF,2,,<lambda>23,27,,138,src/shared/utils.ts::program:getResponse,,,2,,src/shared/utils.ts::program:<lambda>23
+124554051700,METHOD_REF,2,,<lambda>26,32,,176,src/shared/utils.ts::program:sendEmailProcess,,,2,,src/shared/utils.ts::program:<lambda>26
+124554051701,METHOD_REF,2,,<lambda>27,42,,198,src/shared/utils.ts::program:sendMfaAttemptEmailProcess,,,2,,src/shared/utils.ts::program:<lambda>27
+124554051702,METHOD_REF,2,,<lambda>28,42,,230,src/shared/utils.ts::program:sendMfaSuccessEmailProcess,,,2,,src/shared/utils.ts::program:<lambda>28

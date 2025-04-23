@@ -1,0 +1,1754 @@
+103079215104,MEMBER,<empty>,<empty>,private readonly logger = new Logger(AppController.name);,2,,<empty>,6,logger,,,-1,ANY,@nestjs/common:Logger
+103079215105,MEMBER,<empty>,<empty>,"@Get()
+  getHello() {
+    this.logger.log('Calling service get Hello!');
+    return this.appService.getHello();
+  }",2,src/app.controller.ts::program:AppController:getHello,<empty>,9,getHello,,,-1,{ message: __ecma.String; },ANY
+103079215106,MEMBER,<empty>,<empty>,"configure(consumer: MiddlewareConsumer) {
+    consumer.apply(CorrelationIdMiddleware).forRoutes('*');
+  }",2,src/app.module.ts::program:AppModule:configure,<empty>,29,configure,,,-1,(consumer: MiddlewareConsumer) => ANY,ANY
+103079215107,MEMBER,<empty>,<empty>,private readonly logger = new Logger(AppService.name);,2,,<empty>,5,logger,,,-1,ANY,@nestjs/common:Logger
+103079215108,MEMBER,<empty>,<empty>,"getHello() {
+    this.logger.log(`${AppService.name} called function ${this.getHello.name}`);
+    return { message: `Service ${AppService.name} working !!` };
+  }",2,src/app.service.ts::program:AppService:getHello,<empty>,7,getHello,,,-1,() => { message: __ecma.String; },ANY
+103079215109,MEMBER,<empty>,<empty>,private readonly logger = new Logger(RoleAliasesController.name);,2,,<empty>,12,logger,,,-1,ANY,@nestjs/common:Logger
+103079215110,MEMBER,<empty>,<empty>,"@Post()
+  async create(@Body() createRoleAliasDto: CreateRoleAliasDto) {
+    this.logger.log('Creating new Role Alias ..');
+
+    const newRole = await this.roleAliasesService.create(createRoleAliasDto);
+    this.logger.log(`Created new Role Alias! id: ${newRole.id}.`);
+    return newRole;
+  }",2,src/context/role-aliases/role-aliases.controller.ts::program:RoleAliasesController:create,<empty>,14,create,,,-1,Promise<any>,ANY
+103079215111,MEMBER,<empty>,<empty>,"@Get()
+  async findAll() {
+    this.logger.log('Finding All Roles Aliases...');
+    return await this.roleAliasesService.findAll();
+  }",2,src/context/role-aliases/role-aliases.controller.ts::program:RoleAliasesController:findAll,<empty>,23,findAll,,,-1,Promise<RoleAlias[]>,ANY
+103079215112,MEMBER,<empty>,<empty>,"@Get(':id')
+  async findOne(@Param('id') id: string) {
+    this.logger.log(`Searching for Role Alias with id: ${id}.`);
+    const foundRoleAlias = await this.roleAliasesService.findOne(+id);
+    this.logger.log(`Role Alias with id: ${id} was found.`);
+    return foundRoleAlias;
+  }",2,src/context/role-aliases/role-aliases.controller.ts::program:RoleAliasesController:findOne,<empty>,29,findOne,,,-1,Promise<RoleAlias>,ANY
+103079215113,MEMBER,<empty>,<empty>,"@Post('many/')
+  async findMany(@Body() findRoleAliasDto: FindRoleAliasDto) {
+    this.logger.log(`Searching for Role Aliases with many search args.`);
+    const foundRoleAlias = await this.roleAliasesService.findByMany(findRoleAliasDto);
+    this.logger.log(`found ${foundRoleAlias.length} Role Aliases.`);
+    return foundRoleAlias;
+  }",2,src/context/role-aliases/role-aliases.controller.ts::program:RoleAliasesController:findMany,<empty>,36,findMany,,,-1,Promise<RoleAlias[]>,ANY
+103079215114,MEMBER,<empty>,<empty>,"@Patch(':id')
+  async update(@Param('id') id: string, @Body() updateRoleAliasDto: UpdateRoleAliasDto) {
+    this.logger.log(`Updating role alias with id: ${id}.`);
+    const foundRoleAlias = await this.roleAliasesService.update(+id, updateRoleAliasDto);
+    this.logger.log(`Role alias with id: ${id} was updated.`);
+    return foundRoleAlias;
+  }",2,src/context/role-aliases/role-aliases.controller.ts::program:RoleAliasesController:update,<empty>,44,update,,,-1,Promise<any>,ANY
+103079215115,MEMBER,<empty>,<empty>,"@Delete(':id')
+  async remove(@Param('id') id: string) {
+    this.logger.log(`Disabling / Enabling Role alias with id: ${id}.`);
+    const foundRoleAlias = await this.roleAliasesService.remove(+id);
+    this.logger.log(`Role alias with id: ${id} was ` + foundRoleAlias.enabled ? 'Enabled!' : 'Disabled!');
+    return foundRoleAlias;
+  }",2,src/context/role-aliases/role-aliases.controller.ts::program:RoleAliasesController:remove,<empty>,52,remove,,,-1,Promise<any>,ANY
+103079215116,MEMBER,<empty>,<empty>,private readonly logger = new Logger(RolesController.name);,2,,<empty>,12,logger,,,-1,ANY,@nestjs/common:Logger
+103079215117,MEMBER,<empty>,<empty>,"@Post()
+  async create(@Body() createRoleDto: CreateRoleDto) {
+    this.logger.log('Creating new Role ..');
+    const newRole = await this.rolesService.create(createRoleDto);
+    this.logger.log(`Created new Role! id: ${newRole.id}.`);
+    return newRole;
+  }",2,src/context/roles/roles.controller.ts::program:RolesController:create,<empty>,14,create,,,-1,Promise<any>,ANY
+103079215118,MEMBER,<empty>,<empty>,"@Get()
+  async findAll() {
+    this.logger.log('Finding All Roles...');
+    return this.rolesService.findAll();
+  }",2,src/context/roles/roles.controller.ts::program:RolesController:findAll,<empty>,22,findAll,,,-1,Promise<Role[]>,ANY
+103079215119,MEMBER,<empty>,<empty>,"@Post('many/')
+  async findMany(@Body() findRoleDto: FindRoleDto) {
+    this.logger.log(`Searching for Roles with many search args.`);
+    const foundRoleType = await this.rolesService.findByMany(findRoleDto);
+    return foundRoleType;
+  }",2,src/context/roles/roles.controller.ts::program:RolesController:findMany,<empty>,28,findMany,,,-1,Promise<Role[]>,ANY
+103079215120,MEMBER,<empty>,<empty>,"@Get(':id')
+  async findOne(@Param('id') id: string) {
+    this.logger.log(`Searching for Role with id: ${id}.`);
+    const foundRole = await this.rolesService.findOne(+id);
+    this.logger.log(`Role with id: ${id} was found.`);
+    return foundRole;
+  }",2,src/context/roles/roles.controller.ts::program:RolesController:findOne,<empty>,35,findOne,,,-1,Promise<any>,ANY
+103079215121,MEMBER,<empty>,<empty>,"@Patch(':id')
+  async update(@Param('id') id: string, @Body() updateRoleDto: UpdateRoleDto) {
+    this.logger.log(`Updating role with id: ${id}.`);
+    const foundRole = await this.rolesService.update(+id, updateRoleDto);
+    this.logger.log(`Role with id: ${id} was updated.`);
+    return foundRole;
+  }",2,src/context/roles/roles.controller.ts::program:RolesController:update,<empty>,43,update,,,-1,Promise<any>,ANY
+103079215122,MEMBER,<empty>,<empty>,"@Delete(':id')
+  async remove(@Param('id') id: string) {
+    this.logger.log(`Disabling / Enabling Role with id: ${id}.`);
+    const foundRole = await this.rolesService.remove(+id);
+    this.logger.log(`Role with id: ${id} was ` + foundRole.enabled ? 'Enabled!' : 'Disabled!');
+    return foundRole;
+  }",2,src/context/roles/roles.controller.ts::program:RolesController:remove,<empty>,51,remove,,,-1,Promise<any>,ANY
+103079215123,MEMBER,<empty>,<empty>,private readonly logger = new Logger(TenantRoleAliasesController.name);,2,,<empty>,13,logger,,,-1,ANY,@nestjs/common:Logger
+103079215124,MEMBER,<empty>,<empty>,"@Post()
+  async create(@Body() createTenantRoleAliasDto: CreateTenantRoleAliasDto) {
+    this.logger.log('Creating new Tenant Role Aliases ..');
+    const tenantRoleAlias = await this.tenantRoleAliasService.create(createTenantRoleAliasDto);
+    this.logger.log(`Created Tenenat Role Alias with id:${tenantRoleAlias.id}`);
+    return tenantRoleAlias;
+  }",2,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts::program:TenantRoleAliasesController:create,<empty>,15,create,,,-1,Promise<any>,ANY
+103079215125,MEMBER,<empty>,<empty>,"@Get()
+  async findAll() {
+    this.logger.log('Finding All Tenant Role Aliases...');
+    const tenantRoleAlias = await this.tenantRoleAliasService.findAll();
+    return tenantRoleAlias;
+  }",2,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts::program:TenantRoleAliasesController:findAll,<empty>,23,findAll,,,-1,Promise<any>,ANY
+103079215126,MEMBER,<empty>,<empty>,"@Post('many/')
+  async findMany(@Body() findTenantRoleAliasesDto: FindTenantRoleAliasDto) {
+    this.logger.log(`Searching for Tenant Role Aliases with many search args.`);
+    const tenantRoleAlias = await this.tenantRoleAliasService.findByMany(findTenantRoleAliasesDto);
+    return tenantRoleAlias;
+  }",2,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts::program:TenantRoleAliasesController:findMany,<empty>,30,findMany,,,-1,Promise<any>,ANY
+103079215127,MEMBER,<empty>,<empty>,"@Post('assign-role-alias')
+  async assing(@Body() assignRoleAliasDto: AssignTenantRoleAliasDto) {
+    this.logger.log(`Assign A Role alias to a tenant Role alias`);
+    const tenantRoleAlias = await this.tenantRoleAliasService.assignToRoleAlias(assignRoleAliasDto);
+    return tenantRoleAlias;
+  }",2,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts::program:TenantRoleAliasesController:assing,<empty>,36,assing,,,-1,Promise<TenantRoleAliases[]>,ANY
+103079215128,MEMBER,<empty>,<empty>,"@Get(':id')
+  async findOne(@Param('id') id: string) {
+    this.logger.log(`Searching for Tenant Role ALiases with id: ${id}.`);
+    const tenantRoleAlias = await this.tenantRoleAliasService.findOne(+id);
+    this.logger.log(`Found Tenenat Role Alias with id:${id}`);
+    return tenantRoleAlias;
+  }",2,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts::program:TenantRoleAliasesController:findOne,<empty>,43,findOne,,,-1,Promise<any>,ANY
+103079215129,MEMBER,<empty>,<empty>,"@Patch(':id')
+  async update(@Param('id') id: string, @Body() updateTenantRoleAliasesDto: UpdateTenantRoleAliasDto) {
+    this.logger.log(`Updating tenant role alias with id: ${id}.`);
+    const tenantRoleAlias = await this.tenantRoleAliasService.update(+id, updateTenantRoleAliasesDto);
+    this.logger.log(`Updated Tenenat Role Alias with id:${id}`);
+    return tenantRoleAlias;
+  }",2,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts::program:TenantRoleAliasesController:update,<empty>,51,update,,,-1,Promise<any>,ANY
+103079215130,MEMBER,<empty>,<empty>,"@Delete(':id')
+  async remove(@Param('id') id: string) {
+    this.logger.log(`Disabling / Enabling Tenant Role Alias with id: ${id}.`);
+    const tenantRoleAlias = await this.tenantRoleAliasService.remove(+id);
+    this.logger.log(`Tenant Role Alias with id: ${id} was ` + tenantRoleAlias.enabled ? 'Enabled!' : 'Disabled!');
+    return tenantRoleAlias;
+  }",2,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts::program:TenantRoleAliasesController:remove,<empty>,59,remove,,,-1,Promise<any>,ANY
+103079215131,MEMBER,<empty>,<empty>,private readonly logger = new Logger(TenantsController.name);,2,,<empty>,12,logger,,,-1,ANY,@nestjs/common:Logger
+103079215132,MEMBER,<empty>,<empty>,"@Post()
+  async create(@Body() createTenantDto: CreateTenantDto) {
+    this.logger.log('Creating new Tenant ..');
+    const { name, url, description } = createTenantDto;
+    const newTenant = await this.tenantsService.create({
+      ...createTenantDto,
+      name: name.trim(),
+      url: url.trim().toLowerCase(),
+      description: description.trim(),
+    });
+    this.logger.log(`Created new Tenant! id: ${newTenant.id}.`);
+    return newTenant;
+  }",2,src/context/tenants/tenants.controller.ts::program:TenantsController:create,<empty>,14,create,,,-1,Promise<any>,ANY
+103079215133,MEMBER,<empty>,<empty>,"@Get()
+  async findAll() {
+    this.logger.log('Finding All Tenants...');
+    return await this.tenantsService.findAll();
+  }",2,src/context/tenants/tenants.controller.ts::program:TenantsController:findAll,<empty>,28,findAll,,,-1,Promise<Tenant[]>,ANY
+103079215134,MEMBER,<empty>,<empty>,"@Post('many/')
+  async findMany(@Body() findTenantDto: FindTenantDto) {
+    this.logger.log(`Searching for Tenant with many search args.`);
+    const foundTenantType = await this.tenantsService.findByMany(findTenantDto);
+    return foundTenantType;
+  }",2,src/context/tenants/tenants.controller.ts::program:TenantsController:findMany,<empty>,34,findMany,,,-1,Promise<Tenant[]>,ANY
+103079215135,MEMBER,<empty>,<empty>,"@Get(':id')
+  async findOne(@Param('id') id: string) {
+    this.logger.log(`Searching for Tenant with id: ${id}.`);
+    const foundTenant = await this.tenantsService.findOne(+id);
+    this.logger.log(`Tenant with id: ${id} was found.`);
+    return foundTenant;
+  }",2,src/context/tenants/tenants.controller.ts::program:TenantsController:findOne,<empty>,41,findOne,,,-1,Promise<Tenant>,ANY
+103079215136,MEMBER,<empty>,<empty>,"@Patch(':id')
+  async update(@Param('id') id: string, @Body() updateTenantDto: UpdateTenantDto) {
+    this.logger.log(`Updating Tenant with id: ${id}.`);
+    const foundTenant = await this.tenantsService.update(+id, {
+      name: updateTenantDto.name.trim(),
+      url: updateTenantDto.url.toLowerCase().trim(),
+      description: updateTenantDto.description.trim(),
+      ...updateTenantDto,
+    });
+    this.logger.log(`Tenant with id: ${id} was updated.`);
+    return foundTenant;
+  }",2,src/context/tenants/tenants.controller.ts::program:TenantsController:update,<empty>,49,update,,,-1,Promise<any>,ANY
+103079215137,MEMBER,<empty>,<empty>,"@Delete(':id')
+  async remove(@Param('id') id: string) {
+    this.logger.log(`Disabling / Enabling Tenant with id: ${id}.`);
+    const foundTenant = await this.tenantsService.remove(+id);
+    this.logger.log(`Tenant with id: ${id} was ` + foundTenant.enabled ? 'Enabled!' : 'Disabled!');
+    return foundTenant;
+  }",2,src/context/tenants/tenants.controller.ts::program:TenantsController:remove,<empty>,62,remove,,,-1,Promise<any>,ANY
+103079215138,MEMBER,<empty>,<empty>,private readonly logger = new Logger(UserRoleByTenantsService.name);,2,,<empty>,11,logger,,,-1,ANY,@nestjs/common:Logger
+103079215139,MEMBER,<empty>,<empty>,"@Post()
+  async create(@Body() createUserRoleByTenantsDto: CreateUserRoleByTenantsDto) {
+    this.logger.log('Creating new User Role by Tenant...');
+    const newUserRoleByTenants = await this.userRoleByTenantsService.create({ ...createUserRoleByTenantsDto });
+    this.logger.log(`Created new User Role by Tenant! id:${newUserRoleByTenants.id}`);
+    return newUserRoleByTenants;
+  }",2,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts::program:UserRoleByTenantsController:create,<empty>,13,create,,,-1,Promise<any>,ANY
+103079215140,MEMBER,<empty>,<empty>,"@Get()
+  async findAll() {
+    this.logger.log('Finding all User Role By Tenants');
+    return await this.userRoleByTenantsService.findAll();
+  }",2,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts::program:UserRoleByTenantsController:findAll,<empty>,21,findAll,,,-1,Promise<any>,ANY
+103079215141,MEMBER,<empty>,<empty>,"@Post('/many')
+  async findMany(@Body() findUserRoleByTenantsDto: FindUserRoleByTenantsDto) {
+    this.logger.log(`Searching for USer Role By Tenants with many search args.`);
+    const foundUserRoleByTenants = await this.userRoleByTenantsService.findByMany(findUserRoleByTenantsDto);
+    this.logger.log(`Found ${foundUserRoleByTenants.length} items.`);
+    return foundUserRoleByTenants;
+  }",2,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts::program:UserRoleByTenantsController:findMany,<empty>,27,findMany,,,-1,Promise<any>,ANY
+103079215142,MEMBER,<empty>,<empty>,"@Patch(':id')
+  async update(@Param('id') id: string, @Body() updateUserRoleByTenantDto: UpdateUserRoleByTenantsDto) {
+    this.logger.log(`Updating User Role by Tenant with id: ${id}.`);
+    const foundUserRoleByTenants = await this.userRoleByTenantsService.update(+id, { ...updateUserRoleByTenantDto });
+    this.logger.log(`User Role by Tenant with id: ${id} was updated.`);
+    return foundUserRoleByTenants;
+  }",2,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts::program:UserRoleByTenantsController:update,<empty>,35,update,,,-1,Promise<any>,ANY
+103079215143,MEMBER,<empty>,<empty>,"@Delete(':id')
+  async remove(@Param('id') id: string) {
+    this.logger.log(`Disabling / Enabling User Role By Tenant with id: ${id}.`);
+    const foundUserRoleByTenants = await this.userRoleByTenantsService.remove(+id);
+    this.logger.log(
+      `User Role By Tenant with id: ${id} was ` + foundUserRoleByTenants.enabled ? 'Enabled!' : 'Disabled!',
+    );
+    return foundUserRoleByTenants;
+  }",2,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts::program:UserRoleByTenantsController:remove,<empty>,43,remove,,,-1,Promise<any>,ANY
+103079215144,MEMBER,<empty>,<empty>,private readonly logger = new Logger(UsersController.name);,2,,<empty>,13,logger,,,-1,ANY,@nestjs/common:Logger
+103079215145,MEMBER,<empty>,<empty>,"@Post()
+  async create(@Body() createUserDto: CreateUserDto, @Headers('payload') payload: string) {
+    
+    this.logger.log('Creating new user ..');
+    const payloadObject: ContextPayload = JSON.parse(payload);
+
+    const newUser = await this.usersService.create(createUserDto, payloadObject);
+    this.logger.log(`Created new User! id: ${newUser.id}.`);
+    return newUser;
+  }",2,src/context/users/users.controller.ts::program:UsersController:create,<empty>,15,create,,,-1,Promise<any>,ANY
+103079215146,MEMBER,<empty>,<empty>,"@Get()
+  findAll() {
+    this.logger.log('Finding All Users...');
+    return this.usersService.findAll();
+  }",2,src/context/users/users.controller.ts::program:UsersController:findAll,<empty>,26,findAll,,,-1,Promise<User[]>,ANY
+103079215147,MEMBER,<empty>,<empty>,"@Post('many/')
+  async findMany(@Body() findUserDto: FindUserDto) {
+    this.logger.log(`Searching for user with many search args.`);
+    return this.usersService.findByMany(findUserDto);
+  }",2,src/context/users/users.controller.ts::program:UsersController:findMany,<empty>,32,findMany,,,-1,Promise<User[]>,ANY
+103079215148,MEMBER,<empty>,<empty>,"@Get(':id')
+  async findOne(@Param('id') id: string) {
+    this.logger.log(`Searching for user with id: ${id}.`);
+    const foundUser = await this.usersService.findOne(+id);
+    this.logger.log(`User with id: ${id} was found.`);
+    return foundUser;
+  }",2,src/context/users/users.controller.ts::program:UsersController:findOne,<empty>,38,findOne,,,-1,Promise<User>,ANY
+103079215149,MEMBER,<empty>,<empty>,"@Patch(':id')
+  async update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto, @Headers('payload') payload: string) {
+
+    this.logger.log(`Updating user with id: ${id}.`);
+    const payloadObject: ContextPayload = JSON.parse(payload);
+    const foundUser = await this.usersService.update(+id, updateUserDto, payloadObject);
+    this.logger.log(`User with id: ${id} was updated.`);
+    return foundUser;
+  }",2,src/context/users/users.controller.ts::program:UsersController:update,<empty>,46,update,,,-1,Promise<any>,ANY
+103079215150,MEMBER,<empty>,<empty>,"@Patch(':id/resend-verification')
+  async resendVerification(@Param('id') temporalId: string) {
+    this.logger.log(`Updating user with id: ${temporalId}.`);
+    const foundUser = await this.usersService.resendVerification(temporalId);
+    this.logger.log(`User with id: ${temporalId} was updated.`);
+    return foundUser;
+  }",2,src/context/users/users.controller.ts::program:UsersController:resendVerification,<empty>,56,resendVerification,,,-1,Promise<any>,ANY
+103079215151,MEMBER,<empty>,<empty>,"@Post('/mfa/attempt')
+  async sendMfaAttemptEmail(@Body('userId') userId: number) {
+    return this.usersService.sendMfaAttemptEmail(userId);
+  }",2,src/context/users/users.controller.ts::program:UsersController:sendMfaAttemptEmail,<empty>,64,sendMfaAttemptEmail,,,-1,Promise<void>,ANY
+103079215152,MEMBER,<empty>,<empty>,"@Post('/mfa/success')
+  async sendMfaSuccessEmail(@Body('userId') userId: number) {
+    return this.usersService.sendMfaSuccessEmail(userId);
+  }",2,src/context/users/users.controller.ts::program:UsersController:sendMfaSuccessEmail,<empty>,69,sendMfaSuccessEmail,,,-1,Promise<void>,ANY
+103079215153,MEMBER,<empty>,<empty>,"@Delete(':id')
+  async remove(@Param('id') id: string, @Headers('payload') payload: string) {
+    this.logger.log(`Disabling / Enabling User with id: ${id}.`);
+    
+    const payloadObject: ContextPayload = JSON.parse(payload);
+    const foundUser = await this.usersService.remove(+id, payloadObject);
+    this.logger.log(`User with id: ${id} was ` + foundUser.enabled ? 'Enabled!' : 'Disabled!');
+    return foundUser;
+  }",2,src/context/users/users.controller.ts::program:UsersController:remove,<empty>,74,remove,,,-1,Promise<any>,ANY
+103079215154,MEMBER,<empty>,<empty>,"@ApiProperty()
+  @IsNotEmpty()
+  @Length(2, 100)
+  aliasName: string;",2,,<empty>,6,aliasName,,,-1,__ecma.String,__ecma.String
+103079215155,MEMBER,<empty>,<empty>,"@ApiProperty()
+  @IsNotEmpty()
+  @Length(2, 400)
+  description: string;",2,,<empty>,11,description,,,-1,__ecma.String,__ecma.String
+103079215156,MEMBER,<empty>,<empty>,"@ApiProperty()
+  @IsNotEmpty()
+  roleId: number;",2,,<empty>,16,roleId,,,-1,__ecma.Number,__ecma.Number
+103079215157,MEMBER,<empty>,<empty>,"@ApiProperty()
+  enabled: boolean;",2,,<empty>,20,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215158,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  tenantRoleAlias?: number[];",2,,<empty>,23,tenantRoleAlias,,,-1,__ecma.Array,__ecma.Array
+103079215159,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  ids?: number[];",2,,<empty>,6,ids,,,-1,__ecma.Array,__ecma.Array
+103079215160,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  aliasNames?: string[];",2,,<empty>,9,aliasNames,,,-1,__ecma.Array,__ecma.Array
+103079215161,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  descriptions?: string[];",2,,<empty>,12,descriptions,,,-1,__ecma.Array,__ecma.Array
+103079215162,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  enabled?: boolean;",2,,<empty>,15,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215163,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  roleIds?: number[];",2,,<empty>,18,roleIds,,,-1,__ecma.Array,__ecma.Array
+103079215164,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  tenantRoleAlias?: number[];",2,,<empty>,21,tenantRoleAlias,,,-1,__ecma.Array,__ecma.Array
+103079215165,MEMBER,<empty>,<empty>,id: number;,2,,<empty>,4,id,,,-1,__ecma.Number,__ecma.Number
+103079215166,MEMBER,<empty>,<empty>,aliasName: string;,2,,<empty>,5,aliasName,,,-1,__ecma.String,__ecma.String
+103079215167,MEMBER,<empty>,<empty>,description: string;,2,,<empty>,6,description,,,-1,__ecma.String,__ecma.String
+103079215168,MEMBER,<empty>,<empty>,roleId: number;,2,,<empty>,7,roleId,,,-1,__ecma.Number,__ecma.Number
+103079215169,MEMBER,<empty>,<empty>,enabled: boolean;,2,,<empty>,8,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215170,MEMBER,<empty>,<empty>,createdAt: Date;,2,,<empty>,9,createdAt,,,-1,Date,ANY
+103079215171,MEMBER,<empty>,<empty>,updatedAt: Date;,2,,<empty>,10,updatedAt,,,-1,Date,ANY
+103079215172,MEMBER,<empty>,<empty>,tenantRoleAlias?: number[];,2,,<empty>,11,tenantRoleAlias,,,-1,__ecma.Array,__ecma.Array
+103079215173,MEMBER,<empty>,<empty>,roleAliasToUpdate: RoleAlias;,2,,<empty>,15,roleAliasToUpdate,,,-1,RoleAlias,ANY
+103079215174,MEMBER,<empty>,<empty>,tenantRoleAlias?: number[];,2,,<empty>,16,tenantRoleAlias,,,-1,__ecma.Array,__ecma.Array
+103079215175,MEMBER,<empty>,<empty>,roleId?: number;,2,,<empty>,17,roleId,,,-1,__ecma.Number,__ecma.Number
+103079215176,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  @IsNotEmpty()
+  @Length(2, 100)
+  aliasName?: string;",2,,<empty>,7,aliasName,,,-1,__ecma.String,__ecma.String
+103079215177,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  @IsNotEmpty()
+  @Length(2, 400)
+  description?: string;",2,,<empty>,12,description,,,-1,__ecma.String,__ecma.String
+103079215178,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  @IsNotEmpty()
+  roleId?: number;",2,,<empty>,17,roleId,,,-1,__ecma.Number,__ecma.Number
+103079215179,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  enabled?: boolean;",2,,<empty>,21,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215180,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  tenantRoleAlias?: number[];",2,,<empty>,24,tenantRoleAlias,,,-1,__ecma.Array,__ecma.Array
+103079215181,MEMBER,<empty>,<empty>,private readonly logger = new Logger(RoleAliasesService.name);,2,,<empty>,13,logger,,,-1,ANY,@nestjs/common:Logger
+103079215182,MEMBER,<empty>,<empty>,private roleAliasCollection: RoleAlias[] = [];,2,,<empty>,14,roleAliasCollection,,,-1,__ecma.Array,__ecma.Array
+103079215183,MEMBER,<empty>,<empty>,"async create(createRoleAliasDto: CreateRoleAliasDto) {
+    this.logger.log('Creating new User...');
+    const roleId = createRoleAliasDto.roleId;
+    const tenantRoleAlias = createRoleAliasDto.tenantRoleAlias;
+    const aliasName = createRoleAliasDto.aliasName.trim();
+
+    const existingAliasName = await this.rolesAliasRepository.findOneBy({ aliasName });
+    if (existingAliasName) {
+      this.logger.error(`The aliasName ${aliasName} is already used and needs to be unique`);
+      throw new ForbiddenException('aliasName is already in use', {
+        cause: new Error(),
+        description: `The aliasName ${aliasName} is already used and needs to be unique`,
+      });
+    }
+    const existingRole = await this.rolesRepository.findOneBy({ id: roleId });
+
+    if (!existingRole) {
+      this.logger.error(`The role with id ${roleId} was not found`);
+      throw new NotFoundException('Role not found', {
+        cause: new Error(),
+        description: `The role with id ${roleId} was not f...",2,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:create,<empty>,28,create,,,-1,Promise<any>,ANY
+103079215184,MEMBER,<empty>,<empty>,"async findAll() {
+    this.logger.log('Finding All Role Aliases ...');
+    this.roleAliasCollection = await this.rolesAliasRepository
+      .createQueryBuilder('RoleAlias')
+      .leftJoinAndSelect('RoleAlias.tenantRoleAlias', 'tenantRoleAlias')
+      .leftJoinAndSelect('tenantRoleAlias.tenant', 'tenant')
+      .leftJoinAndSelect('tenantRoleAlias.role', 'tenantRoleAliasRole')
+      .leftJoinAndSelect('RoleAlias.role', 'role')
+      .getMany();
+    return this.roleAliasCollection;
+  }",2,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:findAll,<empty>,80,findAll,,,-1,Promise<RoleAlias[]>,ANY
+103079215185,MEMBER,<empty>,<empty>,"async findOne(id: number) {
+    this.logger.log('Finding All Role Aliases ...');
+    this.roleAliasCollection = await this.rolesAliasRepository
+      .createQueryBuilder('RoleAlias')
+      .leftJoinAndSelect('RoleAlias.tenantRoleAlias', 'tenantRoleAlias')
+      .leftJoinAndSelect('tenantRoleAlias.tenant', 'tenant')
+      .leftJoinAndSelect('tenantRoleAlias.role', 'tenantRoleAliasRole')
+      .leftJoinAndSelect('RoleAlias.role', 'role')
+      .where('RoleAlias.id = :id', { id })
+      .getMany();
+    return this.roleAliasCollection[0];
+  }",2,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:findOne,<empty>,92,findOne,,,-1,Promise<RoleAlias>,ANY
+103079215186,MEMBER,<empty>,<empty>,"async findByMany(findRoleAliasDto: FindRoleAliasDto) {
+    this.logger.log(`Finding Role Aliases by many args...`);
+    const { ids, aliasNames, descriptions, enabled, roleIds, tenantRoleAlias } = findRoleAliasDto;
+    let query = this.rolesAliasRepository
+      .createQueryBuilder('RoleAlias')
+      .leftJoinAndSelect('RoleAlias.tenantRoleAlias', 'tenantRoleAlias')
+      .leftJoinAndSelect('tenantRoleAlias.tenant', 'tenant')
+      .leftJoinAndSelect('tenantRoleAlias.role', 'tenantRoleAliasRole')
+      .leftJoinAndSelect('RoleAlias.role', 'role');
+
+    if (ids && ids.length > 0) {
+      query = query.andWhere('RoleAlias.id IN (:...ids) ', { ids });
+    }
+    if (aliasNames) {
+      query = query.andWhere('lower(RoleAlias.aliasName) IN (:...aliasNames) ', {
+        aliasNames: aliasNames.map((alias) => alias.toLowerCase()),
+      });
+    }
+    if (descriptions) {
+      query = query.andWhere('lower(RoleAlias.description) IN (:...descriptions) ', {
+        descriptions: descriptions.m...",2,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:findByMany,<empty>,105,findByMany,,,-1,Promise<RoleAlias[]>,ANY
+103079215187,MEMBER,<empty>,<empty>,"async update(id: number, updateRoleAliasDto: UpdateRoleAliasDto) {
+    this.logger.log(`Updating Role Alias with id: ${id}`);
+    const roleAliasToUpdate = await this.rolesAliasRepository
+      .createQueryBuilder('RoleAlias')
+      .leftJoinAndSelect('RoleAlias.tenantRoleAlias', 'tenantRoleAlias')
+      .leftJoinAndSelect('tenantRoleAlias.tenant', 'tenant')
+      .leftJoinAndSelect('tenantRoleAlias.role', 'tenantRoleAliasRole')
+      .leftJoinAndSelect('RoleAlias.role', 'role')
+      .where('RoleAlias.id = :id', { id })
+      .getOne();
+
+    if (!roleAliasToUpdate) {
+      this.logger.error(`The user with id ${id} was not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `The user with id ${id} was not found`,
+      });
+    }
+    const roleId = updateRoleAliasDto.roleId || null;
+    const tenantRoleAlias = updateRoleAliasDto.tenantRoleAlias;
+    const aliasName = updateRoleAliasDto.aliasName ? updateRoleAliasDto.aliasNam...",2,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:update,<empty>,144,update,,,-1,Promise<any>,ANY
+103079215188,MEMBER,<empty>,<empty>,"async remove(id: number) {
+    this.logger.log(`Enabling / Disabling Role Alias with id: ${id}.`);
+    const userToDisable = await this.rolesAliasRepository.findOneBy({ id });
+    if (!userToDisable) {
+      this.logger.error(`The role alias with id ${id} was not found`);
+      throw new NotFoundException('Tenant not found', {
+        cause: new Error(),
+        description: `The role alias with id ${id} was not found`,
+      });
+    }
+    userToDisable.enabled = !userToDisable.enabled;
+    this.logger.log(`Role alias with id: ${id} was ` + userToDisable.enabled ? 'Enabled!' : 'Disabled!');
+
+    return this.rolesAliasRepository.save(userToDisable);
+  }",2,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:remove,<empty>,214,remove,,,-1,Promise<any>,ANY
+103079215189,MEMBER,<empty>,<empty>,"@ApiProperty()
+  @IsNotEmpty()
+  @Length(2, 100)
+  name: string;",2,,<empty>,6,name,,,-1,__ecma.String,__ecma.String
+103079215190,MEMBER,<empty>,<empty>,"@ApiProperty()
+  @IsNotEmpty()
+  @Length(2, 400)
+  description: string;",2,,<empty>,11,description,,,-1,__ecma.String,__ecma.String
+103079215191,MEMBER,<empty>,<empty>,"@ApiProperty()
+  @IsNotEmpty()
+  @Length(2, 50)
+  tag: string;",2,,<empty>,16,tag,,,-1,__ecma.String,__ecma.String
+103079215192,MEMBER,<empty>,<empty>,"@ApiProperty()
+  enabled: boolean;",2,,<empty>,21,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215193,MEMBER,<empty>,<empty>,"@ApiProperty()
+  BackOfficeAccess?: boolean;",2,,<empty>,24,BackOfficeAccess,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215194,MEMBER,<empty>,<empty>,"@ApiProperty()
+  SaasAccess?: boolean;",2,,<empty>,27,SaasAccess,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215195,MEMBER,<empty>,<empty>,"@ApiProperty()
+  tenantSpecific: boolean;",2,,<empty>,30,tenantSpecific,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215196,MEMBER,<empty>,<empty>,"@ApiProperty()
+  tenantCreatorId?: number;",2,,<empty>,33,tenantCreatorId,,,-1,__ecma.Number,__ecma.Number
+103079215197,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  tenantTypesIds?: number[];",2,,<empty>,36,tenantTypesIds,,,-1,__ecma.Array,__ecma.Array
+103079215198,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  ids?: number[];",2,,<empty>,5,ids,,,-1,__ecma.Array,__ecma.Array
+103079215199,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [String] })
+  names?: string[];",2,,<empty>,8,names,,,-1,__ecma.Array,__ecma.Array
+103079215200,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [String] })
+  descriptions?: string[];",2,,<empty>,11,descriptions,,,-1,__ecma.Array,__ecma.Array
+103079215201,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [String] })
+  tags?: string[];",2,,<empty>,14,tags,,,-1,__ecma.Array,__ecma.Array
+103079215202,MEMBER,<empty>,<empty>,"@ApiProperty()
+  enabled?: boolean;",2,,<empty>,17,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215203,MEMBER,<empty>,<empty>,"@ApiProperty()
+  BackOfficeAccess?: boolean;",2,,<empty>,20,BackOfficeAccess,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215204,MEMBER,<empty>,<empty>,"@ApiProperty()
+  SaasAccess?: boolean;",2,,<empty>,23,SaasAccess,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215205,MEMBER,<empty>,<empty>,"@ApiProperty()
+  tenantSpecific?: boolean;",2,,<empty>,26,tenantSpecific,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215206,MEMBER,<empty>,<empty>,"@ApiProperty()
+  tenantCreatorIds?: number[];",2,,<empty>,29,tenantCreatorIds,,,-1,__ecma.Array,__ecma.Array
+103079215207,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  tenantTypesIds?: number[];",2,,<empty>,32,tenantTypesIds,,,-1,__ecma.Array,__ecma.Array
+103079215208,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  aliasIds?: number[];",2,,<empty>,35,aliasIds,,,-1,__ecma.Array,__ecma.Array
+103079215209,MEMBER,<empty>,<empty>,id: number;,2,,<empty>,2,id,,,-1,__ecma.Number,__ecma.Number
+103079215210,MEMBER,<empty>,<empty>,name: string;,2,,<empty>,3,name,,,-1,__ecma.String,__ecma.String
+103079215211,MEMBER,<empty>,<empty>,description: string;,2,,<empty>,4,description,,,-1,__ecma.String,__ecma.String
+103079215212,MEMBER,<empty>,<empty>,tag: string;,2,,<empty>,5,tag,,,-1,__ecma.String,__ecma.String
+103079215213,MEMBER,<empty>,<empty>,enabled: boolean;,2,,<empty>,6,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215214,MEMBER,<empty>,<empty>,createdAt: Date;,2,,<empty>,7,createdAt,,,-1,Date,ANY
+103079215215,MEMBER,<empty>,<empty>,updatedAt: Date;,2,,<empty>,8,updatedAt,,,-1,Date,ANY
+103079215216,MEMBER,<empty>,<empty>,BackOfficeAccess?: boolean;,2,,<empty>,9,BackOfficeAccess,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215217,MEMBER,<empty>,<empty>,SaasAccess?: boolean;,2,,<empty>,10,SaasAccess,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215218,MEMBER,<empty>,<empty>,tenantSpecific: boolean;,2,,<empty>,11,tenantSpecific,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215219,MEMBER,<empty>,<empty>,tenantCreatorId?: number;,2,,<empty>,12,tenantCreatorId,,,-1,__ecma.Number,__ecma.Number
+103079215220,MEMBER,<empty>,<empty>,tenantTypesIds?: number[];,2,,<empty>,13,tenantTypesIds,,,-1,__ecma.Array,__ecma.Array
+103079215221,MEMBER,<empty>,<empty>,aliases?: number[];,2,,<empty>,14,aliases,,,-1,__ecma.Array,__ecma.Array
+103079215222,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  @IsNotEmpty()
+  @Length(2, 100)
+  name?: string;",2,,<empty>,7,name,,,-1,__ecma.String,__ecma.String
+103079215223,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  @IsNotEmpty()
+  @Length(2, 400)
+  description?: string;",2,,<empty>,12,description,,,-1,__ecma.String,__ecma.String
+103079215224,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  @IsNotEmpty()
+  @Length(2, 50)
+  tag?: string;",2,,<empty>,17,tag,,,-1,__ecma.String,__ecma.String
+103079215225,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  enabled?: boolean;",2,,<empty>,22,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215226,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  BackOfficeAccess?: boolean;",2,,<empty>,25,BackOfficeAccess,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215227,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  SaasAccess?: boolean;",2,,<empty>,28,SaasAccess,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215228,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  tenantSpecific?: boolean;",2,,<empty>,31,tenantSpecific,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215229,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  tenantCreatorId?: number;",2,,<empty>,34,tenantCreatorId,,,-1,__ecma.Number,__ecma.Number
+103079215230,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  tenantTypesIds?: number[];",2,,<empty>,37,tenantTypesIds,,,-1,__ecma.Array,__ecma.Array
+103079215231,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  aliasesIds?: number[];",2,,<empty>,40,aliasesIds,,,-1,__ecma.Array,__ecma.Array
+103079215232,MEMBER,<empty>,<empty>,private readonly logger = new Logger(RolesService.name);,2,,<empty>,13,logger,,,-1,ANY,@nestjs/common:Logger
+103079215233,MEMBER,<empty>,<empty>,private rolesCollection: Role[] = [];,2,,<empty>,14,rolesCollection,,,-1,__ecma.Array,__ecma.Array
+103079215234,MEMBER,<empty>,<empty>,"async create(createRoleDto: CreateRoleDto) {
+    this.logger.log('Creating new roles...');
+    const { tag, name, description, tenantSpecific, tenantCreatorId } = createRoleDto;
+    const existingTenantTag = await this.rolesRepository.findOneBy({ tag: tag.toLowerCase().trim() });
+    if (existingTenantTag) {
+      this.logger.error(`The tag ""${tag}"" is already used and needs to be unique`);
+      throw new ForbiddenException('tag is already in use', {
+        cause: new Error(),
+        description: `The tag ""${tag}"" is already used and needs to be unique`,
+      });
+    }
+    if (createRoleDto.tenantTypesIds && createRoleDto.tenantTypesIds.length > 0) {
+      this.logger.log(`tenant types: ${createRoleDto.tenantTypesIds}`);
+    }
+    let foundTenantCreator: Tenant[] = [];
+    if (tenantSpecific) {
+      const url = process.env.TENANTS_MS_URL || 'error';
+      if (url === 'error') {
+        this.logger.error(`Missing TENANTS_MS_URL env variable`);
+        throw new NotFoundException...",2,src/shared/context/roles/domain/roles.service.ts::program:RolesService:create,<empty>,21,create,,,-1,Promise<any>,ANY
+103079215235,MEMBER,<empty>,<empty>,"async findAll() {
+    this.logger.log('Finding All Roles ...');
+    this.rolesCollection = await this.rolesRepository
+      .createQueryBuilder('roles')
+      .leftJoinAndSelect('roles.tenantTypes', 'tenantTypes')
+      .leftJoinAndSelect('roles.aliases', 'aliases')
+      .leftJoinAndSelect('roles.roles', 'assignedRoles')
+      // .leftJoinAndSelect('roles.gridPreferences', 'gridPreferences')
+      .leftJoinAndSelect('assignedRoles.role', 'role')
+      // .leftJoinAndSelect('assignedRoles.user', 'user')
+      // .leftJoinAndSelect('assignedRoles.tenant', 'tenant')
+      // .leftJoinAndSelect('assignedRoles.roleAlias', 'roleAlias')
+      .getMany();
+    this.logger.log(`${this.rolesCollection.length} roles found`);
+    return this.rolesCollection;
+  }",2,src/shared/context/roles/domain/roles.service.ts::program:RolesService:findAll,<empty>,105,findAll,,,-1,Promise<Role[]>,ANY
+103079215236,MEMBER,<empty>,<empty>,"async findOne(id: number) {
+    this.logger.log(`Searching for Role  with id: ${id}.`);
+    const foundRole = await this.rolesRepository
+      .createQueryBuilder('roles')
+      .leftJoinAndSelect('roles.tenantTypes', 'tenantTypes')
+      .leftJoinAndSelect('roles.aliases', 'aliases')
+      .leftJoinAndSelect('roles.roles', 'assignedRoles')
+      // .leftJoinAndSelect('roles.gridPreferences', 'gridPreferences')
+      .leftJoinAndSelect('assignedRoles.role', 'role')
+      // .leftJoinAndSelect('assignedRoles.user', 'user')
+      // .leftJoinAndSelect('assignedRoles.tenant', 'tenant')
+      // .leftJoinAndSelect('assignedRoles.roleAlias', 'roleAlias')
+      .andWhere('roles.id = :id', { id })
+      .getOne();
+
+    if (!foundRole) {
+      this.logger.error(`The tenant with id ${id} was not found`);
+      throw new NotFoundException('Role  not found', {
+        cause: new Error(),
+        description: `The role with id ${id} was not found`,
+      });
+    }
+    this.logger.log(`role with...",2,src/shared/context/roles/domain/roles.service.ts::program:RolesService:findOne,<empty>,122,findOne,,,-1,Promise<any>,ANY
+103079215237,MEMBER,<empty>,<empty>,"async findByMany(findRoleDto: FindRoleDto) {
+    const {
+      ids,
+      names,
+      descriptions,
+      enabled,
+      tags,
+      BackOfficeAccess,
+      SaasAccess,
+      tenantSpecific,
+      tenantTypesIds,
+      tenantCreatorIds,
+      aliasIds,
+    } = findRoleDto;
+    let query = this.rolesRepository
+      .createQueryBuilder('roles')
+      .leftJoinAndSelect('roles.tenantTypes', 'tenantTypes')
+      .leftJoinAndSelect('roles.aliases', 'aliases')
+      .leftJoinAndSelect('roles.roles', 'assignedRoles')
+      //.leftJoinAndSelect('roles.gridPreferences', 'gridPreferences')
+      .leftJoinAndSelect('assignedRoles.role', 'role');
+    //.leftJoinAndSelect('assignedRoles.user', 'user')
+    //.leftJoinAndSelect('assignedRoles.tenant', 'tenant')
+    //.leftJoinAndSelect('assignedRoles.roleAlias', 'roleAlias');
+    // .leftJoinAndSelect('roles.tenantCreator', 'tenantCreator');
+
+    if (ids && ids.length > 0) {
+      this.logger.log(`Finding by ids: ${ids}`);
+      query = query.an...",2,src/shared/context/roles/domain/roles.service.ts::program:RolesService:findByMany,<empty>,148,findByMany,,,-1,Promise<Role[]>,ANY
+103079215238,MEMBER,<empty>,<empty>,"async update(id: number, updateRoleDto: UpdateRoleDto) {
+    this.logger.log(`Searching for Role with id: ${id} to Update it`);
+    const roleToUpdate = await this.rolesRepository
+      .createQueryBuilder('roles')
+      .leftJoinAndSelect('roles.tenantTypes', 'tenantTypes')
+      .leftJoinAndSelect('roles.aliases', 'aliases')
+      .leftJoinAndSelect('roles.roles', 'assignedRoles')
+      // .leftJoinAndSelect('roles.gridPreferences', 'gridPreferences')
+      .leftJoinAndSelect('assignedRoles.role', 'role')
+      // .leftJoinAndSelect('assignedRoles.user', 'user')
+      // .leftJoinAndSelect('assignedRoles.tenant', 'tenant')
+      // .leftJoinAndSelect('assignedRoles.roleAlias', 'roleAlias')
+      .andWhere('roles.id = :id', { id })
+      .getOne();
+
+    if (!roleToUpdate) {
+      this.logger.error(`The tenant with id ${id} was not found`);
+      throw new NotFoundException('Role  not found', {
+        cause: new Error(),
+        description: `The role with id ${id} was not found`,
+...",2,src/shared/context/roles/domain/roles.service.ts::program:RolesService:update,<empty>,229,update,,,-1,Promise<any>,ANY
+103079215239,MEMBER,<empty>,<empty>,"async remove(id: number) {
+    this.logger.log(`Enabling / Disabling Role with id: ${id}.`);
+    const roleToDelete = await this.rolesRepository
+      .createQueryBuilder('roles')
+      .leftJoinAndSelect('roles.tenantTypes', 'tenantTypes')
+      .leftJoinAndSelect('roles.aliases', 'aliases')
+      .leftJoinAndSelect('roles.roles', 'assignedRoles')
+      // .leftJoinAndSelect('roles.gridPreferences', 'gridPreferences')
+      .leftJoinAndSelect('assignedRoles.role', 'role')
+      // .leftJoinAndSelect('assignedRoles.user', 'user')
+      // .leftJoinAndSelect('assignedRoles.tenant', 'tenant')
+      // .leftJoinAndSelect('assignedRoles.roleAlias', 'roleAlias')
+      .andWhere('roles.id = :id', { id })
+      .getOne();
+
+    if (!roleToDelete) {
+      this.logger.error(`The tenant with id ${id} was not found`);
+      throw new NotFoundException('Role  not found', {
+        cause: new Error(),
+        description: `The role with id ${id} was not found`,
+      });
+    }
+    roleToDelete.en...",2,src/shared/context/roles/domain/roles.service.ts::program:RolesService:remove,<empty>,343,remove,,,-1,Promise<any>,ANY
+103079215240,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  tenantRoleAliasNew: number[];",2,,<empty>,7,tenantRoleAliasNew,,,-1,__ecma.Array,__ecma.Array
+103079215241,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  roleId: number;",2,,<empty>,10,roleId,,,-1,__ecma.Number,__ecma.Number
+103079215242,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  roleAliasToUpdate: RoleAlias;",2,,<empty>,13,roleAliasToUpdate,,,-1,RoleAlias,ANY
+103079215243,MEMBER,<empty>,<empty>,"@ApiProperty()
+  @IsNotEmpty()
+  tenant: number;",2,,<empty>,6,tenant,,,-1,__ecma.Number,__ecma.Number
+103079215244,MEMBER,<empty>,<empty>,"@ApiProperty()
+  @IsNotEmpty()
+  role: number;",2,,<empty>,10,role,,,-1,__ecma.Number,__ecma.Number
+103079215245,MEMBER,<empty>,<empty>,"@ApiProperty()
+  @IsNotEmpty()
+  roleAlias: number;",2,,<empty>,14,roleAlias,,,-1,__ecma.Number,__ecma.Number
+103079215246,MEMBER,<empty>,<empty>,"@ApiProperty()
+  enabled: boolean;",2,,<empty>,18,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215247,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  ids?: number[];",2,,<empty>,6,ids,,,-1,__ecma.Array,__ecma.Array
+103079215248,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  tenants?: number[];",2,,<empty>,9,tenants,,,-1,__ecma.Array,__ecma.Array
+103079215249,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  roles?: number[];",2,,<empty>,12,roles,,,-1,__ecma.Array,__ecma.Array
+103079215250,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  roleAliases?: number[];",2,,<empty>,15,roleAliases,,,-1,__ecma.Array,__ecma.Array
+103079215251,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  enabled?: boolean;",2,,<empty>,18,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215252,MEMBER,<empty>,<empty>,id: number;,2,,<empty>,2,id,,,-1,__ecma.Number,__ecma.Number
+103079215253,MEMBER,<empty>,<empty>,tenant: number;,2,,<empty>,3,tenant,,,-1,__ecma.Number,__ecma.Number
+103079215254,MEMBER,<empty>,<empty>,role: number;,2,,<empty>,4,role,,,-1,__ecma.Number,__ecma.Number
+103079215255,MEMBER,<empty>,<empty>,roleAlias: number;,2,,<empty>,5,roleAlias,,,-1,__ecma.Number,__ecma.Number
+103079215256,MEMBER,<empty>,<empty>,enabled: boolean;,2,,<empty>,6,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215257,MEMBER,<empty>,<empty>,createdAt: Date;,2,,<empty>,7,createdAt,,,-1,Date,ANY
+103079215258,MEMBER,<empty>,<empty>,updatedAt: Date;,2,,<empty>,8,updatedAt,,,-1,Date,ANY
+103079215259,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  @IsNotEmpty()
+  tenant: number;",2,,<empty>,7,tenant,,,-1,__ecma.Number,__ecma.Number
+103079215260,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  @IsNotEmpty()
+  role: number;",2,,<empty>,11,role,,,-1,__ecma.Number,__ecma.Number
+103079215261,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  @IsNotEmpty()
+  roleAlias: number;",2,,<empty>,15,roleAlias,,,-1,__ecma.Number,__ecma.Number
+103079215262,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  enabled: boolean;",2,,<empty>,19,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215263,MEMBER,<empty>,<empty>,private readonly logger = new Logger(TenantRoleAliases.name);,2,,<empty>,13,logger,,,-1,ANY,@nestjs/common:Logger
+103079215264,MEMBER,<empty>,<empty>,private roleAliasCollection: RoleAlias[] = [];,2,,<empty>,14,roleAliasCollection,,,-1,__ecma.Array,__ecma.Array
+103079215265,MEMBER,<empty>,<empty>,tenant,17,,<empty>,27,tenant,,,-1,__ecma.Number,__ecma.Number
+103079215266,MEMBER,<empty>,<empty>,role,25,,<empty>,27,role,,,-1,__ecma.Number,__ecma.Number
+103079215267,MEMBER,<empty>,<empty>,roleAlias,31,,<empty>,27,roleAlias,,,-1,__ecma.Number,__ecma.Number
+103079215268,MEMBER,<empty>,<empty>,enabled,42,,<empty>,27,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215269,MEMBER,<empty>,<empty>,"async create({ tenant, role, roleAlias, enabled }: CreateTenantRoleAliasDto) {
+    const foundTenant = await this.tenantRepository.createQueryBuilder().where('id = :tenant', { tenant }).getOne();
+
+    if (!foundTenant) {
+      this.logger.error(`Invalid Tenant, does not exist any tenant with id ${tenant}`);
+      throw new NotFoundException('Invalid Tenant', {
+        cause: new Error(),
+        description: `Invalid Tenant, does not exist any tenant with id ${tenant}`,
+      });
+    }
+
+    const foundRole = await this.rolesRepository.createQueryBuilder().where('id = :role', { role }).getOne();
+
+    if (!foundRole) {
+      this.logger.error(`Invalid Role, does not exist any role with id ${role}`);
+      throw new NotFoundException('Invalid Role', {
+        cause: new Error(),
+        description: `Invalid Role, does not exist any role with id ${role}`,
+      });
+    }
+
+    const foundRoleAlias = await this.rolesAliasRepository
+      .createQueryBuilder('RoleAlias')
+      .leftJoinAn...",2,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program:TenantRoleAliasesService:create,<empty>,27,create,,,-1,Promise<any>,ANY
+103079215270,MEMBER,<empty>,<empty>,"async findAll() {
+    return await this.tenantRoleAliasRepository
+      .createQueryBuilder('TenantRoleAliases')
+      .leftJoinAndSelect('TenantRoleAliases.tenant', 'Tenant')
+      .leftJoinAndSelect('TenantRoleAliases.role', 'Role')
+      .leftJoinAndSelect('TenantRoleAliases.roleAlias', 'RoleAlias')
+      .getMany();
+  }",2,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program:TenantRoleAliasesService:findAll,<empty>,93,findAll,,,-1,Promise<any>,ANY
+103079215271,MEMBER,<empty>,<empty>,"async findOne(id: number) {
+    return await this.tenantRoleAliasRepository
+      .createQueryBuilder('TenantRoleAliases')
+      .leftJoinAndSelect('TenantRoleAliases.tenant', 'Tenant')
+      .leftJoinAndSelect('TenantRoleAliases.role', 'Role')
+      .leftJoinAndSelect('TenantRoleAliases.roleAlias', 'RoleAlias')
+      .where('TenantRoleAliases.id=:id', { id })
+      .getOne();
+  }",2,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program:TenantRoleAliasesService:findOne,<empty>,102,findOne,,,-1,Promise<any>,ANY
+103079215272,MEMBER,<empty>,<empty>,ids,21,,<empty>,112,ids,,,-1,__ecma.Array,__ecma.Array
+103079215273,MEMBER,<empty>,<empty>,tenants,26,,<empty>,112,tenants,,,-1,__ecma.Array,__ecma.Array
+103079215274,MEMBER,<empty>,<empty>,roles,35,,<empty>,112,roles,,,-1,__ecma.Array,__ecma.Array
+103079215275,MEMBER,<empty>,<empty>,roleAliases,42,,<empty>,112,roleAliases,,,-1,__ecma.Array,__ecma.Array
+103079215276,MEMBER,<empty>,<empty>,enabled,55,,<empty>,112,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215277,MEMBER,<empty>,<empty>,"async findByMany({ ids, tenants, roles, roleAliases, enabled }: FindTenantRoleAliasDto) {
+    let query = this.tenantRoleAliasRepository
+      .createQueryBuilder('TenantRoleAliases')
+      .leftJoinAndSelect('TenantRoleAliases.tenant', 'Tenant')
+      .leftJoinAndSelect('TenantRoleAliases.role', 'Role')
+      .leftJoinAndSelect('TenantRoleAliases.roleAlias', 'RoleAlias');
+
+    if (ids && ids.length > 0) query = query.andWhere('TenantRoleAliases.id IN (:...ids) ', { ids });
+
+    if (roles && roles.length > 0) query = query.andWhere('TenantRoleAliases.role IN (:...roles) ', { roles });
+
+    if (roleAliases && roleAliases.length > 0)
+      query = query.andWhere('TenantRoleAliases.roleAlias IN (:...roleAliases) ', { roleAliases });
+
+    if (tenants && tenants.length > 0)
+      query = query.andWhere('TenantRoleAliases.tenant IN (:...tenants) ', { tenants });
+
+    if (enabled != null) query = query.andWhere('TenantRoleAliases.enabled = :enabled ', { enabled });
+
+    return await query....",2,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program:TenantRoleAliasesService:findByMany,<empty>,112,findByMany,,,-1,Promise<any>,ANY
+103079215278,MEMBER,<empty>,<empty>,tenant,29,,<empty>,134,tenant,,,-1,__ecma.Number,__ecma.Number
+103079215279,MEMBER,<empty>,<empty>,role,37,,<empty>,134,role,,,-1,__ecma.Number,__ecma.Number
+103079215280,MEMBER,<empty>,<empty>,roleAlias,43,,<empty>,134,roleAlias,,,-1,__ecma.Number,__ecma.Number
+103079215281,MEMBER,<empty>,<empty>,enabled,54,,<empty>,134,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215282,MEMBER,<empty>,<empty>,"async update(id: number, { tenant, role, roleAlias, enabled }: UpdateTenantRoleAliasDto) {
+    const tenantRoleAliasesToUpdate = await this.tenantRoleAliasRepository
+      .createQueryBuilder('TenantRoleAliases')
+      .leftJoinAndSelect('TenantRoleAliases.tenant', 'Tenant')
+      .leftJoinAndSelect('TenantRoleAliases.role', 'Role')
+      .leftJoinAndSelect('TenantRoleAliases.roleAlias', 'RoleAlias')
+      .andWhere('TenantRoleAliases.id = :id', { id })
+      .getOne();
+
+    if (!tenantRoleAliasesToUpdate) return null;
+
+    const newTenantId = tenant ? tenant : tenantRoleAliasesToUpdate.tenant.id;
+    const newRole = role ? role : tenantRoleAliasesToUpdate.role.id;
+    if (tenant || role) {
+      const existingTenantRoleAliases = await this.tenantRoleAliasRepository
+        .createQueryBuilder('TenantRoleAliases')
+        .leftJoinAndSelect('TenantRoleAliases.tenant', 'Tenant')
+        .leftJoinAndSelect('TenantRoleAliases.role', 'Role')
+        .leftJoinAndSelect('TenantRoleAliases...",2,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program:TenantRoleAliasesService:update,<empty>,134,update,,,-1,Promise<any>,ANY
+103079215283,MEMBER,<empty>,<empty>,"async remove(id: number) {
+    const tenantRoleAliasToRemove = await this.tenantRoleAliasRepository
+      .createQueryBuilder('TenantRoleAliases')
+      .leftJoinAndSelect('TenantRoleAliases.tenant', 'Tenant')
+      .leftJoinAndSelect('TenantRoleAliases.role', 'Role')
+      .leftJoinAndSelect('TenantRoleAliases.roleAlias', 'RoleAlias')
+      .where('TenantRoleAliases.id=:id', { id })
+      .getOne();
+
+    if (!tenantRoleAliasToRemove) {
+      this.logger.error(`The tenant role alias with id ${id} was not found`);
+      throw new NotFoundException('Tenant role alias not found', {
+        cause: new Error(),
+        description: `The tenant role alias with id ${id} was not found`,
+      });
+    }
+    tenantRoleAliasToRemove.enabled = !tenantRoleAliasToRemove.enabled;
+    this.logger.log(
+      `Tenant role alias with id: ${id} was ` + tenantRoleAliasToRemove.enabled ? 'Enabled!' : 'Disabled!',
+    );
+
+    return await this.tenantRepository.save(tenantRoleAliasToRemove);
+  }",2,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program:TenantRoleAliasesService:remove,<empty>,217,remove,,,-1,Promise<any>,ANY
+103079215284,MEMBER,<empty>,<empty>,roleAliasToUpdate,28,,<empty>,241,roleAliasToUpdate,,,-1,RoleAlias,ANY
+103079215285,MEMBER,<empty>,<empty>,tenantRoleAliasNew,47,,<empty>,241,tenantRoleAliasNew,,,-1,__ecma.Array,__ecma.Array
+103079215286,MEMBER,<empty>,<empty>,roleId,67,,<empty>,241,roleId,,,-1,__ecma.Number,__ecma.Number
+103079215287,MEMBER,<empty>,<empty>,"async assignToRoleAlias({ roleAliasToUpdate, tenantRoleAliasNew, roleId }: AssignTenantRoleAliasDto) {
+    const collection: TenantRoleAliases[] = [];
+
+    if (tenantRoleAliasNew || roleId) {
+      const tenantRoleAliasN: number[] = [];
+      const tenantRoleAliasesToDelete: TenantRoleAliases[] = [];
+
+      if (!tenantRoleAliasNew) {
+        for (const t of roleAliasToUpdate.tenantRoleAlias) {
+          tenantRoleAliasN.push(t.tenant.id);
+        }
+      } else {
+        tenantRoleAliasN.push(...tenantRoleAliasNew);
+      }
+
+      if (tenantRoleAliasN && tenantRoleAliasN.length > 0) {
+        for (const tenant of tenantRoleAliasN) {
+          const foundTenantRoleAliases = await this.tenantRoleAliasRepository
+            .createQueryBuilder('Tenants')
+            .andWhere('Tenants.tenant = :tenant', { tenant })
+            .andWhere('Tenants.role = :roleId', { roleId: roleId || roleAliasToUpdate.role?.id })
+            .getOne();
+          if (foundTenantRoleAliases) {
+            ...",2,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program:TenantRoleAliasesService:assignToRoleAlias,<empty>,241,assignToRoleAlias,,,-1,Promise<TenantRoleAliases[]>,ANY
+103079215288,MEMBER,<empty>,<empty>,"@IsNotEmpty()
+  @Length(2, 200)
+  @ApiProperty()
+  name: string;",2,,<empty>,6,name,,,-1,__ecma.String,__ecma.String
+103079215289,MEMBER,<empty>,<empty>,"@IsNotEmpty()
+  @Length(2, 400)
+  @ApiProperty()
+  description: string;",2,,<empty>,11,description,,,-1,__ecma.String,__ecma.String
+103079215290,MEMBER,<empty>,<empty>,"@ApiProperty()
+  parentId?: number;",2,,<empty>,16,parentId,,,-1,__ecma.Number,__ecma.Number
+103079215291,MEMBER,<empty>,<empty>,"@IsNotEmpty()
+  @ApiProperty()
+  coverageZoneId: number;",2,,<empty>,19,coverageZoneId,,,-1,__ecma.Number,__ecma.Number
+103079215292,MEMBER,<empty>,<empty>,"@IsNotEmpty()
+  @Length(2, 100)
+  @ApiProperty()
+  url: string;",2,,<empty>,23,url,,,-1,__ecma.String,__ecma.String
+103079215293,MEMBER,<empty>,<empty>,"@ApiProperty()
+  enabled: boolean;",2,,<empty>,28,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215294,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  userIds?: number[];",2,,<empty>,31,userIds,,,-1,__ecma.Array,__ecma.Array
+103079215295,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  tenantTypeIds?: number[];",2,,<empty>,34,tenantTypeIds,,,-1,__ecma.Array,__ecma.Array
+103079215296,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  childrenIds?: number[];",2,,<empty>,37,childrenIds,,,-1,__ecma.Array,__ecma.Array
+103079215297,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  roleAliasesIds?: number[];",2,,<empty>,40,roleAliasesIds,,,-1,__ecma.Array,__ecma.Array
+103079215298,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  ids?: number[];",2,,<empty>,6,ids,,,-1,__ecma.Array,__ecma.Array
+103079215299,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [String] })
+  names?: string[];",2,,<empty>,9,names,,,-1,__ecma.Array,__ecma.Array
+103079215300,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [String] })
+  descriptions?: string[];",2,,<empty>,12,descriptions,,,-1,__ecma.Array,__ecma.Array
+103079215301,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  parentIds?: number[];",2,,<empty>,15,parentIds,,,-1,__ecma.Array,__ecma.Array
+103079215302,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  coverageZoneIds?: number[];",2,,<empty>,18,coverageZoneIds,,,-1,__ecma.Array,__ecma.Array
+103079215303,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [String] })
+  urls?: string[];",2,,<empty>,21,urls,,,-1,__ecma.Array,__ecma.Array
+103079215304,MEMBER,<empty>,<empty>,"@ApiProperty()
+  enabled?: boolean;",2,,<empty>,24,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215305,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  userIds?: number[];",2,,<empty>,27,userIds,,,-1,__ecma.Array,__ecma.Array
+103079215306,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  tenantTypeIds?: number[];",2,,<empty>,30,tenantTypeIds,,,-1,__ecma.Array,__ecma.Array
+103079215307,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  childrenIds?: number[];",2,,<empty>,33,childrenIds,,,-1,__ecma.Array,__ecma.Array
+103079215308,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  roleAliasesIds?: number[];",2,,<empty>,36,roleAliasesIds,,,-1,__ecma.Array,__ecma.Array
+103079215309,MEMBER,<empty>,<empty>,id: number;,2,,<empty>,2,id,,,-1,__ecma.Number,__ecma.Number
+103079215310,MEMBER,<empty>,<empty>,name: string;,2,,<empty>,3,name,,,-1,__ecma.String,__ecma.String
+103079215311,MEMBER,<empty>,<empty>,description: string;,2,,<empty>,4,description,,,-1,__ecma.String,__ecma.String
+103079215312,MEMBER,<empty>,<empty>,parentId?: number;,2,,<empty>,5,parentId,,,-1,__ecma.Number,__ecma.Number
+103079215313,MEMBER,<empty>,<empty>,coverageZoneId: number;,2,,<empty>,6,coverageZoneId,,,-1,__ecma.Number,__ecma.Number
+103079215314,MEMBER,<empty>,<empty>,url: string;,2,,<empty>,7,url,,,-1,__ecma.String,__ecma.String
+103079215315,MEMBER,<empty>,<empty>,enabled: boolean;,2,,<empty>,8,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215316,MEMBER,<empty>,<empty>,createdAt: Date;,2,,<empty>,9,createdAt,,,-1,Date,ANY
+103079215317,MEMBER,<empty>,<empty>,updatedAt: Date;,2,,<empty>,10,updatedAt,,,-1,Date,ANY
+103079215318,MEMBER,<empty>,<empty>,userIds?: number[];,2,,<empty>,11,userIds,,,-1,__ecma.Array,__ecma.Array
+103079215319,MEMBER,<empty>,<empty>,tenantTypeIds?: number[];,2,,<empty>,12,tenantTypeIds,,,-1,__ecma.Array,__ecma.Array
+103079215320,MEMBER,<empty>,<empty>,childrenIds?: number[];,2,,<empty>,13,childrenIds,,,-1,__ecma.Array,__ecma.Array
+103079215321,MEMBER,<empty>,<empty>,roleAliasesIds?: number[];,2,,<empty>,14,roleAliasesIds,,,-1,__ecma.Array,__ecma.Array
+103079215322,MEMBER,<empty>,<empty>,"@ApiProperty()
+  id: number;",2,,<empty>,7,id,,,-1,__ecma.Number,__ecma.Number
+103079215323,MEMBER,<empty>,<empty>,"@IsNotEmpty()
+  @Length(2, 200)
+  @ApiProperty()
+  name: string;",2,,<empty>,10,name,,,-1,__ecma.String,__ecma.String
+103079215324,MEMBER,<empty>,<empty>,"@IsNotEmpty()
+  @Length(2, 400)
+  @ApiProperty()
+  description: string;",2,,<empty>,15,description,,,-1,__ecma.String,__ecma.String
+103079215325,MEMBER,<empty>,<empty>,"@ApiProperty()
+  parentId?: number;",2,,<empty>,20,parentId,,,-1,__ecma.Number,__ecma.Number
+103079215326,MEMBER,<empty>,<empty>,"@IsNotEmpty()
+  @ApiProperty()
+  coverageZoneId: number;",2,,<empty>,23,coverageZoneId,,,-1,__ecma.Number,__ecma.Number
+103079215327,MEMBER,<empty>,<empty>,"@IsNotEmpty()
+  @Length(2, 100)
+  @ApiProperty()
+  url: string;",2,,<empty>,27,url,,,-1,__ecma.String,__ecma.String
+103079215328,MEMBER,<empty>,<empty>,"@ApiProperty()
+  enabled: boolean;",2,,<empty>,32,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215329,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  userIds?: number[];",2,,<empty>,35,userIds,,,-1,__ecma.Array,__ecma.Array
+103079215330,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  tenantTypeIds?: number[];",2,,<empty>,38,tenantTypeIds,,,-1,__ecma.Array,__ecma.Array
+103079215331,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  childrenIds?: number[];",2,,<empty>,41,childrenIds,,,-1,__ecma.Array,__ecma.Array
+103079215332,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  roleAliasesIds?: number[];",2,,<empty>,44,roleAliasesIds,,,-1,__ecma.Array,__ecma.Array
+103079215333,MEMBER,<empty>,<empty>,private readonly logger = new Logger(TenantsService.name);,2,,<empty>,12,logger,,,-1,ANY,@nestjs/common:Logger
+103079215334,MEMBER,<empty>,<empty>,private tenantCollection: Tenant[] = [];,2,,<empty>,13,tenantCollection,,,-1,__ecma.Array,__ecma.Array
+103079215335,MEMBER,<empty>,<empty>,"async create(createTenantDto: CreateTenantDto) {
+    this.logger.log('Creating new Tenant...');
+    const { url, name, description } = createTenantDto;
+    const existingTenantUrl = await this.tenantRepository.findOneBy({ url: url.toLowerCase().trim() });
+    if (existingTenantUrl) {
+      this.logger.error(`The url ""${url}"" is already used and needs to be unique`);
+      throw new ForbiddenException('url is already in use', {
+        cause: new Error(),
+        description: `The url ""${url}"" is already used and needs to be unique`,
+      });
+    }
+    if (createTenantDto.tenantTypeIds && createTenantDto.tenantTypeIds.length > 0) {
+      this.logger.log(`tenant types: ${createTenantDto.tenantTypeIds}`);
+    }
+    const newTenantType = this.tenantRepository.create({
+      ...createTenantDto,
+      name: name.trim(),
+      url: url.trim().toLowerCase(),
+      description: description.trim(),
+    });
+    return await this.tenantRepository.save(newTenantType);
+  }",2,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:create,<empty>,20,create,,,-1,Promise<any>,ANY
+103079215336,MEMBER,<empty>,<empty>,"async findAll() {
+    this.logger.log('Finding All Tenant ...');
+    this.tenantCollection = await this.tenantRepository
+      .createQueryBuilder('Tenants')
+      .leftJoinAndSelect('Tenants.tenantType', 'tenantType')
+      .leftJoinAndSelect('Tenants.childrenIds', 'childrenIds')
+      .leftJoinAndSelect('Tenants.parent', 'parent')
+      .leftJoinAndSelect('Tenants.tenantRoleAlias', 'tenantRoleAlias')
+      .leftJoinAndSelect('Tenants.coverageZone', 'coverageZone')
+      //.leftJoinAndSelect('Tenants.userIds', 'userIds')
+      // .leftJoinAndSelect('Tenants.roles', 'roles')
+      //.leftJoinAndSelect('roles.role', 'role')
+      //.leftJoinAndSelect('roles.user', 'user')
+      // .leftJoinAndSelect('roles.tenant', 'tenant')
+      //.leftJoinAndSelect('roles.roleAlias', 'roleAlias')
+      .leftJoinAndSelect('tenantType.roles', 'tenantRoles')
+      .getMany();
+    return this.tenantCollection;
+  }",2,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:findAll,<empty>,43,findAll,,,-1,Promise<Tenant[]>,ANY
+103079215337,MEMBER,<empty>,<empty>,"async findOne(id: number) {
+    this.logger.log(`Searching for Tenant  with id: ${id}.`);
+    this.tenantCollection = await this.tenantRepository
+      .createQueryBuilder('Tenants')
+      .leftJoinAndSelect('Tenants.tenantType', 'tenantType')
+      .leftJoinAndSelect('Tenants.childrenIds', 'childrenIds')
+      .leftJoinAndSelect('Tenants.parent', 'parent')
+      //.leftJoinAndSelect('Tenants.tenantRoleAlias', 'tenantRoleAlias')
+      //.leftJoinAndSelect('Tenants.coverageZone', 'coverageZone')
+      //.leftJoinAndSelect('Tenants.userIds', 'userIds')
+      //.leftJoinAndSelect('Tenants.roles', 'roles')
+      //.leftJoinAndSelect('roles.role', 'role')
+      //.leftJoinAndSelect('roles.user', 'user')
+      //.leftJoinAndSelect('roles.tenant', 'tenant')
+      //.leftJoinAndSelect('roles.roleAlias', 'roleAlias')
+      .leftJoinAndSelect('tenantType.roles', 'tenantRoles')
+      .andWhere('Tenants.id = :id ', { id })
+      .getMany();
+    if (this.tenantCollection.length < 1) {
+      this...",2,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:findOne,<empty>,63,findOne,,,-1,Promise<Tenant>,ANY
+103079215338,MEMBER,<empty>,<empty>,"async findByMany(findTenantDto: FindTenantDto) {
+    const {
+      ids,
+      names,
+      descriptions,
+      enabled,
+      parentIds,
+      coverageZoneIds,
+      urls,
+      userIds,
+      tenantTypeIds,
+      childrenIds,
+      roleAliasesIds,
+    } = findTenantDto;
+    let query = this.tenantRepository
+      .createQueryBuilder('Tenants')
+      .leftJoinAndSelect('Tenants.tenantType', 'tenantType')
+      .leftJoinAndSelect('Tenants.children', 'children')
+      .leftJoinAndSelect('Tenants.parent', 'parent')
+      //.leftJoinAndSelect('Tenants.tenantRoleAlias', 'tenantRoleAlias')
+      //.leftJoinAndSelect('Tenants.coverageZone', 'coverageZone')
+      .leftJoinAndSelect('Tenants.users', 'users')
+      .leftJoinAndSelect('Tenants.roles', 'roles')
+      //.leftJoinAndSelect('roles.role', 'role')
+      .leftJoinAndSelect('roles.user', 'user')
+      //.leftJoinAndSelect('roles.tenant', 'tenant')
+      .leftJoinAndSelect('roles.roleAlias', 'roleAlias')
+      .leftJoinAndSelect('tenan...",2,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:findByMany,<empty>,92,findByMany,,,-1,Promise<Tenant[]>,ANY
+103079215339,MEMBER,<empty>,<empty>,"async update(id: number, updateTenantDto: UpdateTenantDto) {
+    this.logger.log(`Updating for Tenant with id: ${id}.`);
+    const { url, name, description } = updateTenantDto;
+
+    const tenantToUpdate = await this.tenantRepository
+      .createQueryBuilder('Tenants')
+      .leftJoinAndSelect('Tenants.tenantType', 'tenantType')
+      .leftJoinAndSelect('Tenants.childrenIds', 'childrenIds')
+      .leftJoinAndSelect('Tenants.parent', 'parent')
+      //.leftJoinAndSelect('Tenants.tenantRoleAlias', 'tenantRoleAlias')
+      //.leftJoinAndSelect('Tenants.coverageZone', 'coverageZone')
+      //.leftJoinAndSelect('Tenants.userIds', 'userIds')
+      //.leftJoinAndSelect('Tenants.roles', 'roles')
+      //.leftJoinAndSelect('roles.role', 'role')
+      //.leftJoinAndSelect('roles.user', 'user')
+      //.leftJoinAndSelect('roles.tenant', 'tenant')
+      //.leftJoinAndSelect('roles.roleAlias', 'roleAlias')
+      .leftJoinAndSelect('tenantType.roles', 'tenantRoles')
+      .andWhere('Tenants.id = ...",2,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:update,<empty>,171,update,,,-1,Promise<any>,ANY
+103079215340,MEMBER,<empty>,<empty>,"async remove(id: number) {
+    this.logger.log(`Enabling / Disabling Tenant with id: ${id}.`);
+    const tenantToDisable = await this.tenantRepository
+      .createQueryBuilder('Tenants')
+      .leftJoinAndSelect('Tenants.tenantType', 'tenantType')
+      .leftJoinAndSelect('Tenants.childrenIds', 'childrenIds')
+      .leftJoinAndSelect('Tenants.parent', 'parent')
+      //.leftJoinAndSelect('Tenants.tenantRoleAlias', 'tenantRoleAlias')
+      //.leftJoinAndSelect('Tenants.coverageZone', 'coverageZone')
+      //.leftJoinAndSelect('Tenants.userIds', 'userIds')
+      //.leftJoinAndSelect('Tenants.roles', 'roles')
+      //.leftJoinAndSelect('roles.role', 'role')
+      //.leftJoinAndSelect('roles.user', 'user')
+      //.leftJoinAndSelect('roles.tenant', 'tenant')
+      //.leftJoinAndSelect('roles.roleAlias', 'roleAlias')
+      .leftJoinAndSelect('tenantType.roles', 'tenantRoles')
+      .andWhere('Tenants.id = :id ', { id })
+      .getOne();
+    if (!tenantToDisable) {
+      this.logger.erro...",2,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:remove,<empty>,220,remove,,,-1,Promise<any>,ANY
+103079215341,MEMBER,<empty>,<empty>,"async findByIds(findTenantDto: FindTenantDto) {
+    const { ids } = findTenantDto;
+    let query = this.tenantRepository.createQueryBuilder('Tenants');
+
+    if (ids && ids.length > 0) {
+      this.logger.log(`Finding by ids: ${ids}`);
+      query = query.andWhere('Tenants.id IN (:...ids) ', { ids });
+      this.tenantCollection = await query.getMany();
+      this.logger.log(`Found ${this.tenantCollection.length} Tenant Types`);
+      return this.tenantCollection;
+    } else {
+      return [];
+    }
+  }",2,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:findByIds,<empty>,251,findByIds,,,-1,Promise<Tenant[]>,ANY
+103079215342,MEMBER,<empty>,<empty>,"@IsNotEmpty()
+  @ApiProperty()
+  userId: number;",2,,<empty>,6,userId,,,-1,__ecma.Number,__ecma.Number
+103079215343,MEMBER,<empty>,<empty>,"@IsNotEmpty()
+  @ApiProperty()
+  tenantId: number;",2,,<empty>,10,tenantId,,,-1,__ecma.Number,__ecma.Number
+103079215344,MEMBER,<empty>,<empty>,"@IsNotEmpty()
+  @ApiProperty()
+  roleId: number;",2,,<empty>,14,roleId,,,-1,__ecma.Number,__ecma.Number
+103079215345,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  roleAliasId?: number;",2,,<empty>,18,roleAliasId,,,-1,__ecma.Number,__ecma.Number
+103079215346,MEMBER,<empty>,<empty>,"@ApiProperty()
+  enabled: boolean;",2,,<empty>,21,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215347,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  ids?: number;",2,,<empty>,6,ids,,,-1,__ecma.Number,__ecma.Number
+103079215348,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  userIds?: number[];",2,,<empty>,9,userIds,,,-1,__ecma.Array,__ecma.Array
+103079215349,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  tenantIds?: number[];",2,,<empty>,12,tenantIds,,,-1,__ecma.Array,__ecma.Array
+103079215350,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  roleIds?: number[];",2,,<empty>,15,roleIds,,,-1,__ecma.Array,__ecma.Array
+103079215351,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  roleAliasIds?: number[];",2,,<empty>,18,roleAliasIds,,,-1,__ecma.Array,__ecma.Array
+103079215352,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  enabled?: boolean;",2,,<empty>,21,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215353,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  @IsNotEmpty()
+  userId?: number;",2,,<empty>,7,userId,,,-1,__ecma.Number,__ecma.Number
+103079215354,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  @IsNotEmpty()
+  tenantId?: number;",2,,<empty>,11,tenantId,,,-1,__ecma.Number,__ecma.Number
+103079215355,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  @IsNotEmpty()
+  roleId?: number;",2,,<empty>,15,roleId,,,-1,__ecma.Number,__ecma.Number
+103079215356,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  roleAliasId?: number;",2,,<empty>,19,roleAliasId,,,-1,__ecma.Number,__ecma.Number
+103079215357,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  enabled?: boolean;",2,,<empty>,22,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215358,MEMBER,<empty>,<empty>,id: number;,2,,<empty>,2,id,,,-1,__ecma.Number,__ecma.Number
+103079215359,MEMBER,<empty>,<empty>,userId: number;,2,,<empty>,3,userId,,,-1,__ecma.Number,__ecma.Number
+103079215360,MEMBER,<empty>,<empty>,tenantId: number;,2,,<empty>,4,tenantId,,,-1,__ecma.Number,__ecma.Number
+103079215361,MEMBER,<empty>,<empty>,roleId: number;,2,,<empty>,5,roleId,,,-1,__ecma.Number,__ecma.Number
+103079215362,MEMBER,<empty>,<empty>,roleAliasId?: number;,2,,<empty>,6,roleAliasId,,,-1,__ecma.Number,__ecma.Number
+103079215363,MEMBER,<empty>,<empty>,enabled: boolean;,2,,<empty>,7,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215364,MEMBER,<empty>,<empty>,createdAt: Date;,2,,<empty>,8,createdAt,,,-1,Date,ANY
+103079215365,MEMBER,<empty>,<empty>,updatedAt: Date;,2,,<empty>,9,updatedAt,,,-1,Date,ANY
+103079215366,MEMBER,<empty>,<empty>,private readonly logger = new Logger(UserRoleByTenantsService.name);,2,,<empty>,16,logger,,,-1,ANY,@nestjs/common:Logger
+103079215367,MEMBER,<empty>,<empty>,userId,17,,<empty>,35,userId,,,-1,__ecma.Number,__ecma.Number
+103079215368,MEMBER,<empty>,<empty>,tenantId,25,,<empty>,35,tenantId,,,-1,__ecma.Number,__ecma.Number
+103079215369,MEMBER,<empty>,<empty>,roleId,35,,<empty>,35,roleId,,,-1,__ecma.Number,__ecma.Number
+103079215370,MEMBER,<empty>,<empty>,roleAliasId,43,,<empty>,35,roleAliasId,,,-1,__ecma.Number,__ecma.Number
+103079215371,MEMBER,<empty>,<empty>,enabled,56,,<empty>,35,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215372,MEMBER,<empty>,<empty>,"async create({ userId, tenantId, roleId, roleAliasId, enabled }: CreateUserRoleByTenantsDto) {
+    const newUserRoleByTenants = this.userRoleByTenantsRepository.create();
+
+    this.logger.log(`Finding user ${userId} in tenant ${tenantId} ...`);
+    const foundUser = await this.usersService.findByMany({ ids: [userId], tenantsIds: [tenantId] });
+
+    if (foundUser.length < 0) {
+      this.logger.error('Invalid User or is not registered for that Tenant');
+      throw new NotFoundException('Invalid User or is not registered for that Tenant', {
+        cause: new Error(),
+        description: `Invalid User ${userId} or is not registered for Tenant ${tenantId}`,
+      });
+    }
+
+    const foundUserRoleByTenants = await this.findByMany({
+      userIds: [userId],
+      tenantIds: [tenantId],
+      roleIds: [roleId],
+    });
+
+    if (foundUserRoleByTenants.length > 0) {
+      this.logger.error(
+        `There is a role ${roleId} with user ${userId} in the tenant ${tenantId}, and needs to be ...",2,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:create,<empty>,35,create,,,-1,Promise<any>,ANY
+103079215373,MEMBER,<empty>,<empty>,"async findAll() {
+    this.logger.log(`Finding all ...`);
+    return await this.userRoleByTenantsRepository
+      .createQueryBuilder('userRoleByTenants')
+      .leftJoinAndSelect('userRoleByTenants.tenant', 'tenant')
+      .leftJoinAndSelect('userRoleByTenants.user', 'user')
+      .leftJoinAndSelect('userRoleByTenants.role', 'role')
+      .leftJoinAndSelect('userRoleByTenants.roleAlias', 'roleAlias')
+      .getMany();
+  }",2,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:findAll,<empty>,114,findAll,,,-1,Promise<any>,ANY
+103079215374,MEMBER,<empty>,<empty>,ids,21,,<empty>,125,ids,,,-1,__ecma.Number,__ecma.Number
+103079215375,MEMBER,<empty>,<empty>,userIds,26,,<empty>,125,userIds,,,-1,__ecma.Array,__ecma.Array
+103079215376,MEMBER,<empty>,<empty>,tenantIds,35,,<empty>,125,tenantIds,,,-1,__ecma.Array,__ecma.Array
+103079215377,MEMBER,<empty>,<empty>,roleIds,46,,<empty>,125,roleIds,,,-1,__ecma.Array,__ecma.Array
+103079215378,MEMBER,<empty>,<empty>,roleAliasIds,55,,<empty>,125,roleAliasIds,,,-1,__ecma.Array,__ecma.Array
+103079215379,MEMBER,<empty>,<empty>,enabled,69,,<empty>,125,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215380,MEMBER,<empty>,<empty>,"async findByMany({ ids, userIds, tenantIds, roleIds, roleAliasIds, enabled }: FindUserRoleByTenantsDto) {
+    this.logger.log(`Finding user role by tenants`);
+    let query = this.userRoleByTenantsRepository
+      .createQueryBuilder('userRoleByTenants')
+      .leftJoinAndSelect('userRoleByTenants.tenant', 'tenants')
+      .leftJoinAndSelect('userRoleByTenants.user', 'user')
+      .leftJoinAndSelect('userRoleByTenants.role', 'role')
+      .leftJoinAndSelect('userRoleByTenants.roleAlias', 'roleAlias');
+
+    if (ids) {
+      this.logger.log(`with id ${ids} ...`);
+      query = query.andWhere('userRoleByTenants.id IN (:...ids)', { ids });
+    }
+    if (userIds && userIds.length > 0) {
+      this.logger.log(`with userIds ${userIds} ...`);
+      query = query.andWhere('user.id IN (:...userIds)', { userIds });
+    }
+    if (tenantIds && tenantIds.length > 0) {
+      this.logger.log(`with tenantIds ${tenantIds} ...`);
+      query = query.andWhere('tenants.id IN (:...tenantIds)', { tenantId...",2,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:findByMany,<empty>,125,findByMany,,,-1,Promise<any>,ANY
+103079215381,MEMBER,<empty>,<empty>,userId,29,,<empty>,162,userId,,,-1,__ecma.Number,__ecma.Number
+103079215382,MEMBER,<empty>,<empty>,tenantId,37,,<empty>,162,tenantId,,,-1,__ecma.Number,__ecma.Number
+103079215383,MEMBER,<empty>,<empty>,roleId,47,,<empty>,162,roleId,,,-1,__ecma.Number,__ecma.Number
+103079215384,MEMBER,<empty>,<empty>,roleAliasId,55,,<empty>,162,roleAliasId,,,-1,__ecma.Number,__ecma.Number
+103079215385,MEMBER,<empty>,<empty>,enabled,68,,<empty>,162,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215386,MEMBER,<empty>,<empty>,"async update(id: number, { userId, tenantId, roleId, roleAliasId, enabled }: UpdateUserRoleByTenantsDto) {
+    const userRoleByTenantsToUpdate = await this.userRoleByTenantsRepository
+      .createQueryBuilder('userRoleByTenants')
+      .leftJoinAndSelect('userRoleByTenants.tenant', 'tenant')
+      .leftJoinAndSelect('userRoleByTenants.user', 'user')
+      .leftJoinAndSelect('userRoleByTenants.role', 'role')
+      .leftJoinAndSelect('userRoleByTenants.roleAlias', 'roleAlias')
+      .andWhere('userRoleByTenants.id = :id', { id })
+      .getOne();
+
+    if (!userRoleByTenantsToUpdate) {
+      this.logger.error('Property to update not found');
+      throw new NotFoundException('Not found', {
+        cause: new Error(),
+        description: `Property to update not found`,
+      });
+    }
+
+    if (enabled != null) userRoleByTenantsToUpdate.enabled = enabled;
+
+    const newUser = userId || userRoleByTenantsToUpdate.user.id;
+    const newTenant = tenantId || userRoleByTenantsToUpdate.tenant...",2,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:update,<empty>,162,update,,,-1,Promise<any>,ANY
+103079215387,MEMBER,<empty>,<empty>,"async remove(id: number) {
+    this.logger.log(`Enabling / Disabling User Role By Tenant with id: ${id}.`);
+    const userRoleByTenantsToDisable = await this.userRoleByTenantsRepository
+      .createQueryBuilder('userRoleByTenants')
+      .leftJoinAndSelect('userRoleByTenants.tenant', 'tenant')
+      .leftJoinAndSelect('userRoleByTenants.user', 'user')
+      .leftJoinAndSelect('userRoleByTenants.role', 'role')
+      .leftJoinAndSelect('userRoleByTenants.roleAlias', 'roleAlias')
+      .andWhere('userRoleByTenants.id = :id', { id })
+      .getOne();
+
+    if (!userRoleByTenantsToDisable) {
+      this.logger.error('Property to disble/enable not found');
+      throw new NotFoundException('Not found', {
+        cause: new Error(),
+        description: `Property to disable/enable not found`,
+      });
+    }
+    userRoleByTenantsToDisable.enabled = !userRoleByTenantsToDisable.enabled;
+    this.logger.log(
+      `User Role By Tenant with id: ${id} was ` + (userRoleByTenantsToDisable.enabled ...",2,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:remove,<empty>,260,remove,,,-1,Promise<any>,ANY
+103079215388,MEMBER,<empty>,<empty>,"@IsNotEmpty()
+  @Length(2, 200)
+  @ApiProperty()
+  firstName: string;",2,,<empty>,7,firstName,,,-1,__ecma.String,__ecma.String
+103079215389,MEMBER,<empty>,<empty>,"@IsNotEmpty()
+  @Length(2, 200)
+  @ApiProperty()
+  lastName: string;",2,,<empty>,12,lastName,,,-1,__ecma.String,__ecma.String
+103079215390,MEMBER,<empty>,<empty>,"@IsNotEmpty()
+  @Length(2, 200)
+  @ApiProperty()
+  fireBaseId?: string;",2,,<empty>,17,fireBaseId,,,-1,__ecma.String,__ecma.String
+103079215391,MEMBER,<empty>,<empty>,"@ApiProperty()
+  validated: boolean;",2,,<empty>,22,validated,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215392,MEMBER,<empty>,<empty>,"@ApiProperty()
+  BackOfficeAccess?: boolean;",2,,<empty>,25,BackOfficeAccess,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215393,MEMBER,<empty>,<empty>,"@ApiProperty()
+  typeOfUser?: TypeOfUser;",2,,<empty>,28,typeOfUser,,,-1,TypeOfUser,ANY
+103079215394,MEMBER,<empty>,<empty>,"@ApiProperty()
+  SaasAccess?: boolean;",2,,<empty>,31,SaasAccess,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215395,MEMBER,<empty>,<empty>,"@IsNotEmpty()
+  @IsEmail()
+  @Length(2, 200)
+  @ApiProperty()
+  email: string;",2,,<empty>,34,email,,,-1,__ecma.String,__ecma.String
+103079215396,MEMBER,<empty>,<empty>,"@IsOptional()
+  @ApiProperty()
+  phone: string;",2,,<empty>,40,phone,,,-1,__ecma.String,__ecma.String
+103079215397,MEMBER,<empty>,<empty>,"@ApiProperty()
+  enabled?: boolean;",2,,<empty>,44,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215398,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  tenantsIds?: number[];",2,,<empty>,47,tenantsIds,,,-1,__ecma.Array,__ecma.Array
+103079215399,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  userRoleByTenantsIds?: number[];",2,,<empty>,50,userRoleByTenantsIds,,,-1,__ecma.Array,__ecma.Array
+103079215400,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  ids?: number[];",2,,<empty>,6,ids,,,-1,__ecma.Array,__ecma.Array
+103079215401,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [String] })
+  firstNames?: string[];",2,,<empty>,9,firstNames,,,-1,__ecma.Array,__ecma.Array
+103079215402,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [String] })
+  lastNames?: string[];",2,,<empty>,12,lastNames,,,-1,__ecma.Array,__ecma.Array
+103079215403,MEMBER,<empty>,<empty>,"@ApiProperty()
+  fireBaseId?: string;",2,,<empty>,15,fireBaseId,,,-1,__ecma.String,__ecma.String
+103079215404,MEMBER,<empty>,<empty>,"@ApiProperty()
+  validated?: boolean;",2,,<empty>,18,validated,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215405,MEMBER,<empty>,<empty>,"@ApiProperty()
+  BackOfficeAccess?: boolean;",2,,<empty>,21,BackOfficeAccess,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215406,MEMBER,<empty>,<empty>,"@ApiProperty()
+  typeOfUser?: TypeOfUser;",2,,<empty>,24,typeOfUser,,,-1,TypeOfUser,ANY
+103079215407,MEMBER,<empty>,<empty>,"@ApiProperty()
+  SaasAccess?: boolean;",2,,<empty>,27,SaasAccess,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215408,MEMBER,<empty>,<empty>,"@ApiProperty()
+  temporalId?: string;",2,,<empty>,30,temporalId,,,-1,__ecma.String,__ecma.String
+103079215409,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [String] })
+  emails?: string[];",2,,<empty>,33,emails,,,-1,__ecma.Array,__ecma.Array
+103079215410,MEMBER,<empty>,<empty>,"@ApiProperty()
+  enabled?: boolean;",2,,<empty>,36,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215411,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  tenantsIds?: number[];",2,,<empty>,39,tenantsIds,,,-1,__ecma.Array,__ecma.Array
+103079215412,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  userRoleByTenantsIds?: number[];",2,,<empty>,42,userRoleByTenantsIds,,,-1,__ecma.Array,__ecma.Array
+103079215413,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  recordTypeIds?: number[];",2,,<empty>,45,recordTypeIds,,,-1,__ecma.Array,__ecma.Array
+103079215414,MEMBER,<empty>,<empty>,"@IsNotEmpty()
+  @Length(2, 200)
+  @ApiProperty()
+  firstName: string;",2,,<empty>,7,firstName,,,-1,__ecma.String,__ecma.String
+103079215415,MEMBER,<empty>,<empty>,"@IsNotEmpty()
+  @Length(2, 200)
+  @ApiProperty()
+  lastName: string;",2,,<empty>,12,lastName,,,-1,__ecma.String,__ecma.String
+103079215416,MEMBER,<empty>,<empty>,"@IsNotEmpty()
+  @Length(2, 200)
+  @ApiProperty()
+  fireBaseId?: string;",2,,<empty>,17,fireBaseId,,,-1,__ecma.String,__ecma.String
+103079215417,MEMBER,<empty>,<empty>,"@ApiProperty()
+  validated: boolean;",2,,<empty>,22,validated,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215418,MEMBER,<empty>,<empty>,"@ApiProperty()
+  BackOfficeAccess?: boolean;",2,,<empty>,25,BackOfficeAccess,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215419,MEMBER,<empty>,<empty>,"@ApiProperty()
+  typeOfUser?: TypeOfUser;",2,,<empty>,28,typeOfUser,,,-1,TypeOfUser,ANY
+103079215420,MEMBER,<empty>,<empty>,"@ApiProperty()
+  SaasAccess?: boolean;",2,,<empty>,31,SaasAccess,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215421,MEMBER,<empty>,<empty>,"@IsNotEmpty()
+  @IsEmail()
+  @Length(2, 200)
+  @ApiProperty()
+  email: string;",2,,<empty>,34,email,,,-1,__ecma.String,__ecma.String
+103079215422,MEMBER,<empty>,<empty>,"@ApiProperty()
+  phone: string;",2,,<empty>,40,phone,,,-1,__ecma.String,__ecma.String
+103079215423,MEMBER,<empty>,<empty>,"@ApiProperty()
+  enabled?: boolean;",2,,<empty>,43,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215424,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  tenantsIds?: number[];",2,,<empty>,46,tenantsIds,,,-1,__ecma.Array,__ecma.Array
+103079215425,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true, type: [Number] })
+  userRoleByTenantsIds?: number[];",2,,<empty>,49,userRoleByTenantsIds,,,-1,__ecma.Array,__ecma.Array
+103079215426,MEMBER,<empty>,<empty>,"@ApiProperty({ nullable: true })
+  temporalId?: string;",2,,<empty>,52,temporalId,,,-1,__ecma.String,__ecma.String
+103079215427,MEMBER,<empty>,<empty>,id: number;,2,,<empty>,4,id,,,-1,__ecma.Number,__ecma.Number
+103079215428,MEMBER,<empty>,<empty>,firstName: string;,2,,<empty>,5,firstName,,,-1,__ecma.String,__ecma.String
+103079215429,MEMBER,<empty>,<empty>,lastName: string;,2,,<empty>,6,lastName,,,-1,__ecma.String,__ecma.String
+103079215430,MEMBER,<empty>,<empty>,fireBaseId?: string;,2,,<empty>,7,fireBaseId,,,-1,__ecma.String,__ecma.String
+103079215431,MEMBER,<empty>,<empty>,validated: boolean;,2,,<empty>,8,validated,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215432,MEMBER,<empty>,<empty>,BackOfficeAccess?: boolean;,2,,<empty>,9,BackOfficeAccess,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215433,MEMBER,<empty>,<empty>,typeOfUser?: TypeOfUser;,2,,<empty>,10,typeOfUser,,,-1,TypeOfUser,ANY
+103079215434,MEMBER,<empty>,<empty>,SaasAccess?: boolean;,2,,<empty>,11,SaasAccess,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215435,MEMBER,<empty>,<empty>,email: string;,2,,<empty>,12,email,,,-1,__ecma.String,__ecma.String
+103079215436,MEMBER,<empty>,<empty>,enabled?: boolean;,2,,<empty>,13,enabled,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215437,MEMBER,<empty>,<empty>,createdAt: Date;,2,,<empty>,14,createdAt,,,-1,Date,ANY
+103079215438,MEMBER,<empty>,<empty>,updatedAt: Date;,2,,<empty>,15,updatedAt,,,-1,Date,ANY
+103079215439,MEMBER,<empty>,<empty>,tenantsIds?: number[];,2,,<empty>,16,tenantsIds,,,-1,__ecma.Array,__ecma.Array
+103079215440,MEMBER,<empty>,<empty>,userRoleByTenantsIds?: number[];,2,,<empty>,17,userRoleByTenantsIds,,,-1,__ecma.Array,__ecma.Array
+103079215441,MEMBER,<empty>,<empty>,private readonly logger = new Logger(UserVerificationService.name);,2,,<empty>,14,logger,,,-1,ANY,@nestjs/common:Logger
+103079215442,MEMBER,<empty>,<empty>,"async sendVerificationEmail(temporalId: string): Promise<boolean> {
+    this.logger.log(`Sending verification email to user with temporalId: ${temporalId}`);
+    
+    // Find user by temporalId
+    const user = await this.userRepository
+      .createQueryBuilder('user')
+      .leftJoinAndSelect('user.tenants', 'tenants')
+      .where('user.temporalId = :temporalId', { temporalId })
+      .getOne();
+
+    if (!user) {
+      this.logger.error(`User with temporalId ${temporalId} not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `User with temporalId ${temporalId} not found`,
+      });
+    }
+
+    // Check if the user is already verified
+    if (user.validated) {
+      this.logger.error(`User with temporalId ${temporalId} is already verified`);
+      throw new ForbiddenException('User is already verified', {
+        cause: new Error(),
+        description: `User with temporalId ${temporalId} is already verified`,
+      });
+...",2,src/shared/context/users/domain/user-verification.service.ts::program:UserVerificationService:sendVerificationEmail,<empty>,28,sendVerificationEmail,,,-1,Promise<boolean>,ANY
+103079215443,MEMBER,<empty>,<empty>,"async verifyUser(temporalId: string): Promise<User> {
+    this.logger.log(`Verifying user with temporalId: ${temporalId}`);
+    
+    // Find user by temporalId
+    const user = await this.userRepository
+      .createQueryBuilder('user')
+      .where('user.temporalId = :temporalId', { temporalId })
+      .getOne();
+
+    if (!user) {
+      this.logger.error(`User with temporalId ${temporalId} not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `User with temporalId ${temporalId} not found`,
+      });
+    }
+
+    // Check if the user is already verified
+    if (user.validated) {
+      this.logger.error(`User with temporalId ${temporalId} is already verified`);
+      throw new ForbiddenException('User is already verified', {
+        cause: new Error(),
+        description: `User with temporalId ${temporalId} is already verified`,
+      });
+    }
+
+    // Mark user as validated
+    user.validated = true;
+    user.verifiedAt = ...",2,src/shared/context/users/domain/user-verification.service.ts::program:UserVerificationService:verifyUser,<empty>,90,verifyUser,,,-1,Promise<User>,ANY
+103079215444,MEMBER,<empty>,<empty>,"async sendMfaAttemptEmail(userId: number): Promise<boolean> {
+    this.logger.log(`Sending MFA attempt email to user with id: ${userId}`);
+    
+    // Find user by ID
+    const user = await this.userRepository.findOneBy({ id: userId });
+
+    if (!user) {
+      this.logger.error(`User with id ${userId} not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `User with id ${userId} not found`,
+      });
+    }
+
+    // Get email template
+    const template = this.emailProvider.getMfaAttemptTemplate(user);
+    
+    // Send the email
+    this.logger.log(`Sending MFA attempt email to ${user.email}`);
+    const emailSent = await this.emailProvider.sendEmail(user.email, template.subject, template.body);
+    
+    if (emailSent) {
+      this.logger.log(`MFA attempt email sent successfully to ${user.email}`);
+      return true;
+    } else {
+      this.logger.error(`Failed to send MFA attempt email to ${user.email}`);
+      return false...",2,src/shared/context/users/domain/user-verification.service.ts::program:UserVerificationService:sendMfaAttemptEmail,<empty>,130,sendMfaAttemptEmail,,,-1,Promise<boolean>,ANY
+103079215445,MEMBER,<empty>,<empty>,"async sendMfaSuccessEmail(userId: number): Promise<boolean> {
+    this.logger.log(`Sending MFA success email to user with id: ${userId}`);
+    
+    // Find user by ID
+    const user = await this.userRepository.findOneBy({ id: userId });
+
+    if (!user) {
+      this.logger.error(`User with id ${userId} not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `User with id ${userId} not found`,
+      });
+    }
+
+    // Get email template
+    const template = this.emailProvider.getMfaSuccessTemplate(user);
+    
+    // Send the email
+    this.logger.log(`Sending MFA success email to ${user.email}`);
+    const emailSent = await this.emailProvider.sendEmail(user.email, template.subject, template.body);
+    
+    if (emailSent) {
+      this.logger.log(`MFA success email sent successfully to ${user.email}`);
+      return true;
+    } else {
+      this.logger.error(`Failed to send MFA success email to ${user.email}`);
+      return false...",2,src/shared/context/users/domain/user-verification.service.ts::program:UserVerificationService:sendMfaSuccessEmail,<empty>,165,sendMfaSuccessEmail,,,-1,Promise<boolean>,ANY
+103079215446,MEMBER,<empty>,<empty>,private readonly logger = new Logger(UsersService.name);,2,,<empty>,43,logger,,,-1,ANY,@nestjs/common:Logger
+103079215447,MEMBER,<empty>,<empty>,private usersCollection: User[] = [];,2,,<empty>,44,usersCollection,,,-1,__ecma.Array,__ecma.Array
+103079215448,MEMBER,<empty>,<empty>,"async create(createUserDto: CreateUserDto, payload: ContextPayload) {
+    this.logger.log('Creating new User...');
+
+    const { email, firstName, lastName, tenantsIds, userRoleByTenantsIds, phone } = createUserDto;
+    let foundTenants: Tenant[] = [];
+    let foundRoles: Role[] = [];
+
+    if (payload){
+      const userCreator = await this.findOne(payload.userId);
+
+      if (payload.issuer === IssuerEnum.Saas && userCreator.typeOfUser === TypeOfUser.Client  && createUserDto.typeOfUser === TypeOfUser.AvantoEmployee && !userCreator.BackOfficeAccess) {
+        this.logger.error(`Action not allowed for typeOfUser: ${userCreator.typeOfUser}`);
+        throw new ForbiddenException('insufficient permissions for this user', {
+          cause: new Error(),
+          description: `The user of typeOfUser ${userCreator.typeOfUser} doesn´t  have enough permissions to perform this action`,
+        });
+      }
+    }
+    
+    const existingTenantEmail = await this.userRepository.findOneBy({ email })...",2,src/shared/context/users/domain/users.service.ts::program:UsersService:create,<empty>,46,create,,,-1,Promise<any>,ANY
+103079215449,MEMBER,<empty>,<empty>,"async findAll() {
+    this.logger.log('Finding All Users ...');
+    this.usersCollection = await this.userRepository
+      .createQueryBuilder('users')
+      .leftJoinAndSelect('users.tenants', 'tenants')
+      .leftJoinAndSelect('users.roles', 'roles')
+      .leftJoinAndSelect('roles.role', 'role')
+      .leftJoinAndSelect('roles.tenant', 'tenant')
+      .leftJoinAndSelect('roles.roleAlias', 'roleAlias')
+      .getMany();
+    this.logger.log(`Found ${this.usersCollection.length} users`);
+    return this.usersCollection;
+  }",2,src/shared/context/users/domain/users.service.ts::program:UsersService:findAll,<empty>,156,findAll,,,-1,Promise<User[]>,ANY
+103079215450,MEMBER,<empty>,<empty>,"async findOne(id: number) {
+    this.logger.log(`Looking for user with id: ${id}`);
+    this.usersCollection = await this.userRepository
+      .createQueryBuilder('users')
+      .leftJoinAndSelect('users.tenants', 'tenants')
+      .leftJoinAndSelect('users.roles', 'roles')
+      .leftJoinAndSelect('roles.role', 'role')
+      .leftJoinAndSelect('roles.tenant', 'tenant')
+      .leftJoinAndSelect('roles.roleAlias', 'roleAlias')
+      .where('users.id = :id', { id })
+      .getMany();
+    if (this.usersCollection.length <= 0) {
+      throw new NotFoundException(`Not found any user with id: ${id}`, {
+        cause: new Error(),
+        description: `Not found any user with id: ${id}`,
+      });
+    }
+    this.logger.log(`Found ${this.usersCollection.length} users`);
+    return this.usersCollection[0];
+  }",2,src/shared/context/users/domain/users.service.ts::program:UsersService:findOne,<empty>,170,findOne,,,-1,Promise<User>,ANY
+103079215451,MEMBER,<empty>,<empty>,"async findByMany(findUserDto: FindUserDto) {
+    const {
+      ids,
+      firstNames,
+      lastNames,
+      enabled,
+      emails,
+      fireBaseId,
+      validated,
+      BackOfficeAccess,
+      SaasAccess,
+      tenantsIds,
+      userRoleByTenantsIds,
+      recordTypeIds,
+      typeOfUser,
+      temporalId,
+    } = findUserDto;
+    this.logger.log(`Finding Users by many args `);
+    let query = this.userRepository
+      .createQueryBuilder('users')
+      .leftJoinAndSelect('users.tenants', 'tenants')
+      .leftJoinAndSelect('users.roles', 'roles')
+      .leftJoinAndSelect('roles.role', 'role')
+      .leftJoinAndSelect('roles.tenant', 'tenant')
+      .leftJoinAndSelect('roles.roleAlias', 'roleAlias');
+
+    if (ids && ids.length > 0) {
+      this.logger.log(`Finding by ids: ${ids}`);
+      query = query.andWhere('users.id IN (:...ids) ', { ids });
+    }
+    if (firstNames && firstNames.length > 0) {
+      this.logger.log(`Finding by firstNames: ${firstNames}`);
+      query = query...",2,src/shared/context/users/domain/users.service.ts::program:UsersService:findByMany,<empty>,191,findByMany,,,-1,Promise<User[]>,ANY
+103079215452,MEMBER,<empty>,<empty>,"async update(id: number, updateUserDto: UpdateUserDto, payload: ContextPayload) {
+    this.logger.log(`Updating user with id: ${id}`);
+    const {
+      email,
+      firstName,
+      lastName,
+      tenantsIds,
+      phone,
+      temporalId,
+      validated,
+      BackOfficeAccess,
+      typeOfUser,
+      SaasAccess,
+      enabled,
+      fireBaseId,
+    } = updateUserDto;
+    const userToUpdate = await this.userRepository
+      .createQueryBuilder('users')
+      .leftJoinAndSelect('users.tenants', 'tenants')
+      .leftJoinAndSelect('users.roles', 'roles')
+      .leftJoinAndSelect('roles.role', 'role')
+      .leftJoinAndSelect('roles.tenant', 'tenant')
+      .leftJoinAndSelect('roles.roleAlias', 'roleAlias')
+      .where('users.id = :id', { id })
+      .getOne();
+
+    if (!userToUpdate) {
+      this.logger.error(`The user with id ${id} was not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `The user with id ${id} was n...",2,src/shared/context/users/domain/users.service.ts::program:UsersService:update,<empty>,303,update,,,-1,Promise<any>,ANY
+103079215453,MEMBER,<empty>,<empty>,"async remove(id: number, payload: ContextPayload) {
+    this.logger.log(`Enabling / Disabling User with id: ${id}.`);
+    const userToDisable = await this.userRepository.findOneBy({ id });
+    
+    if (!userToDisable) {
+      this.logger.error(`The user with id ${id} was not found`);
+      throw new NotFoundException('Tenant not found', {
+        cause: new Error(),
+        description: `The tenant with id ${id} was not found`,
+      });
+    }
+    if (payload){
+      const userCreator = await this.findOne(payload.userId);
+
+      if (payload.issuer === IssuerEnum.Saas && userCreator.typeOfUser === TypeOfUser.Client  && userToDisable.typeOfUser === TypeOfUser.AvantoEmployee && !userCreator.BackOfficeAccess) {
+        this.logger.error(`Action not allowed for typeOfUser: ${userCreator.typeOfUser}`);
+        throw new ForbiddenException('insufficient permissions for this user', {
+          cause: new Error(),
+          description: `The user of typeOfUser ${userCreator.typeOfUser} doesn...",2,src/shared/context/users/domain/users.service.ts::program:UsersService:remove,<empty>,443,remove,,,-1,Promise<any>,ANY
+103079215454,MEMBER,<empty>,<empty>,"async findByRecordTypeAccess(recordTypeIds: number[]): Promise<number[]> {
+    const recordGridUrl = `${recordGridsMsUrl()}role-access-to-record-fields/many`;
+
+    const roleAccessToRecordFieldOptions = new Options(
+      'POST',
+      { 'Content-Type': 'application/json' },
+      JSON.stringify({ recordTypes: recordTypeIds }),
+    );
+    const resp = await getResponse(recordGridUrl, roleAccessToRecordFieldOptions, this.logger);
+
+    // get unique roles from the response. This roles has access to the record type.
+    const roles = resp.map((roleAccessToRecordField) => roleAccessToRecordField.role);
+    const uniqueRoles = roles.filter((role, index, self) => self.findIndex((r) => r.id === role.id) === index);
+
+    return uniqueRoles.map((role) => role.id);
+  }",2,src/shared/context/users/domain/users.service.ts::program:UsersService:findByRecordTypeAccess,<empty>,472,findByRecordTypeAccess,,,-1,Promise<number[]>,ANY
+103079215455,MEMBER,<empty>,<empty>,"async resendVerification(temporalId: string) {
+    const user = await this.userRepository
+      .createQueryBuilder('user')
+      .leftJoinAndSelect('user.tenants', 'tenants')
+      .where('user.temporalId = :temporalId', { temporalId })
+      .getOne();
+    if (!user) {
+      this.logger.error(`The user with id ${temporalId} was not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `The user with id ${temporalId} was not found`,
+      });
+    }
+    if (user.validated) {
+      this.logger.error(`The user with id ${temporalId} is already verified`);
+      throw new ForbiddenException('User is already verified', {
+        cause: new Error(),
+        description: `The user with id ${temporalId} is already verified`,
+      });
+    }
+    if (!(user.tenants && user.tenants.length > 0)) {
+      this.logger.error(`The user with id ${temporalId} has no tenants asociated`);
+      throw new ForbiddenException('User has no tenants as...",2,src/shared/context/users/domain/users.service.ts::program:UsersService:resendVerification,<empty>,489,resendVerification,,,-1,Promise<any>,ANY
+103079215456,MEMBER,<empty>,<empty>,"async sendMfaAttemptEmail(userId: number) {
+    const user = await this.userRepository.findOne({ where: { id: userId } });
+
+    if (!user) {
+      this.logger.error(`The user with id ${userId} was not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `The user with id ${userId} was not found`,
+      });
+    }
+
+    return sendMfaAttemptEmailProcess(user, this.emailProvider);
+  }",2,src/shared/context/users/domain/users.service.ts::program:UsersService:sendMfaAttemptEmail,<empty>,525,sendMfaAttemptEmail,,,-1,Promise<void>,ANY
+103079215457,MEMBER,<empty>,<empty>,"async sendMfaSuccessEmail(userId: number) {
+    const user = await this.userRepository.findOne({ where: { id: userId } });
+
+    if (!user) {
+      this.logger.error(`The user with id ${userId} was not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `The user with id ${userId} was not found`,
+      });
+    }
+
+    return sendMfaSuccessEmailProcess(user, this.emailProvider);
+  }",2,src/shared/context/users/domain/users.service.ts::program:UsersService:sendMfaSuccessEmail,<empty>,539,sendMfaSuccessEmail,,,-1,Promise<void>,ANY
+103079215458,MEMBER,<empty>,<empty>,BackOffice = 'BackOffice',2,,<empty>,2,BackOffice,,,1,IssuerEnum.BackOffice,IssuerEnum.BackOffice
+103079215459,MEMBER,<empty>,<empty>,Saas = 'Saas',2,,<empty>,3,Saas,,,2,IssuerEnum.Saas,IssuerEnum.Saas
+103079215460,MEMBER,<empty>,<empty>,NotAllowed = 'NotAllowed',2,,<empty>,7,NotAllowed,,,1,FieldAccessEnum.NotAllowed,FieldAccessEnum.NotAllowed
+103079215461,MEMBER,<empty>,<empty>,Editable = 'Editable',2,,<empty>,8,Editable,,,2,FieldAccessEnum.Editable,FieldAccessEnum.Editable
+103079215462,MEMBER,<empty>,<empty>,ViewOnly = 'ViewOnly',2,,<empty>,9,ViewOnly,,,3,FieldAccessEnum.ViewOnly,FieldAccessEnum.ViewOnly
+103079215463,MEMBER,<empty>,<empty>,userId: number;,2,,<empty>,5,userId,,,-1,__ecma.Number,__ecma.Number
+103079215464,MEMBER,<empty>,<empty>,fireBaseId?: string;,2,,<empty>,6,fireBaseId,,,-1,__ecma.String,__ecma.String
+103079215465,MEMBER,<empty>,<empty>,issuer: IssuerEnum;,2,,<empty>,7,issuer,,,-1,IssuerEnum,ANY
+103079215466,MEMBER,<empty>,<empty>,backOfficeRole?: number;,2,,<empty>,8,backOfficeRole,,,-1,__ecma.Number,__ecma.Number
+103079215467,MEMBER,<empty>,<empty>,tenants?: TenantData[];,2,,<empty>,9,tenants,,,-1,__ecma.Array,__ecma.Array
+103079215468,MEMBER,<empty>,<empty>,new: MyContext,7,src/shared/dataTypes/MyContext.ts::program:MyContext:<init>,<empty>,12,<init>,,,-1,,src/shared/dataTypes/MyContext.ts::program:MyContext
+103079215469,MEMBER,<empty>,<empty>,req: Request;,2,,<empty>,13,req,,,-1,Request,ANY
+103079215470,MEMBER,<empty>,<empty>,res?: Response;,2,,<empty>,14,res,,,-1,Response,ANY
+103079215471,MEMBER,<empty>,<empty>,payload?: ContextPayload;,2,,<empty>,15,payload,,,-1,ContextPayload,ANY
+103079215472,MEMBER,<empty>,<empty>,tenantId: number;,2,,<empty>,19,tenantId,,,-1,__ecma.Number,__ecma.Number
+103079215473,MEMBER,<empty>,<empty>,tenantTypes: TenantTypeData[] | undefined;,2,,<empty>,20,tenantTypes,,,-1,ANY,ANY
+103079215474,MEMBER,<empty>,<empty>,role?: number;,2,,<empty>,21,role,,,-1,__ecma.Number,__ecma.Number
+103079215475,MEMBER,<empty>,<empty>,tenantTypeId: number;,2,,<empty>,25,tenantTypeId,,,-1,__ecma.Number,__ecma.Number
+103079215476,MEMBER,<empty>,<empty>,recordType: number[] | undefined;,2,,<empty>,26,recordType,,,-1,ANY,ANY
+103079215477,MEMBER,<empty>,<empty>,this.body = body;,4,,<empty>,7,body,,,-1,this,__ecma.String
+103079215478,MEMBER,<empty>,<empty>,this.headers = headers;,4,,<empty>,8,headers,,,-1,this,__ecma.Object
+103079215479,MEMBER,<empty>,<empty>,this.method = method;,4,,<empty>,9,method,,,-1,this,__ecma.String
+103079215480,MEMBER,<empty>,<empty>,method?: 'POST' | 'GET' | 'PATCH' | 'PUT' | 'DELETE';,2,,<empty>,2,method,,,-1,ANY,ANY
+103079215481,MEMBER,<empty>,<empty>,body?: string;,2,,<empty>,3,body,,,-1,__ecma.String,__ecma.String
+103079215482,MEMBER,<empty>,<empty>,headers?: any;,2,,<empty>,4,headers,,,-1,ANY,ANY
+103079215483,MEMBER,<empty>,<empty>,name: string;,2,,<empty>,2,name,,,-1,__ecma.String,__ecma.String
+103079215484,MEMBER,<empty>,<empty>,username: string;,2,,<empty>,3,username,,,-1,__ecma.String,__ecma.String
+103079215485,MEMBER,<empty>,<empty>,password: string;,2,,<empty>,4,password,,,-1,__ecma.String,__ecma.String
+103079215486,MEMBER,<empty>,<empty>,host: string;,2,,<empty>,5,host,,,-1,__ecma.String,__ecma.String
+103079215487,MEMBER,<empty>,<empty>,port: number;,2,,<empty>,6,port,,,-1,__ecma.Number,__ecma.Number
+103079215488,MEMBER,<empty>,<empty>,database: string;,2,,<empty>,7,database,,,-1,__ecma.String,__ecma.String
+103079215489,MEMBER,<empty>,<empty>,synchronize: boolean;,2,,<empty>,8,synchronize,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215490,MEMBER,<empty>,<empty>,logging: boolean;,2,,<empty>,9,logging,,,-1,__ecma.Boolean,__ecma.Boolean
+103079215491,MEMBER,<empty>,<empty>,schema: string;,2,,<empty>,10,schema,,,-1,__ecma.String,__ecma.String
+103079215492,MEMBER,<empty>,<empty>,tenantId: number;,2,,<empty>,2,tenantId,,,-1,__ecma.Number,__ecma.Number
+103079215493,MEMBER,<empty>,<empty>,roleId: number;,2,,<empty>,3,roleId,,,-1,__ecma.Number,__ecma.Number
+103079215494,MEMBER,<empty>,<empty>,userId: number;,2,,<empty>,2,userId,,,-1,__ecma.Number,__ecma.Number
+103079215495,MEMBER,<empty>,<empty>,roleId: number;,2,,<empty>,3,roleId,,,-1,__ecma.Number,__ecma.Number
+103079215496,MEMBER,<empty>,<empty>,[key: string | number]: Date | number | boolean | string;,2,,<empty>,2,[key: string | number]: Date | number | boolean | string;,,,-1,ANY,ANY
+103079215497,MEMBER,<empty>,<empty>,[key: string | number]: { [key: string | number]: Date | number | boolean | string };,2,,<empty>,6,[key: string | number]: { [key: string | number]: Date | number | boolean | string };,,,-1,ANY,ANY
+103079215498,MEMBER,<empty>,<empty>,tenantId: number;,2,,<empty>,2,tenantId,,,-1,__ecma.Number,__ecma.Number
+103079215499,MEMBER,<empty>,<empty>,userId: number;,2,,<empty>,3,userId,,,-1,__ecma.Number,__ecma.Number
+103079215500,MEMBER,<empty>,<empty>,private readonly logger = new Logger(EmailProvider.name);,2,,<empty>,10,logger,,,-1,ANY,@nestjs/common:Logger
+103079215501,MEMBER,<empty>,<empty>,this.region = process.env.AWS_REGION;,4,,<empty>,12,region,,,-1,this,ANY
+103079215502,MEMBER,<empty>,<empty>,"this.ses = new SES({ credentials: fromInstanceMetadata(), region: this.region });",4,,<empty>,13,ses,,,-1,this,@aws-sdk/client-ses:SES
+103079215503,MEMBER,<empty>,<empty>,private ses: SES;,2,,<empty>,8,ses,,,-1,SES,ANY
+103079215504,MEMBER,<empty>,<empty>,private readonly region: string;,2,,<empty>,9,region,,,-1,__ecma.String,__ecma.String
+103079215505,MEMBER,<empty>,<empty>,"async sendEmail(params: SendEmailRequest): Promise<void> {
+    try {
+      this.logger.log(`Sending email with params ${params}`);
+      await this.ses.sendEmail(params);
+      this.logger.log(`Email sent to ${params.Destination.ToAddresses[0]}`);
+    } catch (error) {
+      throw error;
+    }
+  }",2,src/shared/infrastructure/mails/mailProvider.ts::program:EmailProvider:sendEmail,<empty>,16,sendEmail,,,-1,Promise<void>,ANY
+103079215506,MEMBER,<empty>,<empty>,"async sendEmailWithTemplate(
+    from: string,
+    to: string,
+    templateName: string,
+    templateData: Record<string, string>,
+  ): Promise<void> {
+    const params: SendTemplatedEmailRequest = {
+      Source: from,
+      Destination: {
+        ToAddresses: [to],
+      },
+      Template: templateName,
+      TemplateData: JSON.stringify(templateData),
+    };
+    this.logger.log(`Sending email with template ${params}`);
+    await this.ses.sendTemplatedEmail(params);
+    this.logger.log('Email sent');
+  }",2,src/shared/infrastructure/mails/mailProvider.ts::program:EmailProvider:sendEmailWithTemplate,<empty>,26,sendEmailWithTemplate,,,-1,Promise<void>,ANY
+103079215507,MEMBER,<empty>,<empty>,"use(req: Request, res: Response, next: NextFunction) {
+    const id = randomUUID();
+    req[CORRELATION_ID_HEADER] = id;
+    res.set(CORRELATION_ID_HEADER, id);
+    next();
+  }",2,src/shared/middleware/correlation-id/correlation-id.middleware.ts::program:CorrelationIdMiddleware:use,<empty>,9,use,,,-1,"(req: Request, res: Response, next: NextFunction) => ANY",ANY

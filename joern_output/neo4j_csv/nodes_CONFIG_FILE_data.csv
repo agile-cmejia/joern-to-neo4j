@@ -1,0 +1,148 @@
+42949672960,CONFIG_FILE,"{
+    ""default"": true,
+    ""MD003"": {
+        ""style"": ""atx_closed""
+    },
+    ""MD007"": {
+        ""indent"": 4
+    },
+    ""no-hard-tabs"": false
+}",.markdownlint.json
+42949672961,CONFIG_FILE,"{
+  ""cSpell.words"": [""pino"", ""typeorm""]
+}",.vscode/settings.json
+42949672962,CONFIG_FILE,module.exports = { extends: ['@commitlint/config-conventional'] };,commitlint.config.js
+42949672963,CONFIG_FILE,"{
+  ""$schema"": ""https://json.schemastore.org/nest-cli"",
+  ""collection"": ""@nestjs/schematics"",
+  ""sourceRoot"": ""src""
+}",nest-cli.json
+42949672964,CONFIG_FILE,"{
+  ""name"": ""back-user-ms"",
+  ""version"": ""0.0.1"",
+  ""description"": """",
+  ""author"": """",
+  ""private"": true,
+  ""contributors"": [
+    ""Arlan Galvez Alonso <galvezalonso@gmail.com>"",
+    ""Christian Mejia <tenhitokiri@gmail.com>"",
+    ""Leonardo Fundora <>""
+  ],
+  ""license"": ""MIT"",
+  ""scripts"": {
+    ""prebuild"": ""rimraf dist"",
+    ""pre-commit"": ""lint-staged"",
+    ""build"": ""nest build"",
+    ""format"": ""prettier --write \\""src/**/*.ts\\"" \\""test/**/*.ts\\"""",
+    ""start"": ""nest start"",
+    ""dev"": ""nest start --watch"",
+    ""debug"": ""nest start --debug --watch"",
+    ""prod"": ""node dist/main"",
+    ""lint"": ""eslint \\""{src,apps,libs,test}/**/*.ts\\"" --fix --cache"",
+    ""test"": ""jest"",
+    ""test:watch"": ""jest --watch"",
+    ""test:cov"": ""jest --coverage"",
+    ""test:debug"": ""node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand"",
+    ""test:e2e"": ""jest --config ./test/jest-e2e.json"",
+    ""pretty:lint"": ""prettier --write \\""src/**/*.ts\\"" \\""test/**/*.ts\\"" && eslint \\""{src,apps,libs,test}/**/*.ts\\"" --fix --cache"",
+    ""typeorm"": ""typeorm-ts-node-commonjs"",
+    ""migration:generate"": ""yarn typeorm migration:generate -- -d src/shared/infrastructure/persistance/postgre-sql/migration.config.ts"",
+    ""migration:create"": ""yarn typeorm migration:create"",
+    ""prepare"": ""husky install""
+  },
+  ""dependencies"": {
+    ""@avantodev/avanto-db"": ""1.4.10"",
+    ""@avantodev/avanto-shared-resources"": ""^0.0.9"",
+    ""@aws-sdk/client-ses"": ""^3.391.0"",
+    ""@aws-sdk/credential-providers"": ""^3.391.0"",
+    ""@nestjs/common"": ""^9.0.0"",
+    ""@nestjs/core"": ""^9.0.0"",
+    ""@nestjs/platform-express"": ""^9.0.0"",
+    ""@nestjs/swagger"": ""^6.1.3"",
+    ""@nestjs/typeorm"": ""^9.0.1"",
+    ""aws-sdk"": ""^2.1396.0"",
+    ""class-transformer"": ""^0.5.1"",
+    ""class-validator"": ""^0.13.2"",
+    ""cross-fetch"": ""^3.1.5"",
+    ""dotenv"": ""^16.0.3"",
+    ""nestjs-pino"": ""^3.1.1"",
+    ""pg"": ""^8.8.0"",
+    ""pino-http"": ""^8.2.1"",
+    ""reflect-metadata"": ""^0.1.13"",
+    ""rimraf"": ""^3.0.2"",
+    ""rxjs"": ""^7.2.0"",
+    ""typedoc"": ""^0.24.8"",
+    ""typeorm"": ""^0.3.10""
+  },
+  ""devDependencies"": {
+    ""@commitlint/cli"": ""^17.3.0"",
+    ""@commitlint/config-conventional"": ""^17.3.0"",
+    ""@nestjs/cli"": ""^9.0.0"",
+    ""@nestjs/schematics"": ""^9.0.0"",
+    ""@nestjs/testing"": ""^9.0.0"",
+    ""@types/express"": ""^4.17.13"",
+    ""@types/jest"": ""28.1.8"",
+    ""@types/mime"": ""3.0.4"",
+    ""@types/node"": ""^16.0.0"",
+    ""@types/supertest"": ""^2.0.11"",
+    ""@typescript-eslint/eslint-plugin"": ""^5.0.0"",
+    ""@typescript-eslint/parser"": ""^5.0.0"",
+    ""eslint"": ""^8.0.1"",
+    ""eslint-config-prettier"": ""^8.3.0"",
+    ""eslint-plugin-prettier"": ""^4.0.0"",
+    ""husky"": ""^8.0.0"",
+    ""jest"": ""28.1.3"",
+    ""lint-staged"": ""^13.0.4"",
+    ""pino-pretty"": ""^9.1.1"",
+    ""prettier"": ""^2.3.2"",
+    ""source-map-support"": ""^0.5.20"",
+    ""supertest"": ""^6.1.3"",
+    ""ts-jest"": ""28.0.8"",
+    ""ts-loader"": ""^9.2.3"",
+    ""ts-node"": ""^10.9.1"",
+    ""tsconfig-paths"": ""4.1.0"",
+    ""typescript"": ""^4.7.4""
+  },
+  ""jest"": {
+    ""moduleFileExtensions"": [
+      ""js"",
+      ""json"",
+      ""ts""
+    ],
+    ""rootDir"": ""src"",
+    ""testRegex"": "".*\\\\.spec\\\\.ts$"",
+    ""transform"": {
+      ""^.+\\\\.(t|j)s$"": ""ts-jest""
+    },
+    ""collectCoverageFrom"": [
+      ""**/*.(t|j)s""
+    ],
+    ""coverageDirectory"": ""../coverage"",
+    ""testEnvironment"": ""node""
+  }
+}",package.json
+42949672965,CONFIG_FILE,"{
+  ""extends"": ""./tsconfig.json"",
+  ""exclude"": [""node_modules"", ""test"", ""dist"", ""**/*spec.ts""]
+}",tsconfig.build.json
+42949672966,CONFIG_FILE,"{
+  ""compilerOptions"": {
+    ""module"": ""commonjs"",
+    ""declaration"": true,
+    ""removeComments"": true,
+    ""emitDecoratorMetadata"": true,
+    ""experimentalDecorators"": true,
+    ""allowSyntheticDefaultImports"": true,
+    ""target"": ""es2017"",
+    ""sourceMap"": true,
+    ""outDir"": ""./dist"",
+    ""baseUrl"": ""./"",
+    ""incremental"": true,
+    ""skipLibCheck"": true,
+    ""strictNullChecks"": false,
+    ""noImplicitAny"": false,
+    ""strictBindCallApply"": false,
+    ""forceConsistentCasingInFileNames"": false,
+    ""noFallthroughCasesInSwitch"": false
+  }
+}",tsconfig.json

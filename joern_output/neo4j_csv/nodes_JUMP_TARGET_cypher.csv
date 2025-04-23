@@ -1,0 +1,13 @@
+LOAD CSV FROM 'file:/nodes_JUMP_TARGET_data.csv' AS line
+CREATE (:JUMP_TARGET {
+id: toInteger(line[0]),
+ARGUMENT_INDEX: toInteger(line[2]),
+CODE: line[3],
+COLUMN_NUMBER: toInteger(line[4]),
+LINE_NUMBER: toInteger(line[5]),
+NAME: line[6],
+OFFSET: line[7],
+OFFSET_END: line[8],
+ORDER: toInteger(line[9]),
+PARSER_TYPE_NAME: line[10]
+});

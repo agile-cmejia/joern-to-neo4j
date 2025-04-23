@@ -1,0 +1,320 @@
+# Joern to Neo4j - Best Practices and Examples
+
+## Best Practices
+
+### Source Code Preparation
+
+1. **Clean Your Code**: Remove build artifacts and temporary files
+2. **Organize Dependencies**: Ensure external libraries are available if needed
+3. **Limit Scope**: For large projects, consider analyzing critical components separately
+4. **Include Headers**: For C/C++ projects, make sure header files are accessible
+
+### Resource Allocation
+
+1. **JVM Memory**: Allocate appropriate memory based on codebase size:
+   - Small projects (<10K LOC): `-J-Xmx4G` (default)
+   - Medium projects (10K-100K LOC): `-J-Xmx8G`
+   - Large projects (>100K LOC): `-J-Xmx16G` or more
+
+2. **Disk Space**: Ensure sufficient storage for intermediate files:
+   - CPG size: ~10-20x the source code size
+   - CSV export: ~2-5x the CPG size
+
+### Neo4j Configuration
+
+1. **Memory Settings**: Configure Neo4j's memory settings in `neo4j.conf`:
+   ```
+   dbms.memory.heap.initial_size=4G
+   dbms.memory.heap.max_size=8G
+   ```
+
+2. **Import Directory**: Configure Neo4j's import directory:
+   ```
+   dbms.directories.import=/path/to/neo4j/import
+   ```
+
+3. **Indexes and Constraints**: For large graphs, add indexes after import:
+   ```cypher
+   CREATE INDEX node_type IF NOT EXISTS FOR (n:Node) ON (n.type);
+   ```
+
+### Security Considerations
+
+1. **Credentials Management**: Use environment variables instead of command-line arguments
+2. **Temporary Files**: Clean up intermediate files after successful import
+3. **Access Control**: Use a dedicated Neo4j user with appropriate permissions
+
+## Common Workflows
+
+### 1. Vulnerability Analysis
+
+Analyze a codebase for security vulnerabilities:
+
+```bash
+# Step 1: Run the import
+python joern_to_neo4j.py /path/to/codebase --neo4j-database vuln_analysis
+
+# Step 2: Query for vulnerabilities in Neo4j Browser
+```
+
+Example Neo4j queries for vulnerability detection:
+
+```cypher
+// Find potential SQL injections
+MATCH (source:Call)-[:REACHES*]->(sink:Call)
+WHERE source.code CONTAINS "user input" 
+  AND sink.code CONTAINS "executeQuery"
+RETURN source, sink
+```
+
+### 2. Code Structure Analysis
+
+Analyze code structure and dependencies:
+
+```bash
+# Import the code
+python joern_to_neo4j.py /path/to/project --neo4j-database code_structure
+```
+
+Example Neo4j queries for structure analysis:
+
+```cypher
+// Find methods with high complexity
+MATCH (m:Method)
+WHERE m.cyclomaticComplexity > 10
+RETURN m.name, m.cyclomaticComplexity
+ORDER BY m.cyclomaticComplexity DESC
+
+// Find dependencies between components
+MATCH (caller:Method)-[:CALLS]->(callee:Method)
+WHERE caller.filename CONTAINS "component1"
+  AND callee.filename CONTAINS "component2"
+RETURN caller.name, callee.name
+```
+
+### 3. Incremental Analysis
+
+For ongoing code audits, analyze changes incrementally:
+
+```bash
+# Analyze an updated codebase
+python joern_to_neo4j.py /path/to/updated/code \
+  --neo4j-database incremental_analysis_$(date +%Y%m%d)
+```
+
+## Advanced Techniques
+
+### Custom Data Integration
+
+Combine Joern results with other data sources:
+
+1. Import Joern analysis into Neo4j
+2. Import additional data (e.g., dependency scanning results)
+3. Create relationships between the datasets
+
+Example:
+
+```cypher
+// Link Joern-analyzed methods to known vulnerabilities
+MATCH (m:Method {name: 'vulnerableMethod'})
+MATCH (v:Vulnerability {cve: 'CVE-2023-12345'})
+CREATE (m)-[:HAS_VULNERABILITY]->(v)
+```
+
+### Query Templates
+
+Keep a library of useful Neo4j queries:
+
+```cypher
+// Find unused methods
+MATCH (m:Method)
+WHERE NOT ()-[:CALLS]->(m)
+  AND NOT m.name STARTS WITH 'main'
+  AND NOT m.name STARTS WITH 'test'
+RETURN m.name, m.filename
+
+// Find dataflow between sources and sinks
+MATCH path = (source:Call)-[:REACHES*]->(sink:Call)
+WHERE source.name IN ['getUserInput', 'getParameter'] 
+  AND sink.name IN ['executeQuery', 'eval']
+RETURN path
+```
+
+### Export Neo4j Results
+
+Export analysis results for reporting:
+
+```cypher
+// Export vulnerable methods to CSV
+MATCH (m:Method)-[:HAS_VULNERABILITY]->(v:Vulnerability)
+RETURN m.name, m.filename, v.cve, v.description
+```
+
+## Troubleshooting Advanced Issues
+
+### Memory Optimization
+
+If experiencing out-of-memory errors:
+
+1. **For Joern Parse**:
+   ```bash
+   python joern_to_neo4j.py /path/to/code --jvm-mem -J-Xmx16G
+   ```
+
+2. **For Neo4j Import**:
+   - Reduce batch size by modifying `BATCH_SIZE` in the script
+   - Import nodes and edges separately by editing the script
+
+### Handling Large Projects
+
+For extremely large codebases:
+
+1. **Divide and Conquer**:
+   ```bash
+   # Analyze components separately
+   python joern_to_neo4j.py /path/to/component1 --neo4j-database project_comp1
+   python joern_to_neo4j.py /path/to/component2 --neo4j-database project_comp2
+   ```
+
+2. **Use Filtering**:
+   - Modify the script to filter specific file types or directories
+   - Create separate analyses for critical components
+
+### Connection Pooling
+
+For scripts that run multiple import jobs:
+
+```python
+# Create a driver once
+driver = GraphDatabase.driver(uri, auth=(user, password))
+
+# Use it for multiple imports
+import_online_neo4j(driver, "database1", files1, output_dir)
+import_online_neo4j(driver, "database2", files2, output_dir)
+
+# Close at the end
+driver.close()
+```
+
+## Example Use Cases
+
+### 1. Code Audit for Security Review
+
+```bash
+# Run the import
+python joern_to_neo4j.py /path/to/code --neo4j-database security_audit
+
+# In Neo4j Browser, run queries like:
+# - Find dangerous function calls
+# - Identify input validation issues
+# - Detect authentication bypasses
+```
+
+### 2. Code Quality Assessment
+
+```bash
+# Run the import
+python joern_to_neo4j.py /path/to/code --neo4j-database code_quality
+
+# In Neo4j Browser, examine:
+# - Method complexity
+# - Component dependencies
+# - Dead code
+```
+
+### 3. Developer Onboarding
+
+```bash
+# Import codebase
+python joern_to_neo4j.py /path/to/code --neo4j-database onboarding
+
+# Visualize:
+# - Core components
+# - Control flow
+# - Important interfaces
+```
+
+## Customization Examples
+
+### Adding Custom Node Labels
+
+Modify the Cypher import to add custom labels:
+
+```python
+# Original Cypher: CREATE (n:Node {id: line.id})
+# Modified Cypher:
+modified_cypher = original_cypher.replace(
+    "CREATE (n:Node {",
+    "CREATE (n:Node:CustomLabel {"
+)
+```
+
+### Filtering Specific Files
+
+Add file filtering logic:
+
+```python
+# Filter node_cypher_files to only include specific components
+filtered_node_files = [f for f in node_cypher_files if "component" in f.name]
+```
+
+## Integration with CI/CD
+
+### GitHub Actions Example
+
+```yaml
+name: Code Analysis
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    
+    services:
+      neo4j:
+        image: neo4j:4.4
+        env:
+          NEO4J_AUTH: neo4j/password
+        ports:
+          - 7687:7687
+          
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Install Joern
+        run: |
+          curl -L "https://github.com/joernio/joern/releases/latest/download/joern-install.sh" -o joern-install.sh
+          chmod +x joern-install.sh
+          ./joern-install.sh --version=latest
+          echo "$(pwd)/joern/joern-cli/bin" >> $GITHUB_PATH
+          
+      - name: Run Joern to Neo4j
+        run: |
+          python joern_to_neo4j.py ./src \
+            --neo4j-uri bolt://localhost:7687 \
+            --neo4j-user neo4j \
+            --neo4j-password password
+            
+      - name: Run Security Queries
+        run: |
+          # Run Neo4j queries and export results
+          # ...
+          
+      - name: Generate Report
+        run: |
+          # Generate report from analysis
+          # ...
+```
+
+## Performance Benchmarks
+
+| Codebase Size | Parse Time | Export Time | Import Time | Total Memory |
+|---------------|------------|-------------|-------------|--------------|
+| 5K LOC        | ~1 min     | ~30 sec     | ~1 min      | ~4GB         |
+| 50K LOC       | ~10 min    | ~5 min      | ~10 min     | ~8GB         |
+| 500K LOC      | ~2 hours   | ~1 hour     | ~2 hours    | ~16GB        |
+
+*Note: These are approximate figures and will vary based on code complexity and hardware.*

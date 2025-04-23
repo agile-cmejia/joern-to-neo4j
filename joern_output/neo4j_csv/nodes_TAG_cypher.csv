@@ -1,0 +1,6 @@
+LOAD CSV FROM 'file:/nodes_TAG_data.csv' AS line
+CREATE (:TAG {
+id: toInteger(line[0]),
+NAME: line[2],
+VALUE: line[3]
+});

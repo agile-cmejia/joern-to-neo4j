@@ -1,0 +1,217 @@
+146028888064,RETURN,2,,return this.appService.getHello(),4,12,,,2
+146028888065,RETURN,2,,return { message: `Service ${AppService.name} working !!` },4,9,,,2
+146028888066,RETURN,4,,return newRole,4,20,,,4
+146028888067,RETURN,2,,return await this.roleAliasesService.findAll(),4,26,,,2
+146028888068,RETURN,4,,return foundRoleAlias,4,34,,,4
+146028888069,RETURN,4,,return foundRoleAlias,4,41,,,4
+146028888070,RETURN,4,,return foundRoleAlias,4,49,,,4
+146028888071,RETURN,4,,return foundRoleAlias,4,57,,,4
+146028888072,RETURN,4,,return newRole,4,19,,,4
+146028888073,RETURN,2,,return this.rolesService.findAll(),4,25,,,2
+146028888074,RETURN,3,,return foundRoleType,4,32,,,3
+146028888075,RETURN,4,,return foundRole,4,40,,,4
+146028888076,RETURN,4,,return foundRole,4,48,,,4
+146028888077,RETURN,4,,return foundRole,4,56,,,4
+146028888078,RETURN,4,,return tenantRoleAlias,4,20,,,4
+146028888079,RETURN,3,,return tenantRoleAlias,4,27,,,3
+146028888080,RETURN,3,,return tenantRoleAlias,4,34,,,3
+146028888081,RETURN,3,,return tenantRoleAlias,4,40,,,3
+146028888082,RETURN,4,,return tenantRoleAlias,4,48,,,4
+146028888083,RETURN,4,,return tenantRoleAlias,4,56,,,4
+146028888084,RETURN,4,,return tenantRoleAlias,4,64,,,4
+146028888085,RETURN,5,,return newTenant,4,25,,,5
+146028888086,RETURN,2,,return await this.tenantsService.findAll(),4,31,,,2
+146028888087,RETURN,3,,return foundTenantType,4,38,,,3
+146028888088,RETURN,4,,return foundTenant,4,46,,,4
+146028888089,RETURN,4,,return foundTenant,4,59,,,4
+146028888090,RETURN,4,,return foundTenant,4,67,,,4
+146028888091,RETURN,4,,return newUserRoleByTenants,4,18,,,4
+146028888092,RETURN,2,,return await this.userRoleByTenantsService.findAll(),4,24,,,2
+146028888093,RETURN,4,,return foundUserRoleByTenants,4,32,,,4
+146028888094,RETURN,4,,return foundUserRoleByTenants,4,40,,,4
+146028888095,RETURN,4,,return foundUserRoleByTenants,4,50,,,4
+146028888096,RETURN,5,,return newUser,4,23,,,5
+146028888097,RETURN,2,,return this.usersService.findAll(),4,29,,,2
+146028888098,RETURN,2,,return this.usersService.findByMany(findUserDto),4,35,,,2
+146028888099,RETURN,4,,return foundUser,4,43,,,4
+146028888100,RETURN,5,,return foundUser,4,53,,,5
+146028888101,RETURN,4,,return foundUser,4,61,,,4
+146028888102,RETURN,1,,return this.usersService.sendMfaAttemptEmail(userId),4,66,,,1
+146028888103,RETURN,1,,return this.usersService.sendMfaSuccessEmail(userId),4,71,,,1
+146028888104,RETURN,5,,return foundUser,4,81,,,5
+146028888105,RETURN,1,,console.log(`App Running in port ${PORT}`),36,27,,,1
+146028888106,RETURN,1,,TenantRoleAliasesService,29,24,,,1
+146028888107,RETURN,2,,return tenantRoleAlias,10,71,,,2
+146028888108,RETURN,12,,return newRoleAlias,4,77,,,12
+146028888109,RETURN,3,,return this.roleAliasCollection,4,89,,,3
+146028888110,RETURN,3,,return this.roleAliasCollection[0],4,102,,,3
+146028888111,RETURN,1,,alias.toLowerCase(),46,120,,,1
+146028888112,RETURN,1,,desc.toLowerCase(),49,125,,,1
+146028888113,RETURN,11,,return this.roleAliasCollection,4,141,,,11
+146028888114,RETURN,2,,return tenantRoleAlias,10,206,,,2
+146028888115,RETURN,13,,return await this.rolesAliasRepository.save(roleAliasToUpdate),4,211,,,13
+146028888116,RETURN,6,,return this.rolesAliasRepository.save(userToDisable),4,227,,,6
+146028888117,RETURN,12,,return await this.rolesRepository.save(role),4,102,,,12
+146028888118,RETURN,4,,return this.rolesCollection,4,119,,,4
+146028888119,RETURN,5,,return foundRole,4,145,,,5
+146028888120,RETURN,1,,name.toLowerCase().trim(),35,181,,,1
+146028888121,RETURN,1,,tag.toLowerCase().trim(),90,186,,,1
+146028888122,RETURN,15,,return this.rolesCollection,4,226,,,15
+146028888123,RETURN,16,,return this.rolesRepository.save(roleToUpdate),4,340,,,16
+146028888124,RETURN,6,,return await this.rolesRepository.save(roleToDelete),4,367,,,6
+146028888125,RETURN,19,,return newTenantRoleAliases,4,90,,,19
+146028888126,RETURN,1,,"return await this.tenantRoleAliasRepository
+      .createQueryBuilder('TenantRoleAliases')
+      .leftJoinAndSelect('TenantRoleAliases.tenant', 'Tenant')
+      .leftJoinAndSelect('TenantRoleAliases.role', 'Role')
+      .leftJoinAndSelect('TenantRoleAliases.roleAlias', 'RoleAlias')
+      .getMany()",4,94,,,1
+146028888127,RETURN,1,,"return await this.tenantRoleAliasRepository
+      .createQueryBuilder('TenantRoleAliases')
+      .leftJoinAndSelect('TenantRoleAliases.tenant', 'Tenant')
+      .leftJoinAndSelect('TenantRoleAliases.role', 'Role')
+      .leftJoinAndSelect('TenantRoleAliases.roleAlias', 'RoleAlias')
+      .where('TenantRoleAliases.id=:id', { id })
+      .getOne()",4,103,,,1
+146028888128,RETURN,12,,return await query.getMany(),4,131,,,12
+146028888129,RETURN,-1,,return null,36,143,,,2
+146028888130,RETURN,15,,return tenantRoleAliasesToUpdate,4,214,,,15
+146028888131,RETURN,5,,return await this.tenantRepository.save(tenantRoleAliasToRemove),4,238,,,5
+146028888132,RETURN,6,,return collection,4,317,,,6
+146028888133,RETURN,7,,return await this.tenantRepository.save(newTenantType),4,40,,,7
+146028888134,RETURN,3,,return this.tenantCollection,4,60,,,3
+146028888135,RETURN,5,,return this.tenantCollection[0],4,89,,,5
+146028888136,RETURN,1,,name,89,127,,,1
+146028888137,RETURN,1,,url,85,131,,,1
+146028888138,RETURN,16,,return this.tenantCollection,4,168,,,16
+146028888139,RETURN,8,,return await this.tenantRepository.save(tenantToUpdate),4,217,,,8
+146028888140,RETURN,6,,return await this.tenantRepository.save(tenantToDisable),4,248,,,6
+146028888141,RETURN,5,,return this.tenantCollection,6,260,,,5
+146028888142,RETURN,1,,return [],6,262,,,1
+146028888143,RETURN,1,,UsersService,29,22,,,1
+146028888144,RETURN,1,,TenantsService,29,25,,,1
+146028888145,RETURN,1,,RolesService,29,28,,,1
+146028888146,RETURN,1,,RoleAliasesService,29,31,,,1
+146028888147,RETURN,1,,tenantType.id,70,76,,,1
+146028888148,RETURN,26,,return newUserRoleByTenants,4,111,,,26
+146028888149,RETURN,2,,"return await this.userRoleByTenantsRepository
+      .createQueryBuilder('userRoleByTenants')
+      .leftJoinAndSelect('userRoleByTenants.tenant', 'tenant')
+      .leftJoinAndSelect('userRoleByTenants.user', 'user')
+      .leftJoinAndSelect('userRoleByTenants.role', 'role')
+      .leftJoinAndSelect('userRoleByTenants.roleAlias', 'roleAlias')
+      .getMany()",4,116,,,2
+146028888150,RETURN,15,,return await query.getMany(),4,159,,,15
+146028888151,RETURN,1,,tenantType.id,70,208,,,1
+146028888152,RETURN,22,,return userRoleByTenantsToUpdate,4,257,,,22
+146028888153,RETURN,6,,return await this.userRoleByTenantsRepository.save(userRoleByTenantsToDisable),4,283,,,6
+146028888154,RETURN,1,,tenant.id,89,65,,,1
+146028888155,RETURN,4,,return true,6,78,,,4
+146028888156,RETURN,2,,return false,6,81,,,2
+146028888157,RETURN,8,,return this.userRepository.save(user),4,122,,,8
+146028888158,RETURN,2,,return true,6,153,,,2
+146028888159,RETURN,2,,return false,6,156,,,2
+146028888160,RETURN,2,,return true,6,188,,,2
+146028888161,RETURN,2,,return false,6,191,,,2
+146028888162,RETURN,1,,TenantsService,29,38,,,1
+146028888163,RETURN,17,,return user,4,152,,,17
+146028888164,RETURN,4,,return this.usersCollection,4,167,,,4
+146028888165,RETURN,5,,return this.usersCollection[0],4,188,,,5
+146028888166,RETURN,1,,name,45,224,,,1
+146028888167,RETURN,1,,name,43,230,,,1
+146028888168,RETURN,1,,email.toLowerCase(),38,236,,,1
+146028888169,RETURN,20,,return this.usersCollection,4,300,,,20
+146028888170,RETURN,1,,foundTenant.id === tenant.id,56,390,,,1
+146028888171,RETURN,1,,!foundTenants.some((foundTenant) => foundTenant.id === tenant.id),20,390,,,1
+146028888172,RETURN,1,,tenantToDelete.id === tenant.id,62,393,,,1
+146028888173,RETURN,1,,!tenantsToDelete.some((tenantToDelete) => tenantToDelete.id === tenant.id),20,393,,,1
+146028888174,RETURN,20,,return this.userRepository.save(userToUpdate),4,440,,,20
+146028888175,RETURN,8,,return await this.userRepository.save(userToDisable),4,469,,,8
+146028888176,RETURN,1,,roleAccessToRecordField.role,56,483,,,1
+146028888177,RETURN,1,,r.id === role.id,82,484,,,1
+146028888178,RETURN,1,,self.findIndex((r) => r.id === role.id) === index,60,484,,,1
+146028888179,RETURN,1,,role.id,37,486,,,1
+146028888180,RETURN,6,,return uniqueRoles.map((role) => role.id),4,486,,,6
+146028888181,RETURN,1,,tenant.id,91,516,,,1
+146028888182,RETURN,9,,return user,4,522,,,9
+146028888183,RETURN,3,,"return sendMfaAttemptEmailProcess(user, this.emailProvider)",4,536,,,3
+146028888184,RETURN,3,,"return sendMfaSuccessEmailProcess(user, this.emailProvider)",4,550,,,3
+146028888185,RETURN,1,,"return {
+        correlationId: req[CORRELATION_ID_HEADER],
+      }",6,16,,,1
+146028888186,RETURN,1,,return undefined,8,22,,,1
+146028888187,RETURN,1,,return undefined,8,25,,,1
+146028888188,RETURN,1,,"`
+<div style=""line-height:0.9;text-align:center;width:70%;margin:0auto;border:1px solid #ccc;padding:20px;font-family:Arial,sans-serif;border-radius:10px"">
+<img src=""https://ci3.googleusercontent.com/meips/ADKq_NbmlS89t1aNZlMT2xnvZF8EIsHnDI8he-ejvE-v7TH2zPeACPxoEpNHOx1asYu8F1XlQdP0T71xqbLcAAWp9KZQOESFltFoHhRMW1iUF5WE2HNU7VsReptL50ixmBfA6HiEUGONpg=s0-d-e1-ft#https://resources-images-orderbahn-dev.s3.amazonaws.com/Property+1%3DDefault.png"" alt=""Header Image"" style=""width:260px;height:auto"">
+<p style=""color:#222"">Dear ${userName},</p> <p style=""color:#222"">We noticed an attempted setup of Multi-Factor Authentication (MFA) on your account at ${dateNow}.</p>
+<p style=""color:#222"">If you initiated this action, you can disregard this notification.</p>
+<p style=""color:#222"">However, if you did not attempt to set up MFA, please secure your account immediately and contact our support team at <a href=""mailto:support@goavanto.com"" style=""color:#5D599E"">support@goavanto.com</a> for further assis...",63,3,,,1
+146028888189,RETURN,1,,"`
+<div style=""line-height:0.9; text-align:center;width:70%;margin:0 auto;border:1px solid #ccc;padding:20px;font-family:Arial,sans-serif;border-radius:10px"">
+<img src=""https://ci3.googleusercontent.com/meips/ADKq_NbmlS89t1aNZlMT2xnvZF8EIsHnDI8he-ejvE-v7TH2zPeACPxoEpNHOx1asYu8F1XlQdP0T71xqbLcAAWp9KZQOESFltFoHhRMW1iUF5WE2HNU7VsReptL50ixmBfA6HiEUGONpg=s0-d-e1-ft#https://resources-images-orderbahn-dev.s3.amazonaws.com/Property+1%3DDefault.png"" alt=""Header Image"" style=""width:260px;height:auto"">
+<p style=""color:#222"">Dear ${userName},</p>
+<p style=""color:#222"">We're pleased to inform you that Multi-Factor Authentication (MFA) has been successfully set up on your account.</p>
+<p style=""color:#222"">This additional security measure will help protect your account from unauthorized access and enhance data security.</p>
+<p style=""color:#222"">If you have any questions or concerns regarding MFA or your account security, please don't hesitate to reach out to our support team at <a href=""mailto:su...",56,3,,,1
+146028888190,RETURN,1,,"`
+    <div style=""text-align: center; width: 70%; margin: 0 auto; border: 1px solid #ccc; padding: 20px; font-family: Arial, sans-serif; border-radius: 10px;"">
+        <img src=""https://ci3.googleusercontent.com/meips/ADKq_NbmlS89t1aNZlMT2xnvZF8EIsHnDI8he-ejvE-v7TH2zPeACPxoEpNHOx1asYu8F1XlQdP0T71xqbLcAAWp9KZQOESFltFoHhRMW1iUF5WE2HNU7VsReptL50ixmBfA6HiEUGONpg=s0-d-e1-ft#https://resources-images-orderbahn-dev.s3.amazonaws.com/Property+1%3DDefault.png"" alt=""Header Image"" style=""width: 260px; height: auto;"">
+        <p>In order to continue with your registration at OrderBahn, we need your confirmation.</p>
+        <p>Please click on the button below and follow the instructions to complete your registration.</p>
+
+        <a href=${process.env.ENVIRONMENT_URL}/user-confirmation/${userId} style=""font-weight: bold; background-color: #37326E; border-radius: 5px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); color: white; text-decoration: none; padding: 10px; display: block; text-align: center...",92,3,,,1
+146028888191,RETURN,1,,"return {
+    type: 'postgres',
+    name: dbConfig.name,
+    host: dbConfig.host,
+    port: dbConfig.port,
+    username: dbConfig.username,
+    password: dbConfig.password,
+    database: dbConfig.database,
+    synchronize: dbConfig.synchronize,
+    schema: dbConfig.schema,
+    logging: dbConfig.logging,
+    autoLoadEntities: true,
+    entities: models,
+  } as DataSourceOptions",2,30,,,1
+146028888192,RETURN,1,,return val?.toLocaleLowerCase() === 'true',2,6,,,1
+146028888193,RETURN,7,,return dateToValidate >= today,2,32,,,7
+146028888194,RETURN,4,,return dateToValidate <= today,2,39,,,4
+146028888195,RETURN,1,,return false,4,44,,,1
+146028888196,RETURN,1,,return false,4,48,,,1
+146028888197,RETURN,3,,return !Number.isNaN(Number(str)),2,51,,,3
+146028888198,RETURN,3,,first.toUpperCase() + rest.join('').toLowerCase(),67,54,,,3
+146028888199,RETURN,1,,capitalizeFirstLetter(word),19,59,,,1
+146028888200,RETURN,1,,"words
+    .split(' ')
+    .map((word) => capitalizeFirstLetter(word))
+    .join(' ')",2,57,,,1
+146028888201,RETURN,2,,return regex.test(text),2,64,,,2
+146028888202,RETURN,1,,return /[0-9]/.test(text),2,68,,,1
+146028888203,RETURN,2,,return options.includes(app),2,73,,,2
+146028888204,RETURN,1,,response.json(),24,85,,,1
+146028888205,RETURN,3,,return response,2,89,,,3
+146028888206,RETURN,3,,return url,2,99,,,3
+146028888207,RETURN,1,,"return getValidEndpointUrl(process.env.SECURITY_MS_URL, 'SECURITY_MS_URL')",2,103,,,1
+146028888208,RETURN,1,,"return getValidEndpointUrl(process.env.CATALOG_MS_URL, 'CATALOG_MS_URL')",2,107,,,1
+146028888209,RETURN,1,,"return getValidEndpointUrl(process.env.TENANTS_MS_URL, 'TENANTS_MS_URL')",2,111,,,1
+146028888210,RETURN,1,,"return getValidEndpointUrl(process.env.USERS_MS_URL, 'USERS_MS_URL')",2,115,,,1
+146028888211,RETURN,1,,"return getValidEndpointUrl(process.env.RECORDS_GRID_MS_URL, 'RECORDS_GRID_MS_URL')",2,119,,,1
+146028888212,RETURN,1,,"return getValidEndpointUrl(process.env.APP_MODULES_MS_URL, 'APP_MODULES_MS_URL')",2,123,,,1
+146028888213,RETURN,1,,"return getValidEndpointUrl(process.env.GENERAL_MS_URL, 'GENERAL_MS_URL')",2,127,,,1
+146028888214,RETURN,1,,"return getValidEndpointUrl(process.env.RECORDS_MS_URL, 'RECORDS_MS_URL')",2,131,,,1
+146028888215,RETURN,1,,"return getValidEndpointUrl(process.env.FILE_MANAGEMENT_MS_URL, 'FILE_MANAGEMENT_MS_URL')",2,135,,,1
+146028888216,RETURN,1,,response.json(),24,140,,,1
+146028888217,RETURN,4,,return new BadRequestException(response.message),6,149,,,4
+146028888218,RETURN,8,,return new UnauthorizedException(response.message),6,152,,,8
+146028888219,RETURN,12,,return new ForbiddenException(response.message),6,155,,,12
+146028888220,RETURN,16,,return new NotFoundException(response.message),6,158,,,16
+146028888221,RETURN,20,,return new RequestTimeoutException(response.message),6,161,,,20
+146028888222,RETURN,24,,return new ConflictException(response.message),6,164,,,24
+146028888223,RETURN,28,,return new PayloadTooLargeException(response.message),6,167,,,28
+146028888224,RETURN,32,,return new InternalServerErrorException(response.message),6,170,,,32
+146028888225,RETURN,3,,return response,2,173,,,3
+146028888226,RETURN,2,,return await emailProvider.sendEmail(params),2,195,,,2
+146028888227,RETURN,9,,return await emailProvider.sendEmail(params),2,227,,,9
+146028888228,RETURN,2,,return await emailProvider.sendEmail(params),2,249,,,2

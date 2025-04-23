@@ -1,0 +1,1948 @@
+111669149696,METHOD,commitlint.config.js::program,TYPE_DECL,:program,0,0,commitlint.config.js,commitlint.config.js::program,<empty>,,false,1,2,:program,,,1,
+111669149697,METHOD,src/app.controller.ts::program,TYPE_DECL,:program,0,0,src/app.controller.ts,src/app.controller.ts::program,<empty>,,false,1,15,:program,,,1,
+111669149698,METHOD,<empty>,<empty>,constructor(private readonly appService: AppService) {},2,57,src/app.controller.ts,src/app.controller.ts::program:AppController:<init>,<empty>,,false,7,7,<init>,,,1,
+111669149699,METHOD,<empty>,<empty>,"@Get()
+  getHello() {
+    this.logger.log('Calling service get Hello!');
+    return this.appService.getHello();
+  }",2,3,src/app.controller.ts,src/app.controller.ts::program:AppController:getHello,<empty>,,false,9,13,getHello,,,1,
+111669149700,METHOD,src/app.module.ts::program,TYPE_DECL,:program,0,0,src/app.module.ts,src/app.module.ts::program,<empty>,,false,1,33,:program,,,1,
+111669149701,METHOD,<empty>,<empty>,constructor() {},0,1,src/app.module.ts,src/app.module.ts::program:AppModule:<init>,<empty>,,false,15,32,<init>,,,1,
+111669149702,METHOD,<empty>,<empty>,"configure(consumer: MiddlewareConsumer) {
+    consumer.apply(CorrelationIdMiddleware).forRoutes('*');
+  }",2,3,src/app.module.ts,src/app.module.ts::program:AppModule:configure,<empty>,,false,29,31,configure,,,1,
+111669149703,METHOD,src/app.service.ts::program,TYPE_DECL,:program,0,0,src/app.service.ts,src/app.service.ts::program,<empty>,,false,1,12,:program,,,1,
+111669149704,METHOD,<empty>,<empty>,constructor() {},0,1,src/app.service.ts,src/app.service.ts::program:AppService:<init>,<empty>,,false,3,11,<init>,,,1,
+111669149705,METHOD,<empty>,<empty>,"getHello() {
+    this.logger.log(`${AppService.name} called function ${this.getHello.name}`);
+    return { message: `Service ${AppService.name} working !!` };
+  }",2,3,src/app.service.ts,src/app.service.ts::program:AppService:getHello,<empty>,,false,7,10,getHello,,,1,
+111669149706,METHOD,src/context/role-aliases/role-aliases.controller.ts::program,TYPE_DECL,:program,0,0,src/context/role-aliases/role-aliases.controller.ts,src/context/role-aliases/role-aliases.controller.ts::program,<empty>,,false,1,60,:program,,,1,
+111669149707,METHOD,<empty>,<empty>,constructor(private readonly roleAliasesService: RoleAliasesService) {},2,73,src/context/role-aliases/role-aliases.controller.ts,src/context/role-aliases/role-aliases.controller.ts::program:RoleAliasesController:<init>,<empty>,,false,11,11,<init>,,,1,
+111669149708,METHOD,<empty>,<empty>,"@Post()
+  async create(@Body() createRoleAliasDto: CreateRoleAliasDto) {
+    this.logger.log('Creating new Role Alias ..');
+
+    const newRole = await this.roleAliasesService.create(createRoleAliasDto);
+    this.logger.log(`Created new Role Alias! id: ${newRole.id}.`);
+    return newRole;
+  }",2,3,src/context/role-aliases/role-aliases.controller.ts,src/context/role-aliases/role-aliases.controller.ts::program:RoleAliasesController:create,<empty>,,false,14,21,create,,,1,
+111669149709,METHOD,<empty>,<empty>,"@Get()
+  async findAll() {
+    this.logger.log('Finding All Roles Aliases...');
+    return await this.roleAliasesService.findAll();
+  }",2,3,src/context/role-aliases/role-aliases.controller.ts,src/context/role-aliases/role-aliases.controller.ts::program:RoleAliasesController:findAll,<empty>,,false,23,27,findAll,,,1,
+111669149710,METHOD,<empty>,<empty>,"@Get(':id')
+  async findOne(@Param('id') id: string) {
+    this.logger.log(`Searching for Role Alias with id: ${id}.`);
+    const foundRoleAlias = await this.roleAliasesService.findOne(+id);
+    this.logger.log(`Role Alias with id: ${id} was found.`);
+    return foundRoleAlias;
+  }",2,3,src/context/role-aliases/role-aliases.controller.ts,src/context/role-aliases/role-aliases.controller.ts::program:RoleAliasesController:findOne,<empty>,,false,29,35,findOne,,,1,
+111669149711,METHOD,<empty>,<empty>,"@Post('many/')
+  async findMany(@Body() findRoleAliasDto: FindRoleAliasDto) {
+    this.logger.log(`Searching for Role Aliases with many search args.`);
+    const foundRoleAlias = await this.roleAliasesService.findByMany(findRoleAliasDto);
+    this.logger.log(`found ${foundRoleAlias.length} Role Aliases.`);
+    return foundRoleAlias;
+  }",2,3,src/context/role-aliases/role-aliases.controller.ts,src/context/role-aliases/role-aliases.controller.ts::program:RoleAliasesController:findMany,<empty>,,false,36,42,findMany,,,1,
+111669149712,METHOD,<empty>,<empty>,"@Patch(':id')
+  async update(@Param('id') id: string, @Body() updateRoleAliasDto: UpdateRoleAliasDto) {
+    this.logger.log(`Updating role alias with id: ${id}.`);
+    const foundRoleAlias = await this.roleAliasesService.update(+id, updateRoleAliasDto);
+    this.logger.log(`Role alias with id: ${id} was updated.`);
+    return foundRoleAlias;
+  }",2,3,src/context/role-aliases/role-aliases.controller.ts,src/context/role-aliases/role-aliases.controller.ts::program:RoleAliasesController:update,<empty>,,false,44,50,update,,,1,
+111669149713,METHOD,<empty>,<empty>,"@Delete(':id')
+  async remove(@Param('id') id: string) {
+    this.logger.log(`Disabling / Enabling Role alias with id: ${id}.`);
+    const foundRoleAlias = await this.roleAliasesService.remove(+id);
+    this.logger.log(`Role alias with id: ${id} was ` + foundRoleAlias.enabled ? 'Enabled!' : 'Disabled!');
+    return foundRoleAlias;
+  }",2,3,src/context/role-aliases/role-aliases.controller.ts,src/context/role-aliases/role-aliases.controller.ts::program:RoleAliasesController:remove,<empty>,,false,52,58,remove,,,1,
+111669149714,METHOD,src/context/role-aliases/role-aliases.module.ts::program,TYPE_DECL,:program,0,0,src/context/role-aliases/role-aliases.module.ts,src/context/role-aliases/role-aliases.module.ts::program,<empty>,,false,1,15,:program,,,1,
+111669149715,METHOD,<empty>,<empty>,constructor() {},0,33,src/context/role-aliases/role-aliases.module.ts,src/context/role-aliases/role-aliases.module.ts::program:RoleAliasesModule:<init>,<empty>,,false,9,14,<init>,,,1,
+111669149716,METHOD,src/context/roles/roles.controller.ts::program,TYPE_DECL,:program,0,0,src/context/roles/roles.controller.ts,src/context/roles/roles.controller.ts::program,<empty>,,false,1,59,:program,,,1,
+111669149717,METHOD,<empty>,<empty>,constructor(private readonly rolesService: RolesService) {},2,61,src/context/roles/roles.controller.ts,src/context/roles/roles.controller.ts::program:RolesController:<init>,<empty>,,false,11,11,<init>,,,1,
+111669149718,METHOD,<empty>,<empty>,"@Post()
+  async create(@Body() createRoleDto: CreateRoleDto) {
+    this.logger.log('Creating new Role ..');
+    const newRole = await this.rolesService.create(createRoleDto);
+    this.logger.log(`Created new Role! id: ${newRole.id}.`);
+    return newRole;
+  }",2,3,src/context/roles/roles.controller.ts,src/context/roles/roles.controller.ts::program:RolesController:create,<empty>,,false,14,20,create,,,1,
+111669149719,METHOD,<empty>,<empty>,"@Get()
+  async findAll() {
+    this.logger.log('Finding All Roles...');
+    return this.rolesService.findAll();
+  }",2,3,src/context/roles/roles.controller.ts,src/context/roles/roles.controller.ts::program:RolesController:findAll,<empty>,,false,22,26,findAll,,,1,
+111669149720,METHOD,<empty>,<empty>,"@Post('many/')
+  async findMany(@Body() findRoleDto: FindRoleDto) {
+    this.logger.log(`Searching for Roles with many search args.`);
+    const foundRoleType = await this.rolesService.findByMany(findRoleDto);
+    return foundRoleType;
+  }",2,3,src/context/roles/roles.controller.ts,src/context/roles/roles.controller.ts::program:RolesController:findMany,<empty>,,false,28,33,findMany,,,1,
+111669149721,METHOD,<empty>,<empty>,"@Get(':id')
+  async findOne(@Param('id') id: string) {
+    this.logger.log(`Searching for Role with id: ${id}.`);
+    const foundRole = await this.rolesService.findOne(+id);
+    this.logger.log(`Role with id: ${id} was found.`);
+    return foundRole;
+  }",2,3,src/context/roles/roles.controller.ts,src/context/roles/roles.controller.ts::program:RolesController:findOne,<empty>,,false,35,41,findOne,,,1,
+111669149722,METHOD,<empty>,<empty>,"@Patch(':id')
+  async update(@Param('id') id: string, @Body() updateRoleDto: UpdateRoleDto) {
+    this.logger.log(`Updating role with id: ${id}.`);
+    const foundRole = await this.rolesService.update(+id, updateRoleDto);
+    this.logger.log(`Role with id: ${id} was updated.`);
+    return foundRole;
+  }",2,3,src/context/roles/roles.controller.ts,src/context/roles/roles.controller.ts::program:RolesController:update,<empty>,,false,43,49,update,,,1,
+111669149723,METHOD,<empty>,<empty>,"@Delete(':id')
+  async remove(@Param('id') id: string) {
+    this.logger.log(`Disabling / Enabling Role with id: ${id}.`);
+    const foundRole = await this.rolesService.remove(+id);
+    this.logger.log(`Role with id: ${id} was ` + foundRole.enabled ? 'Enabled!' : 'Disabled!');
+    return foundRole;
+  }",2,3,src/context/roles/roles.controller.ts,src/context/roles/roles.controller.ts::program:RolesController:remove,<empty>,,false,51,57,remove,,,1,
+111669149724,METHOD,src/context/roles/roles.module.ts::program,TYPE_DECL,:program,0,0,src/context/roles/roles.module.ts,src/context/roles/roles.module.ts::program,<empty>,,false,1,14,:program,,,1,
+111669149725,METHOD,<empty>,<empty>,constructor() {},0,27,src/context/roles/roles.module.ts,src/context/roles/roles.module.ts::program:RolesModule:<init>,<empty>,,false,8,13,<init>,,,1,
+111669149726,METHOD,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts::program,TYPE_DECL,:program,0,0,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts::program,<empty>,,false,1,67,:program,,,1,
+111669149727,METHOD,<empty>,<empty>,constructor(private readonly tenantRoleAliasService: TenantRoleAliasesService) {},2,83,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts::program:TenantRoleAliasesController:<init>,<empty>,,false,12,12,<init>,,,1,
+111669149728,METHOD,<empty>,<empty>,"@Post()
+  async create(@Body() createTenantRoleAliasDto: CreateTenantRoleAliasDto) {
+    this.logger.log('Creating new Tenant Role Aliases ..');
+    const tenantRoleAlias = await this.tenantRoleAliasService.create(createTenantRoleAliasDto);
+    this.logger.log(`Created Tenenat Role Alias with id:${tenantRoleAlias.id}`);
+    return tenantRoleAlias;
+  }",2,3,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts::program:TenantRoleAliasesController:create,<empty>,,false,15,21,create,,,1,
+111669149729,METHOD,<empty>,<empty>,"@Get()
+  async findAll() {
+    this.logger.log('Finding All Tenant Role Aliases...');
+    const tenantRoleAlias = await this.tenantRoleAliasService.findAll();
+    return tenantRoleAlias;
+  }",2,3,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts::program:TenantRoleAliasesController:findAll,<empty>,,false,23,28,findAll,,,1,
+111669149730,METHOD,<empty>,<empty>,"@Post('many/')
+  async findMany(@Body() findTenantRoleAliasesDto: FindTenantRoleAliasDto) {
+    this.logger.log(`Searching for Tenant Role Aliases with many search args.`);
+    const tenantRoleAlias = await this.tenantRoleAliasService.findByMany(findTenantRoleAliasesDto);
+    return tenantRoleAlias;
+  }",2,3,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts::program:TenantRoleAliasesController:findMany,<empty>,,false,30,35,findMany,,,1,
+111669149731,METHOD,<empty>,<empty>,"@Post('assign-role-alias')
+  async assing(@Body() assignRoleAliasDto: AssignTenantRoleAliasDto) {
+    this.logger.log(`Assign A Role alias to a tenant Role alias`);
+    const tenantRoleAlias = await this.tenantRoleAliasService.assignToRoleAlias(assignRoleAliasDto);
+    return tenantRoleAlias;
+  }",2,3,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts::program:TenantRoleAliasesController:assing,<empty>,,false,36,41,assing,,,1,
+111669149732,METHOD,<empty>,<empty>,"@Get(':id')
+  async findOne(@Param('id') id: string) {
+    this.logger.log(`Searching for Tenant Role ALiases with id: ${id}.`);
+    const tenantRoleAlias = await this.tenantRoleAliasService.findOne(+id);
+    this.logger.log(`Found Tenenat Role Alias with id:${id}`);
+    return tenantRoleAlias;
+  }",2,3,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts::program:TenantRoleAliasesController:findOne,<empty>,,false,43,49,findOne,,,1,
+111669149733,METHOD,<empty>,<empty>,"@Patch(':id')
+  async update(@Param('id') id: string, @Body() updateTenantRoleAliasesDto: UpdateTenantRoleAliasDto) {
+    this.logger.log(`Updating tenant role alias with id: ${id}.`);
+    const tenantRoleAlias = await this.tenantRoleAliasService.update(+id, updateTenantRoleAliasesDto);
+    this.logger.log(`Updated Tenenat Role Alias with id:${id}`);
+    return tenantRoleAlias;
+  }",2,3,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts::program:TenantRoleAliasesController:update,<empty>,,false,51,57,update,,,1,
+111669149734,METHOD,<empty>,<empty>,"@Delete(':id')
+  async remove(@Param('id') id: string) {
+    this.logger.log(`Disabling / Enabling Tenant Role Alias with id: ${id}.`);
+    const tenantRoleAlias = await this.tenantRoleAliasService.remove(+id);
+    this.logger.log(`Tenant Role Alias with id: ${id} was ` + tenantRoleAlias.enabled ? 'Enabled!' : 'Disabled!');
+    return tenantRoleAlias;
+  }",2,3,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts::program:TenantRoleAliasesController:remove,<empty>,,false,59,65,remove,,,1,
+111669149735,METHOD,src/context/tenant-role-aliases/tenant-role-aliases.module.ts::program,TYPE_DECL,:program,0,0,src/context/tenant-role-aliases/tenant-role-aliases.module.ts,src/context/tenant-role-aliases/tenant-role-aliases.module.ts::program,<empty>,,false,1,14,:program,,,1,
+111669149736,METHOD,<empty>,<empty>,constructor() {},0,37,src/context/tenant-role-aliases/tenant-role-aliases.module.ts,src/context/tenant-role-aliases/tenant-role-aliases.module.ts::program:TenantRoleAliasModule:<init>,<empty>,,false,8,13,<init>,,,1,
+111669149737,METHOD,src/context/tenants/tenants.controller.ts::program,TYPE_DECL,:program,0,0,src/context/tenants/tenants.controller.ts,src/context/tenants/tenants.controller.ts::program,<empty>,,false,1,70,:program,,,1,
+111669149738,METHOD,<empty>,<empty>,constructor(private readonly tenantsService: TenantsService) {},2,65,src/context/tenants/tenants.controller.ts,src/context/tenants/tenants.controller.ts::program:TenantsController:<init>,<empty>,,false,11,11,<init>,,,1,
+111669149739,METHOD,<empty>,<empty>,"@Post()
+  async create(@Body() createTenantDto: CreateTenantDto) {
+    this.logger.log('Creating new Tenant ..');
+    const { name, url, description } = createTenantDto;
+    const newTenant = await this.tenantsService.create({
+      ...createTenantDto,
+      name: name.trim(),
+      url: url.trim().toLowerCase(),
+      description: description.trim(),
+    });
+    this.logger.log(`Created new Tenant! id: ${newTenant.id}.`);
+    return newTenant;
+  }",2,3,src/context/tenants/tenants.controller.ts,src/context/tenants/tenants.controller.ts::program:TenantsController:create,<empty>,,false,14,26,create,,,1,
+111669149740,METHOD,<empty>,<empty>,"@Get()
+  async findAll() {
+    this.logger.log('Finding All Tenants...');
+    return await this.tenantsService.findAll();
+  }",2,3,src/context/tenants/tenants.controller.ts,src/context/tenants/tenants.controller.ts::program:TenantsController:findAll,<empty>,,false,28,32,findAll,,,1,
+111669149741,METHOD,<empty>,<empty>,"@Post('many/')
+  async findMany(@Body() findTenantDto: FindTenantDto) {
+    this.logger.log(`Searching for Tenant with many search args.`);
+    const foundTenantType = await this.tenantsService.findByMany(findTenantDto);
+    return foundTenantType;
+  }",2,3,src/context/tenants/tenants.controller.ts,src/context/tenants/tenants.controller.ts::program:TenantsController:findMany,<empty>,,false,34,39,findMany,,,1,
+111669149742,METHOD,<empty>,<empty>,"@Get(':id')
+  async findOne(@Param('id') id: string) {
+    this.logger.log(`Searching for Tenant with id: ${id}.`);
+    const foundTenant = await this.tenantsService.findOne(+id);
+    this.logger.log(`Tenant with id: ${id} was found.`);
+    return foundTenant;
+  }",2,3,src/context/tenants/tenants.controller.ts,src/context/tenants/tenants.controller.ts::program:TenantsController:findOne,<empty>,,false,41,47,findOne,,,1,
+111669149743,METHOD,<empty>,<empty>,"@Patch(':id')
+  async update(@Param('id') id: string, @Body() updateTenantDto: UpdateTenantDto) {
+    this.logger.log(`Updating Tenant with id: ${id}.`);
+    const foundTenant = await this.tenantsService.update(+id, {
+      name: updateTenantDto.name.trim(),
+      url: updateTenantDto.url.toLowerCase().trim(),
+      description: updateTenantDto.description.trim(),
+      ...updateTenantDto,
+    });
+    this.logger.log(`Tenant with id: ${id} was updated.`);
+    return foundTenant;
+  }",2,3,src/context/tenants/tenants.controller.ts,src/context/tenants/tenants.controller.ts::program:TenantsController:update,<empty>,,false,49,60,update,,,1,
+111669149744,METHOD,<empty>,<empty>,"@Delete(':id')
+  async remove(@Param('id') id: string) {
+    this.logger.log(`Disabling / Enabling Tenant with id: ${id}.`);
+    const foundTenant = await this.tenantsService.remove(+id);
+    this.logger.log(`Tenant with id: ${id} was ` + foundTenant.enabled ? 'Enabled!' : 'Disabled!');
+    return foundTenant;
+  }",2,3,src/context/tenants/tenants.controller.ts,src/context/tenants/tenants.controller.ts::program:TenantsController:remove,<empty>,,false,62,68,remove,,,1,
+111669149745,METHOD,src/context/tenants/tenants.module.ts::program,TYPE_DECL,:program,0,0,src/context/tenants/tenants.module.ts,src/context/tenants/tenants.module.ts::program,<empty>,,false,1,14,:program,,,1,
+111669149746,METHOD,<empty>,<empty>,constructor() {},0,29,src/context/tenants/tenants.module.ts,src/context/tenants/tenants.module.ts::program:TenantsModule:<init>,<empty>,,false,8,13,<init>,,,1,
+111669149747,METHOD,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts::program,TYPE_DECL,:program,0,0,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts::program,<empty>,,false,1,53,:program,,,1,
+111669149748,METHOD,<empty>,<empty>,constructor(private readonly userRoleByTenantsService: UserRoleByTenantsService) {},2,85,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts::program:UserRoleByTenantsController:<init>,<empty>,,false,10,10,<init>,,,1,
+111669149749,METHOD,<empty>,<empty>,"@Post()
+  async create(@Body() createUserRoleByTenantsDto: CreateUserRoleByTenantsDto) {
+    this.logger.log('Creating new User Role by Tenant...');
+    const newUserRoleByTenants = await this.userRoleByTenantsService.create({ ...createUserRoleByTenantsDto });
+    this.logger.log(`Created new User Role by Tenant! id:${newUserRoleByTenants.id}`);
+    return newUserRoleByTenants;
+  }",2,3,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts::program:UserRoleByTenantsController:create,<empty>,,false,13,19,create,,,1,
+111669149750,METHOD,<empty>,<empty>,"@Get()
+  async findAll() {
+    this.logger.log('Finding all User Role By Tenants');
+    return await this.userRoleByTenantsService.findAll();
+  }",2,3,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts::program:UserRoleByTenantsController:findAll,<empty>,,false,21,25,findAll,,,1,
+111669149751,METHOD,<empty>,<empty>,"@Post('/many')
+  async findMany(@Body() findUserRoleByTenantsDto: FindUserRoleByTenantsDto) {
+    this.logger.log(`Searching for USer Role By Tenants with many search args.`);
+    const foundUserRoleByTenants = await this.userRoleByTenantsService.findByMany(findUserRoleByTenantsDto);
+    this.logger.log(`Found ${foundUserRoleByTenants.length} items.`);
+    return foundUserRoleByTenants;
+  }",2,3,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts::program:UserRoleByTenantsController:findMany,<empty>,,false,27,33,findMany,,,1,
+111669149752,METHOD,<empty>,<empty>,"@Patch(':id')
+  async update(@Param('id') id: string, @Body() updateUserRoleByTenantDto: UpdateUserRoleByTenantsDto) {
+    this.logger.log(`Updating User Role by Tenant with id: ${id}.`);
+    const foundUserRoleByTenants = await this.userRoleByTenantsService.update(+id, { ...updateUserRoleByTenantDto });
+    this.logger.log(`User Role by Tenant with id: ${id} was updated.`);
+    return foundUserRoleByTenants;
+  }",2,3,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts::program:UserRoleByTenantsController:update,<empty>,,false,35,41,update,,,1,
+111669149753,METHOD,<empty>,<empty>,"@Delete(':id')
+  async remove(@Param('id') id: string) {
+    this.logger.log(`Disabling / Enabling User Role By Tenant with id: ${id}.`);
+    const foundUserRoleByTenants = await this.userRoleByTenantsService.remove(+id);
+    this.logger.log(
+      `User Role By Tenant with id: ${id} was ` + foundUserRoleByTenants.enabled ? 'Enabled!' : 'Disabled!',
+    );
+    return foundUserRoleByTenants;
+  }",2,3,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts::program:UserRoleByTenantsController:remove,<empty>,,false,43,51,remove,,,1,
+111669149754,METHOD,src/context/user-role-by-tenants/user-role-by-tenants.module.ts::program,TYPE_DECL,:program,0,0,src/context/user-role-by-tenants/user-role-by-tenants.module.ts,src/context/user-role-by-tenants/user-role-by-tenants.module.ts::program,<empty>,,false,1,30,:program,,,1,
+111669149755,METHOD,<empty>,<empty>,constructor() {},0,39,src/context/user-role-by-tenants/user-role-by-tenants.module.ts,src/context/user-role-by-tenants/user-role-by-tenants.module.ts::program:UserRoleByTenantsModule:<init>,<empty>,,false,14,29,<init>,,,1,
+111669149756,METHOD,src/context/users/users.controller.ts::program,TYPE_DECL,:program,0,0,src/context/users/users.controller.ts,src/context/users/users.controller.ts::program,<empty>,,false,1,84,:program,,,1,
+111669149757,METHOD,<empty>,<empty>,constructor(private readonly usersService: UsersService) {},2,61,src/context/users/users.controller.ts,src/context/users/users.controller.ts::program:UsersController:<init>,<empty>,,false,12,12,<init>,,,1,
+111669149758,METHOD,<empty>,<empty>,"@Post()
+  async create(@Body() createUserDto: CreateUserDto, @Headers('payload') payload: string) {
+    
+    this.logger.log('Creating new user ..');
+    const payloadObject: ContextPayload = JSON.parse(payload);
+
+    const newUser = await this.usersService.create(createUserDto, payloadObject);
+    this.logger.log(`Created new User! id: ${newUser.id}.`);
+    return newUser;
+  }",2,3,src/context/users/users.controller.ts,src/context/users/users.controller.ts::program:UsersController:create,<empty>,,false,15,24,create,,,1,
+111669149759,METHOD,<empty>,<empty>,"@Get()
+  findAll() {
+    this.logger.log('Finding All Users...');
+    return this.usersService.findAll();
+  }",2,3,src/context/users/users.controller.ts,src/context/users/users.controller.ts::program:UsersController:findAll,<empty>,,false,26,30,findAll,,,1,
+111669149760,METHOD,<empty>,<empty>,"@Post('many/')
+  async findMany(@Body() findUserDto: FindUserDto) {
+    this.logger.log(`Searching for user with many search args.`);
+    return this.usersService.findByMany(findUserDto);
+  }",2,3,src/context/users/users.controller.ts,src/context/users/users.controller.ts::program:UsersController:findMany,<empty>,,false,32,36,findMany,,,1,
+111669149761,METHOD,<empty>,<empty>,"@Get(':id')
+  async findOne(@Param('id') id: string) {
+    this.logger.log(`Searching for user with id: ${id}.`);
+    const foundUser = await this.usersService.findOne(+id);
+    this.logger.log(`User with id: ${id} was found.`);
+    return foundUser;
+  }",2,3,src/context/users/users.controller.ts,src/context/users/users.controller.ts::program:UsersController:findOne,<empty>,,false,38,44,findOne,,,1,
+111669149762,METHOD,<empty>,<empty>,"@Patch(':id')
+  async update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto, @Headers('payload') payload: string) {
+
+    this.logger.log(`Updating user with id: ${id}.`);
+    const payloadObject: ContextPayload = JSON.parse(payload);
+    const foundUser = await this.usersService.update(+id, updateUserDto, payloadObject);
+    this.logger.log(`User with id: ${id} was updated.`);
+    return foundUser;
+  }",2,3,src/context/users/users.controller.ts,src/context/users/users.controller.ts::program:UsersController:update,<empty>,,false,46,54,update,,,1,
+111669149763,METHOD,<empty>,<empty>,"@Patch(':id/resend-verification')
+  async resendVerification(@Param('id') temporalId: string) {
+    this.logger.log(`Updating user with id: ${temporalId}.`);
+    const foundUser = await this.usersService.resendVerification(temporalId);
+    this.logger.log(`User with id: ${temporalId} was updated.`);
+    return foundUser;
+  }",2,3,src/context/users/users.controller.ts,src/context/users/users.controller.ts::program:UsersController:resendVerification,<empty>,,false,56,62,resendVerification,,,1,
+111669149764,METHOD,<empty>,<empty>,"@Post('/mfa/attempt')
+  async sendMfaAttemptEmail(@Body('userId') userId: number) {
+    return this.usersService.sendMfaAttemptEmail(userId);
+  }",2,3,src/context/users/users.controller.ts,src/context/users/users.controller.ts::program:UsersController:sendMfaAttemptEmail,<empty>,,false,64,67,sendMfaAttemptEmail,,,1,
+111669149765,METHOD,<empty>,<empty>,"@Post('/mfa/success')
+  async sendMfaSuccessEmail(@Body('userId') userId: number) {
+    return this.usersService.sendMfaSuccessEmail(userId);
+  }",2,3,src/context/users/users.controller.ts,src/context/users/users.controller.ts::program:UsersController:sendMfaSuccessEmail,<empty>,,false,69,72,sendMfaSuccessEmail,,,1,
+111669149766,METHOD,<empty>,<empty>,"@Delete(':id')
+  async remove(@Param('id') id: string, @Headers('payload') payload: string) {
+    this.logger.log(`Disabling / Enabling User with id: ${id}.`);
+    
+    const payloadObject: ContextPayload = JSON.parse(payload);
+    const foundUser = await this.usersService.remove(+id, payloadObject);
+    this.logger.log(`User with id: ${id} was ` + foundUser.enabled ? 'Enabled!' : 'Disabled!');
+    return foundUser;
+  }",2,3,src/context/users/users.controller.ts,src/context/users/users.controller.ts::program:UsersController:remove,<empty>,,false,74,82,remove,,,1,
+111669149767,METHOD,src/context/users/users.module.ts::program,TYPE_DECL,:program,0,0,src/context/users/users.module.ts,src/context/users/users.module.ts::program,<empty>,,false,1,16,:program,,,1,
+111669149768,METHOD,<empty>,<empty>,constructor() {},0,27,src/context/users/users.module.ts,src/context/users/users.module.ts::program:UsersModule:<init>,<empty>,,false,10,15,<init>,,,1,
+111669149769,METHOD,<empty>,<empty>,() => console.log(`App Running in port ${PORT}`),30,78,src/main.ts,src/main.ts::program:bootstrap:<lambda>0,<empty>,,false,27,27,<lambda>0,,,1,
+111669149770,METHOD,<empty>,<empty>,"async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+  app.useLogger(app.get(Logger));
+
+  const config = new DocumentBuilder()
+    .setTitle('Tenant Micro Service')
+    .setDescription('Tenants Micro Service API documentation')
+    .setVersion('1.0')
+    .addTag('tenant-types')
+    .addTag('users')
+    .addTag('roles')
+    .build();
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('docs', app, document);
+
+  app.useGlobalPipes(new ValidationPipe());
+
+  await app.listen(PORT).then(() => console.log(`App Running in port ${PORT}`));
+}",0,1,src/main.ts,src/main.ts::program:bootstrap,<empty>,,false,10,28,bootstrap,,,1,
+111669149771,METHOD,src/main.ts::program,TYPE_DECL,:program,0,0,src/main.ts,src/main.ts::program,<empty>,,false,1,30,:program,,,1,
+111669149772,METHOD,src/shared/context/role-aliases/domain/dto/create-role-alias.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/role-aliases/domain/dto/create-role-alias.dto.ts,src/shared/context/role-aliases/domain/dto/create-role-alias.dto.ts::program,<empty>,,false,1,26,:program,,,1,
+111669149773,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/role-aliases/domain/dto/create-role-alias.dto.ts,src/shared/context/role-aliases/domain/dto/create-role-alias.dto.ts::program:CreateRoleAliasDto:<init>,<empty>,,false,5,25,<init>,,,1,
+111669149774,METHOD,src/shared/context/role-aliases/domain/dto/find-role-alias.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/role-aliases/domain/dto/find-role-alias.dto.ts,src/shared/context/role-aliases/domain/dto/find-role-alias.dto.ts::program,<empty>,,false,1,24,:program,,,1,
+111669149775,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/role-aliases/domain/dto/find-role-alias.dto.ts,src/shared/context/role-aliases/domain/dto/find-role-alias.dto.ts::program:FindRoleAliasDto:<init>,<empty>,,false,5,23,<init>,,,1,
+111669149776,METHOD,src/shared/context/role-aliases/domain/dto/role-alias.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/role-aliases/domain/dto/role-alias.dto.ts,src/shared/context/role-aliases/domain/dto/role-alias.dto.ts::program,<empty>,,false,1,19,:program,,,1,
+111669149777,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/role-aliases/domain/dto/role-alias.dto.ts,src/shared/context/role-aliases/domain/dto/role-alias.dto.ts::program:RoleAliasDto:<init>,<empty>,,false,3,12,<init>,,,1,
+111669149778,METHOD,src/shared/context/role-aliases/domain/dto/update-role-alias.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/role-aliases/domain/dto/update-role-alias.dto.ts,src/shared/context/role-aliases/domain/dto/update-role-alias.dto.ts::program,<empty>,,false,1,27,:program,,,1,
+111669149779,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/role-aliases/domain/dto/update-role-alias.dto.ts,src/shared/context/role-aliases/domain/dto/update-role-alias.dto.ts::program:UpdateRoleAliasDto:<init>,<empty>,,false,6,26,<init>,,,1,
+111669149780,METHOD,src/shared/context/role-aliases/domain/role-aliases.service.ts::program,TYPE_DECL,:program,0,0,src/shared/context/role-aliases/domain/role-aliases.service.ts,src/shared/context/role-aliases/domain/role-aliases.service.ts::program,<empty>,,false,1,230,:program,,,1,
+111669149781,METHOD,<empty>,<empty>,() => TenantRoleAliasesService,23,53,src/shared/context/role-aliases/domain/role-aliases.service.ts,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:<init>:<lambda>0,<empty>,,false,24,24,<lambda>0,,,1,
+111669149782,METHOD,<empty>,<empty>,"constructor(
+    @InjectRepository(RoleAlias, dbConfig.name)
+    private readonly rolesAliasRepository: Repository<RoleAlias>,
+    @InjectRepository(Role, dbConfig.name)
+    private readonly rolesRepository: Repository<Role>,
+    @InjectRepository(TenantRoleAliases, dbConfig.name)
+    private readonly tenantRoleAliasRepository: Repository<TenantRoleAliases>,
+
+    @Inject(forwardRef(() => TenantRoleAliasesService))
+    private readonly tenantRoleAliasService: TenantRoleAliasesService,
+  ) {}",2,6,src/shared/context/role-aliases/domain/role-aliases.service.ts,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:<init>,<empty>,,false,16,26,<init>,,,1,
+111669149783,METHOD,<empty>,<empty>,"(tenantRoleAlias) => {
+          delete tenantRoleAlias.roleAlias;
+          return tenantRoleAlias;
+        }",64,9,src/shared/context/role-aliases/domain/role-aliases.service.ts,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:create:<lambda>1,<empty>,,false,69,72,<lambda>1,,,1,
+111669149784,METHOD,<empty>,<empty>,"async create(createRoleAliasDto: CreateRoleAliasDto) {
+    this.logger.log('Creating new User...');
+    const roleId = createRoleAliasDto.roleId;
+    const tenantRoleAlias = createRoleAliasDto.tenantRoleAlias;
+    const aliasName = createRoleAliasDto.aliasName.trim();
+
+    const existingAliasName = await this.rolesAliasRepository.findOneBy({ aliasName });
+    if (existingAliasName) {
+      this.logger.error(`The aliasName ${aliasName} is already used and needs to be unique`);
+      throw new ForbiddenException('aliasName is already in use', {
+        cause: new Error(),
+        description: `The aliasName ${aliasName} is already used and needs to be unique`,
+      });
+    }
+    const existingRole = await this.rolesRepository.findOneBy({ id: roleId });
+
+    if (!existingRole) {
+      this.logger.error(`The role with id ${roleId} was not found`);
+      throw new NotFoundException('Role not found', {
+        cause: new Error(),
+        description: `The role with id ${roleId} was not f...",2,3,src/shared/context/role-aliases/domain/role-aliases.service.ts,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:create,<empty>,,false,28,78,create,,,1,
+111669149785,METHOD,<empty>,<empty>,"async findAll() {
+    this.logger.log('Finding All Role Aliases ...');
+    this.roleAliasCollection = await this.rolesAliasRepository
+      .createQueryBuilder('RoleAlias')
+      .leftJoinAndSelect('RoleAlias.tenantRoleAlias', 'tenantRoleAlias')
+      .leftJoinAndSelect('tenantRoleAlias.tenant', 'tenant')
+      .leftJoinAndSelect('tenantRoleAlias.role', 'tenantRoleAliasRole')
+      .leftJoinAndSelect('RoleAlias.role', 'role')
+      .getMany();
+    return this.roleAliasCollection;
+  }",2,3,src/shared/context/role-aliases/domain/role-aliases.service.ts,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:findAll,<empty>,,false,80,90,findAll,,,1,
+111669149786,METHOD,<empty>,<empty>,"async findOne(id: number) {
+    this.logger.log('Finding All Role Aliases ...');
+    this.roleAliasCollection = await this.rolesAliasRepository
+      .createQueryBuilder('RoleAlias')
+      .leftJoinAndSelect('RoleAlias.tenantRoleAlias', 'tenantRoleAlias')
+      .leftJoinAndSelect('tenantRoleAlias.tenant', 'tenant')
+      .leftJoinAndSelect('tenantRoleAlias.role', 'tenantRoleAliasRole')
+      .leftJoinAndSelect('RoleAlias.role', 'role')
+      .where('RoleAlias.id = :id', { id })
+      .getMany();
+    return this.roleAliasCollection[0];
+  }",2,3,src/shared/context/role-aliases/domain/role-aliases.service.ts,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:findOne,<empty>,,false,92,103,findOne,,,1,
+111669149787,METHOD,<empty>,<empty>,(alias) => alias.toLowerCase(),35,65,src/shared/context/role-aliases/domain/role-aliases.service.ts,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:findByMany:<lambda>2,<empty>,,false,120,120,<lambda>2,,,1,
+111669149788,METHOD,<empty>,<empty>,"async findByMany(findRoleAliasDto: FindRoleAliasDto) {
+    this.logger.log(`Finding Role Aliases by many args...`);
+    const { ids, aliasNames, descriptions, enabled, roleIds, tenantRoleAlias } = findRoleAliasDto;
+    let query = this.rolesAliasRepository
+      .createQueryBuilder('RoleAlias')
+      .leftJoinAndSelect('RoleAlias.tenantRoleAlias', 'tenantRoleAlias')
+      .leftJoinAndSelect('tenantRoleAlias.tenant', 'tenant')
+      .leftJoinAndSelect('tenantRoleAlias.role', 'tenantRoleAliasRole')
+      .leftJoinAndSelect('RoleAlias.role', 'role');
+
+    if (ids && ids.length > 0) {
+      query = query.andWhere('RoleAlias.id IN (:...ids) ', { ids });
+    }
+    if (aliasNames) {
+      query = query.andWhere('lower(RoleAlias.aliasName) IN (:...aliasNames) ', {
+        aliasNames: aliasNames.map((alias) => alias.toLowerCase()),
+      });
+    }
+    if (descriptions) {
+      query = query.andWhere('lower(RoleAlias.description) IN (:...descriptions) ', {
+        descriptions: descriptions.m...",2,3,src/shared/context/role-aliases/domain/role-aliases.service.ts,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:findByMany,<empty>,,false,105,142,findByMany,,,1,
+111669149789,METHOD,<empty>,<empty>,(desc) => desc.toLowerCase(),39,67,src/shared/context/role-aliases/domain/role-aliases.service.ts,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:findByMany:<lambda>3,<empty>,,false,125,125,<lambda>3,,,1,
+111669149790,METHOD,<empty>,<empty>,"(tenantRoleAlias) => {
+          delete tenantRoleAlias.roleAlias;
+          return tenantRoleAlias;
+        }",69,9,src/shared/context/role-aliases/domain/role-aliases.service.ts,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:update:<lambda>4,<empty>,,false,204,207,<lambda>4,,,1,
+111669149791,METHOD,<empty>,<empty>,"async update(id: number, updateRoleAliasDto: UpdateRoleAliasDto) {
+    this.logger.log(`Updating Role Alias with id: ${id}`);
+    const roleAliasToUpdate = await this.rolesAliasRepository
+      .createQueryBuilder('RoleAlias')
+      .leftJoinAndSelect('RoleAlias.tenantRoleAlias', 'tenantRoleAlias')
+      .leftJoinAndSelect('tenantRoleAlias.tenant', 'tenant')
+      .leftJoinAndSelect('tenantRoleAlias.role', 'tenantRoleAliasRole')
+      .leftJoinAndSelect('RoleAlias.role', 'role')
+      .where('RoleAlias.id = :id', { id })
+      .getOne();
+
+    if (!roleAliasToUpdate) {
+      this.logger.error(`The user with id ${id} was not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `The user with id ${id} was not found`,
+      });
+    }
+    const roleId = updateRoleAliasDto.roleId || null;
+    const tenantRoleAlias = updateRoleAliasDto.tenantRoleAlias;
+    const aliasName = updateRoleAliasDto.aliasName ? updateRoleAliasDto.aliasNam...",2,3,src/shared/context/role-aliases/domain/role-aliases.service.ts,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:update,<empty>,,false,144,212,update,,,1,
+111669149792,METHOD,<empty>,<empty>,"async remove(id: number) {
+    this.logger.log(`Enabling / Disabling Role Alias with id: ${id}.`);
+    const userToDisable = await this.rolesAliasRepository.findOneBy({ id });
+    if (!userToDisable) {
+      this.logger.error(`The role alias with id ${id} was not found`);
+      throw new NotFoundException('Tenant not found', {
+        cause: new Error(),
+        description: `The role alias with id ${id} was not found`,
+      });
+    }
+    userToDisable.enabled = !userToDisable.enabled;
+    this.logger.log(`Role alias with id: ${id} was ` + userToDisable.enabled ? 'Enabled!' : 'Disabled!');
+
+    return this.rolesAliasRepository.save(userToDisable);
+  }",2,3,src/shared/context/role-aliases/domain/role-aliases.service.ts,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:RoleAliasesService:remove,<empty>,,false,214,228,remove,,,1,
+111669149793,METHOD,src/shared/context/roles/domain/dto/create-role.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/roles/domain/dto/create-role.dto.ts,src/shared/context/roles/domain/dto/create-role.dto.ts::program,<empty>,,false,1,44,:program,,,1,
+111669149794,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/roles/domain/dto/create-role.dto.ts,src/shared/context/roles/domain/dto/create-role.dto.ts::program:CreateRoleDto:<init>,<empty>,,false,5,43,<init>,,,1,
+111669149795,METHOD,src/shared/context/roles/domain/dto/find-role.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/roles/domain/dto/find-role.dto.ts,src/shared/context/roles/domain/dto/find-role.dto.ts::program,<empty>,,false,1,38,:program,,,1,
+111669149796,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/roles/domain/dto/find-role.dto.ts,src/shared/context/roles/domain/dto/find-role.dto.ts::program:FindRoleDto:<init>,<empty>,,false,4,37,<init>,,,1,
+111669149797,METHOD,src/shared/context/roles/domain/dto/role.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/roles/domain/dto/role.dto.ts,src/shared/context/roles/domain/dto/role.dto.ts::program,<empty>,,false,1,16,:program,,,1,
+111669149798,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/roles/domain/dto/role.dto.ts,src/shared/context/roles/domain/dto/role.dto.ts::program:RoleDto:<init>,<empty>,,false,1,15,<init>,,,1,
+111669149799,METHOD,src/shared/context/roles/domain/dto/update-role.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/roles/domain/dto/update-role.dto.ts,src/shared/context/roles/domain/dto/update-role.dto.ts::program,<empty>,,false,1,43,:program,,,1,
+111669149800,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/roles/domain/dto/update-role.dto.ts,src/shared/context/roles/domain/dto/update-role.dto.ts::program:UpdateRoleDto:<init>,<empty>,,false,6,42,<init>,,,1,
+111669149801,METHOD,src/shared/context/roles/domain/roles.service.ts::program,TYPE_DECL,:program,0,0,src/shared/context/roles/domain/roles.service.ts,src/shared/context/roles/domain/roles.service.ts::program,<empty>,,false,1,370,:program,,,1,
+111669149802,METHOD,<empty>,<empty>,"constructor(
+    @InjectRepository(Role, dbConfig.name)
+    private readonly rolesRepository: Repository<Role>,
+  ) {}",2,6,src/shared/context/roles/domain/roles.service.ts,src/shared/context/roles/domain/roles.service.ts::program:RolesService:<init>,<empty>,,false,16,19,<init>,,,1,
+111669149803,METHOD,<empty>,<empty>,"async create(createRoleDto: CreateRoleDto) {
+    this.logger.log('Creating new roles...');
+    const { tag, name, description, tenantSpecific, tenantCreatorId } = createRoleDto;
+    const existingTenantTag = await this.rolesRepository.findOneBy({ tag: tag.toLowerCase().trim() });
+    if (existingTenantTag) {
+      this.logger.error(`The tag ""${tag}"" is already used and needs to be unique`);
+      throw new ForbiddenException('tag is already in use', {
+        cause: new Error(),
+        description: `The tag ""${tag}"" is already used and needs to be unique`,
+      });
+    }
+    if (createRoleDto.tenantTypesIds && createRoleDto.tenantTypesIds.length > 0) {
+      this.logger.log(`tenant types: ${createRoleDto.tenantTypesIds}`);
+    }
+    let foundTenantCreator: Tenant[] = [];
+    if (tenantSpecific) {
+      const url = process.env.TENANTS_MS_URL || 'error';
+      if (url === 'error') {
+        this.logger.error(`Missing TENANTS_MS_URL env variable`);
+        throw new NotFoundException...",2,3,src/shared/context/roles/domain/roles.service.ts,src/shared/context/roles/domain/roles.service.ts::program:RolesService:create,<empty>,,false,21,103,create,,,1,
+111669149804,METHOD,<empty>,<empty>,"async findAll() {
+    this.logger.log('Finding All Roles ...');
+    this.rolesCollection = await this.rolesRepository
+      .createQueryBuilder('roles')
+      .leftJoinAndSelect('roles.tenantTypes', 'tenantTypes')
+      .leftJoinAndSelect('roles.aliases', 'aliases')
+      .leftJoinAndSelect('roles.roles', 'assignedRoles')
+      // .leftJoinAndSelect('roles.gridPreferences', 'gridPreferences')
+      .leftJoinAndSelect('assignedRoles.role', 'role')
+      // .leftJoinAndSelect('assignedRoles.user', 'user')
+      // .leftJoinAndSelect('assignedRoles.tenant', 'tenant')
+      // .leftJoinAndSelect('assignedRoles.roleAlias', 'roleAlias')
+      .getMany();
+    this.logger.log(`${this.rolesCollection.length} roles found`);
+    return this.rolesCollection;
+  }",2,3,src/shared/context/roles/domain/roles.service.ts,src/shared/context/roles/domain/roles.service.ts::program:RolesService:findAll,<empty>,,false,105,120,findAll,,,1,
+111669149805,METHOD,<empty>,<empty>,"async findOne(id: number) {
+    this.logger.log(`Searching for Role  with id: ${id}.`);
+    const foundRole = await this.rolesRepository
+      .createQueryBuilder('roles')
+      .leftJoinAndSelect('roles.tenantTypes', 'tenantTypes')
+      .leftJoinAndSelect('roles.aliases', 'aliases')
+      .leftJoinAndSelect('roles.roles', 'assignedRoles')
+      // .leftJoinAndSelect('roles.gridPreferences', 'gridPreferences')
+      .leftJoinAndSelect('assignedRoles.role', 'role')
+      // .leftJoinAndSelect('assignedRoles.user', 'user')
+      // .leftJoinAndSelect('assignedRoles.tenant', 'tenant')
+      // .leftJoinAndSelect('assignedRoles.roleAlias', 'roleAlias')
+      .andWhere('roles.id = :id', { id })
+      .getOne();
+
+    if (!foundRole) {
+      this.logger.error(`The tenant with id ${id} was not found`);
+      throw new NotFoundException('Role  not found', {
+        cause: new Error(),
+        description: `The role with id ${id} was not found`,
+      });
+    }
+    this.logger.log(`role with...",2,3,src/shared/context/roles/domain/roles.service.ts,src/shared/context/roles/domain/roles.service.ts::program:RolesService:findOne,<empty>,,false,122,146,findOne,,,1,
+111669149806,METHOD,<empty>,<empty>,(name) => name.toLowerCase().trim(),25,60,src/shared/context/roles/domain/roles.service.ts,src/shared/context/roles/domain/roles.service.ts::program:RolesService:findByMany:<lambda>0,<empty>,,false,181,181,<lambda>0,,,1,
+111669149807,METHOD,<empty>,<empty>,"async findByMany(findRoleDto: FindRoleDto) {
+    const {
+      ids,
+      names,
+      descriptions,
+      enabled,
+      tags,
+      BackOfficeAccess,
+      SaasAccess,
+      tenantSpecific,
+      tenantTypesIds,
+      tenantCreatorIds,
+      aliasIds,
+    } = findRoleDto;
+    let query = this.rolesRepository
+      .createQueryBuilder('roles')
+      .leftJoinAndSelect('roles.tenantTypes', 'tenantTypes')
+      .leftJoinAndSelect('roles.aliases', 'aliases')
+      .leftJoinAndSelect('roles.roles', 'assignedRoles')
+      //.leftJoinAndSelect('roles.gridPreferences', 'gridPreferences')
+      .leftJoinAndSelect('assignedRoles.role', 'role');
+    //.leftJoinAndSelect('assignedRoles.user', 'user')
+    //.leftJoinAndSelect('assignedRoles.tenant', 'tenant')
+    //.leftJoinAndSelect('assignedRoles.roleAlias', 'roleAlias');
+    // .leftJoinAndSelect('roles.tenantCreator', 'tenantCreator');
+
+    if (ids && ids.length > 0) {
+      this.logger.log(`Finding by ids: ${ids}`);
+      query = query.an...",2,3,src/shared/context/roles/domain/roles.service.ts,src/shared/context/roles/domain/roles.service.ts::program:RolesService:findByMany,<empty>,,false,148,227,findByMany,,,1,
+111669149808,METHOD,<empty>,<empty>,(tag) => tag.toLowerCase().trim(),81,114,src/shared/context/roles/domain/roles.service.ts,src/shared/context/roles/domain/roles.service.ts::program:RolesService:findByMany:<lambda>1,<empty>,,false,186,186,<lambda>1,,,1,
+111669149809,METHOD,<empty>,<empty>,"async update(id: number, updateRoleDto: UpdateRoleDto) {
+    this.logger.log(`Searching for Role with id: ${id} to Update it`);
+    const roleToUpdate = await this.rolesRepository
+      .createQueryBuilder('roles')
+      .leftJoinAndSelect('roles.tenantTypes', 'tenantTypes')
+      .leftJoinAndSelect('roles.aliases', 'aliases')
+      .leftJoinAndSelect('roles.roles', 'assignedRoles')
+      // .leftJoinAndSelect('roles.gridPreferences', 'gridPreferences')
+      .leftJoinAndSelect('assignedRoles.role', 'role')
+      // .leftJoinAndSelect('assignedRoles.user', 'user')
+      // .leftJoinAndSelect('assignedRoles.tenant', 'tenant')
+      // .leftJoinAndSelect('assignedRoles.roleAlias', 'roleAlias')
+      .andWhere('roles.id = :id', { id })
+      .getOne();
+
+    if (!roleToUpdate) {
+      this.logger.error(`The tenant with id ${id} was not found`);
+      throw new NotFoundException('Role  not found', {
+        cause: new Error(),
+        description: `The role with id ${id} was not found`,
+...",2,3,src/shared/context/roles/domain/roles.service.ts,src/shared/context/roles/domain/roles.service.ts::program:RolesService:update,<empty>,,false,229,341,update,,,1,
+111669149810,METHOD,<empty>,<empty>,"async remove(id: number) {
+    this.logger.log(`Enabling / Disabling Role with id: ${id}.`);
+    const roleToDelete = await this.rolesRepository
+      .createQueryBuilder('roles')
+      .leftJoinAndSelect('roles.tenantTypes', 'tenantTypes')
+      .leftJoinAndSelect('roles.aliases', 'aliases')
+      .leftJoinAndSelect('roles.roles', 'assignedRoles')
+      // .leftJoinAndSelect('roles.gridPreferences', 'gridPreferences')
+      .leftJoinAndSelect('assignedRoles.role', 'role')
+      // .leftJoinAndSelect('assignedRoles.user', 'user')
+      // .leftJoinAndSelect('assignedRoles.tenant', 'tenant')
+      // .leftJoinAndSelect('assignedRoles.roleAlias', 'roleAlias')
+      .andWhere('roles.id = :id', { id })
+      .getOne();
+
+    if (!roleToDelete) {
+      this.logger.error(`The tenant with id ${id} was not found`);
+      throw new NotFoundException('Role  not found', {
+        cause: new Error(),
+        description: `The role with id ${id} was not found`,
+      });
+    }
+    roleToDelete.en...",2,3,src/shared/context/roles/domain/roles.service.ts,src/shared/context/roles/domain/roles.service.ts::program:RolesService:remove,<empty>,,false,343,368,remove,,,1,
+111669149811,METHOD,src/shared/context/tenant-role-aliases/dto/assign-tenant-role-alias.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/tenant-role-aliases/dto/assign-tenant-role-alias.dto.ts,src/shared/context/tenant-role-aliases/dto/assign-tenant-role-alias.dto.ts::program,<empty>,,false,1,16,:program,,,1,
+111669149812,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/tenant-role-aliases/dto/assign-tenant-role-alias.dto.ts,src/shared/context/tenant-role-aliases/dto/assign-tenant-role-alias.dto.ts::program:AssignTenantRoleAliasDto:<init>,<empty>,,false,6,15,<init>,,,1,
+111669149813,METHOD,src/shared/context/tenant-role-aliases/dto/create-tenant-role-aliases.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/tenant-role-aliases/dto/create-tenant-role-aliases.dto.ts,src/shared/context/tenant-role-aliases/dto/create-tenant-role-aliases.dto.ts::program,<empty>,,false,1,21,:program,,,1,
+111669149814,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/tenant-role-aliases/dto/create-tenant-role-aliases.dto.ts,src/shared/context/tenant-role-aliases/dto/create-tenant-role-aliases.dto.ts::program:CreateTenantRoleAliasDto:<init>,<empty>,,false,5,20,<init>,,,1,
+111669149815,METHOD,src/shared/context/tenant-role-aliases/dto/find-tenant-role-alias.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/tenant-role-aliases/dto/find-tenant-role-alias.dto.ts,src/shared/context/tenant-role-aliases/dto/find-tenant-role-alias.dto.ts::program,<empty>,,false,1,21,:program,,,1,
+111669149816,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/tenant-role-aliases/dto/find-tenant-role-alias.dto.ts,src/shared/context/tenant-role-aliases/dto/find-tenant-role-alias.dto.ts::program:FindTenantRoleAliasDto:<init>,<empty>,,false,5,20,<init>,,,1,
+111669149817,METHOD,src/shared/context/tenant-role-aliases/dto/tenant-role-alias.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/tenant-role-aliases/dto/tenant-role-alias.dto.ts,src/shared/context/tenant-role-aliases/dto/tenant-role-alias.dto.ts::program,<empty>,,false,1,10,:program,,,1,
+111669149818,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/tenant-role-aliases/dto/tenant-role-alias.dto.ts,src/shared/context/tenant-role-aliases/dto/tenant-role-alias.dto.ts::program:TenantRoleAliasDto:<init>,<empty>,,false,1,9,<init>,,,1,
+111669149819,METHOD,src/shared/context/tenant-role-aliases/dto/update-tenant-role-alias.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/tenant-role-aliases/dto/update-tenant-role-alias.dto.ts,src/shared/context/tenant-role-aliases/dto/update-tenant-role-alias.dto.ts::program,<empty>,,false,1,22,:program,,,1,
+111669149820,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/tenant-role-aliases/dto/update-tenant-role-alias.dto.ts,src/shared/context/tenant-role-aliases/dto/update-tenant-role-alias.dto.ts::program:UpdateTenantRoleAliasDto:<init>,<empty>,,false,6,21,<init>,,,1,
+111669149821,METHOD,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program,TYPE_DECL,:program,0,0,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program,<empty>,,false,1,320,:program,,,1,
+111669149822,METHOD,<empty>,<empty>,"constructor(
+    @InjectRepository(RoleAlias, dbConfig.name)
+    private readonly rolesAliasRepository: Repository<RoleAlias>,
+    @InjectRepository(Role, dbConfig.name)
+    private readonly rolesRepository: Repository<Role>,
+    @InjectRepository(TenantRoleAliases, dbConfig.name)
+    private readonly tenantRoleAliasRepository: Repository<TenantRoleAliases>,
+    @InjectRepository(Tenant, dbConfig.name)
+    private readonly tenantRepository: Repository<Tenant>,
+  ) {}",2,6,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program:TenantRoleAliasesService:<init>,<empty>,,false,16,25,<init>,,,1,
+111669149823,METHOD,<empty>,<empty>,"async create({ tenant, role, roleAlias, enabled }: CreateTenantRoleAliasDto) {
+    const foundTenant = await this.tenantRepository.createQueryBuilder().where('id = :tenant', { tenant }).getOne();
+
+    if (!foundTenant) {
+      this.logger.error(`Invalid Tenant, does not exist any tenant with id ${tenant}`);
+      throw new NotFoundException('Invalid Tenant', {
+        cause: new Error(),
+        description: `Invalid Tenant, does not exist any tenant with id ${tenant}`,
+      });
+    }
+
+    const foundRole = await this.rolesRepository.createQueryBuilder().where('id = :role', { role }).getOne();
+
+    if (!foundRole) {
+      this.logger.error(`Invalid Role, does not exist any role with id ${role}`);
+      throw new NotFoundException('Invalid Role', {
+        cause: new Error(),
+        description: `Invalid Role, does not exist any role with id ${role}`,
+      });
+    }
+
+    const foundRoleAlias = await this.rolesAliasRepository
+      .createQueryBuilder('RoleAlias')
+      .leftJoinAn...",2,3,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program:TenantRoleAliasesService:create,<empty>,,false,27,91,create,,,1,
+111669149824,METHOD,<empty>,<empty>,"async findAll() {
+    return await this.tenantRoleAliasRepository
+      .createQueryBuilder('TenantRoleAliases')
+      .leftJoinAndSelect('TenantRoleAliases.tenant', 'Tenant')
+      .leftJoinAndSelect('TenantRoleAliases.role', 'Role')
+      .leftJoinAndSelect('TenantRoleAliases.roleAlias', 'RoleAlias')
+      .getMany();
+  }",2,3,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program:TenantRoleAliasesService:findAll,<empty>,,false,93,100,findAll,,,1,
+111669149825,METHOD,<empty>,<empty>,"async findOne(id: number) {
+    return await this.tenantRoleAliasRepository
+      .createQueryBuilder('TenantRoleAliases')
+      .leftJoinAndSelect('TenantRoleAliases.tenant', 'Tenant')
+      .leftJoinAndSelect('TenantRoleAliases.role', 'Role')
+      .leftJoinAndSelect('TenantRoleAliases.roleAlias', 'RoleAlias')
+      .where('TenantRoleAliases.id=:id', { id })
+      .getOne();
+  }",2,3,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program:TenantRoleAliasesService:findOne,<empty>,,false,102,110,findOne,,,1,
+111669149826,METHOD,<empty>,<empty>,"async findByMany({ ids, tenants, roles, roleAliases, enabled }: FindTenantRoleAliasDto) {
+    let query = this.tenantRoleAliasRepository
+      .createQueryBuilder('TenantRoleAliases')
+      .leftJoinAndSelect('TenantRoleAliases.tenant', 'Tenant')
+      .leftJoinAndSelect('TenantRoleAliases.role', 'Role')
+      .leftJoinAndSelect('TenantRoleAliases.roleAlias', 'RoleAlias');
+
+    if (ids && ids.length > 0) query = query.andWhere('TenantRoleAliases.id IN (:...ids) ', { ids });
+
+    if (roles && roles.length > 0) query = query.andWhere('TenantRoleAliases.role IN (:...roles) ', { roles });
+
+    if (roleAliases && roleAliases.length > 0)
+      query = query.andWhere('TenantRoleAliases.roleAlias IN (:...roleAliases) ', { roleAliases });
+
+    if (tenants && tenants.length > 0)
+      query = query.andWhere('TenantRoleAliases.tenant IN (:...tenants) ', { tenants });
+
+    if (enabled != null) query = query.andWhere('TenantRoleAliases.enabled = :enabled ', { enabled });
+
+    return await query....",2,3,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program:TenantRoleAliasesService:findByMany,<empty>,,false,112,132,findByMany,,,1,
+111669149827,METHOD,<empty>,<empty>,"async update(id: number, { tenant, role, roleAlias, enabled }: UpdateTenantRoleAliasDto) {
+    const tenantRoleAliasesToUpdate = await this.tenantRoleAliasRepository
+      .createQueryBuilder('TenantRoleAliases')
+      .leftJoinAndSelect('TenantRoleAliases.tenant', 'Tenant')
+      .leftJoinAndSelect('TenantRoleAliases.role', 'Role')
+      .leftJoinAndSelect('TenantRoleAliases.roleAlias', 'RoleAlias')
+      .andWhere('TenantRoleAliases.id = :id', { id })
+      .getOne();
+
+    if (!tenantRoleAliasesToUpdate) return null;
+
+    const newTenantId = tenant ? tenant : tenantRoleAliasesToUpdate.tenant.id;
+    const newRole = role ? role : tenantRoleAliasesToUpdate.role.id;
+    if (tenant || role) {
+      const existingTenantRoleAliases = await this.tenantRoleAliasRepository
+        .createQueryBuilder('TenantRoleAliases')
+        .leftJoinAndSelect('TenantRoleAliases.tenant', 'Tenant')
+        .leftJoinAndSelect('TenantRoleAliases.role', 'Role')
+        .leftJoinAndSelect('TenantRoleAliases...",2,3,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program:TenantRoleAliasesService:update,<empty>,,false,134,215,update,,,1,
+111669149828,METHOD,<empty>,<empty>,"async remove(id: number) {
+    const tenantRoleAliasToRemove = await this.tenantRoleAliasRepository
+      .createQueryBuilder('TenantRoleAliases')
+      .leftJoinAndSelect('TenantRoleAliases.tenant', 'Tenant')
+      .leftJoinAndSelect('TenantRoleAliases.role', 'Role')
+      .leftJoinAndSelect('TenantRoleAliases.roleAlias', 'RoleAlias')
+      .where('TenantRoleAliases.id=:id', { id })
+      .getOne();
+
+    if (!tenantRoleAliasToRemove) {
+      this.logger.error(`The tenant role alias with id ${id} was not found`);
+      throw new NotFoundException('Tenant role alias not found', {
+        cause: new Error(),
+        description: `The tenant role alias with id ${id} was not found`,
+      });
+    }
+    tenantRoleAliasToRemove.enabled = !tenantRoleAliasToRemove.enabled;
+    this.logger.log(
+      `Tenant role alias with id: ${id} was ` + tenantRoleAliasToRemove.enabled ? 'Enabled!' : 'Disabled!',
+    );
+
+    return await this.tenantRepository.save(tenantRoleAliasToRemove);
+  }",2,3,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program:TenantRoleAliasesService:remove,<empty>,,false,217,239,remove,,,1,
+111669149829,METHOD,<empty>,<empty>,"async assignToRoleAlias({ roleAliasToUpdate, tenantRoleAliasNew, roleId }: AssignTenantRoleAliasDto) {
+    const collection: TenantRoleAliases[] = [];
+
+    if (tenantRoleAliasNew || roleId) {
+      const tenantRoleAliasN: number[] = [];
+      const tenantRoleAliasesToDelete: TenantRoleAliases[] = [];
+
+      if (!tenantRoleAliasNew) {
+        for (const t of roleAliasToUpdate.tenantRoleAlias) {
+          tenantRoleAliasN.push(t.tenant.id);
+        }
+      } else {
+        tenantRoleAliasN.push(...tenantRoleAliasNew);
+      }
+
+      if (tenantRoleAliasN && tenantRoleAliasN.length > 0) {
+        for (const tenant of tenantRoleAliasN) {
+          const foundTenantRoleAliases = await this.tenantRoleAliasRepository
+            .createQueryBuilder('Tenants')
+            .andWhere('Tenants.tenant = :tenant', { tenant })
+            .andWhere('Tenants.role = :roleId', { roleId: roleId || roleAliasToUpdate.role?.id })
+            .getOne();
+          if (foundTenantRoleAliases) {
+            ...",2,3,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program:TenantRoleAliasesService:assignToRoleAlias,<empty>,,false,241,318,assignToRoleAlias,,,1,
+111669149830,METHOD,<empty>,<empty>,"(qb) => {
+              qb.where('TenantRoleAliases.tenant NOT IN (:...tenant)', {
+                tenant: tenantRoleAliasN,
+              }).orWhere('TenantRoleAliases.role <> :roleId', {
+                roleId: roleId || roleAliasToUpdate.role?.id,
+              });
+            }",25,13,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program:TenantRoleAliasesService:assignToRoleAlias:<lambda>0,<empty>,,false,290,296,<lambda>0,,,1,
+111669149831,METHOD,src/shared/context/tenants/domain/dto/create-tenant.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/tenants/domain/dto/create-tenant.dto.ts,src/shared/context/tenants/domain/dto/create-tenant.dto.ts::program,<empty>,,false,1,43,:program,,,1,
+111669149832,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/tenants/domain/dto/create-tenant.dto.ts,src/shared/context/tenants/domain/dto/create-tenant.dto.ts::program:CreateTenantDto:<init>,<empty>,,false,5,42,<init>,,,1,
+111669149833,METHOD,src/shared/context/tenants/domain/dto/find-tenant.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/tenants/domain/dto/find-tenant.dto.ts,src/shared/context/tenants/domain/dto/find-tenant.dto.ts::program,<empty>,,false,1,39,:program,,,1,
+111669149834,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/tenants/domain/dto/find-tenant.dto.ts,src/shared/context/tenants/domain/dto/find-tenant.dto.ts::program:FindTenantDto:<init>,<empty>,,false,5,38,<init>,,,1,
+111669149835,METHOD,src/shared/context/tenants/domain/dto/tenant.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/tenants/domain/dto/tenant.dto.ts,src/shared/context/tenants/domain/dto/tenant.dto.ts::program,<empty>,,false,1,16,:program,,,1,
+111669149836,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/tenants/domain/dto/tenant.dto.ts,src/shared/context/tenants/domain/dto/tenant.dto.ts::program:TenantDto:<init>,<empty>,,false,1,15,<init>,,,1,
+111669149837,METHOD,src/shared/context/tenants/domain/dto/update-tenant.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/tenants/domain/dto/update-tenant.dto.ts,src/shared/context/tenants/domain/dto/update-tenant.dto.ts::program,<empty>,,false,1,47,:program,,,1,
+111669149838,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/tenants/domain/dto/update-tenant.dto.ts,src/shared/context/tenants/domain/dto/update-tenant.dto.ts::program:UpdateTenantDto:<init>,<empty>,,false,6,46,<init>,,,1,
+111669149839,METHOD,src/shared/context/tenants/domain/tenants.service.ts::program,TYPE_DECL,:program,0,0,src/shared/context/tenants/domain/tenants.service.ts,src/shared/context/tenants/domain/tenants.service.ts::program,<empty>,,false,1,266,:program,,,1,
+111669149840,METHOD,<empty>,<empty>,"constructor(
+    @InjectRepository(Tenant, dbConfig.name)
+    private readonly tenantRepository: Repository<Tenant>,
+  ) {}",2,6,src/shared/context/tenants/domain/tenants.service.ts,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:<init>,<empty>,,false,15,18,<init>,,,1,
+111669149841,METHOD,<empty>,<empty>,"async create(createTenantDto: CreateTenantDto) {
+    this.logger.log('Creating new Tenant...');
+    const { url, name, description } = createTenantDto;
+    const existingTenantUrl = await this.tenantRepository.findOneBy({ url: url.toLowerCase().trim() });
+    if (existingTenantUrl) {
+      this.logger.error(`The url ""${url}"" is already used and needs to be unique`);
+      throw new ForbiddenException('url is already in use', {
+        cause: new Error(),
+        description: `The url ""${url}"" is already used and needs to be unique`,
+      });
+    }
+    if (createTenantDto.tenantTypeIds && createTenantDto.tenantTypeIds.length > 0) {
+      this.logger.log(`tenant types: ${createTenantDto.tenantTypeIds}`);
+    }
+    const newTenantType = this.tenantRepository.create({
+      ...createTenantDto,
+      name: name.trim(),
+      url: url.trim().toLowerCase(),
+      description: description.trim(),
+    });
+    return await this.tenantRepository.save(newTenantType);
+  }",2,3,src/shared/context/tenants/domain/tenants.service.ts,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:create,<empty>,,false,20,41,create,,,1,
+111669149842,METHOD,<empty>,<empty>,"async findAll() {
+    this.logger.log('Finding All Tenant ...');
+    this.tenantCollection = await this.tenantRepository
+      .createQueryBuilder('Tenants')
+      .leftJoinAndSelect('Tenants.tenantType', 'tenantType')
+      .leftJoinAndSelect('Tenants.childrenIds', 'childrenIds')
+      .leftJoinAndSelect('Tenants.parent', 'parent')
+      .leftJoinAndSelect('Tenants.tenantRoleAlias', 'tenantRoleAlias')
+      .leftJoinAndSelect('Tenants.coverageZone', 'coverageZone')
+      //.leftJoinAndSelect('Tenants.userIds', 'userIds')
+      // .leftJoinAndSelect('Tenants.roles', 'roles')
+      //.leftJoinAndSelect('roles.role', 'role')
+      //.leftJoinAndSelect('roles.user', 'user')
+      // .leftJoinAndSelect('roles.tenant', 'tenant')
+      //.leftJoinAndSelect('roles.roleAlias', 'roleAlias')
+      .leftJoinAndSelect('tenantType.roles', 'tenantRoles')
+      .getMany();
+    return this.tenantCollection;
+  }",2,3,src/shared/context/tenants/domain/tenants.service.ts,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:findAll,<empty>,,false,43,61,findAll,,,1,
+111669149843,METHOD,<empty>,<empty>,"async findOne(id: number) {
+    this.logger.log(`Searching for Tenant  with id: ${id}.`);
+    this.tenantCollection = await this.tenantRepository
+      .createQueryBuilder('Tenants')
+      .leftJoinAndSelect('Tenants.tenantType', 'tenantType')
+      .leftJoinAndSelect('Tenants.childrenIds', 'childrenIds')
+      .leftJoinAndSelect('Tenants.parent', 'parent')
+      //.leftJoinAndSelect('Tenants.tenantRoleAlias', 'tenantRoleAlias')
+      //.leftJoinAndSelect('Tenants.coverageZone', 'coverageZone')
+      //.leftJoinAndSelect('Tenants.userIds', 'userIds')
+      //.leftJoinAndSelect('Tenants.roles', 'roles')
+      //.leftJoinAndSelect('roles.role', 'role')
+      //.leftJoinAndSelect('roles.user', 'user')
+      //.leftJoinAndSelect('roles.tenant', 'tenant')
+      //.leftJoinAndSelect('roles.roleAlias', 'roleAlias')
+      .leftJoinAndSelect('tenantType.roles', 'tenantRoles')
+      .andWhere('Tenants.id = :id ', { id })
+      .getMany();
+    if (this.tenantCollection.length < 1) {
+      this...",2,3,src/shared/context/tenants/domain/tenants.service.ts,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:findOne,<empty>,,false,63,90,findOne,,,1,
+111669149844,METHOD,<empty>,<empty>,(name) => name,79,93,src/shared/context/tenants/domain/tenants.service.ts,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:findByMany:<lambda>0,<empty>,,false,127,127,<lambda>0,,,1,
+111669149845,METHOD,<empty>,<empty>,"async findByMany(findTenantDto: FindTenantDto) {
+    const {
+      ids,
+      names,
+      descriptions,
+      enabled,
+      parentIds,
+      coverageZoneIds,
+      urls,
+      userIds,
+      tenantTypeIds,
+      childrenIds,
+      roleAliasesIds,
+    } = findTenantDto;
+    let query = this.tenantRepository
+      .createQueryBuilder('Tenants')
+      .leftJoinAndSelect('Tenants.tenantType', 'tenantType')
+      .leftJoinAndSelect('Tenants.children', 'children')
+      .leftJoinAndSelect('Tenants.parent', 'parent')
+      //.leftJoinAndSelect('Tenants.tenantRoleAlias', 'tenantRoleAlias')
+      //.leftJoinAndSelect('Tenants.coverageZone', 'coverageZone')
+      .leftJoinAndSelect('Tenants.users', 'users')
+      .leftJoinAndSelect('Tenants.roles', 'roles')
+      //.leftJoinAndSelect('roles.role', 'role')
+      .leftJoinAndSelect('roles.user', 'user')
+      //.leftJoinAndSelect('roles.tenant', 'tenant')
+      .leftJoinAndSelect('roles.roleAlias', 'roleAlias')
+      .leftJoinAndSelect('tenan...",2,3,src/shared/context/tenants/domain/tenants.service.ts,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:findByMany,<empty>,,false,92,169,findByMany,,,1,
+111669149846,METHOD,<empty>,<empty>,(url) => url,76,88,src/shared/context/tenants/domain/tenants.service.ts,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:findByMany:<lambda>1,<empty>,,false,131,131,<lambda>1,,,1,
+111669149847,METHOD,<empty>,<empty>,"async update(id: number, updateTenantDto: UpdateTenantDto) {
+    this.logger.log(`Updating for Tenant with id: ${id}.`);
+    const { url, name, description } = updateTenantDto;
+
+    const tenantToUpdate = await this.tenantRepository
+      .createQueryBuilder('Tenants')
+      .leftJoinAndSelect('Tenants.tenantType', 'tenantType')
+      .leftJoinAndSelect('Tenants.childrenIds', 'childrenIds')
+      .leftJoinAndSelect('Tenants.parent', 'parent')
+      //.leftJoinAndSelect('Tenants.tenantRoleAlias', 'tenantRoleAlias')
+      //.leftJoinAndSelect('Tenants.coverageZone', 'coverageZone')
+      //.leftJoinAndSelect('Tenants.userIds', 'userIds')
+      //.leftJoinAndSelect('Tenants.roles', 'roles')
+      //.leftJoinAndSelect('roles.role', 'role')
+      //.leftJoinAndSelect('roles.user', 'user')
+      //.leftJoinAndSelect('roles.tenant', 'tenant')
+      //.leftJoinAndSelect('roles.roleAlias', 'roleAlias')
+      .leftJoinAndSelect('tenantType.roles', 'tenantRoles')
+      .andWhere('Tenants.id = ...",2,3,src/shared/context/tenants/domain/tenants.service.ts,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:update,<empty>,,false,171,218,update,,,1,
+111669149848,METHOD,<empty>,<empty>,"async remove(id: number) {
+    this.logger.log(`Enabling / Disabling Tenant with id: ${id}.`);
+    const tenantToDisable = await this.tenantRepository
+      .createQueryBuilder('Tenants')
+      .leftJoinAndSelect('Tenants.tenantType', 'tenantType')
+      .leftJoinAndSelect('Tenants.childrenIds', 'childrenIds')
+      .leftJoinAndSelect('Tenants.parent', 'parent')
+      //.leftJoinAndSelect('Tenants.tenantRoleAlias', 'tenantRoleAlias')
+      //.leftJoinAndSelect('Tenants.coverageZone', 'coverageZone')
+      //.leftJoinAndSelect('Tenants.userIds', 'userIds')
+      //.leftJoinAndSelect('Tenants.roles', 'roles')
+      //.leftJoinAndSelect('roles.role', 'role')
+      //.leftJoinAndSelect('roles.user', 'user')
+      //.leftJoinAndSelect('roles.tenant', 'tenant')
+      //.leftJoinAndSelect('roles.roleAlias', 'roleAlias')
+      .leftJoinAndSelect('tenantType.roles', 'tenantRoles')
+      .andWhere('Tenants.id = :id ', { id })
+      .getOne();
+    if (!tenantToDisable) {
+      this.logger.erro...",2,3,src/shared/context/tenants/domain/tenants.service.ts,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:remove,<empty>,,false,220,249,remove,,,1,
+111669149849,METHOD,<empty>,<empty>,"async findByIds(findTenantDto: FindTenantDto) {
+    const { ids } = findTenantDto;
+    let query = this.tenantRepository.createQueryBuilder('Tenants');
+
+    if (ids && ids.length > 0) {
+      this.logger.log(`Finding by ids: ${ids}`);
+      query = query.andWhere('Tenants.id IN (:...ids) ', { ids });
+      this.tenantCollection = await query.getMany();
+      this.logger.log(`Found ${this.tenantCollection.length} Tenant Types`);
+      return this.tenantCollection;
+    } else {
+      return [];
+    }
+  }",2,3,src/shared/context/tenants/domain/tenants.service.ts,src/shared/context/tenants/domain/tenants.service.ts::program:TenantsService:findByIds,<empty>,,false,251,264,findByIds,,,1,
+111669149850,METHOD,src/shared/context/tenants/stubs/tenants.stub.ts::program,TYPE_DECL,:program,0,16,src/shared/context/tenants/stubs/tenants.stub.ts,src/shared/context/tenants/stubs/tenants.stub.ts::program,<empty>,,false,1,88,:program,,,1,
+111669149851,METHOD,src/shared/context/user-role-by-tenants/dto/create-user-role-by-tenants.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/user-role-by-tenants/dto/create-user-role-by-tenants.dto.ts,src/shared/context/user-role-by-tenants/dto/create-user-role-by-tenants.dto.ts::program,<empty>,,false,1,24,:program,,,1,
+111669149852,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/user-role-by-tenants/dto/create-user-role-by-tenants.dto.ts,src/shared/context/user-role-by-tenants/dto/create-user-role-by-tenants.dto.ts::program:CreateUserRoleByTenantsDto:<init>,<empty>,,false,5,23,<init>,,,1,
+111669149853,METHOD,src/shared/context/user-role-by-tenants/dto/find-user-role-by-tenants.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/user-role-by-tenants/dto/find-user-role-by-tenants.dto.ts,src/shared/context/user-role-by-tenants/dto/find-user-role-by-tenants.dto.ts::program,<empty>,,false,1,24,:program,,,1,
+111669149854,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/user-role-by-tenants/dto/find-user-role-by-tenants.dto.ts,src/shared/context/user-role-by-tenants/dto/find-user-role-by-tenants.dto.ts::program:FindUserRoleByTenantsDto:<init>,<empty>,,false,5,23,<init>,,,1,
+111669149855,METHOD,src/shared/context/user-role-by-tenants/dto/update-user-role-by-tenants.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/user-role-by-tenants/dto/update-user-role-by-tenants.dto.ts,src/shared/context/user-role-by-tenants/dto/update-user-role-by-tenants.dto.ts::program,<empty>,,false,1,25,:program,,,1,
+111669149856,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/user-role-by-tenants/dto/update-user-role-by-tenants.dto.ts,src/shared/context/user-role-by-tenants/dto/update-user-role-by-tenants.dto.ts::program:UpdateUserRoleByTenantsDto:<init>,<empty>,,false,6,24,<init>,,,1,
+111669149857,METHOD,src/shared/context/user-role-by-tenants/dto/user-role-by-tenants.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/user-role-by-tenants/dto/user-role-by-tenants.dto.ts,src/shared/context/user-role-by-tenants/dto/user-role-by-tenants.dto.ts::program,<empty>,,false,1,11,:program,,,1,
+111669149858,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/user-role-by-tenants/dto/user-role-by-tenants.dto.ts,src/shared/context/user-role-by-tenants/dto/user-role-by-tenants.dto.ts::program:UserRoleByTenantsDto:<init>,<empty>,,false,1,10,<init>,,,1,
+111669149859,METHOD,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program,TYPE_DECL,:program,0,0,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program,<empty>,,false,1,286,:program,,,1,
+111669149860,METHOD,<empty>,<empty>,() => UsersService,23,41,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:<init>:<lambda>0,<empty>,,false,22,22,<lambda>0,,,1,
+111669149861,METHOD,<empty>,<empty>,"constructor(
+    @InjectRepository(UserRoleByTenants, dbConfig.name)
+    private readonly userRoleByTenantsRepository: Repository<UserRoleByTenants>,
+
+    @Inject(forwardRef(() => UsersService))
+    private readonly usersService: UsersService,
+
+    @Inject(forwardRef(() => TenantsService))
+    private readonly tenantsService: TenantsService,
+
+    @Inject(forwardRef(() => RolesService))
+    private readonly rolesService: RolesService,
+
+    @Inject(forwardRef(() => RoleAliasesService))
+    private readonly roleAliasService: RoleAliasesService,
+  ) {}",2,6,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:<init>,<empty>,,false,18,33,<init>,,,1,
+111669149862,METHOD,<empty>,<empty>,() => TenantsService,23,43,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:<init>:<lambda>1,<empty>,,false,25,25,<lambda>1,,,1,
+111669149863,METHOD,<empty>,<empty>,() => RolesService,23,41,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:<init>:<lambda>2,<empty>,,false,28,28,<lambda>2,,,1,
+111669149864,METHOD,<empty>,<empty>,() => RoleAliasesService,23,47,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:<init>:<lambda>3,<empty>,,false,31,31,<lambda>3,,,1,
+111669149865,METHOD,<empty>,<empty>,"async create({ userId, tenantId, roleId, roleAliasId, enabled }: CreateUserRoleByTenantsDto) {
+    const newUserRoleByTenants = this.userRoleByTenantsRepository.create();
+
+    this.logger.log(`Finding user ${userId} in tenant ${tenantId} ...`);
+    const foundUser = await this.usersService.findByMany({ ids: [userId], tenantsIds: [tenantId] });
+
+    if (foundUser.length < 0) {
+      this.logger.error('Invalid User or is not registered for that Tenant');
+      throw new NotFoundException('Invalid User or is not registered for that Tenant', {
+        cause: new Error(),
+        description: `Invalid User ${userId} or is not registered for Tenant ${tenantId}`,
+      });
+    }
+
+    const foundUserRoleByTenants = await this.findByMany({
+      userIds: [userId],
+      tenantIds: [tenantId],
+      roleIds: [roleId],
+    });
+
+    if (foundUserRoleByTenants.length > 0) {
+      this.logger.error(
+        `There is a role ${roleId} with user ${userId} in the tenant ${tenantId}, and needs to be ...",2,3,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:create,<empty>,,false,35,112,create,,,1,
+111669149866,METHOD,<empty>,<empty>,(tenantType) => tenantType.id,54,83,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:create:<lambda>4,<empty>,,false,76,76,<lambda>4,,,1,
+111669149867,METHOD,<empty>,<empty>,"async findAll() {
+    this.logger.log(`Finding all ...`);
+    return await this.userRoleByTenantsRepository
+      .createQueryBuilder('userRoleByTenants')
+      .leftJoinAndSelect('userRoleByTenants.tenant', 'tenant')
+      .leftJoinAndSelect('userRoleByTenants.user', 'user')
+      .leftJoinAndSelect('userRoleByTenants.role', 'role')
+      .leftJoinAndSelect('userRoleByTenants.roleAlias', 'roleAlias')
+      .getMany();
+  }",2,3,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:findAll,<empty>,,false,114,123,findAll,,,1,
+111669149868,METHOD,<empty>,<empty>,"async findByMany({ ids, userIds, tenantIds, roleIds, roleAliasIds, enabled }: FindUserRoleByTenantsDto) {
+    this.logger.log(`Finding user role by tenants`);
+    let query = this.userRoleByTenantsRepository
+      .createQueryBuilder('userRoleByTenants')
+      .leftJoinAndSelect('userRoleByTenants.tenant', 'tenants')
+      .leftJoinAndSelect('userRoleByTenants.user', 'user')
+      .leftJoinAndSelect('userRoleByTenants.role', 'role')
+      .leftJoinAndSelect('userRoleByTenants.roleAlias', 'roleAlias');
+
+    if (ids) {
+      this.logger.log(`with id ${ids} ...`);
+      query = query.andWhere('userRoleByTenants.id IN (:...ids)', { ids });
+    }
+    if (userIds && userIds.length > 0) {
+      this.logger.log(`with userIds ${userIds} ...`);
+      query = query.andWhere('user.id IN (:...userIds)', { userIds });
+    }
+    if (tenantIds && tenantIds.length > 0) {
+      this.logger.log(`with tenantIds ${tenantIds} ...`);
+      query = query.andWhere('tenants.id IN (:...tenantIds)', { tenantId...",2,3,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:findByMany,<empty>,,false,125,160,findByMany,,,1,
+111669149869,METHOD,<empty>,<empty>,"async update(id: number, { userId, tenantId, roleId, roleAliasId, enabled }: UpdateUserRoleByTenantsDto) {
+    const userRoleByTenantsToUpdate = await this.userRoleByTenantsRepository
+      .createQueryBuilder('userRoleByTenants')
+      .leftJoinAndSelect('userRoleByTenants.tenant', 'tenant')
+      .leftJoinAndSelect('userRoleByTenants.user', 'user')
+      .leftJoinAndSelect('userRoleByTenants.role', 'role')
+      .leftJoinAndSelect('userRoleByTenants.roleAlias', 'roleAlias')
+      .andWhere('userRoleByTenants.id = :id', { id })
+      .getOne();
+
+    if (!userRoleByTenantsToUpdate) {
+      this.logger.error('Property to update not found');
+      throw new NotFoundException('Not found', {
+        cause: new Error(),
+        description: `Property to update not found`,
+      });
+    }
+
+    if (enabled != null) userRoleByTenantsToUpdate.enabled = enabled;
+
+    const newUser = userId || userRoleByTenantsToUpdate.user.id;
+    const newTenant = tenantId || userRoleByTenantsToUpdate.tenant...",2,3,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:update,<empty>,,false,162,258,update,,,1,
+111669149870,METHOD,<empty>,<empty>,(tenantType) => tenantType.id,54,83,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:update:<lambda>5,<empty>,,false,208,208,<lambda>5,,,1,
+111669149871,METHOD,<empty>,<empty>,"(existingRole) => {
+        if (existingRole.id !== userRoleByTenantsToUpdate.id) {
+          this.logger.error(
+            `There is a role ${newRole} with that user ${newUser} in the tenant ${newTenant}, and needs to be unique`,
+          );
+          throw new ForbiddenException('Violation of unique constraint', {
+            cause: new Error(),
+            description: `There is a role ${newRole} with that user ${newUser} in the tenant ${newTenant}, and needs to be unique`,
+          });
+        }
+      }",44,7,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:update:<lambda>6,<empty>,,false,243,253,<lambda>6,,,1,
+111669149872,METHOD,<empty>,<empty>,"async remove(id: number) {
+    this.logger.log(`Enabling / Disabling User Role By Tenant with id: ${id}.`);
+    const userRoleByTenantsToDisable = await this.userRoleByTenantsRepository
+      .createQueryBuilder('userRoleByTenants')
+      .leftJoinAndSelect('userRoleByTenants.tenant', 'tenant')
+      .leftJoinAndSelect('userRoleByTenants.user', 'user')
+      .leftJoinAndSelect('userRoleByTenants.role', 'role')
+      .leftJoinAndSelect('userRoleByTenants.roleAlias', 'roleAlias')
+      .andWhere('userRoleByTenants.id = :id', { id })
+      .getOne();
+
+    if (!userRoleByTenantsToDisable) {
+      this.logger.error('Property to disble/enable not found');
+      throw new NotFoundException('Not found', {
+        cause: new Error(),
+        description: `Property to disable/enable not found`,
+      });
+    }
+    userRoleByTenantsToDisable.enabled = !userRoleByTenantsToDisable.enabled;
+    this.logger.log(
+      `User Role By Tenant with id: ${id} was ` + (userRoleByTenantsToDisable.enabled ...",2,3,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:UserRoleByTenantsService:remove,<empty>,,false,260,284,remove,,,1,
+111669149873,METHOD,src/shared/context/users/domain/dto/create-user.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/users/domain/dto/create-user.dto.ts,src/shared/context/users/domain/dto/create-user.dto.ts::program,<empty>,,false,1,53,:program,,,1,
+111669149874,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/users/domain/dto/create-user.dto.ts,src/shared/context/users/domain/dto/create-user.dto.ts::program:CreateUserDto:<init>,<empty>,,false,6,52,<init>,,,1,
+111669149875,METHOD,src/shared/context/users/domain/dto/find-user.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/users/domain/dto/find-user.dto.ts,src/shared/context/users/domain/dto/find-user.dto.ts::program,<empty>,,false,1,48,:program,,,1,
+111669149876,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/users/domain/dto/find-user.dto.ts,src/shared/context/users/domain/dto/find-user.dto.ts::program:FindUserDto:<init>,<empty>,,false,5,47,<init>,,,1,
+111669149877,METHOD,src/shared/context/users/domain/dto/update-user.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/users/domain/dto/update-user.dto.ts,src/shared/context/users/domain/dto/update-user.dto.ts::program,<empty>,,false,1,55,:program,,,1,
+111669149878,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/users/domain/dto/update-user.dto.ts,src/shared/context/users/domain/dto/update-user.dto.ts::program:UpdateUserDto:<init>,<empty>,,false,6,54,<init>,,,1,
+111669149879,METHOD,src/shared/context/users/domain/dto/user.dto.ts::program,TYPE_DECL,:program,0,0,src/shared/context/users/domain/dto/user.dto.ts,src/shared/context/users/domain/dto/user.dto.ts::program,<empty>,,false,1,19,:program,,,1,
+111669149880,METHOD,<empty>,<empty>,constructor() {},7,1,src/shared/context/users/domain/dto/user.dto.ts,src/shared/context/users/domain/dto/user.dto.ts::program:UserDto:<init>,<empty>,,false,3,18,<init>,,,1,
+111669149881,METHOD,src/shared/context/users/domain/stubs/user.stub.ts::program,TYPE_DECL,:program,0,0,src/shared/context/users/domain/stubs/user.stub.ts,src/shared/context/users/domain/stubs/user.stub.ts::program,<empty>,,false,1,105,:program,,,1,
+111669149882,METHOD,src/shared/context/users/domain/user-verification.service.ts::program,TYPE_DECL,:program,0,0,src/shared/context/users/domain/user-verification.service.ts,src/shared/context/users/domain/user-verification.service.ts::program,<empty>,,false,1,195,:program,,,1,
+111669149883,METHOD,<empty>,<empty>,"constructor(
+    @InjectRepository(User, dbConfig.name)
+    private readonly userRepository: Repository<User>,
+    private readonly tenantService: TenantsService,
+    private readonly emailProvider: EmailProvider,
+  ) {}",2,6,src/shared/context/users/domain/user-verification.service.ts,src/shared/context/users/domain/user-verification.service.ts::program:UserVerificationService:<init>,<empty>,,false,16,21,<init>,,,1,
+111669149884,METHOD,<empty>,<empty>,tenant => tenant.id,79,98,src/shared/context/users/domain/user-verification.service.ts,src/shared/context/users/domain/user-verification.service.ts::program:UserVerificationService:sendVerificationEmail:<lambda>0,<empty>,,false,65,65,<lambda>0,,,1,
+111669149885,METHOD,<empty>,<empty>,"async sendVerificationEmail(temporalId: string): Promise<boolean> {
+    this.logger.log(`Sending verification email to user with temporalId: ${temporalId}`);
+    
+    // Find user by temporalId
+    const user = await this.userRepository
+      .createQueryBuilder('user')
+      .leftJoinAndSelect('user.tenants', 'tenants')
+      .where('user.temporalId = :temporalId', { temporalId })
+      .getOne();
+
+    if (!user) {
+      this.logger.error(`User with temporalId ${temporalId} not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `User with temporalId ${temporalId} not found`,
+      });
+    }
+
+    // Check if the user is already verified
+    if (user.validated) {
+      this.logger.error(`User with temporalId ${temporalId} is already verified`);
+      throw new ForbiddenException('User is already verified', {
+        cause: new Error(),
+        description: `User with temporalId ${temporalId} is already verified`,
+      });
+...",2,3,src/shared/context/users/domain/user-verification.service.ts,src/shared/context/users/domain/user-verification.service.ts::program:UserVerificationService:sendVerificationEmail,<empty>,,false,28,83,sendVerificationEmail,,,1,
+111669149886,METHOD,<empty>,<empty>,"async verifyUser(temporalId: string): Promise<User> {
+    this.logger.log(`Verifying user with temporalId: ${temporalId}`);
+    
+    // Find user by temporalId
+    const user = await this.userRepository
+      .createQueryBuilder('user')
+      .where('user.temporalId = :temporalId', { temporalId })
+      .getOne();
+
+    if (!user) {
+      this.logger.error(`User with temporalId ${temporalId} not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `User with temporalId ${temporalId} not found`,
+      });
+    }
+
+    // Check if the user is already verified
+    if (user.validated) {
+      this.logger.error(`User with temporalId ${temporalId} is already verified`);
+      throw new ForbiddenException('User is already verified', {
+        cause: new Error(),
+        description: `User with temporalId ${temporalId} is already verified`,
+      });
+    }
+
+    // Mark user as validated
+    user.validated = true;
+    user.verifiedAt = ...",2,3,src/shared/context/users/domain/user-verification.service.ts,src/shared/context/users/domain/user-verification.service.ts::program:UserVerificationService:verifyUser,<empty>,,false,90,123,verifyUser,,,1,
+111669149887,METHOD,<empty>,<empty>,"async sendMfaAttemptEmail(userId: number): Promise<boolean> {
+    this.logger.log(`Sending MFA attempt email to user with id: ${userId}`);
+    
+    // Find user by ID
+    const user = await this.userRepository.findOneBy({ id: userId });
+
+    if (!user) {
+      this.logger.error(`User with id ${userId} not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `User with id ${userId} not found`,
+      });
+    }
+
+    // Get email template
+    const template = this.emailProvider.getMfaAttemptTemplate(user);
+    
+    // Send the email
+    this.logger.log(`Sending MFA attempt email to ${user.email}`);
+    const emailSent = await this.emailProvider.sendEmail(user.email, template.subject, template.body);
+    
+    if (emailSent) {
+      this.logger.log(`MFA attempt email sent successfully to ${user.email}`);
+      return true;
+    } else {
+      this.logger.error(`Failed to send MFA attempt email to ${user.email}`);
+      return false...",2,3,src/shared/context/users/domain/user-verification.service.ts,src/shared/context/users/domain/user-verification.service.ts::program:UserVerificationService:sendMfaAttemptEmail,<empty>,,false,130,158,sendMfaAttemptEmail,,,1,
+111669149888,METHOD,<empty>,<empty>,"async sendMfaSuccessEmail(userId: number): Promise<boolean> {
+    this.logger.log(`Sending MFA success email to user with id: ${userId}`);
+    
+    // Find user by ID
+    const user = await this.userRepository.findOneBy({ id: userId });
+
+    if (!user) {
+      this.logger.error(`User with id ${userId} not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `User with id ${userId} not found`,
+      });
+    }
+
+    // Get email template
+    const template = this.emailProvider.getMfaSuccessTemplate(user);
+    
+    // Send the email
+    this.logger.log(`Sending MFA success email to ${user.email}`);
+    const emailSent = await this.emailProvider.sendEmail(user.email, template.subject, template.body);
+    
+    if (emailSent) {
+      this.logger.log(`MFA success email sent successfully to ${user.email}`);
+      return true;
+    } else {
+      this.logger.error(`Failed to send MFA success email to ${user.email}`);
+      return false...",2,3,src/shared/context/users/domain/user-verification.service.ts,src/shared/context/users/domain/user-verification.service.ts::program:UserVerificationService:sendMfaSuccessEmail,<empty>,,false,165,193,sendMfaSuccessEmail,,,1,
+111669149889,METHOD,src/shared/context/users/domain/users.service.ts::program,TYPE_DECL,:program,0,0,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program,<empty>,,false,1,553,:program,,,1,
+111669149890,METHOD,<empty>,<empty>,() => TenantsService,23,43,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:<init>:<lambda>0,<empty>,,false,38,38,<lambda>0,,,1,
+111669149891,METHOD,<empty>,<empty>,"constructor(
+    @InjectRepository(User, dbConfig.name)
+    private readonly userRepository: Repository<User>,
+    @InjectRepository(Role, dbConfig.name)
+    private readonly rolesRepository: Repository<Role>,
+    //inject tenant service
+    @Inject(forwardRef(() => TenantsService))
+    private readonly tenantService: TenantsService,
+    private readonly emailProvider: EmailProvider,
+  ) {}",2,6,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:<init>,<empty>,,false,32,41,<init>,,,1,
+111669149892,METHOD,<empty>,<empty>,"async create(createUserDto: CreateUserDto, payload: ContextPayload) {
+    this.logger.log('Creating new User...');
+
+    const { email, firstName, lastName, tenantsIds, userRoleByTenantsIds, phone } = createUserDto;
+    let foundTenants: Tenant[] = [];
+    let foundRoles: Role[] = [];
+
+    if (payload){
+      const userCreator = await this.findOne(payload.userId);
+
+      if (payload.issuer === IssuerEnum.Saas && userCreator.typeOfUser === TypeOfUser.Client  && createUserDto.typeOfUser === TypeOfUser.AvantoEmployee && !userCreator.BackOfficeAccess) {
+        this.logger.error(`Action not allowed for typeOfUser: ${userCreator.typeOfUser}`);
+        throw new ForbiddenException('insufficient permissions for this user', {
+          cause: new Error(),
+          description: `The user of typeOfUser ${userCreator.typeOfUser} doesn´t  have enough permissions to perform this action`,
+        });
+      }
+    }
+    
+    const existingTenantEmail = await this.userRepository.findOneBy({ email })...",2,3,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:create,<empty>,,false,46,154,create,,,1,
+111669149893,METHOD,<empty>,<empty>,"async findAll() {
+    this.logger.log('Finding All Users ...');
+    this.usersCollection = await this.userRepository
+      .createQueryBuilder('users')
+      .leftJoinAndSelect('users.tenants', 'tenants')
+      .leftJoinAndSelect('users.roles', 'roles')
+      .leftJoinAndSelect('roles.role', 'role')
+      .leftJoinAndSelect('roles.tenant', 'tenant')
+      .leftJoinAndSelect('roles.roleAlias', 'roleAlias')
+      .getMany();
+    this.logger.log(`Found ${this.usersCollection.length} users`);
+    return this.usersCollection;
+  }",2,3,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:findAll,<empty>,,false,156,168,findAll,,,1,
+111669149894,METHOD,<empty>,<empty>,"async findOne(id: number) {
+    this.logger.log(`Looking for user with id: ${id}`);
+    this.usersCollection = await this.userRepository
+      .createQueryBuilder('users')
+      .leftJoinAndSelect('users.tenants', 'tenants')
+      .leftJoinAndSelect('users.roles', 'roles')
+      .leftJoinAndSelect('roles.role', 'role')
+      .leftJoinAndSelect('roles.tenant', 'tenant')
+      .leftJoinAndSelect('roles.roleAlias', 'roleAlias')
+      .where('users.id = :id', { id })
+      .getMany();
+    if (this.usersCollection.length <= 0) {
+      throw new NotFoundException(`Not found any user with id: ${id}`, {
+        cause: new Error(),
+        description: `Not found any user with id: ${id}`,
+      });
+    }
+    this.logger.log(`Found ${this.usersCollection.length} users`);
+    return this.usersCollection[0];
+  }",2,3,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:findOne,<empty>,,false,170,189,findOne,,,1,
+111669149895,METHOD,<empty>,<empty>,(name) => name,35,49,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:findByMany:<lambda>1,<empty>,,false,224,224,<lambda>1,,,1,
+111669149896,METHOD,<empty>,<empty>,"async findByMany(findUserDto: FindUserDto) {
+    const {
+      ids,
+      firstNames,
+      lastNames,
+      enabled,
+      emails,
+      fireBaseId,
+      validated,
+      BackOfficeAccess,
+      SaasAccess,
+      tenantsIds,
+      userRoleByTenantsIds,
+      recordTypeIds,
+      typeOfUser,
+      temporalId,
+    } = findUserDto;
+    this.logger.log(`Finding Users by many args `);
+    let query = this.userRepository
+      .createQueryBuilder('users')
+      .leftJoinAndSelect('users.tenants', 'tenants')
+      .leftJoinAndSelect('users.roles', 'roles')
+      .leftJoinAndSelect('roles.role', 'role')
+      .leftJoinAndSelect('roles.tenant', 'tenant')
+      .leftJoinAndSelect('roles.roleAlias', 'roleAlias');
+
+    if (ids && ids.length > 0) {
+      this.logger.log(`Finding by ids: ${ids}`);
+      query = query.andWhere('users.id IN (:...ids) ', { ids });
+    }
+    if (firstNames && firstNames.length > 0) {
+      this.logger.log(`Finding by firstNames: ${firstNames}`);
+      query = query...",2,3,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:findByMany,<empty>,,false,191,301,findByMany,,,1,
+111669149897,METHOD,<empty>,<empty>,(name) => name,33,47,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:findByMany:<lambda>2,<empty>,,false,230,230,<lambda>2,,,1,
+111669149898,METHOD,<empty>,<empty>,(email) => email.toLowerCase(),27,57,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:findByMany:<lambda>3,<empty>,,false,236,236,<lambda>3,,,1,
+111669149899,METHOD,<empty>,<empty>,(foundTenant) => foundTenant.id === tenant.id,39,84,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:update:<lambda>4:<lambda>5,<empty>,,false,390,390,<lambda>5,,,1,
+111669149900,METHOD,<empty>,<empty>,(tenant) => !foundTenants.some((foundTenant) => foundTenant.id === tenant.id),8,85,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:update:<lambda>4,<empty>,,false,390,390,<lambda>4,,,1,
+111669149901,METHOD,<empty>,<empty>,"async update(id: number, updateUserDto: UpdateUserDto, payload: ContextPayload) {
+    this.logger.log(`Updating user with id: ${id}`);
+    const {
+      email,
+      firstName,
+      lastName,
+      tenantsIds,
+      phone,
+      temporalId,
+      validated,
+      BackOfficeAccess,
+      typeOfUser,
+      SaasAccess,
+      enabled,
+      fireBaseId,
+    } = updateUserDto;
+    const userToUpdate = await this.userRepository
+      .createQueryBuilder('users')
+      .leftJoinAndSelect('users.tenants', 'tenants')
+      .leftJoinAndSelect('users.roles', 'roles')
+      .leftJoinAndSelect('roles.role', 'role')
+      .leftJoinAndSelect('roles.tenant', 'tenant')
+      .leftJoinAndSelect('roles.roleAlias', 'roleAlias')
+      .where('users.id = :id', { id })
+      .getOne();
+
+    if (!userToUpdate) {
+      this.logger.error(`The user with id ${id} was not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `The user with id ${id} was n...",2,3,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:update,<empty>,,false,303,441,update,,,1,
+111669149902,METHOD,<empty>,<empty>,(tenantToDelete) => tenantToDelete.id === tenant.id,42,93,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:update:<lambda>6:<lambda>7,<empty>,,false,393,393,<lambda>7,,,1,
+111669149903,METHOD,<empty>,<empty>,(tenant) => !tenantsToDelete.some((tenantToDelete) => tenantToDelete.id === tenant.id),8,94,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:update:<lambda>6,<empty>,,false,393,393,<lambda>6,,,1,
+111669149904,METHOD,<empty>,<empty>,"async remove(id: number, payload: ContextPayload) {
+    this.logger.log(`Enabling / Disabling User with id: ${id}.`);
+    const userToDisable = await this.userRepository.findOneBy({ id });
+    
+    if (!userToDisable) {
+      this.logger.error(`The user with id ${id} was not found`);
+      throw new NotFoundException('Tenant not found', {
+        cause: new Error(),
+        description: `The tenant with id ${id} was not found`,
+      });
+    }
+    if (payload){
+      const userCreator = await this.findOne(payload.userId);
+
+      if (payload.issuer === IssuerEnum.Saas && userCreator.typeOfUser === TypeOfUser.Client  && userToDisable.typeOfUser === TypeOfUser.AvantoEmployee && !userCreator.BackOfficeAccess) {
+        this.logger.error(`Action not allowed for typeOfUser: ${userCreator.typeOfUser}`);
+        throw new ForbiddenException('insufficient permissions for this user', {
+          cause: new Error(),
+          description: `The user of typeOfUser ${userCreator.typeOfUser} doesn...",2,3,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:remove,<empty>,,false,443,470,remove,,,1,
+111669149905,METHOD,<empty>,<empty>,(roleAccessToRecordField) => roleAccessToRecordField.role,27,84,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:findByRecordTypeAccess:<lambda>8,<empty>,,false,483,483,<lambda>8,,,1,
+111669149906,METHOD,<empty>,<empty>,"async findByRecordTypeAccess(recordTypeIds: number[]): Promise<number[]> {
+    const recordGridUrl = `${recordGridsMsUrl()}role-access-to-record-fields/many`;
+
+    const roleAccessToRecordFieldOptions = new Options(
+      'POST',
+      { 'Content-Type': 'application/json' },
+      JSON.stringify({ recordTypes: recordTypeIds }),
+    );
+    const resp = await getResponse(recordGridUrl, roleAccessToRecordFieldOptions, this.logger);
+
+    // get unique roles from the response. This roles has access to the record type.
+    const roles = resp.map((roleAccessToRecordField) => roleAccessToRecordField.role);
+    const uniqueRoles = roles.filter((role, index, self) => self.findIndex((r) => r.id === role.id) === index);
+
+    return uniqueRoles.map((role) => role.id);
+  }",2,3,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:findByRecordTypeAccess,<empty>,,false,472,487,findByRecordTypeAccess,,,1,
+111669149907,METHOD,<empty>,<empty>,(r) => r.id === role.id,75,98,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:findByRecordTypeAccess:<lambda>9:<lambda>10,<empty>,,false,484,484,<lambda>10,,,1,
+111669149908,METHOD,<empty>,<empty>,"(role, index, self) => self.findIndex((r) => r.id === role.id) === index",37,109,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:findByRecordTypeAccess:<lambda>9,<empty>,,false,484,484,<lambda>9,,,1,
+111669149909,METHOD,<empty>,<empty>,(role) => role.id,27,44,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:findByRecordTypeAccess:<lambda>11,<empty>,,false,486,486,<lambda>11,,,1,
+111669149910,METHOD,<empty>,<empty>,(tenant) => tenant.id,79,100,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:resendVerification:<lambda>12,<empty>,,false,516,516,<lambda>12,,,1,
+111669149911,METHOD,<empty>,<empty>,"async resendVerification(temporalId: string) {
+    const user = await this.userRepository
+      .createQueryBuilder('user')
+      .leftJoinAndSelect('user.tenants', 'tenants')
+      .where('user.temporalId = :temporalId', { temporalId })
+      .getOne();
+    if (!user) {
+      this.logger.error(`The user with id ${temporalId} was not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `The user with id ${temporalId} was not found`,
+      });
+    }
+    if (user.validated) {
+      this.logger.error(`The user with id ${temporalId} is already verified`);
+      throw new ForbiddenException('User is already verified', {
+        cause: new Error(),
+        description: `The user with id ${temporalId} is already verified`,
+      });
+    }
+    if (!(user.tenants && user.tenants.length > 0)) {
+      this.logger.error(`The user with id ${temporalId} has no tenants asociated`);
+      throw new ForbiddenException('User has no tenants as...",2,3,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:resendVerification,<empty>,,false,489,523,resendVerification,,,1,
+111669149912,METHOD,<empty>,<empty>,"async sendMfaAttemptEmail(userId: number) {
+    const user = await this.userRepository.findOne({ where: { id: userId } });
+
+    if (!user) {
+      this.logger.error(`The user with id ${userId} was not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `The user with id ${userId} was not found`,
+      });
+    }
+
+    return sendMfaAttemptEmailProcess(user, this.emailProvider);
+  }",2,3,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:sendMfaAttemptEmail,<empty>,,false,525,537,sendMfaAttemptEmail,,,1,
+111669149913,METHOD,<empty>,<empty>,"async sendMfaSuccessEmail(userId: number) {
+    const user = await this.userRepository.findOne({ where: { id: userId } });
+
+    if (!user) {
+      this.logger.error(`The user with id ${userId} was not found`);
+      throw new NotFoundException('User not found', {
+        cause: new Error(),
+        description: `The user with id ${userId} was not found`,
+      });
+    }
+
+    return sendMfaSuccessEmailProcess(user, this.emailProvider);
+  }",2,3,src/shared/context/users/domain/users.service.ts,src/shared/context/users/domain/users.service.ts::program:UsersService:sendMfaSuccessEmail,<empty>,,false,539,551,sendMfaSuccessEmail,,,1,
+111669149914,METHOD,<empty>,<empty>,<empty>,7,,<empty>,src/shared/dataTypes/Enums.ts::program:IssuerEnum:<clinit>,<empty>,,false,1,,<clinit>,,,3,
+111669149915,METHOD,src/shared/dataTypes/Enums.ts::program,TYPE_DECL,:program,0,0,src/shared/dataTypes/Enums.ts,src/shared/dataTypes/Enums.ts::program,<empty>,,false,1,11,:program,,,1,
+111669149916,METHOD,<empty>,<empty>,<empty>,7,,<empty>,src/shared/dataTypes/Enums.ts::program:FieldAccessEnum:<clinit>,<empty>,,false,6,,<clinit>,,,4,
+111669149917,METHOD,<empty>,<empty>,new: MyContext,7,1,src/shared/dataTypes/MyContext.ts,src/shared/dataTypes/MyContext.ts::program:MyContext:<init>,<empty>,,false,12,16,<init>,,,1,
+111669149918,METHOD,src/shared/dataTypes/MyContext.ts::program,TYPE_DECL,:program,0,0,src/shared/dataTypes/MyContext.ts,src/shared/dataTypes/MyContext.ts::program,<empty>,,false,1,28,:program,,,1,
+111669149919,METHOD,src/shared/dataTypes/Options.ts::program,TYPE_DECL,:program,0,0,src/shared/dataTypes/Options.ts,src/shared/dataTypes/Options.ts::program,<empty>,,false,1,12,:program,,,1,
+111669149920,METHOD,<empty>,<empty>,"constructor(method: 'POST' | 'GET' | 'PATCH' | 'PUT' | 'DELETE', headers?: object, body?: string) {
+    this.body = body;
+    this.headers = headers;
+    this.method = method;
+  }",2,3,src/shared/dataTypes/Options.ts,src/shared/dataTypes/Options.ts::program:Options:<init>,<empty>,,false,6,10,<init>,,,1,
+111669149921,METHOD,src/shared/dataTypes/PostgreSQLConfig.ts::program,TYPE_DECL,:program,0,0,src/shared/dataTypes/PostgreSQLConfig.ts,src/shared/dataTypes/PostgreSQLConfig.ts::program,<empty>,,false,1,12,:program,,,1,
+111669149922,METHOD,src/shared/dataTypes/RoleInTenant.DataType.ts::program,TYPE_DECL,:program,0,0,src/shared/dataTypes/RoleInTenant.DataType.ts,src/shared/dataTypes/RoleInTenant.DataType.ts::program,<empty>,,false,1,5,:program,,,1,
+111669149923,METHOD,src/shared/dataTypes/RoleInUser.DataType.ts::program,TYPE_DECL,:program,0,0,src/shared/dataTypes/RoleInUser.DataType.ts,src/shared/dataTypes/RoleInUser.DataType.ts::program,<empty>,,false,1,5,:program,,,1,
+111669149924,METHOD,src/shared/dataTypes/UnknownKeysObject.ts::program,TYPE_DECL,:program,0,0,src/shared/dataTypes/UnknownKeysObject.ts,src/shared/dataTypes/UnknownKeysObject.ts::program,<empty>,,false,1,8,:program,,,1,
+111669149925,METHOD,src/shared/dataTypes/UserInTenant.DataType.ts::program,TYPE_DECL,:program,0,0,src/shared/dataTypes/UserInTenant.DataType.ts,src/shared/dataTypes/UserInTenant.DataType.ts::program,<empty>,,false,1,5,:program,,,1,
+111669149926,METHOD,<empty>,<empty>,"(req: Request) => {
+      return {
+        correlationId: req[CORRELATION_ID_HEADER],
+      };
+    }",17,5,src/shared/infrastructure/logger/pinoLoggerOptions.ts,src/shared/infrastructure/logger/pinoLoggerOptions.ts::program:customProps,<empty>,,false,15,19,customProps,,,1,
+111669149927,METHOD,src/shared/infrastructure/logger/pinoLoggerOptions.ts::program,TYPE_DECL,:program,0,0,src/shared/infrastructure/logger/pinoLoggerOptions.ts,src/shared/infrastructure/logger/pinoLoggerOptions.ts::program,<empty>,,false,1,30,:program,,,1,
+111669149928,METHOD,<empty>,<empty>,"() => {
+        return undefined;
+      }",11,7,src/shared/infrastructure/logger/pinoLoggerOptions.ts,src/shared/infrastructure/logger/pinoLoggerOptions.ts::program:req,<empty>,,false,21,23,req,,,1,
+111669149929,METHOD,<empty>,<empty>,"() => {
+        return undefined;
+      }",11,7,src/shared/infrastructure/logger/pinoLoggerOptions.ts,src/shared/infrastructure/logger/pinoLoggerOptions.ts::program:res,<empty>,,false,24,26,res,,,1,
+111669149930,METHOD,src/shared/infrastructure/mails/mailProvider.ts::program,TYPE_DECL,:program,0,0,src/shared/infrastructure/mails/mailProvider.ts,src/shared/infrastructure/mails/mailProvider.ts::program,<empty>,,false,1,45,:program,,,1,
+111669149931,METHOD,<empty>,<empty>,"constructor() {
+    this.region = process.env.AWS_REGION;
+    this.ses = new SES({ credentials: fromInstanceMetadata(), region: this.region });
+  }",2,3,src/shared/infrastructure/mails/mailProvider.ts,src/shared/infrastructure/mails/mailProvider.ts::program:EmailProvider:<init>,<empty>,,false,11,14,<init>,,,1,
+111669149932,METHOD,<empty>,<empty>,"async sendEmail(params: SendEmailRequest): Promise<void> {
+    try {
+      this.logger.log(`Sending email with params ${params}`);
+      await this.ses.sendEmail(params);
+      this.logger.log(`Email sent to ${params.Destination.ToAddresses[0]}`);
+    } catch (error) {
+      throw error;
+    }
+  }",2,3,src/shared/infrastructure/mails/mailProvider.ts,src/shared/infrastructure/mails/mailProvider.ts::program:EmailProvider:sendEmail,<empty>,,false,16,24,sendEmail,,,1,
+111669149933,METHOD,<empty>,<empty>,"async sendEmailWithTemplate(
+    from: string,
+    to: string,
+    templateName: string,
+    templateData: Record<string, string>,
+  ): Promise<void> {
+    const params: SendTemplatedEmailRequest = {
+      Source: from,
+      Destination: {
+        ToAddresses: [to],
+      },
+      Template: templateName,
+      TemplateData: JSON.stringify(templateData),
+    };
+    this.logger.log(`Sending email with template ${params}`);
+    await this.ses.sendTemplatedEmail(params);
+    this.logger.log('Email sent');
+  }",2,3,src/shared/infrastructure/mails/mailProvider.ts,src/shared/infrastructure/mails/mailProvider.ts::program:EmailProvider:sendEmailWithTemplate,<empty>,,false,26,43,sendEmailWithTemplate,,,1,
+111669149934,METHOD,<empty>,<empty>,"(dateNow, userName) => `
+<div style=""line-height:0.9;text-align:center;width:70%;margin:0auto;border:1px solid #ccc;padding:20px;font-family:Arial,sans-serif;border-radius:10px"">
+<img src=""https://ci3.googleusercontent.com/meips/ADKq_NbmlS89t1aNZlMT2xnvZF8EIsHnDI8he-ejvE-v7TH2zPeACPxoEpNHOx1asYu8F1XlQdP0T71xqbLcAAWp9KZQOESFltFoHhRMW1iUF5WE2HNU7VsReptL50ixmBfA6HiEUGONpg=s0-d-e1-ft#https://resources-images-orderbahn-dev.s3.amazonaws.com/Property+1%3DDefault.png"" alt=""Header Image"" style=""width:260px;height:auto"">
+<p style=""color:#222"">Dear ${userName},</p> <p style=""color:#222"">We noticed an attempted setup of Multi-Factor Authentication (MFA) on your account at ${dateNow}.</p>
+<p style=""color:#222"">If you initiated this action, you can disregard this notification.</p>
+<p style=""color:#222"">However, if you did not attempt to set up MFA, please secure your account immediately and contact our support team at <a href=""mailto:support@goavanto.com"" style=""color:#5D599E"">support@goavanto.co...",40,1,src/shared/infrastructure/mails/templates/mfaAlertTemplate.ts,src/shared/infrastructure/mails/templates/mfaAlertTemplate.ts::program:generateMfaAlertTemplate,<empty>,,false,3,13,generateMfaAlertTemplate,,,1,
+111669149935,METHOD,src/shared/infrastructure/mails/templates/mfaAlertTemplate.ts::program,TYPE_DECL,:program,0,0,src/shared/infrastructure/mails/templates/mfaAlertTemplate.ts,src/shared/infrastructure/mails/templates/mfaAlertTemplate.ts::program,<empty>,,false,1,14,:program,,,1,
+111669149936,METHOD,<empty>,<empty>,"(userName) => `
+<div style=""line-height:0.9; text-align:center;width:70%;margin:0 auto;border:1px solid #ccc;padding:20px;font-family:Arial,sans-serif;border-radius:10px"">
+<img src=""https://ci3.googleusercontent.com/meips/ADKq_NbmlS89t1aNZlMT2xnvZF8EIsHnDI8he-ejvE-v7TH2zPeACPxoEpNHOx1asYu8F1XlQdP0T71xqbLcAAWp9KZQOESFltFoHhRMW1iUF5WE2HNU7VsReptL50ixmBfA6HiEUGONpg=s0-d-e1-ft#https://resources-images-orderbahn-dev.s3.amazonaws.com/Property+1%3DDefault.png"" alt=""Header Image"" style=""width:260px;height:auto"">
+<p style=""color:#222"">Dear ${userName},</p>
+<p style=""color:#222"">We're pleased to inform you that Multi-Factor Authentication (MFA) has been successfully set up on your account.</p>
+<p style=""color:#222"">This additional security measure will help protect your account from unauthorized access and enhance data security.</p>
+<p style=""color:#222"">If you have any questions or concerns regarding MFA or your account security, please don't hesitate to reach out to our support team at <a h...",42,1,src/shared/infrastructure/mails/templates/mfaSuccessTemplate.ts,src/shared/infrastructure/mails/templates/mfaSuccessTemplate.ts::program:generateMfaSuccessTemplate,<empty>,,false,3,14,generateMfaSuccessTemplate,,,1,
+111669149937,METHOD,src/shared/infrastructure/mails/templates/mfaSuccessTemplate.ts::program,TYPE_DECL,:program,0,0,src/shared/infrastructure/mails/templates/mfaSuccessTemplate.ts,src/shared/infrastructure/mails/templates/mfaSuccessTemplate.ts::program,<empty>,,false,1,15,:program,,,1,
+111669149938,METHOD,<empty>,<empty>,"(userId: string, tenantName: string): string => `
+    <div style=""text-align: center; width: 70%; margin: 0 auto; border: 1px solid #ccc; padding: 20px; font-family: Arial, sans-serif; border-radius: 10px;"">
+        <img src=""https://ci3.googleusercontent.com/meips/ADKq_NbmlS89t1aNZlMT2xnvZF8EIsHnDI8he-ejvE-v7TH2zPeACPxoEpNHOx1asYu8F1XlQdP0T71xqbLcAAWp9KZQOESFltFoHhRMW1iUF5WE2HNU7VsReptL50ixmBfA6HiEUGONpg=s0-d-e1-ft#https://resources-images-orderbahn-dev.s3.amazonaws.com/Property+1%3DDefault.png"" alt=""Header Image"" style=""width: 260px; height: auto;"">
+        <p>In order to continue with your registration at OrderBahn, we need your confirmation.</p>
+        <p>Please click on the button below and follow the instructions to complete your registration.</p>
+
+        <a href=${process.env.ENVIRONMENT_URL}/user-confirmation/${userId} style=""font-weight: bold; background-color: #37326E; border-radius: 5px; box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); color: white; text-decoration: none; p...",44,1,src/shared/infrastructure/mails/templates/userConfirmationTemplate.ts,src/shared/infrastructure/mails/templates/userConfirmationTemplate.ts::program:generateConfirmationTemplate,<empty>,,false,3,19,generateConfirmationTemplate,,,1,
+111669149939,METHOD,src/shared/infrastructure/mails/templates/userConfirmationTemplate.ts::program,TYPE_DECL,:program,0,0,src/shared/infrastructure/mails/templates/userConfirmationTemplate.ts,src/shared/infrastructure/mails/templates/userConfirmationTemplate.ts::program,<empty>,,false,1,20,:program,,,1,
+111669149940,METHOD,<empty>,<empty>,"function getConfig() {
+  return {
+    type: 'postgres',
+    name: dbConfig.name,
+    host: dbConfig.host,
+    port: dbConfig.port,
+    username: dbConfig.username,
+    password: dbConfig.password,
+    database: dbConfig.database,
+    synchronize: dbConfig.synchronize,
+    schema: dbConfig.schema,
+    logging: dbConfig.logging,
+    autoLoadEntities: true,
+    entities: models,
+  } as DataSourceOptions;
+}",7,1,src/shared/infrastructure/persistance/postgre-sql/PostgresDataSource.ts,src/shared/infrastructure/persistance/postgre-sql/PostgresDataSource.ts::program:getConfig,<empty>,,false,29,44,getConfig,,,1,
+111669149941,METHOD,src/shared/infrastructure/persistance/postgre-sql/PostgresDataSource.ts::program,TYPE_DECL,:program,0,0,src/shared/infrastructure/persistance/postgre-sql/PostgresDataSource.ts,src/shared/infrastructure/persistance/postgre-sql/PostgresDataSource.ts::program,<empty>,,false,1,45,:program,,,1,
+111669149942,METHOD,src/shared/infrastructure/persistance/postgre-sql/dbConfig.ts::program,TYPE_DECL,:program,0,0,src/shared/infrastructure/persistance/postgre-sql/dbConfig.ts,src/shared/infrastructure/persistance/postgre-sql/dbConfig.ts::program,<empty>,,false,1,16,:program,,,1,
+111669149943,METHOD,src/shared/middleware/correlation-id/correlation-id.middleware.ts::program,TYPE_DECL,:program,0,0,src/shared/middleware/correlation-id/correlation-id.middleware.ts,src/shared/middleware/correlation-id/correlation-id.middleware.ts::program,<empty>,,false,1,16,:program,,,1,
+111669149944,METHOD,<empty>,<empty>,constructor() {},0,1,src/shared/middleware/correlation-id/correlation-id.middleware.ts,src/shared/middleware/correlation-id/correlation-id.middleware.ts::program:CorrelationIdMiddleware:<init>,<empty>,,false,7,15,<init>,,,1,
+111669149945,METHOD,<empty>,<empty>,"use(req: Request, res: Response, next: NextFunction) {
+    const id = randomUUID();
+    req[CORRELATION_ID_HEADER] = id;
+    res.set(CORRELATION_ID_HEADER, id);
+    next();
+  }",2,3,src/shared/middleware/correlation-id/correlation-id.middleware.ts,src/shared/middleware/correlation-id/correlation-id.middleware.ts::program:CorrelationIdMiddleware:use,<empty>,,false,9,14,use,,,1,
+111669149946,METHOD,<empty>,<empty>,"(val: string | undefined): boolean => {
+  return val?.toLocaleLowerCase() === 'true';
+}",30,1,src/shared/utils.ts,src/shared/utils.ts::program:evalENVBoolean,<empty>,,false,5,7,evalENVBoolean,,,1,
+111669149947,METHOD,src/shared/utils.ts::program,TYPE_DECL,:program,0,0,src/shared/utils.ts,src/shared/utils.ts::program,<empty>,,false,1,251,:program,,,1,
+111669149948,METHOD,<empty>,<empty>,"(date: Date): boolean => {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  console.log('today: ' + today);
+  const dateToValidate = new Date(date);
+  console.log('date to validate: ' + dateToValidate);
+  console.log('validation: ', dateToValidate >= today);
+  return dateToValidate >= today;
+}",31,1,src/shared/utils.ts,src/shared/utils.ts::program:ValidFutureDate,<empty>,,false,25,33,ValidFutureDate,,,1,
+111669149949,METHOD,<empty>,<empty>,"(date: Date): boolean => {
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  const dateToValidate = new Date(date);
+  return dateToValidate <= today;
+}",29,1,src/shared/utils.ts,src/shared/utils.ts::program:ValidPastDate,<empty>,,false,35,40,ValidPastDate,,,1,
+111669149950,METHOD,<empty>,<empty>,"(str: string): boolean => {
+  if (typeof str !== 'string') {
+    return false;
+  }
+
+  if (str.trim() === '') {
+    return false;
+  }
+
+  return !Number.isNaN(Number(str));
+}",24,1,src/shared/utils.ts,src/shared/utils.ts::program:isNumber,<empty>,,false,42,52,isNumber,,,1,
+111669149951,METHOD,<empty>,<empty>,"([first, ...rest]: string) => first.toUpperCase() + rest.join('').toLowerCase()",37,116,src/shared/utils.ts,src/shared/utils.ts::program:capitalizeFirstLetter,<empty>,,false,54,54,capitalizeFirstLetter,,,1,
+111669149952,METHOD,<empty>,<empty>,(word) => capitalizeFirstLetter(word),9,46,src/shared/utils.ts,src/shared/utils.ts::program:<lambda>5:<lambda>6,<empty>,,false,59,59,<lambda>6,,,1,
+111669149953,METHOD,<empty>,<empty>,"(words: string) =>
+  words
+    .split(' ')
+    .map((word) => capitalizeFirstLetter(word))
+    .join(' ')",34,14,src/shared/utils.ts,src/shared/utils.ts::program:capitalizeSentence,<empty>,,false,56,60,capitalizeSentence,,,1,
+111669149954,METHOD,<empty>,<empty>,"(text: string) => {
+  const regex = /^[a-zA-Z ]*$/;
+  return regex.test(text);
+}",27,1,src/shared/utils.ts,src/shared/utils.ts::program:onlyLetters,<empty>,,false,62,65,onlyLetters,,,1,
+111669149955,METHOD,<empty>,<empty>,"(text: string) => {
+  return /[0-9]/.test(text);
+}",32,1,src/shared/utils.ts,src/shared/utils.ts::program:stringHasNumbers,<empty>,,false,67,69,stringHasNumbers,,,1,
+111669149956,METHOD,<empty>,<empty>,"(app: string): boolean => {
+  const options: string[] = Object.values(IssuerEnum);
+  return options.includes(app);
+}",34,1,src/shared/utils.ts,src/shared/utils.ts::program:isValidApplication,<empty>,,false,71,74,isValidApplication,,,1,
+111669149957,METHOD,<empty>,<empty>,(response) => response.json(),10,39,src/shared/utils.ts,src/shared/utils.ts::program:<lambda>10:<lambda>11,<empty>,,false,85,85,<lambda>11,,,1,
+111669149958,METHOD,<empty>,<empty>,"async (args: any, url: string) => {
+  const opts = {
+    method: 'POST',
+    body: JSON.stringify(args),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
+  const response = await fetch(url, opts)
+    .then((response) => response.json())
+    .catch((err) => {
+      throw err;
+    });
+  return response;
+}",28,1,src/shared/utils.ts,src/shared/utils.ts::program:fetchTenants,<empty>,,false,76,90,fetchTenants,,,1,
+111669149959,METHOD,<empty>,<empty>,"(err) => {
+      throw err;
+    }",11,5,src/shared/utils.ts,src/shared/utils.ts::program:<lambda>10:<lambda>12,<empty>,,false,86,88,<lambda>12,,,1,
+111669149960,METHOD,<empty>,<empty>,"(configUrl: string, type?: string): string => {
+  if (!configUrl)
+    throw new NotFoundException(`${type} env variable not found`, {
+      cause: new Error(),
+      description: `Missing ${type} env variable`,
+    });
+  const url = configUrl.endsWith('/') ? configUrl : `${configUrl}/`;
+  return url;
+}",35,1,src/shared/utils.ts,src/shared/utils.ts::program:getValidEndpointUrl,<empty>,,false,92,100,getValidEndpointUrl,,,1,
+111669149961,METHOD,<empty>,<empty>,"(): string => {
+  return getValidEndpointUrl(process.env.SECURITY_MS_URL, 'SECURITY_MS_URL');
+}",29,1,src/shared/utils.ts,src/shared/utils.ts::program:securityMsUrl,<empty>,,false,102,104,securityMsUrl,,,1,
+111669149962,METHOD,<empty>,<empty>,"(): string => {
+  return getValidEndpointUrl(process.env.CATALOG_MS_URL, 'CATALOG_MS_URL');
+}",28,1,src/shared/utils.ts,src/shared/utils.ts::program:catalogMsUrl,<empty>,,false,106,108,catalogMsUrl,,,1,
+111669149963,METHOD,<empty>,<empty>,"(): string => {
+  return getValidEndpointUrl(process.env.TENANTS_MS_URL, 'TENANTS_MS_URL');
+}",28,1,src/shared/utils.ts,src/shared/utils.ts::program:tenantsMsUrl,<empty>,,false,110,112,tenantsMsUrl,,,1,
+111669149964,METHOD,<empty>,<empty>,"(): string => {
+  return getValidEndpointUrl(process.env.USERS_MS_URL, 'USERS_MS_URL');
+}",26,1,src/shared/utils.ts,src/shared/utils.ts::program:usersMsUrl,<empty>,,false,114,116,usersMsUrl,,,1,
+111669149965,METHOD,<empty>,<empty>,"(): string => {
+  return getValidEndpointUrl(process.env.RECORDS_GRID_MS_URL, 'RECORDS_GRID_MS_URL');
+}",32,1,src/shared/utils.ts,src/shared/utils.ts::program:recordGridsMsUrl,<empty>,,false,118,120,recordGridsMsUrl,,,1,
+111669149966,METHOD,<empty>,<empty>,"(): string => {
+  return getValidEndpointUrl(process.env.APP_MODULES_MS_URL, 'APP_MODULES_MS_URL');
+}",31,1,src/shared/utils.ts,src/shared/utils.ts::program:appModulesMsUrl,<empty>,,false,122,124,appModulesMsUrl,,,1,
+111669149967,METHOD,<empty>,<empty>,"(): string => {
+  return getValidEndpointUrl(process.env.GENERAL_MS_URL, 'GENERAL_MS_URL');
+}",34,1,src/shared/utils.ts,src/shared/utils.ts::program:generalConfigMsUrl,<empty>,,false,126,128,generalConfigMsUrl,,,1,
+111669149968,METHOD,<empty>,<empty>,"(): string => {
+  return getValidEndpointUrl(process.env.RECORDS_MS_URL, 'RECORDS_MS_URL');
+}",28,1,src/shared/utils.ts,src/shared/utils.ts::program:recordsMsUrl,<empty>,,false,130,132,recordsMsUrl,,,1,
+111669149969,METHOD,<empty>,<empty>,"(): string => {
+  return getValidEndpointUrl(process.env.FILE_MANAGEMENT_MS_URL, 'FILE_MANAGEMENT_MS_URL');
+}",35,1,src/shared/utils.ts,src/shared/utils.ts::program:fileManagementMsUrl,<empty>,,false,134,136,fileManagementMsUrl,,,1,
+111669149970,METHOD,<empty>,<empty>,(response) => response.json(),10,39,src/shared/utils.ts,src/shared/utils.ts::program:<lambda>23:<lambda>24,<empty>,,false,140,140,<lambda>24,,,1,
+111669149971,METHOD,<empty>,<empty>,"async (url: string, options: object, logger: Logger) => {
+  const response = await fetch(url, options)
+    .then((response) => response.json())
+    .catch((err) => {
+      logger.error(err.message);
+      throw new InternalServerErrorException(err.message);
+    });
+
+  switch (response.statusCode) {
+    case 400:
+      logger.log(`Bad Request: ${response.message}`);
+      return new BadRequestException(response.message);
+    case 401:
+      logger.log(`Unauthorized: ${response.message}`);
+      return new UnauthorizedException(response.message);
+    case 403:
+      logger.log(`Forbidden: ${response.message}`);
+      return new ForbiddenException(response.message);
+    case 404:
+      logger.log(`Not Found: ${response.message}`);
+      return new NotFoundException(response.message);
+    case 408:
+      logger.log(`Request Timeout: ${response.message}`);
+      return new RequestTimeoutException(response.message);
+    case 409:
+      logger.log(`Conflict: ${response.message}`);
+      re...",27,1,src/shared/utils.ts,src/shared/utils.ts::program:getResponse,<empty>,,false,138,174,getResponse,,,1,
+111669149972,METHOD,<empty>,<empty>,"(err) => {
+      logger.error(err.message);
+      throw new InternalServerErrorException(err.message);
+    }",11,5,src/shared/utils.ts,src/shared/utils.ts::program:<lambda>23:<lambda>25,<empty>,,false,141,144,<lambda>25,,,1,
+111669149973,METHOD,<empty>,<empty>,"async (user: User, tenant: Tenant, emailProvider: EmailProvider) => {
+  const params: AWS.SES.SendEmailRequest = {
+    Source: process.env.AWS_IDENTITY_EMAIL_SENDER,
+    Destination: {
+      ToAddresses: [user.email],
+    },
+    Message: {
+      Subject: {
+        Charset: 'UTF-8',
+        Data: `Welcome ${user.firstName} ${user.lastName}`,
+      },
+      Body: {
+        Html: {
+          Charset: 'UTF-8',
+          Data: generateConfirmationTemplate(user.temporalId, tenant.url),
+        },
+      },
+    },
+  };
+  return await emailProvider.sendEmail(params);
+}",32,1,src/shared/utils.ts,src/shared/utils.ts::program:sendEmailProcess,<empty>,,false,176,196,sendEmailProcess,,,1,
+111669149974,METHOD,<empty>,<empty>,"async (user: User, emailProvider: EmailProvider) => {
+  const now = new Date();
+
+  const year = now.getFullYear();
+  const month = String(now.getMonth() + 1).padStart(2, '0');
+  const day = String(now.getDate()).padStart(2, '0');
+  const hours = String(now.getHours()).padStart(2, '0');
+  const minutes = String(now.getMinutes()).padStart(2, '0');
+
+  const formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}`;
+
+  const params: AWS.SES.SendEmailRequest = {
+    Source: process.env.AWS_IDENTITY_EMAIL_SENDER,
+    Destination: {
+      ToAddresses: [user.email],
+    },
+    Message: {
+      Subject: {
+        Charset: 'UTF-8',
+        Data: `Alert: Attempted MFA Setup on Your Account`,
+      },
+      Body: {
+        Html: {
+          Charset: 'UTF-8',
+          Data: generateMfaAlertTemplate(formattedDateTime, `${user.firstName} ${user.lastName}`),
+        },
+      },
+    },
+  };
+  return await emailProvider.sendEmail(params);
+}",42,1,src/shared/utils.ts,src/shared/utils.ts::program:sendMfaAttemptEmailProcess,<empty>,,false,198,228,sendMfaAttemptEmailProcess,,,1,
+111669149975,METHOD,<empty>,<empty>,"async (user: User, emailProvider: EmailProvider) => {
+  const params: AWS.SES.SendEmailRequest = {
+    Source: process.env.AWS_IDENTITY_EMAIL_SENDER,
+    Destination: {
+      ToAddresses: [user.email],
+    },
+    Message: {
+      Subject: {
+        Charset: 'UTF-8',
+        Data: `Congratulations! MFA Successfully Set Up on Your Account`,
+      },
+      Body: {
+        Html: {
+          Charset: 'UTF-8',
+          Data: generateMfaSuccessTemplate(`${user.firstName} ${user.lastName}`),
+        },
+      },
+    },
+  };
+  return await emailProvider.sendEmail(params);
+}",42,1,src/shared/utils.ts,src/shared/utils.ts::program:sendMfaSuccessEmailProcess,<empty>,,false,230,250,sendMfaSuccessEmailProcess,,,1,
+111669149976,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.assignment,<empty>,,true,,,<operator>.assignment,,,0,
+111669149977,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.fieldAccess,<empty>,,true,,,<operator>.fieldAccess,,,0,
+111669149978,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,__ecma.Array.factory,<empty>,,true,,,__ecma.Array.factory,,,0,
+111669149979,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.alloc,<empty>,,true,,,<operator>.alloc,,,0,
+111669149980,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.formatString,<empty>,,true,,,<operator>.formatString,,,0,
+111669149981,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.await,<empty>,,true,,,<operator>.await,,,0,
+111669149982,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.plus,<empty>,,true,,,<operator>.plus,,,0,
+111669149983,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.conditional,<empty>,,true,,,<operator>.conditional,,,0,
+111669149984,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.addition,<empty>,,true,,,<operator>.addition,,,0,
+111669149985,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.spread,<empty>,,true,,,<operator>.spread,,,0,
+111669149986,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,JSON.parse,<empty>,,true,,,parse,,,0,
+111669149987,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.logicalOr,<empty>,,true,,,<operator>.logicalOr,,,0,
+111669149988,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.delete,<empty>,,true,,,<operator>.delete,,,0,
+111669149989,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.throw,<empty>,,true,,,<operator>.throw,,,0,
+111669149990,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.logicalNot,<empty>,,true,,,<operator>.logicalNot,,,0,
+111669149991,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.logicalAnd,<empty>,,true,,,<operator>.logicalAnd,,,0,
+111669149992,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.greaterThan,<empty>,,true,,,<operator>.greaterThan,,,0,
+111669149993,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.indexAccess,<empty>,,true,,,<operator>.indexAccess,,,0,
+111669149994,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.notEquals,<empty>,,true,,,<operator>.notEquals,,,0,
+111669149995,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.equals,<empty>,,true,,,<operator>.equals,,,0,
+111669149996,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.lessThan,<empty>,,true,,,<operator>.lessThan,,,0,
+111669149997,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.iterator,<empty>,,true,,,<operator>.iterator,,,0,
+111669149998,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.not,<empty>,,true,,,<operator>.not,,,0,
+111669149999,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.cast,<empty>,,true,,,<operator>.cast,,,0,
+111669150000,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.lessEqualsThan,<empty>,,true,,,<operator>.lessEqualsThan,,,0,
+111669150001,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,Object.values,<empty>,,true,,,values,,,0,
+111669150002,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,String,<empty>,,true,,,String,,,0,
+111669150003,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,JSON.stringify,<empty>,,true,,,stringify,,,0,
+111669150004,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.greaterEqualsThan,<empty>,,true,,,<operator>.greaterEqualsThan,,,0,
+111669150005,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,<operator>.instanceOf,<empty>,,true,,,<operator>.instanceOf,,,0,
+111669150006,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,Number.isNaN,<empty>,,true,,,isNaN,,,0,
+111669150007,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,Number,<empty>,,true,,,Number,,,0,
+111669150008,METHOD,<global>,NAMESPACE_BLOCK,<empty>,,,<empty>,fetch,<empty>,,true,,,fetch,,,0,
+111669150009,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,__ecma.Array:,<empty>,,true,,,__ecma.Array:,,,0,
+111669150010,METHOD,src/app.controller.ts::program,TYPE_DECL,<empty>,,,<empty>,src/app.controller.ts::program:require,<empty>,,true,,,require,,,0,
+111669150011,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/common:Logger,<empty>,,true,,,Logger,,,0,
+111669150012,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/common:Logger:log,<empty>,,true,,,log,,,0,
+111669150013,METHOD,src/app.module.ts::program,TYPE_DECL,<empty>,,,<empty>,src/app.module.ts::program:require,<empty>,,true,,,require,,,0,
+111669150014,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/typeorm:TypeOrmModule:forRoot,<empty>,,true,,,forRoot,,,0,
+111669150015,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,nestjs-pino:LoggerModule:forRoot,<empty>,,true,,,forRoot,,,0,
+111669150016,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/common:MiddlewareConsumer:apply:<returnValue>:forRoutes,<empty>,,true,,,forRoutes,,,0,
+111669150017,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/common:MiddlewareConsumer:apply,<empty>,,true,,,apply,,,0,
+111669150018,METHOD,src/app.service.ts::program,TYPE_DECL,<empty>,,,<empty>,src/app.service.ts::program:require,<empty>,,true,,,require,,,0,
+111669150019,METHOD,src/context/role-aliases/role-aliases.controller.ts::program,TYPE_DECL,<empty>,,,<empty>,src/context/role-aliases/role-aliases.controller.ts::program:require,<empty>,,true,,,require,,,0,
+111669150020,METHOD,src/context/role-aliases/role-aliases.module.ts::program,TYPE_DECL,<empty>,,,<empty>,src/context/role-aliases/role-aliases.module.ts::program:require,<empty>,,true,,,require,,,0,
+111669150021,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/typeorm:TypeOrmModule:forFeature,<empty>,,true,,,forFeature,,,0,
+111669150022,METHOD,src/context/roles/roles.controller.ts::program,TYPE_DECL,<empty>,,,<empty>,src/context/roles/roles.controller.ts::program:require,<empty>,,true,,,require,,,0,
+111669150023,METHOD,src/context/roles/roles.module.ts::program,TYPE_DECL,<empty>,,,<empty>,src/context/roles/roles.module.ts::program:require,<empty>,,true,,,require,,,0,
+111669150024,METHOD,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts::program,TYPE_DECL,<empty>,,,<empty>,src/context/tenant-role-aliases/tenant-role-aliases.controller.ts::program:require,<empty>,,true,,,require,,,0,
+111669150025,METHOD,src/context/tenant-role-aliases/tenant-role-aliases.module.ts::program,TYPE_DECL,<empty>,,,<empty>,src/context/tenant-role-aliases/tenant-role-aliases.module.ts::program:require,<empty>,,true,,,require,,,0,
+111669150026,METHOD,src/context/tenants/tenants.controller.ts::program,TYPE_DECL,<empty>,,,<empty>,src/context/tenants/tenants.controller.ts::program:require,<empty>,,true,,,require,,,0,
+111669150027,METHOD,__ecma.String,TYPE_DECL,<empty>,,,<empty>,__ecma.String:trim,<empty>,,true,,,trim,,,0,
+111669150028,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,__ecma.String:trim:<returnValue>:toLowerCase,<empty>,,true,,,toLowerCase,,,0,
+111669150029,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,__ecma.String:toLowerCase:<returnValue>:trim,<empty>,,true,,,trim,,,0,
+111669150030,METHOD,__ecma.String,TYPE_DECL,<empty>,,,<empty>,__ecma.String:toLowerCase,<empty>,,true,,,toLowerCase,,,0,
+111669150031,METHOD,src/context/tenants/tenants.module.ts::program,TYPE_DECL,<empty>,,,<empty>,src/context/tenants/tenants.module.ts::program:require,<empty>,,true,,,require,,,0,
+111669150032,METHOD,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts::program,TYPE_DECL,<empty>,,,<empty>,src/context/user-role-by-tenants/user-role-by-tenants.controller.ts::program:require,<empty>,,true,,,require,,,0,
+111669150033,METHOD,src/context/user-role-by-tenants/user-role-by-tenants.module.ts::program,TYPE_DECL,<empty>,,,<empty>,src/context/user-role-by-tenants/user-role-by-tenants.module.ts::program:require,<empty>,,true,,,require,,,0,
+111669150034,METHOD,src/context/users/users.controller.ts::program,TYPE_DECL,<empty>,,,<empty>,src/context/users/users.controller.ts::program:require,<empty>,,true,,,require,,,0,
+111669150035,METHOD,src/context/users/users.module.ts::program,TYPE_DECL,<empty>,,,<empty>,src/context/users/users.module.ts::program:require,<empty>,,true,,,require,,,0,
+111669150036,METHOD,src/main.ts::program,TYPE_DECL,<empty>,,,<empty>,src/main.ts::program:require,<empty>,,true,,,require,,,0,
+111669150037,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,__whatwg.console:log,<empty>,,true,,,log,,,0,
+111669150038,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/core:NestFactory:create,<empty>,,true,,,create,,,0,
+111669150039,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/swagger:DocumentBuilder:setTitle:<returnValue>:setDescription,<empty>,,true,,,setDescription,,,0,
+111669150040,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/swagger:DocumentBuilder:setTitle,<empty>,,true,,,setTitle,,,0,
+111669150041,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/swagger:DocumentBuilder,<empty>,,true,,,DocumentBuilder,,,0,
+111669150042,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/swagger:SwaggerModule:createDocument,<empty>,,true,,,createDocument,,,0,
+111669150043,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/swagger:SwaggerModule:setup,<empty>,,true,,,setup,,,0,
+111669150044,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/common:ValidationPipe,<empty>,,true,,,ValidationPipe,,,0,
+111669150045,METHOD,src/shared/context/role-aliases/domain/dto/create-role-alias.dto.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/role-aliases/domain/dto/create-role-alias.dto.ts::program:require,<empty>,,true,,,require,,,0,
+111669150046,METHOD,src/shared/context/role-aliases/domain/dto/find-role-alias.dto.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/role-aliases/domain/dto/find-role-alias.dto.ts::program:require,<empty>,,true,,,require,,,0,
+111669150047,METHOD,src/shared/context/role-aliases/domain/dto/role-alias.dto.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/role-aliases/domain/dto/role-alias.dto.ts::program:require,<empty>,,true,,,require,,,0,
+111669150048,METHOD,src/shared/context/role-aliases/domain/dto/update-role-alias.dto.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/role-aliases/domain/dto/update-role-alias.dto.ts::program:require,<empty>,,true,,,require,,,0,
+111669150049,METHOD,src/shared/context/role-aliases/domain/role-aliases.service.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/role-aliases/domain/role-aliases.service.ts::program:require,<empty>,,true,,,require,,,0,
+111669150050,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/common:forwardRef,<empty>,,true,,,forwardRef,,,0,
+111669150051,METHOD,Repository<RoleAlias>,TYPE_DECL,<empty>,,,<empty>,Repository<RoleAlias>:findOneBy,<empty>,,true,,,findOneBy,,,0,
+111669150052,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/common:Logger:error,<empty>,,true,,,error,,,0,
+111669150053,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/common:ForbiddenException,<empty>,,true,,,ForbiddenException,,,0,
+111669150054,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,__ecma.Error:<operator>.new,<empty>,,true,,,<operator>.new,,,0,
+111669150055,METHOD,Repository<Role>,TYPE_DECL,<empty>,,,<empty>,Repository<Role>:findOneBy,<empty>,,true,,,findOneBy,,,0,
+111669150056,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/common:NotFoundException,<empty>,,true,,,NotFoundException,,,0,
+111669150057,METHOD,Repository<RoleAlias>,TYPE_DECL,<empty>,,,<empty>,Repository<RoleAlias>:create,<empty>,,true,,,create,,,0,
+111669150058,METHOD,Repository<RoleAlias>,TYPE_DECL,<empty>,,,<empty>,Repository<RoleAlias>:save,<empty>,,true,,,save,,,0,
+111669150059,METHOD,__ecma.Array,TYPE_DECL,<empty>,,,<empty>,__ecma.Array:map,<empty>,,true,,,map,,,0,
+111669150060,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,Repository<RoleAlias>:createQueryBuilder:<returnValue>:leftJoinAndSelect,<empty>,,true,,,leftJoinAndSelect,,,0,
+111669150061,METHOD,Repository<RoleAlias>,TYPE_DECL,<empty>,,,<empty>,Repository<RoleAlias>:createQueryBuilder,<empty>,,true,,,createQueryBuilder,,,0,
+111669150062,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,__ecma.String:trim:<returnValue>:trim,<empty>,,true,,,trim,,,0,
+111669150063,METHOD,Repository<RoleAlias>,TYPE_DECL,<empty>,,,<empty>,Repository<RoleAlias>:merge,<empty>,,true,,,merge,,,0,
+111669150064,METHOD,src/shared/context/roles/domain/dto/create-role.dto.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/roles/domain/dto/create-role.dto.ts::program:require,<empty>,,true,,,require,,,0,
+111669150065,METHOD,src/shared/context/roles/domain/dto/find-role.dto.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/roles/domain/dto/find-role.dto.ts::program:require,<empty>,,true,,,require,,,0,
+111669150066,METHOD,src/shared/context/roles/domain/dto/update-role.dto.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/roles/domain/dto/update-role.dto.ts::program:require,<empty>,,true,,,require,,,0,
+111669150067,METHOD,src/shared/context/roles/domain/roles.service.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/roles/domain/roles.service.ts::program:require,<empty>,,true,,,require,,,0,
+111669150068,METHOD,Repository<Role>,TYPE_DECL,<empty>,,,<empty>,Repository<Role>:save,<empty>,,true,,,save,,,0,
+111669150069,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,Repository<Role>:createQueryBuilder:<returnValue>:leftJoinAndSelect,<empty>,,true,,,leftJoinAndSelect,,,0,
+111669150070,METHOD,Repository<Role>,TYPE_DECL,<empty>,,,<empty>,Repository<Role>:createQueryBuilder,<empty>,,true,,,createQueryBuilder,,,0,
+111669150071,METHOD,Repository<Role>,TYPE_DECL,<empty>,,,<empty>,Repository<Role>:merge,<empty>,,true,,,merge,,,0,
+111669150072,METHOD,src/shared/context/tenant-role-aliases/dto/assign-tenant-role-alias.dto.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/tenant-role-aliases/dto/assign-tenant-role-alias.dto.ts::program:require,<empty>,,true,,,require,,,0,
+111669150073,METHOD,src/shared/context/tenant-role-aliases/dto/create-tenant-role-aliases.dto.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/tenant-role-aliases/dto/create-tenant-role-aliases.dto.ts::program:require,<empty>,,true,,,require,,,0,
+111669150074,METHOD,src/shared/context/tenant-role-aliases/dto/find-tenant-role-alias.dto.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/tenant-role-aliases/dto/find-tenant-role-alias.dto.ts::program:require,<empty>,,true,,,require,,,0,
+111669150075,METHOD,src/shared/context/tenant-role-aliases/dto/update-tenant-role-alias.dto.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/tenant-role-aliases/dto/update-tenant-role-alias.dto.ts::program:require,<empty>,,true,,,require,,,0,
+111669150076,METHOD,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/tenant-role-aliases/tenant-role-aliases.service.ts::program:require,<empty>,,true,,,require,,,0,
+111669150077,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,Repository<Tenant>:createQueryBuilder:<returnValue>:where,<empty>,,true,,,where,,,0,
+111669150078,METHOD,Repository<Tenant>,TYPE_DECL,<empty>,,,<empty>,Repository<Tenant>:createQueryBuilder,<empty>,,true,,,createQueryBuilder,,,0,
+111669150079,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,Repository<Role>:createQueryBuilder:<returnValue>:where,<empty>,,true,,,where,,,0,
+111669150080,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,Repository<TenantRoleAliases>:createQueryBuilder:<returnValue>:leftJoinAndSelect,<empty>,,true,,,leftJoinAndSelect,,,0,
+111669150081,METHOD,Repository<TenantRoleAliases>,TYPE_DECL,<empty>,,,<empty>,Repository<TenantRoleAliases>:createQueryBuilder,<empty>,,true,,,createQueryBuilder,,,0,
+111669150082,METHOD,Repository<TenantRoleAliases>,TYPE_DECL,<empty>,,,<empty>,Repository<TenantRoleAliases>:create,<empty>,,true,,,create,,,0,
+111669150083,METHOD,Repository<TenantRoleAliases>,TYPE_DECL,<empty>,,,<empty>,Repository<TenantRoleAliases>:save,<empty>,,true,,,save,,,0,
+111669150084,METHOD,Repository<Tenant>,TYPE_DECL,<empty>,,,<empty>,Repository<Tenant>:save,<empty>,,true,,,save,,,0,
+111669150085,METHOD,__ecma.Array,TYPE_DECL,<empty>,,,<empty>,__ecma.Array:push,<empty>,,true,,,push,,,0,
+111669150086,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,Repository<TenantRoleAliases>:createQueryBuilder:<returnValue>:andWhere,<empty>,,true,,,andWhere,,,0,
+111669150087,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,Repository<TenantRoleAliases>:createQueryBuilder:<returnValue>:where,<empty>,,true,,,where,,,0,
+111669150088,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,typeorm:Brackets,<empty>,,true,,,Brackets,,,0,
+111669150089,METHOD,Repository<TenantRoleAliases>,TYPE_DECL,<empty>,,,<empty>,Repository<TenantRoleAliases>:delete,<empty>,,true,,,delete,,,0,
+111669150090,METHOD,src/shared/context/tenants/domain/dto/create-tenant.dto.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/tenants/domain/dto/create-tenant.dto.ts::program:require,<empty>,,true,,,require,,,0,
+111669150091,METHOD,src/shared/context/tenants/domain/dto/find-tenant.dto.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/tenants/domain/dto/find-tenant.dto.ts::program:require,<empty>,,true,,,require,,,0,
+111669150092,METHOD,src/shared/context/tenants/domain/dto/update-tenant.dto.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/tenants/domain/dto/update-tenant.dto.ts::program:require,<empty>,,true,,,require,,,0,
+111669150093,METHOD,src/shared/context/tenants/domain/tenants.service.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/tenants/domain/tenants.service.ts::program:require,<empty>,,true,,,require,,,0,
+111669150094,METHOD,Repository<Tenant>,TYPE_DECL,<empty>,,,<empty>,Repository<Tenant>:findOneBy,<empty>,,true,,,findOneBy,,,0,
+111669150095,METHOD,Repository<Tenant>,TYPE_DECL,<empty>,,,<empty>,Repository<Tenant>:create,<empty>,,true,,,create,,,0,
+111669150096,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,Repository<Tenant>:createQueryBuilder:<returnValue>:leftJoinAndSelect,<empty>,,true,,,leftJoinAndSelect,,,0,
+111669150097,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,Repository<Tenant>:createQueryBuilder:<returnValue>:andWhere,<empty>,,true,,,andWhere,,,0,
+111669150098,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,Repository<Tenant>:createQueryBuilder:<returnValue>:getMany,<empty>,,true,,,getMany,,,0,
+111669150099,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,Repository<Tenant>:createQueryBuilder:<returnValue>:andWhere:<returnValue>:getMany,<empty>,,true,,,getMany,,,0,
+111669150100,METHOD,Repository<Tenant>,TYPE_DECL,<empty>,,,<empty>,Repository<Tenant>:merge,<empty>,,true,,,merge,,,0,
+111669150101,METHOD,src/shared/context/tenants/stubs/tenants.stub.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/tenants/stubs/tenants.stub.ts::program:require,<empty>,,true,,,require,,,0,
+111669150102,METHOD,src/shared/context/user-role-by-tenants/dto/create-user-role-by-tenants.dto.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/user-role-by-tenants/dto/create-user-role-by-tenants.dto.ts::program:require,<empty>,,true,,,require,,,0,
+111669150103,METHOD,src/shared/context/user-role-by-tenants/dto/find-user-role-by-tenants.dto.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/user-role-by-tenants/dto/find-user-role-by-tenants.dto.ts::program:require,<empty>,,true,,,require,,,0,
+111669150104,METHOD,src/shared/context/user-role-by-tenants/dto/update-user-role-by-tenants.dto.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/user-role-by-tenants/dto/update-user-role-by-tenants.dto.ts::program:require,<empty>,,true,,,require,,,0,
+111669150105,METHOD,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/user-role-by-tenants/user-role-by-tenants.service.ts::program:require,<empty>,,true,,,require,,,0,
+111669150106,METHOD,Repository<UserRoleByTenants>,TYPE_DECL,<empty>,,,<empty>,Repository<UserRoleByTenants>:create,<empty>,,true,,,create,,,0,
+111669150107,METHOD,Repository<UserRoleByTenants>,TYPE_DECL,<empty>,,,<empty>,Repository<UserRoleByTenants>:save,<empty>,,true,,,save,,,0,
+111669150108,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,Repository<UserRoleByTenants>:createQueryBuilder:<returnValue>:leftJoinAndSelect,<empty>,,true,,,leftJoinAndSelect,,,0,
+111669150109,METHOD,Repository<UserRoleByTenants>,TYPE_DECL,<empty>,,,<empty>,Repository<UserRoleByTenants>:createQueryBuilder,<empty>,,true,,,createQueryBuilder,,,0,
+111669150110,METHOD,__ecma.Boolean,TYPE_DECL,<empty>,,,<empty>,__ecma.Boolean:forEach,<empty>,,true,,,forEach,,,0,
+111669150111,METHOD,src/shared/context/users/domain/dto/create-user.dto.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/users/domain/dto/create-user.dto.ts::program:require,<empty>,,true,,,require,,,0,
+111669150112,METHOD,src/shared/context/users/domain/dto/find-user.dto.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/users/domain/dto/find-user.dto.ts::program:require,<empty>,,true,,,require,,,0,
+111669150113,METHOD,src/shared/context/users/domain/dto/update-user.dto.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/users/domain/dto/update-user.dto.ts::program:require,<empty>,,true,,,require,,,0,
+111669150114,METHOD,src/shared/context/users/domain/dto/user.dto.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/users/domain/dto/user.dto.ts::program:require,<empty>,,true,,,require,,,0,
+111669150115,METHOD,src/shared/context/users/domain/stubs/user.stub.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/users/domain/stubs/user.stub.ts::program:require,<empty>,,true,,,require,,,0,
+111669150116,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,__ecma.Date:<operator>.new,<empty>,,true,,,<operator>.new,,,0,
+111669150117,METHOD,src/shared/context/users/domain/user-verification.service.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/users/domain/user-verification.service.ts::program:require,<empty>,,true,,,require,,,0,
+111669150118,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,Repository<User>:createQueryBuilder:<returnValue>:leftJoinAndSelect,<empty>,,true,,,leftJoinAndSelect,,,0,
+111669150119,METHOD,Repository<User>,TYPE_DECL,<empty>,,,<empty>,Repository<User>:createQueryBuilder,<empty>,,true,,,createQueryBuilder,,,0,
+111669150120,METHOD,EmailProvider,TYPE_DECL,<empty>,,,<empty>,EmailProvider:getVerificationTemplate,<empty>,,true,,,getVerificationTemplate,,,0,
+111669150121,METHOD,src/shared/infrastructure/mails/mailProvider.ts::program:EmailProvider,TYPE_DECL,<empty>,,,<empty>,src/shared/infrastructure/mails/mailProvider.ts::program:EmailProvider:getVerificationTemplate,<empty>,,true,,,getVerificationTemplate,,,0,
+111669150122,METHOD,Repository<User>,TYPE_DECL,<empty>,,,<empty>,Repository<User>:save,<empty>,,true,,,save,,,0,
+111669150123,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,Repository<User>:createQueryBuilder:<returnValue>:where,<empty>,,true,,,where,,,0,
+111669150124,METHOD,Repository<User>,TYPE_DECL,<empty>,,,<empty>,Repository<User>:findOneBy,<empty>,,true,,,findOneBy,,,0,
+111669150125,METHOD,EmailProvider,TYPE_DECL,<empty>,,,<empty>,EmailProvider:getMfaAttemptTemplate,<empty>,,true,,,getMfaAttemptTemplate,,,0,
+111669150126,METHOD,src/shared/infrastructure/mails/mailProvider.ts::program:EmailProvider,TYPE_DECL,<empty>,,,<empty>,src/shared/infrastructure/mails/mailProvider.ts::program:EmailProvider:getMfaAttemptTemplate,<empty>,,true,,,getMfaAttemptTemplate,,,0,
+111669150127,METHOD,EmailProvider,TYPE_DECL,<empty>,,,<empty>,EmailProvider:getMfaSuccessTemplate,<empty>,,true,,,getMfaSuccessTemplate,,,0,
+111669150128,METHOD,src/shared/infrastructure/mails/mailProvider.ts::program:EmailProvider,TYPE_DECL,<empty>,,,<empty>,src/shared/infrastructure/mails/mailProvider.ts::program:EmailProvider:getMfaSuccessTemplate,<empty>,,true,,,getMfaSuccessTemplate,,,0,
+111669150129,METHOD,src/shared/context/users/domain/users.service.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/context/users/domain/users.service.ts::program:require,<empty>,,true,,,require,,,0,
+111669150130,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,Object.values:<returnValue>:includes,<empty>,,true,,,includes,,,0,
+111669150131,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/common:BadRequestException,<empty>,,true,,,BadRequestException,,,0,
+111669150132,METHOD,Repository<User>,TYPE_DECL,<empty>,,,<empty>,Repository<User>:create,<empty>,,true,,,create,,,0,
+111669150133,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,uuid:v4,<empty>,,true,,,v4,,,0,
+111669150134,METHOD,__ecma.Array,TYPE_DECL,<empty>,,,<empty>,__ecma.Array:some,<empty>,,true,,,some,,,0,
+111669150135,METHOD,__ecma.Boolean,TYPE_DECL,<empty>,,,<empty>,__ecma.Boolean:some,<empty>,,true,,,some,,,0,
+111669150136,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,__ecma.Array:filter:<returnValue>:some,<empty>,,true,,,some,,,0,
+111669150137,METHOD,__ecma.Array,TYPE_DECL,<empty>,,,<empty>,__ecma.Array:filter,<empty>,,true,,,filter,,,0,
+111669150138,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,Repository<User>:createQueryBuilder:<returnValue>:relation,<empty>,,true,,,relation,,,0,
+111669150139,METHOD,__ecma.Boolean,TYPE_DECL,<empty>,,,<empty>,__ecma.Boolean:findIndex,<empty>,,true,,,findIndex,,,0,
+111669150140,METHOD,Repository<User>,TYPE_DECL,<empty>,,,<empty>,Repository<User>:findOne,<empty>,,true,,,findOne,,,0,
+111669150141,METHOD,src/shared/dataTypes/MyContext.ts::program:MyContext,TYPE_DECL,<empty>,,,<empty>,src/shared/dataTypes/MyContext.ts::program:MyContext:require,<empty>,,true,,,require,,,0,
+111669150142,METHOD,src/shared/infrastructure/logger/pinoLoggerOptions.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/infrastructure/logger/pinoLoggerOptions.ts::program:require,<empty>,,true,,,require,,,0,
+111669150143,METHOD,src/shared/infrastructure/mails/mailProvider.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/infrastructure/mails/mailProvider.ts::program:require,<empty>,,true,,,require,,,0,
+111669150144,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@aws-sdk/client-ses:SES,<empty>,,true,,,SES,,,0,
+111669150145,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@aws-sdk/credential-providers:fromInstanceMetadata,<empty>,,true,,,fromInstanceMetadata,,,0,
+111669150146,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@aws-sdk/client-ses:SES:sendEmail,<empty>,,true,,,sendEmail,,,0,
+111669150147,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@aws-sdk/client-ses:SES:sendTemplatedEmail,<empty>,,true,,,sendTemplatedEmail,,,0,
+111669150148,METHOD,src/shared/infrastructure/mails/templates/mfaAlertTemplate.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/infrastructure/mails/templates/mfaAlertTemplate.ts::program:require,<empty>,,true,,,require,,,0,
+111669150149,METHOD,src/shared/infrastructure/mails/templates/mfaSuccessTemplate.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/infrastructure/mails/templates/mfaSuccessTemplate.ts::program:require,<empty>,,true,,,require,,,0,
+111669150150,METHOD,src/shared/infrastructure/mails/templates/userConfirmationTemplate.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/infrastructure/mails/templates/userConfirmationTemplate.ts::program:require,<empty>,,true,,,require,,,0,
+111669150151,METHOD,src/shared/infrastructure/persistance/postgre-sql/PostgresDataSource.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/infrastructure/persistance/postgre-sql/PostgresDataSource.ts::program:require,<empty>,,true,,,require,,,0,
+111669150152,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@avantodev/avanto-db:commonEntities:hasOwnProperty,<empty>,,true,,,hasOwnProperty,,,0,
+111669150153,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,(...items: __ecma.Array) => __ecma.Number:push,<empty>,,true,,,push,,,0,
+111669150154,METHOD,src/shared/infrastructure/persistance/postgre-sql/dbConfig.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/infrastructure/persistance/postgre-sql/dbConfig.ts::program:require,<empty>,,true,,,require,,,0,
+111669150155,METHOD,src/shared/middleware/correlation-id/correlation-id.middleware.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/middleware/correlation-id/correlation-id.middleware.ts::program:require,<empty>,,true,,,require,,,0,
+111669150156,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,crypto:randomUUID,<empty>,,true,,,randomUUID,,,0,
+111669150157,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,express:Response:set,<empty>,,true,,,set,,,0,
+111669150158,METHOD,src/shared/middleware/correlation-id/correlation-id.middleware.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/middleware/correlation-id/correlation-id.middleware.ts::program:next,<empty>,,true,,,next,,,0,
+111669150159,METHOD,src/shared/utils.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/utils.ts::program:require,<empty>,,true,,,require,,,0,
+111669150160,METHOD,src/shared/utils.ts::program,TYPE_DECL,<empty>,,,<empty>,src/shared/utils.ts::program:val?.toLocaleLowerCase,<empty>,,true,,,val?.toLocaleLowerCase,,,0,
+111669150161,METHOD,DateConstructor,TYPE_DECL,<empty>,,,<empty>,DateConstructor:setHours,<empty>,,true,,,setHours,,,0,
+111669150162,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,__ecma.Date:setHours,<empty>,,true,,,setHours,,,0,
+111669150163,METHOD,__ecma.String,TYPE_DECL,<empty>,,,<empty>,__ecma.String:toUpperCase,<empty>,,true,,,toUpperCase,,,0,
+111669150164,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,__ecma.Array:join:<returnValue>:toLowerCase,<empty>,,true,,,toLowerCase,,,0,
+111669150165,METHOD,__ecma.Array,TYPE_DECL,<empty>,,,<empty>,__ecma.Array:join,<empty>,,true,,,join,,,0,
+111669150166,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,__ecma.String:split:<returnValue>:map,<empty>,,true,,,map,,,0,
+111669150167,METHOD,__ecma.String,TYPE_DECL,<empty>,,,<empty>,__ecma.String:split,<empty>,,true,,,split,,,0,
+111669150168,METHOD,RegExp,TYPE_DECL,<empty>,,,<empty>,RegExp:test,<empty>,,true,,,test,,,0,
+111669150169,METHOD,__ecma.String,TYPE_DECL,<empty>,,,<empty>,__ecma.String:test,<empty>,,true,,,test,,,0,
+111669150170,METHOD,__ecma.Object,TYPE_DECL,<empty>,,,<empty>,__ecma.Object:includes,<empty>,,true,,,includes,,,0,
+111669150171,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,fetch:<returnValue>:then,<empty>,,true,,,then,,,0,
+111669150172,METHOD,__ecma.String,TYPE_DECL,<empty>,,,<empty>,__ecma.String:endsWith,<empty>,,true,,,endsWith,,,0,
+111669150173,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/common:InternalServerErrorException,<empty>,,true,,,InternalServerErrorException,,,0,
+111669150174,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/common:UnauthorizedException,<empty>,,true,,,UnauthorizedException,,,0,
+111669150175,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/common:RequestTimeoutException,<empty>,,true,,,RequestTimeoutException,,,0,
+111669150176,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/common:ConflictException,<empty>,,true,,,ConflictException,,,0,
+111669150177,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,@nestjs/common:PayloadTooLargeException,<empty>,,true,,,PayloadTooLargeException,,,0,
+111669150178,METHOD,EmailProvider,TYPE_DECL,<empty>,,,<empty>,EmailProvider:sendEmail,<empty>,,true,,,sendEmail,,,0,
+111669150179,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,src/shared/infrastructure/mails/mailProvider:ts::program:EmailProvider:sendEmail,<empty>,,true,,,sendEmail,,,0,
+111669150180,METHOD,DateConstructor,TYPE_DECL,<empty>,,,<empty>,DateConstructor:getFullYear,<empty>,,true,,,getFullYear,,,0,
+111669150181,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,__ecma.Date:getFullYear,<empty>,,true,,,getFullYear,,,0,
+111669150182,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,String:<returnValue>:padStart,<empty>,,true,,,padStart,,,0,
+111669150183,METHOD,DateConstructor,TYPE_DECL,<empty>,,,<empty>,DateConstructor:getMonth,<empty>,,true,,,getMonth,,,0,
+111669150184,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,__ecma.Date:getMonth,<empty>,,true,,,getMonth,,,0,
+111669150185,METHOD,DateConstructor,TYPE_DECL,<empty>,,,<empty>,DateConstructor:getDate,<empty>,,true,,,getDate,,,0,
+111669150186,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,__ecma.Date:getDate,<empty>,,true,,,getDate,,,0,
+111669150187,METHOD,DateConstructor,TYPE_DECL,<empty>,,,<empty>,DateConstructor:getHours,<empty>,,true,,,getHours,,,0,
+111669150188,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,__ecma.Date:getHours,<empty>,,true,,,getHours,,,0,
+111669150189,METHOD,DateConstructor,TYPE_DECL,<empty>,,,<empty>,DateConstructor:getMinutes,<empty>,,true,,,getMinutes,,,0,
+111669150190,METHOD,<speculatedMethods>,NAMESPACE_BLOCK,<empty>,,,<empty>,__ecma.Date:getMinutes,<empty>,,true,,,getMinutes,,,0,

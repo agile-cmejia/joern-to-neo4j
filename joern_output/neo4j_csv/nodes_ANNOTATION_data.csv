@@ -1,0 +1,433 @@
+0,ANNOTATION,-1,,@Controller(),0,Controller,4,Controller,,,1
+1,ANNOTATION,-1,,@Get(),2,Get,9,Get,,,4
+2,ANNOTATION,-1,,@Get(),2,Get,9,Get,,,1
+3,ANNOTATION,-1,,"@Module({
+  imports: [
+    TypeOrmModule.forRoot(appPostgresDataSource),
+    LoggerModule.forRoot(pinoOptions),
+    UsersModule,
+    RolesModule,
+    RoleAliasesModule,
+    UserRoleByTenantsModule,
+    TenantRoleAliasModule,
+  ],
+  controllers: [AppController],
+  providers: [AppService],
+})",0,Module,15,Module,,,1
+4,ANNOTATION,-1,,@Injectable(),0,Injectable,3,Injectable,,,1
+5,ANNOTATION,-1,,@ApiTags('role-aliases'),0,ApiTags,8,ApiTags,,,1
+6,ANNOTATION,-1,,@Controller('role-aliases'),0,Controller,9,Controller,,,1
+7,ANNOTATION,-1,,@Body(),15,Body,15,Body,,,1
+8,ANNOTATION,-1,,@Post(),2,Post,14,Post,,,5
+9,ANNOTATION,-1,,@Post(),2,Post,14,Post,,,1
+10,ANNOTATION,-1,,@Get(),2,Get,23,Get,,,4
+11,ANNOTATION,-1,,@Get(),2,Get,23,Get,,,1
+12,ANNOTATION,-1,,@Param('id'),16,Param,30,Param,,,1
+13,ANNOTATION,-1,,@Get(':id'),2,Get,29,Get,,,5
+14,ANNOTATION,-1,,@Get(':id'),2,Get,29,Get,,,1
+15,ANNOTATION,-1,,@Body(),17,Body,37,Body,,,1
+16,ANNOTATION,-1,,@Post('many/'),2,Post,36,Post,,,5
+17,ANNOTATION,-1,,@Post('many/'),2,Post,36,Post,,,1
+18,ANNOTATION,-1,,@Param('id'),15,Param,45,Param,,,1
+19,ANNOTATION,-1,,@Body(),40,Body,45,Body,,,1
+20,ANNOTATION,-1,,@Patch(':id'),2,Patch,44,Patch,,,6
+21,ANNOTATION,-1,,@Patch(':id'),2,Patch,44,Patch,,,1
+22,ANNOTATION,-1,,@Param('id'),15,Param,53,Param,,,1
+23,ANNOTATION,-1,,@Delete(':id'),2,Delete,52,Delete,,,5
+24,ANNOTATION,-1,,@Delete(':id'),2,Delete,52,Delete,,,1
+25,ANNOTATION,-1,,"@Module({
+  imports: [TypeOrmModule.forFeature([Tenant, Role, RoleAlias, TenantRoleAliases], dbConfig.name)],
+  controllers: [RoleAliasesController],
+  providers: [RoleAliasesService, TenantRoleAliasesService],
+})",0,Module,9,Module,,,1
+26,ANNOTATION,-1,,@ApiTags('roles'),0,ApiTags,8,ApiTags,,,1
+27,ANNOTATION,-1,,@Controller('roles'),0,Controller,9,Controller,,,1
+28,ANNOTATION,-1,,@Body(),15,Body,15,Body,,,1
+29,ANNOTATION,-1,,@Post(),2,Post,14,Post,,,5
+30,ANNOTATION,-1,,@Post(),2,Post,14,Post,,,1
+31,ANNOTATION,-1,,@Get(),2,Get,22,Get,,,4
+32,ANNOTATION,-1,,@Get(),2,Get,22,Get,,,1
+33,ANNOTATION,-1,,@Body(),17,Body,29,Body,,,1
+34,ANNOTATION,-1,,@Post('many/'),2,Post,28,Post,,,5
+35,ANNOTATION,-1,,@Post('many/'),2,Post,28,Post,,,1
+36,ANNOTATION,-1,,@Param('id'),16,Param,36,Param,,,1
+37,ANNOTATION,-1,,@Get(':id'),2,Get,35,Get,,,5
+38,ANNOTATION,-1,,@Get(':id'),2,Get,35,Get,,,1
+39,ANNOTATION,-1,,@Param('id'),15,Param,44,Param,,,1
+40,ANNOTATION,-1,,@Body(),40,Body,44,Body,,,1
+41,ANNOTATION,-1,,@Patch(':id'),2,Patch,43,Patch,,,6
+42,ANNOTATION,-1,,@Patch(':id'),2,Patch,43,Patch,,,1
+43,ANNOTATION,-1,,@Param('id'),15,Param,52,Param,,,1
+44,ANNOTATION,-1,,@Delete(':id'),2,Delete,51,Delete,,,5
+45,ANNOTATION,-1,,@Delete(':id'),2,Delete,51,Delete,,,1
+46,ANNOTATION,-1,,"@Module({
+  imports: [TypeOrmModule.forFeature([User, Role], dbConfig.name)],
+  controllers: [RolesController],
+  providers: [RolesService],
+})",0,Module,8,Module,,,1
+47,ANNOTATION,-1,,@ApiTags('tenant-role-aliases'),0,ApiTags,9,ApiTags,,,1
+48,ANNOTATION,-1,,@Controller('tenant-role-aliases'),0,Controller,10,Controller,,,1
+49,ANNOTATION,-1,,@Body(),15,Body,16,Body,,,1
+50,ANNOTATION,-1,,@Post(),2,Post,15,Post,,,5
+51,ANNOTATION,-1,,@Post(),2,Post,15,Post,,,1
+52,ANNOTATION,-1,,@Get(),2,Get,23,Get,,,4
+53,ANNOTATION,-1,,@Get(),2,Get,23,Get,,,1
+54,ANNOTATION,-1,,@Body(),17,Body,31,Body,,,1
+55,ANNOTATION,-1,,@Post('many/'),2,Post,30,Post,,,5
+56,ANNOTATION,-1,,@Post('many/'),2,Post,30,Post,,,1
+57,ANNOTATION,-1,,@Body(),15,Body,37,Body,,,1
+58,ANNOTATION,-1,,@Post('assign-role-alias'),2,Post,36,Post,,,5
+59,ANNOTATION,-1,,@Post('assign-role-alias'),2,Post,36,Post,,,1
+60,ANNOTATION,-1,,@Param('id'),16,Param,44,Param,,,1
+61,ANNOTATION,-1,,@Get(':id'),2,Get,43,Get,,,5
+62,ANNOTATION,-1,,@Get(':id'),2,Get,43,Get,,,1
+63,ANNOTATION,-1,,@Param('id'),15,Param,52,Param,,,1
+64,ANNOTATION,-1,,@Body(),40,Body,52,Body,,,1
+65,ANNOTATION,-1,,@Patch(':id'),2,Patch,51,Patch,,,6
+66,ANNOTATION,-1,,@Patch(':id'),2,Patch,51,Patch,,,1
+67,ANNOTATION,-1,,@Param('id'),15,Param,60,Param,,,1
+68,ANNOTATION,-1,,@Delete(':id'),2,Delete,59,Delete,,,5
+69,ANNOTATION,-1,,@Delete(':id'),2,Delete,59,Delete,,,1
+70,ANNOTATION,-1,,"@Module({
+  imports: [TypeOrmModule.forFeature([Role, Tenant, TenantRoleAliases, RoleAlias], dbConfig.name)],
+  controllers: [TenantRoleAliasesController],
+  providers: [TenantRoleAliasesService],
+})",0,Module,8,Module,,,1
+71,ANNOTATION,-1,,@ApiTags('tenants'),0,ApiTags,8,ApiTags,,,1
+72,ANNOTATION,-1,,@Controller('tenants'),0,Controller,9,Controller,,,1
+73,ANNOTATION,-1,,@Body(),15,Body,15,Body,,,1
+74,ANNOTATION,-1,,@Post(),2,Post,14,Post,,,5
+75,ANNOTATION,-1,,@Post(),2,Post,14,Post,,,1
+76,ANNOTATION,-1,,@Get(),2,Get,28,Get,,,4
+77,ANNOTATION,-1,,@Get(),2,Get,28,Get,,,1
+78,ANNOTATION,-1,,@Body(),17,Body,35,Body,,,1
+79,ANNOTATION,-1,,@Post('many/'),2,Post,34,Post,,,5
+80,ANNOTATION,-1,,@Post('many/'),2,Post,34,Post,,,1
+81,ANNOTATION,-1,,@Param('id'),16,Param,42,Param,,,1
+82,ANNOTATION,-1,,@Get(':id'),2,Get,41,Get,,,5
+83,ANNOTATION,-1,,@Get(':id'),2,Get,41,Get,,,1
+84,ANNOTATION,-1,,@Param('id'),15,Param,50,Param,,,1
+85,ANNOTATION,-1,,@Body(),40,Body,50,Body,,,1
+86,ANNOTATION,-1,,@Patch(':id'),2,Patch,49,Patch,,,6
+87,ANNOTATION,-1,,@Patch(':id'),2,Patch,49,Patch,,,1
+88,ANNOTATION,-1,,@Param('id'),15,Param,63,Param,,,1
+89,ANNOTATION,-1,,@Delete(':id'),2,Delete,62,Delete,,,5
+90,ANNOTATION,-1,,@Delete(':id'),2,Delete,62,Delete,,,1
+91,ANNOTATION,-1,,"@Module({
+  imports: [TypeOrmModule.forFeature([Tenant, TenantType, TenantConfig], dbConfig.name)],
+  controllers: [TenantsController],
+  providers: [TenantsService],
+})",0,Module,8,Module,,,1
+92,ANNOTATION,-1,,@ApiTags('user-role-by-tenants'),0,ApiTags,7,ApiTags,,,1
+93,ANNOTATION,-1,,@Controller('user-role-by-tenants'),0,Controller,8,Controller,,,1
+94,ANNOTATION,-1,,@Body(),15,Body,14,Body,,,1
+95,ANNOTATION,-1,,@Post(),2,Post,13,Post,,,5
+96,ANNOTATION,-1,,@Post(),2,Post,13,Post,,,1
+97,ANNOTATION,-1,,@Get(),2,Get,21,Get,,,4
+98,ANNOTATION,-1,,@Get(),2,Get,21,Get,,,1
+99,ANNOTATION,-1,,@Body(),17,Body,28,Body,,,1
+100,ANNOTATION,-1,,@Post('/many'),2,Post,27,Post,,,5
+101,ANNOTATION,-1,,@Post('/many'),2,Post,27,Post,,,1
+102,ANNOTATION,-1,,@Param('id'),15,Param,36,Param,,,1
+103,ANNOTATION,-1,,@Body(),40,Body,36,Body,,,1
+104,ANNOTATION,-1,,@Patch(':id'),2,Patch,35,Patch,,,6
+105,ANNOTATION,-1,,@Patch(':id'),2,Patch,35,Patch,,,1
+106,ANNOTATION,-1,,@Param('id'),15,Param,44,Param,,,1
+107,ANNOTATION,-1,,@Delete(':id'),2,Delete,43,Delete,,,5
+108,ANNOTATION,-1,,@Delete(':id'),2,Delete,43,Delete,,,1
+109,ANNOTATION,-1,,"@Module({
+  imports: [
+    TypeOrmModule.forFeature([UserRoleByTenants, Role, User, RoleAlias, Tenant, TenantRoleAliases], dbConfig.name),
+  ],
+  controllers: [UserRoleByTenantsController],
+  providers: [
+    UserRoleByTenantsService,
+    UsersService,
+    RolesService,
+    RoleAliasesService,
+    TenantsService,
+    TenantRoleAliasesService,
+    EmailProvider,
+  ],
+})",0,Module,14,Module,,,1
+110,ANNOTATION,-1,,@ApiTags('users'),0,ApiTags,9,ApiTags,,,1
+111,ANNOTATION,-1,,@Controller('users'),0,Controller,10,Controller,,,1
+112,ANNOTATION,-1,,@Body(),15,Body,16,Body,,,1
+113,ANNOTATION,-1,,@Headers('payload'),53,Headers,16,Headers,,,1
+114,ANNOTATION,-1,,@Post(),2,Post,15,Post,,,6
+115,ANNOTATION,-1,,@Post(),2,Post,15,Post,,,1
+116,ANNOTATION,-1,,@Get(),2,Get,26,Get,,,4
+117,ANNOTATION,-1,,@Get(),2,Get,26,Get,,,1
+118,ANNOTATION,-1,,@Body(),17,Body,33,Body,,,1
+119,ANNOTATION,-1,,@Post('many/'),2,Post,32,Post,,,5
+120,ANNOTATION,-1,,@Post('many/'),2,Post,32,Post,,,1
+121,ANNOTATION,-1,,@Param('id'),16,Param,39,Param,,,1
+122,ANNOTATION,-1,,@Get(':id'),2,Get,38,Get,,,5
+123,ANNOTATION,-1,,@Get(':id'),2,Get,38,Get,,,1
+124,ANNOTATION,-1,,@Param('id'),15,Param,47,Param,,,1
+125,ANNOTATION,-1,,@Body(),40,Body,47,Body,,,1
+126,ANNOTATION,-1,,@Headers('payload'),78,Headers,47,Headers,,,1
+127,ANNOTATION,-1,,@Patch(':id'),2,Patch,46,Patch,,,7
+128,ANNOTATION,-1,,@Patch(':id'),2,Patch,46,Patch,,,1
+129,ANNOTATION,-1,,@Param('id'),27,Param,57,Param,,,1
+130,ANNOTATION,-1,,@Patch(':id/resend-verification'),2,Patch,56,Patch,,,5
+131,ANNOTATION,-1,,@Patch(':id/resend-verification'),2,Patch,56,Patch,,,1
+132,ANNOTATION,-1,,@Body('userId'),28,Body,65,Body,,,1
+133,ANNOTATION,-1,,@Post('/mfa/attempt'),2,Post,64,Post,,,5
+134,ANNOTATION,-1,,@Post('/mfa/attempt'),2,Post,64,Post,,,1
+135,ANNOTATION,-1,,@Body('userId'),28,Body,70,Body,,,1
+136,ANNOTATION,-1,,@Post('/mfa/success'),2,Post,69,Post,,,5
+137,ANNOTATION,-1,,@Post('/mfa/success'),2,Post,69,Post,,,1
+138,ANNOTATION,-1,,@Param('id'),15,Param,75,Param,,,1
+139,ANNOTATION,-1,,@Headers('payload'),40,Headers,75,Headers,,,1
+140,ANNOTATION,-1,,@Delete(':id'),2,Delete,74,Delete,,,6
+141,ANNOTATION,-1,,@Delete(':id'),2,Delete,74,Delete,,,1
+142,ANNOTATION,-1,,"@Module({
+  imports: [TypeOrmModule.forFeature([Tenant, User, Role], dbConfig.name)],
+  controllers: [UsersController],
+  providers: [UsersService, TenantsService, EmailProvider],
+})",0,Module,10,Module,,,1
+143,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,6,ApiProperty,,,1
+144,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,7,IsNotEmpty,,,1
+145,ANNOTATION,-1,,"@Length(2, 100)",2,Length,8,Length,,,1
+146,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,11,ApiProperty,,,1
+147,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,12,IsNotEmpty,,,1
+148,ANNOTATION,-1,,"@Length(2, 400)",2,Length,13,Length,,,1
+149,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,16,ApiProperty,,,1
+150,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,17,IsNotEmpty,,,1
+151,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,20,ApiProperty,,,1
+152,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,23,ApiProperty,,,1
+153,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,6,ApiProperty,,,1
+154,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,9,ApiProperty,,,1
+155,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,12,ApiProperty,,,1
+156,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,15,ApiProperty,,,1
+157,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,18,ApiProperty,,,1
+158,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,21,ApiProperty,,,1
+159,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,7,ApiProperty,,,1
+160,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,8,IsNotEmpty,,,1
+161,ANNOTATION,-1,,"@Length(2, 100)",2,Length,9,Length,,,1
+162,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,12,ApiProperty,,,1
+163,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,13,IsNotEmpty,,,1
+164,ANNOTATION,-1,,"@Length(2, 400)",2,Length,14,Length,,,1
+165,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,17,ApiProperty,,,1
+166,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,18,IsNotEmpty,,,1
+167,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,21,ApiProperty,,,1
+168,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,24,ApiProperty,,,1
+169,ANNOTATION,-1,,@Injectable(),0,Injectable,11,Injectable,,,1
+170,ANNOTATION,-1,,"@InjectRepository(RoleAlias, dbConfig.name)",4,InjectRepository,17,InjectRepository,,,1
+171,ANNOTATION,-1,,"@InjectRepository(Role, dbConfig.name)",4,InjectRepository,19,InjectRepository,,,1
+172,ANNOTATION,-1,,"@InjectRepository(TenantRoleAliases, dbConfig.name)",4,InjectRepository,21,InjectRepository,,,1
+173,ANNOTATION,-1,,@Inject(forwardRef(() => TenantRoleAliasesService)),4,Inject,24,Inject,,,1
+174,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,6,ApiProperty,,,1
+175,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,7,IsNotEmpty,,,1
+176,ANNOTATION,-1,,"@Length(2, 100)",2,Length,8,Length,,,1
+177,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,11,ApiProperty,,,1
+178,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,12,IsNotEmpty,,,1
+179,ANNOTATION,-1,,"@Length(2, 400)",2,Length,13,Length,,,1
+180,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,16,ApiProperty,,,1
+181,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,17,IsNotEmpty,,,1
+182,ANNOTATION,-1,,"@Length(2, 50)",2,Length,18,Length,,,1
+183,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,21,ApiProperty,,,1
+184,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,24,ApiProperty,,,1
+185,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,27,ApiProperty,,,1
+186,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,30,ApiProperty,,,1
+187,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,33,ApiProperty,,,1
+188,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,36,ApiProperty,,,1
+189,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,5,ApiProperty,,,1
+190,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [String] })",2,ApiProperty,8,ApiProperty,,,1
+191,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [String] })",2,ApiProperty,11,ApiProperty,,,1
+192,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [String] })",2,ApiProperty,14,ApiProperty,,,1
+193,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,17,ApiProperty,,,1
+194,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,20,ApiProperty,,,1
+195,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,23,ApiProperty,,,1
+196,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,26,ApiProperty,,,1
+197,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,29,ApiProperty,,,1
+198,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,32,ApiProperty,,,1
+199,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,35,ApiProperty,,,1
+200,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,7,ApiProperty,,,1
+201,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,8,IsNotEmpty,,,1
+202,ANNOTATION,-1,,"@Length(2, 100)",2,Length,9,Length,,,1
+203,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,12,ApiProperty,,,1
+204,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,13,IsNotEmpty,,,1
+205,ANNOTATION,-1,,"@Length(2, 400)",2,Length,14,Length,,,1
+206,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,17,ApiProperty,,,1
+207,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,18,IsNotEmpty,,,1
+208,ANNOTATION,-1,,"@Length(2, 50)",2,Length,19,Length,,,1
+209,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,22,ApiProperty,,,1
+210,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,25,ApiProperty,,,1
+211,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,28,ApiProperty,,,1
+212,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,31,ApiProperty,,,1
+213,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,34,ApiProperty,,,1
+214,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,37,ApiProperty,,,1
+215,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,40,ApiProperty,,,1
+216,ANNOTATION,-1,,@Injectable(),0,Injectable,11,Injectable,,,1
+217,ANNOTATION,-1,,"@InjectRepository(Role, dbConfig.name)",4,InjectRepository,17,InjectRepository,,,1
+218,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,7,ApiProperty,,,1
+219,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,10,ApiProperty,,,1
+220,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,13,ApiProperty,,,1
+221,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,6,ApiProperty,,,1
+222,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,7,IsNotEmpty,,,1
+223,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,10,ApiProperty,,,1
+224,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,11,IsNotEmpty,,,1
+225,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,14,ApiProperty,,,1
+226,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,15,IsNotEmpty,,,1
+227,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,18,ApiProperty,,,1
+228,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,6,ApiProperty,,,1
+229,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,9,ApiProperty,,,1
+230,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,12,ApiProperty,,,1
+231,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,15,ApiProperty,,,1
+232,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,18,ApiProperty,,,1
+233,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,7,ApiProperty,,,1
+234,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,8,IsNotEmpty,,,1
+235,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,11,ApiProperty,,,1
+236,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,12,IsNotEmpty,,,1
+237,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,15,ApiProperty,,,1
+238,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,16,IsNotEmpty,,,1
+239,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,19,ApiProperty,,,1
+240,ANNOTATION,-1,,@Injectable(),0,Injectable,11,Injectable,,,1
+241,ANNOTATION,-1,,"@InjectRepository(RoleAlias, dbConfig.name)",4,InjectRepository,17,InjectRepository,,,1
+242,ANNOTATION,-1,,"@InjectRepository(Role, dbConfig.name)",4,InjectRepository,19,InjectRepository,,,1
+243,ANNOTATION,-1,,"@InjectRepository(TenantRoleAliases, dbConfig.name)",4,InjectRepository,21,InjectRepository,,,1
+244,ANNOTATION,-1,,"@InjectRepository(Tenant, dbConfig.name)",4,InjectRepository,23,InjectRepository,,,1
+245,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,6,IsNotEmpty,,,1
+246,ANNOTATION,-1,,"@Length(2, 200)",2,Length,7,Length,,,1
+247,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,8,ApiProperty,,,1
+248,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,11,IsNotEmpty,,,1
+249,ANNOTATION,-1,,"@Length(2, 400)",2,Length,12,Length,,,1
+250,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,13,ApiProperty,,,1
+251,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,16,ApiProperty,,,1
+252,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,19,IsNotEmpty,,,1
+253,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,20,ApiProperty,,,1
+254,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,23,IsNotEmpty,,,1
+255,ANNOTATION,-1,,"@Length(2, 100)",2,Length,24,Length,,,1
+256,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,25,ApiProperty,,,1
+257,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,28,ApiProperty,,,1
+258,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,31,ApiProperty,,,1
+259,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,34,ApiProperty,,,1
+260,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,37,ApiProperty,,,1
+261,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,40,ApiProperty,,,1
+262,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,6,ApiProperty,,,1
+263,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [String] })",2,ApiProperty,9,ApiProperty,,,1
+264,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [String] })",2,ApiProperty,12,ApiProperty,,,1
+265,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,15,ApiProperty,,,1
+266,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,18,ApiProperty,,,1
+267,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [String] })",2,ApiProperty,21,ApiProperty,,,1
+268,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,24,ApiProperty,,,1
+269,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,27,ApiProperty,,,1
+270,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,30,ApiProperty,,,1
+271,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,33,ApiProperty,,,1
+272,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,36,ApiProperty,,,1
+273,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,7,ApiProperty,,,1
+274,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,10,IsNotEmpty,,,1
+275,ANNOTATION,-1,,"@Length(2, 200)",2,Length,11,Length,,,1
+276,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,12,ApiProperty,,,1
+277,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,15,IsNotEmpty,,,1
+278,ANNOTATION,-1,,"@Length(2, 400)",2,Length,16,Length,,,1
+279,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,17,ApiProperty,,,1
+280,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,20,ApiProperty,,,1
+281,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,23,IsNotEmpty,,,1
+282,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,24,ApiProperty,,,1
+283,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,27,IsNotEmpty,,,1
+284,ANNOTATION,-1,,"@Length(2, 100)",2,Length,28,Length,,,1
+285,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,29,ApiProperty,,,1
+286,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,32,ApiProperty,,,1
+287,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,35,ApiProperty,,,1
+288,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,38,ApiProperty,,,1
+289,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,41,ApiProperty,,,1
+290,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,44,ApiProperty,,,1
+291,ANNOTATION,-1,,@Injectable(),0,Injectable,10,Injectable,,,1
+292,ANNOTATION,-1,,"@InjectRepository(Tenant, dbConfig.name)",4,InjectRepository,16,InjectRepository,,,1
+293,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,6,IsNotEmpty,,,1
+294,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,7,ApiProperty,,,1
+295,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,10,IsNotEmpty,,,1
+296,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,11,ApiProperty,,,1
+297,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,14,IsNotEmpty,,,1
+298,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,15,ApiProperty,,,1
+299,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,18,ApiProperty,,,1
+300,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,21,ApiProperty,,,1
+301,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,6,ApiProperty,,,1
+302,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,9,ApiProperty,,,1
+303,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,12,ApiProperty,,,1
+304,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,15,ApiProperty,,,1
+305,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,18,ApiProperty,,,1
+306,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,21,ApiProperty,,,1
+307,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,7,ApiProperty,,,1
+308,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,8,IsNotEmpty,,,1
+309,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,11,ApiProperty,,,1
+310,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,12,IsNotEmpty,,,1
+311,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,15,ApiProperty,,,1
+312,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,16,IsNotEmpty,,,1
+313,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,19,ApiProperty,,,1
+314,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,22,ApiProperty,,,1
+315,ANNOTATION,-1,,@Injectable(),0,Injectable,14,Injectable,,,1
+316,ANNOTATION,-1,,"@InjectRepository(UserRoleByTenants, dbConfig.name)",4,InjectRepository,19,InjectRepository,,,1
+317,ANNOTATION,-1,,@Inject(forwardRef(() => UsersService)),4,Inject,22,Inject,,,1
+318,ANNOTATION,-1,,@Inject(forwardRef(() => TenantsService)),4,Inject,25,Inject,,,1
+319,ANNOTATION,-1,,@Inject(forwardRef(() => RolesService)),4,Inject,28,Inject,,,1
+320,ANNOTATION,-1,,@Inject(forwardRef(() => RoleAliasesService)),4,Inject,31,Inject,,,1
+321,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,7,IsNotEmpty,,,1
+322,ANNOTATION,-1,,"@Length(2, 200)",2,Length,8,Length,,,1
+323,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,9,ApiProperty,,,1
+324,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,12,IsNotEmpty,,,1
+325,ANNOTATION,-1,,"@Length(2, 200)",2,Length,13,Length,,,1
+326,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,14,ApiProperty,,,1
+327,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,17,IsNotEmpty,,,1
+328,ANNOTATION,-1,,"@Length(2, 200)",2,Length,18,Length,,,1
+329,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,19,ApiProperty,,,1
+330,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,22,ApiProperty,,,1
+331,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,25,ApiProperty,,,1
+332,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,28,ApiProperty,,,1
+333,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,31,ApiProperty,,,1
+334,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,34,IsNotEmpty,,,1
+335,ANNOTATION,-1,,@IsEmail(),2,IsEmail,35,IsEmail,,,1
+336,ANNOTATION,-1,,"@Length(2, 200)",2,Length,36,Length,,,1
+337,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,37,ApiProperty,,,1
+338,ANNOTATION,-1,,@IsOptional(),2,IsOptional,40,IsOptional,,,1
+339,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,41,ApiProperty,,,1
+340,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,44,ApiProperty,,,1
+341,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,47,ApiProperty,,,1
+342,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,50,ApiProperty,,,1
+343,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,6,ApiProperty,,,1
+344,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [String] })",2,ApiProperty,9,ApiProperty,,,1
+345,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [String] })",2,ApiProperty,12,ApiProperty,,,1
+346,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,15,ApiProperty,,,1
+347,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,18,ApiProperty,,,1
+348,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,21,ApiProperty,,,1
+349,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,24,ApiProperty,,,1
+350,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,27,ApiProperty,,,1
+351,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,30,ApiProperty,,,1
+352,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [String] })",2,ApiProperty,33,ApiProperty,,,1
+353,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,36,ApiProperty,,,1
+354,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,39,ApiProperty,,,1
+355,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,42,ApiProperty,,,1
+356,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,45,ApiProperty,,,1
+357,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,7,IsNotEmpty,,,1
+358,ANNOTATION,-1,,"@Length(2, 200)",2,Length,8,Length,,,1
+359,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,9,ApiProperty,,,1
+360,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,12,IsNotEmpty,,,1
+361,ANNOTATION,-1,,"@Length(2, 200)",2,Length,13,Length,,,1
+362,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,14,ApiProperty,,,1
+363,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,17,IsNotEmpty,,,1
+364,ANNOTATION,-1,,"@Length(2, 200)",2,Length,18,Length,,,1
+365,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,19,ApiProperty,,,1
+366,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,22,ApiProperty,,,1
+367,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,25,ApiProperty,,,1
+368,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,28,ApiProperty,,,1
+369,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,31,ApiProperty,,,1
+370,ANNOTATION,-1,,@IsNotEmpty(),2,IsNotEmpty,34,IsNotEmpty,,,1
+371,ANNOTATION,-1,,@IsEmail(),2,IsEmail,35,IsEmail,,,1
+372,ANNOTATION,-1,,"@Length(2, 200)",2,Length,36,Length,,,1
+373,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,37,ApiProperty,,,1
+374,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,40,ApiProperty,,,1
+375,ANNOTATION,-1,,@ApiProperty(),2,ApiProperty,43,ApiProperty,,,1
+376,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,46,ApiProperty,,,1
+377,ANNOTATION,-1,,"@ApiProperty({ nullable: true, type: [Number] })",2,ApiProperty,49,ApiProperty,,,1
+378,ANNOTATION,-1,,@ApiProperty({ nullable: true }),2,ApiProperty,52,ApiProperty,,,1
+379,ANNOTATION,-1,,@Injectable(),0,Injectable,12,Injectable,,,1
+380,ANNOTATION,-1,,"@InjectRepository(User, dbConfig.name)",4,InjectRepository,17,InjectRepository,,,1
+381,ANNOTATION,-1,,@Injectable(),0,Injectable,30,Injectable,,,1
+382,ANNOTATION,-1,,"@InjectRepository(User, dbConfig.name)",4,InjectRepository,33,InjectRepository,,,1
+383,ANNOTATION,-1,,"@InjectRepository(Role, dbConfig.name)",4,InjectRepository,35,InjectRepository,,,1
+384,ANNOTATION,-1,,@Inject(forwardRef(() => TenantsService)),4,Inject,38,Inject,,,1
+385,ANNOTATION,-1,,@Injectable(),0,Injectable,6,Injectable,,,1
+386,ANNOTATION,-1,,@Injectable(),0,Injectable,7,Injectable,,,1
