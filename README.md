@@ -116,4 +116,5 @@ The script provides detailed logging to help diagnose issues:
 
 This tool builds on the capabilities of:
 - [Joern](https://joern.io/) - The open-source code analysis platform
+- [Joern git](https://github.com/joernio/joern) - The repo for the open-source code analysis platform
 - [Neo4j](https://neo4j.com/) - The graph database platform

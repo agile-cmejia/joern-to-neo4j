@@ -91,7 +91,7 @@ def run_joern_export(cpg_input_path, csv_output_dir, export_format="neo4jcsv", j
     else:
         logging.error("Joern export failed.")
         return None
-    
+
 def get_cypher_files(output_dir: Path) -> tuple[list[Path], list[Path]]:
     """
     Finds node and edge Cypher import files (*_cypher.csv) in the specified directory.
@@ -173,6 +173,7 @@ def import_online_neo4j(
     # --- Process Cypher Files ---
     all_cypher_files = node_cypher_files + edge_cypher_files
     import_errors = False
+    processed_files = 0 # Initialize counter
 
     for cypher_file_path in all_cypher_files:
         logging.info(f"\n--- Processing Cypher File: {cypher_file_path.name} ---")
@@ -296,11 +297,6 @@ def import_online_neo4j(
         return True
 # --- Main Execution ---
 
-# Define the Neo4j import directory (adjust if your setup differs)
-# This path is specific to Neo4j Desktop on macOS for a particular DB instance
-NEO4J_IMPORT_DIR = Path("/Users/tenhitokiri/Library/Application Support/Neo4j Desktop/Application/relate-data/dbmss/dbms-208c6b9e-421f-40a0-90c1-d54f6b80a942/import")
-
-
 def main():
     parser = argparse.ArgumentParser(
         description="Automate Joern CPG generation and Neo4j online import.",
@@ -321,7 +317,8 @@ def main():
                             help="Neo4j password. If not provided, reads from NEO4J_PASSWORD env var.")
     parser.add_argument("--neo4j-database", default=os.getenv("NEO4J_DATABASE", "neo4j"),
                             help="Target Neo4j database name. Reads from NEO4J_DATABASE env var if set.")
-
+    parser.add_argument("--neo4j-import-dir", default=os.getenv("NEO4J_IMPORT_DIR", "joern_neo4j_import"),
+                            help="Directory to store intermediate CPG and CSV files. Within the Neo4j import directory")
 
     # Set password from environment variable if not provided via argument
     args = parser.parse_args()
@@ -339,6 +336,12 @@ def main():
     if not os.path.isdir(args.input_path) and not os.path.isfile(args.input_path):
         logging.error(f"Input path is not a valid file or directory: {args.input_path}")
         sys.exit(1)
+    if not args.neo4j_password:
+        logging.error("Neo4j password is required. Set --neo4j-password or NEO4J_PASSWORD environment variable.")
+        sys.exit(1)
+    if not args.neo4j_url:
+        logging.error("Neo4j URL is required. Set --neo4j-url or NEO4J_URL environment variable.")
+        sys.exit(1)
 
     # --- Define Paths ---
 
@@ -348,6 +351,11 @@ def main():
     cpg_file_path = os.path.join(abs_output_dir, "cpg.bin")
     csv_export_dir = os.path.join(abs_output_dir, "neo4j_csv")
     output_dir_path = Path(csv_export_dir).resolve() # Use resolved absolute path
+
+    # Define the Neo4j import directory (adjust if your setup differs)
+    # This path is specific to Neo4j Desktop on macOS for a particular DB instance
+    # NEO4J_IMPORT_DIR = Path("/Users/tenhitokiri/Library/Application Support/Neo4j Desktop/Application/relate-data/dbmss/dbms-208c6b9e-421f-40a0-90c1-d54f6b80a942/import")
+    NEO4J_IMPORT_DIR = Path(args.neo4j_import_dir).resolve()
 
     # --- Step 1: Run Joern Parse ---
     cpg_path = run_joern_parse(args.input_path, cpg_file_path, args.jvm_mem)
